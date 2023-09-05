@@ -361,7 +361,7 @@ procedure eprb_signal_correlations is
 -- which I have no answer, except to suggest experimenter bias leading
 -- to poor control of the measurements. I am not in the least a
 -- scholar of the experimental techniques employed. The derivation
--- above shows that these experiments were pointless, anyway.
+-- above shows that these experiments are pointless, anyway.
 --
 -- The other question is how do Bell and others arrive at their
 -- ‘inequalities’ in the first place? That question was answered at
