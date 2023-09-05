@@ -358,8 +358,10 @@ procedure eprb_signal_correlations is
 -- Two questions immediately arise. One is why do experimenters get
 -- Bell inequality violations, despite that they may have incorrect
 -- formulas for their correlation calculations? This is a question for
--- which I have no answer. I am not in the least a scholar of the
--- experimental techniques employed.
+-- which I have no answer, except to suggest experimenter bias leading
+-- to poor control of the measurements. I am not in the least a
+-- scholar of the experimental techniques employed. The derivation
+-- above shows that these experiments were pointless, anyway.
 --
 -- The other question is how do Bell and others arrive at their
 -- ‘inequalities’ in the first place? That question was answered at
