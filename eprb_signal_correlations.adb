@@ -630,8 +630,8 @@ end eprb_signal_correlations;
 -- light. The wave coherence approach could be used as well with
 -- abstract signals, looking for coherence not in electromagnetic
 -- waves, but directly within statistical data. The mathematics for
--- statistical coherence would be similar to that for electromagnetic
--- wave coherence.
+-- data coherence would be similar to that for electromagnetic wave
+-- coherence.
 --
 -- Finally, I would like to point out that Bell’s ‘axiom of causality’
 -- is actually a corollary of the famous ‘Wishing Theorem’. The
