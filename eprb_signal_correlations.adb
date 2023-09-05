@@ -243,9 +243,9 @@ procedure eprb_signal_correlations is
 --         = P(σ=↶) P(τ₁=⊕ | σ=↶ ζ₁=φ₁) P(τ₂=⊕ | σ=↶ ζ₂=φ₂)
 --
 -- where in the last expression the ζ₁ parameter is removed from the
--- factor for the channel 2, because it plays no role in channel 2.
--- By the previous calculation and similar ones, the following table
--- can be constructed.
+-- factor for channel 2, because it plays no role in channel 2. By the
+-- previous calculation and similar ones, the following table can be
+-- constructed.
 --
 --    P(σ=↶ τ₁=⊕ τ₂=⊕ | ζ₁=φ₁ ζ₂=φ₂) = ½ cos²(φ₁) cos²(φ₂)
 --    P(σ=↶ τ₁=⊕ τ₂=⊖ | ζ₁=φ₁ ζ₂=φ₂) = ½ cos²(φ₁) sin²(φ₂)
