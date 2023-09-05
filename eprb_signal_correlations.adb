@@ -645,7 +645,7 @@ end eprb_signal_correlations;
 --     preprint, CERN-TH-2926 (1980).
 --     http://cds.cern.ch/record/142461/ (Open access, CC BY 4.0)
 --
--- [2] E. T. Jaynes, ‘Clearing up Mysteries—The Original Goal’, in
+-- [2] E. T. Jaynes, ‘Clearing up mysteries—the original goal’, in
 --     J. Skilling, ed., Maximum-Entropy and Bayesian Methods, Kluwer,
 --     Dordrecht (1989).
 --     https://bayes.wustl.edu/etj/articles/cmystery.pdf
