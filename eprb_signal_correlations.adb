@@ -336,6 +336,13 @@ procedure eprb_signal_correlations is
 --
 -- which, finally, is a solution in the desired, coordinate-free form.
 --
+-- One may ask how it is that we can transform coordinates between
+-- (φ′₁,φ′₂) and (φ₁,φ₂) while keeping the tagging algorithm in the
+-- cos²/sin² form, rather than changing the phases of the
+-- sinusoids. The answer is that instead one can rotate the random
+-- scalar in the interval [0,1). The scalar is random, however, so
+-- there is no actual need to do the rotation.
+--
 -- Plugging in the Bell test angles gives
 --
 --    φ₁=0    φ₂=π/8       ρ=√½
