@@ -337,12 +337,11 @@ procedure eprb_signal_correlations is
 -- which, finally, is a solution in the desired, coordinate-free
 -- form.
 --
--- The ζ settings, φ₁ and φ₂, determine the coordinate system of an
--- experimental run, and what goes into the raw data set depends a
--- great deal on that coordinate system. However, the correlation
--- coefficient depends only on the difference φ₂-φ₁.
---
--- Plugging in the Bell test angles gives
+-- Setting ζ₁=φ₁, ζ₂=φ₂ is now a change of coordinate system from
+-- ζ₁=0, ζ₂=φ₂-φ₁. The specific JOINT PROBABILITIES do depend on the
+-- coordinate system, but the CORRELATION COEFFICIENT, which is an
+-- average, depends only on the difference φ₂-φ₁. Therefore we can
+-- proceed to plug in the Bell test angles, giving
 --
 --    φ₁=0    φ₂=π/8       ρ=√½
 --    φ₁=0    φ₂=3π/8      ρ=-√½
