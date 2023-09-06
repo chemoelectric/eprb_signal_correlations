@@ -338,8 +338,8 @@ procedure eprb_signal_correlations is
 -- form.
 --
 -- The ζ settings, φ₁ and φ₂, determine the coordinate system of an
--- experimental run, and thus what goes into the raw data set depends
--- a great deal on that coordinate system. However, the correlation
+-- experimental run, and what goes into the raw data set depends a
+-- great deal on that coordinate system. However, the correlation
 -- coefficient depends only on the difference φ₂-φ₁.
 --
 -- Plugging in the Bell test angles gives
