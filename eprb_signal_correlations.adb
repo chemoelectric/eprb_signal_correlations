@@ -334,14 +334,13 @@ procedure eprb_signal_correlations is
 --
 --    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁) = cos(2(φ₂-φ₁))
 --
--- which, finally, is a solution in the desired, coordinate-free form.
+-- which, finally, is a solution in the desired, coordinate-free
+-- form.
 --
--- One may ask how it is that we can transform coordinates between
--- (φ′₁,φ′₂) and (φ₁,φ₂) while keeping the tagging algorithm in the
--- cos²/sin² form, rather than changing the phases of the
--- sinusoids. The answer is that instead one can rotate the random
--- scalar in the interval [0,1). The scalar is random, however, so
--- there is no actual need to do the rotation.
+-- The ζ settings, φ₁ and φ₂, determine the coordinate system of an
+-- experimental run, and thus what goes into the raw data set depends
+-- a great deal on that coordinate system. However, the correlation
+-- coefficient depends only on the difference φ₂-φ₁.
 --
 -- Plugging in the Bell test angles gives
 --
