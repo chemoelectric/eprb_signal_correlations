@@ -39,7 +39,7 @@
 -- optimized and with runtime checks, by saving it in a file called
 -- ‘eprb_signal_correlations.adb’ and then running the command
 --
---   gnatmake -O2 -gnata eprb_signal_correlations
+--   gnatmake -O3 -gnata eprb_signal_correlations
 --
 -- which will create an executable program called
 -- ‘eprb_signal_correlations’.  Alternatively, translate the program
