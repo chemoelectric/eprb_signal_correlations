@@ -1,6 +1,7 @@
-Here repose translations of the program from the Ada into other
+Here repose translations of the simulation from Ada into other
 programming languages. The extensive comments in the Ada, containing a
-derivation of the correlation coefficient, are left out.
+derivation of the correlation coefficient without recourse to quantum
+physics, are left out.
 
 The random number generators are not necessarily the same as in the
 Ada program, and neither need be execution orders nor the run lengths,
