@@ -549,6 +549,7 @@ procedure eprb_signal_correlations is
 
     ρ_estimate := (c12 * c12) - (s12 * s12);
 
+    assert (abs (ρ_estimate) - 1.0 < 500.0 * scalar'model_epsilon);
     return scalar'min (1.0, scalar'max (-1.0, ρ_estimate));
   end estimate_ρ;
 
