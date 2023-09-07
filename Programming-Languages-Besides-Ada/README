@@ -1,0 +1,13 @@
+Here repose translations of the program from the Ada into other
+programming languages. The extensive comments in the Ada, containing a
+derivation of the correlation coefficient, are left out.
+
+The random number generators are not necessarily the same as in the
+Ada program, and neither need be execution orders nor the run lengths,
+and thus the numbers produced may differ.  A given program might in
+fact produce different numbers on different runs, although we will try
+to avoid that.
+
+These programs all generate data using the tagging algorithm, and then
+analyze the data by substituting frequencies for probabilities in the
+correlation coefficient.
