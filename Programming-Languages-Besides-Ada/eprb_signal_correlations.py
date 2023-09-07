@@ -149,7 +149,7 @@ def printBellTests(delta_φ):
         φ1_ = φ1 / π_180
         φ2_ = φ2 / π_180
         ρ_ = estimate_ρ(φ1, φ2, runLength)
-        print(f'    φ₁ = {φ1_:6.2f}°  φ₂ = {φ2_:6.2f}°  ρ est. = {ρ_:7.5f}')
+        print(f'    φ₁ = {φ1_:6.2f}°  φ₂ = {φ2_:6.2f}°   ρ est. = {ρ_:8.5f}')
     return
 
 def main():
