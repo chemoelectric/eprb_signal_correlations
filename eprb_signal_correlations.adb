@@ -327,18 +327,16 @@ procedure eprb_signal_correlations is
 --
 -- Let φ′₂=(φ₂-φ₁)+δ, where δ is an arbitrary number that puts φ′₂
 -- within any valid coordinate system. Because δ is arbitrary, we may
--- drop the origin-quadrant restriction and write
+-- drop the quadrant restriction φ′₁∈[-π/4,π/4] and write
 --
 --    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁) = cos(2(φ₂-φ₁))
 --
 -- which, finally, is a solution in the desired, coordinate-free
--- form.
---
--- Setting ζ₁=φ₁, ζ₂=φ₂ is now a change of coordinate system from
--- ζ₁=0, ζ₂=φ₂-φ₁. The specific JOINT PROBABILITIES do depend on the
+-- form. One changes coordinate system by changing the ζ settings of
+-- the channels. The specific JOINT PROBABILITIES do depend on the
 -- coordinate system, but the CORRELATION COEFFICIENT, which is an
--- average, depends only on the difference φ₂-φ₁. Therefore we can
--- proceed to plug in the Bell test angles, giving
+-- AVERAGE, depends only on the difference in settings. Therefore we
+-- can proceed to plug in the Bell test angles, giving
 --
 --    φ₁=0    φ₂=π/8       ρ=√½
 --    φ₁=0    φ₂=3π/8      ρ=-√½
