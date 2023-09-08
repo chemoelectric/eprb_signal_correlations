@@ -23,6 +23,8 @@
 ;;;
 ;;; For more information, please refer to <https://unlicense.org>
 
+;; Run with ‘sbcl --script eprb_signal_correlations.lisp’
+
 (defconstant π      pi)
 (defconstant π/2    (/ π 2))
 (defconstant π/3    (/ π 3))
