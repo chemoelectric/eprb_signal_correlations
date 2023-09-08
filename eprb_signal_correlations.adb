@@ -327,7 +327,7 @@ procedure eprb_signal_correlations is
 --
 -- Let φ′₂=(φ₂-φ₁)+δ, where δ is an arbitrary number that puts φ′₂
 -- within any valid coordinate system. Because δ is arbitrary, we may
--- drop the restriction and write
+-- drop the origin-quadrant restriction and write
 --
 --    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁) = cos(2(φ₂-φ₁))
 --
