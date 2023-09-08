@@ -12,3 +12,8 @@ syntax: regexp
 ^eprb_signal_correlations$
 ^eprb_signal_correlations\.ali$
 ^eprb_signal_correlations\.o$
+
+# Other files likely to show up.
+^.*/a\.out$
+^.*/eprb_signal_correlations$
+\.o$
