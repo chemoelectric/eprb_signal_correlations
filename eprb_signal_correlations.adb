@@ -326,12 +326,8 @@ procedure eprb_signal_correlations is
 --                                 = cos(2φ′₂) = cos²(φ′₂) - sin²(φ′₂)
 --
 -- Let φ′₂=(φ₂-φ₁)+δ, where δ is an arbitrary number that puts φ′₂
--- within any valid coordinate system. Thus a solution is
---
---    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁),  δ ∈ [-π/4,π/4]
---
--- Because δ is arbitrary, we may drop the quadrant restriction and
--- write
+-- within any valid coordinate system. Because δ is arbitrary, we may
+-- drop the restriction and write
 --
 --    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁) = cos(2(φ₂-φ₁))
 --
