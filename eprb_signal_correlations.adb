@@ -327,7 +327,7 @@ procedure eprb_signal_correlations is
 --
 -- Let φ′₂=(φ₂-φ₁)+δ, where δ is an arbitrary number. Thus a solution is
 --
---    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁),  φ₁+δ ∈ [-π/4,π/4]
+--    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁),  δ ∈ [-π/4,π/4]
 --
 -- Because δ is arbitrary, we may drop the quadrant restriction and
 -- write
