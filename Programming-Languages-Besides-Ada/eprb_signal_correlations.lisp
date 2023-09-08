@@ -109,7 +109,7 @@
   (estimate-ρ-from-raw-data (collect-data φ₁ φ₂ run-length) φ₁ φ₂))
 
 (defun print-bell-tests (delta-φ)
-  (let ((run-length 100000))
+  (let ((run-length 500000))
     (format t "~4Tφ₂ − φ₁ = ~6,2F°~%" (/ delta-φ π/180))
     (do ((i 0 (1+ i)))
         ((= i 33))
