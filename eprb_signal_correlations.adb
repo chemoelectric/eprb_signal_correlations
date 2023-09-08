@@ -331,9 +331,10 @@ procedure eprb_signal_correlations is
 --
 --    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁) = cos(2(φ₂-φ₁))
 --
--- which, finally, is a solution in the desired, coordinate-free
--- form. One changes coordinate system by changing the ζ settings of
--- the channels. The specific JOINT PROBABILITIES do depend on the
+-- which, finally, is a solution in the desired, coordinate-free form.
+--
+-- One can change coordinate system by changing the ζ settings of the
+-- channels. The specific JOINT PROBABILITIES do depend on the
 -- coordinate system, but the CORRELATION COEFFICIENT, which is an
 -- AVERAGE, depends only on the difference in settings. Therefore we
 -- can proceed to plug in the Bell test angles, giving
