@@ -319,9 +319,9 @@ procedure eprb_signal_correlations is
 -- Let φ′₁ be the angular origin and take on any value in [-π/4,π/4].
 -- Compute the expectation
 --
---        π/4                π/4
---    ρ = ∫ ρ′ φ′₁ = cos(2φ′₂) ∫ cos(2φ′₁) dφ′₁
---       -π/4               -π/4
+--        π/4                 π/4
+--    ρ = ∫ ρ′ dφ′₁ = cos(2φ′₂) ∫ cos(2φ′₁) dφ′₁
+--       -π/4                -π/4
 --
 --                                 = cos(2φ′₂) = cos²(φ′₂) - sin²(φ′₂)
 --
