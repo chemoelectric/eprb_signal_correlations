@@ -325,16 +325,18 @@ procedure eprb_signal_correlations is
 --
 --                                 = cos(2φ′₂) = cos²(φ′₂) - sin²(φ′₂)
 --
--- Let φ′₁=φ₁, φ′₂=φ₂-φ₁. Then
+-- Let φ′₂=φ₂-φ₁. Then
 --
---    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁),  φ₁∈[-π/4,π/4]
+--    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁),  φ′₁∈[-π/4,π/4]
 --
 -- We can make similar arguments for the other three quadrants, and
 -- therefore can drop the quadrant restriction. Thus
 --
 --    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁) = cos(2(φ₂-φ₁))
 --
--- which, finally, is a solution in the desired, coordinate-free form.
+-- which, finally, is a solution in the desired, coordinate-free
+-- form. We have, in a sense, hidden the ζ₁ setting—as we must do to
+-- calculate a correlation coefficient.
 --
 -- One can change coordinate system by changing the ζ settings of the
 -- channels. The specific JOINT PROBABILITIES do depend on the
