@@ -325,12 +325,25 @@ procedure eprb_signal_correlations is
 --
 --                                 = cos(2φ′₂) = cos²(φ′₂) - sin²(φ′₂)
 --
+-- where the absolute value is taken because the integrand is a
+-- probability distribution function (pdf).
+--
 -- Let φ′₂=φ₂-φ₁. Then
 --
 --    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁),  φ′₁∈[-π/4,π/4]
 --
--- We can make similar arguments for φ′₁∈[3π/4,π/4], φ′₁∈[3π/4,5π/4],
--- and φ′₁∈[7π/4,5π/4], and therefore can drop the quadrant
+-- For φ′₁∈[π/4,3π/4], the cosine in the integral is negative, so to
+-- make a probability distribution function (pdf) of it the sign must
+-- be reversed.
+--
+--        3π/4                3π/4
+--    ρ = ∫ ρ′ dφ′₁ = cos(2φ′₂) ∫ -cos(2φ′₁) dφ′₁
+--        π/4                 π/4
+--
+--                                 = cos(2φ′₂) = cos²(φ′₂) - sin²(φ′₂)
+--
+-- We can make similar arguments for φ′₁∈[3π/4,5π/4], and
+-- φ′₁∈[5π/4,7π/4], and therefore can drop the quadrant
 -- restriction. Thus
 --
 --    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁) = cos(2(φ₂-φ₁))
