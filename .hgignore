@@ -16,4 +16,5 @@ syntax: regexp
 # Other files likely to show up.
 ^.*/a\.out$
 ^.*/eprb_signal_correlations$
+^.*/eprb_signal_correlations_r7rs(\..*)?$
 \.o$
