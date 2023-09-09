@@ -307,8 +307,9 @@ procedure eprb_signal_correlations is
 -- assumed a particular coordinate system, and that is what we have
 -- done for the ζ settings. However, look at the answer we got: it
 -- SHOULD be, but is not, in terms of φ₂-φ₁. It is not
--- coordinate-free. We should always have had an angular origin
--- written into our probabilities as another condition.
+-- coordinate-free. We should always have had that we were assuming a
+-- particular coordinate system written into our probabilities as
+-- another condition.
 --
 -- Therefore let us assume that condition implicitly written in, and
 -- begin again exactly where we left off, but with the variables
