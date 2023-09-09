@@ -40,5 +40,10 @@ eprb_signal_correlations: eprb_signal_correlations.adb
 	fi
 
 .PHONY: clean
-clean:
+clean: clean-subdirectories
 	$(REMOVE_THINGS)
+
+.PHONY: clean-subdirectories
+clean-subdirectories:
+	rm -f Programming-Languages-Besides-Ada/eprb_signal_correlations
+	rm -f Programming-Languages-Besides-Ada/eprb_signal_correlations_r7rs{,.{c,o}}
