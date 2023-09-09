@@ -336,21 +336,25 @@ procedure eprb_signal_correlations is
 --    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁) = cos(2(φ₂-φ₁))
 --
 -- which, finally, is a solution in the desired, coordinate-free
--- form. We have, in a sense, hidden the ζ₁ setting—as we must do to
--- calculate a correlation coefficient.
+-- form.
 --
--- One can change coordinate system by changing the ζ settings of the
--- channels. The specific JOINT PROBABILITIES do depend on the
--- coordinate system, but the CORRELATION COEFFICIENT, which is an
--- AVERAGE, depends only on the difference in settings. Therefore we
--- can proceed to plug in the Bell test angles, giving
+-- We have, in a sense, hidden the ζ₁ setting—as we must do to
+-- calculate a correlation coefficient. When running a simulation,
+-- however, one can set a specific coordinate system with the ζ
+-- settings of the channels. The specific JOINT PROBABILITIES do
+-- depend on the coordinate system, but the CORRELATION COEFFICIENT,
+-- which is an AVERAGE, depends only on the difference in
+-- settings.
+--
+-- Let us, then, plug in the Bell test angles. This gives
 --
 --    φ₁=0    φ₂=π/8       ρ=√½
 --    φ₁=0    φ₂=3π/8      ρ=-√½
 --    φ₁=π/4  φ₂=π/8       ρ=√½
 --    φ₁=π/4  φ₂=3π/8      ρ=√½
 --
--- which is more satisfactory.
+-- which is fully satisfactory. This is what quantum mechanics
+-- predicts.
 --
 ----------------------------------------------------------------------
 --
