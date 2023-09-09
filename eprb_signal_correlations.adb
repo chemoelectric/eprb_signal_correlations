@@ -353,8 +353,7 @@ procedure eprb_signal_correlations is
 --    φ₁=π/4  φ₂=π/8       ρ=√½
 --    φ₁=π/4  φ₂=3π/8      ρ=√½
 --
--- which is fully satisfactory. This is what quantum mechanics
--- predicts.
+-- which is more satisfactory.
 --
 ----------------------------------------------------------------------
 --
