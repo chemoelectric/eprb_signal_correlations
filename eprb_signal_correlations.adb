@@ -325,19 +325,19 @@ procedure eprb_signal_correlations is
 --
 --                                 = cos(2φ′₂) = cos²(φ′₂) - sin²(φ′₂)
 --
--- where cos(2φ′₁) is the probability distribution function (pdf) of
--- angular origins in the quadrant [-π/4,π/4].
+-- where the angular origins φ′₁ are uniformly distributed in the
+-- quadrant [-π/4,π/4].
 --
 -- Let φ′₂=φ₂-φ₁. Then
 --
 --    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁),  φ′₁∈[-π/4,π/4]
 --
--- For φ′₁∈[π/4,3π/4], the cosine in the integral is negative, so to
--- make a pdf of it the sign must be reversed.
+-- For φ′₁∈[π/4,3π/4], the cosine in the integral is negative, so we
+-- integrate in the other direction.
 --
---        3π/4                3π/4
---    ρ = ∫ ρ′ dφ′₁ = cos(2φ′₂) ∫ -cos(2φ′₁) dφ′₁
 --        π/4                 π/4
+--    ρ = ∫ ρ′ dφ′₁ = cos(2φ′₂) ∫ cos(2φ′₁) dφ′₁
+--       3π/4                3π/4
 --
 --                                 = cos(2φ′₂) = cos²(φ′₂) - sin²(φ′₂)
 --
