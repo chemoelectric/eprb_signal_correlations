@@ -193,6 +193,9 @@ val degreeSignString =
 fun printBellTests delta_phi =
     let
         val runLength = 1000000
+        val pad = StringCvt.padLeft #" "
+        fun angle phi = LargeReal.fmt (StringCvt.FIX (SOME 2))
+                                      (phi / pi_180)
     in
         print "    ";
         print phi2String;
@@ -201,8 +204,7 @@ fun printBellTests delta_phi =
         print " ";
         print phi1String;
         print " = ";
-        print (LargeReal.fmt (StringCvt.FIX (SOME 2))
-                             (delta_phi / pi_180));
+        print (pad 6 (angle delta_phi));
         print degreeSignString;
         print "\n";
         let
@@ -219,20 +221,19 @@ fun printBellTests delta_phi =
                         print "    ";
                         print phi1String;
                         print " = ";
-                        print (LargeReal.fmt (StringCvt.FIX (SOME 2))
-                                             (phi1 / pi_180));
+                        print (pad 6 (angle phi1));
                         print degreeSignString;
                         print "  ";
                         print phi2String;
                         print " = ";
-                        print (LargeReal.fmt (StringCvt.FIX (SOME 2))
-                                             (phi2 / pi_180));
+                        print (pad 6 (angle phi2));
                         print degreeSignString;
                         print "   ";
                         print rhoString;
                         print " est. = ";
-                        print (LargeReal.fmt (StringCvt.FIX (SOME 5))
-                                             rho_estimate);
+                        print (pad 8 (LargeReal.fmt
+                                        (StringCvt.FIX (SOME 5))
+                                        rho_estimate));
                         print "\n";
                         loop (i + 1)
                     end
