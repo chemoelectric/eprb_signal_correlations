@@ -341,7 +341,7 @@ procedure eprb_signal_correlations is
 --
 --                                 = cos(2φ′₂) = cos²(φ′₂) - sin²(φ′₂)
 --
--- We can make similar arguments for φ′₁∈[3π/4,5π/4], and
+-- We can make similar arguments for φ′₁∈[3π/4,5π/4] and
 -- φ′₁∈[5π/4,7π/4], and therefore can drop the quadrant
 -- restriction. Thus
 --
