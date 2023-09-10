@@ -92,7 +92,7 @@ record of received pairs of tagged signals, for some pair of
 hundred thousand or one million pairs of tagged signals might be
 recorded.
 
-Now suppose we map tags to numbers, $T\to T'=\{-1,+1\}$, thus:
+Now suppose we map tags to numbers, $T\to T^{\prime}=\{-1,+1\}$, thus:
 \begin{align}
   \oplus \mapsto +1 \\
   \ominus \mapsto -1
@@ -146,7 +146,7 @@ expression for the following.
 However, because that does not fit well into a line of text, let us
 first introduce a shorthand, by writing something like
 \begin{equation}
-  P(\curvearrowleft\,\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\;
+  P_1 = P(\curvearrowleft\,\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\;
   [0,2\pi]\,,\; \lambda)
 \end{equation}
 to mean the same thing. Then, by probability theory, and taking into
@@ -196,14 +196,14 @@ We want to calculate the correlation coefficient
   \label{corrcoef}
   \rho = \frac{E(\tau'_1 \tau'_2)}{\sqrt{E({\tau'_1}^2)}\sqrt{E({\tau'_2}^2)}}
 \end{equation}
-where $\tau'_1, \tau'_2 \in T'$ and the expectations $E$ are
+where $\tau'_1, \tau'_2 \in T^{\prime}$ and the expectations $E$ are
 calculated with respect to the conditional probabilities derived
 above. The numerator is the covariance and the denominator is the
 product of the standard deviations.
 
-The choice of values for the elements of $T'$ makes it so the standard
-deviations in (\ref{corrcoef}) equal one, and thus the correlation
-coefficient simplifies to the covariance
+The choice of values for the elements of $T^{\prime}$ makes it so the
+standard deviations in (\ref{corrcoef}) equal one, and thus the
+correlation coefficient simplifies to the covariance
 \begin{equation}
   \rho = E(\tau'_1 \tau'_2)
 \end{equation}
@@ -216,6 +216,25 @@ probability distribution is uniform, which simplifies our
 integration. We will encounter a complication, but it will be minor:
 we will have to break the integration into pieces.
 
-
+First let us calculate the sum for (\ref{coscos}) and~(\ref{cossin})
+(call the sum $\rho^{\prime}$), and then we will integrate the result of that
+sum.
+\begin{multline}
+  \rho^{\prime} 
+  = (+1)(+1) P(\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
+  + (+1)(-1) P(\oplus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
+  + (-1)(+1) P(\ominus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
+  + (-1)(-1) P(\ominus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda)
+\end{multline}
+Substituting for the probabilities gives
+\begin{multline}
+  \rho^{\prime} = \cos^2 \phi_1\, \cos^2 \phi_2 - \cos^2 \phi_1\, \sin^2 \phi_2 \\
+  - \sin^2 \phi_1\, \cos^2 \phi_2 + \sin^2 \phi_1\, \sin^2 \phi_2
+\end{multline}
+and so
+\begin{align}
+  \rho^{\prime} &= (\cos^2 \phi_2 - \sin^2 \phi_2) (\cos^2 \phi_1 - \sin^2 \phi_1) \\
+                &=\cos(2\phi_2)\,\cos(2\phi_1)
+\end{align}
 
 \end{document}
