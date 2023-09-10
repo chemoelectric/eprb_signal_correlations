@@ -1,0 +1,59 @@
+%% THIS TECHNOTE IS A WORK IN PROGRESS
+
+\documentclass[9pt,technote]{IEEEtran}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\usepackage{textcomp}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{cite}
+\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
+
+\newcommand{\signal}{{\em{signal}}}
+\newcommand{\tagg}{{\em{tag}}}
+
+\begin{document}
+
+\title{Solution to a Two-Channel Bell Test\\by Probability Theory}
+\author{Barry~Schwartz,~\IEEEmembership{Member,~IEEE}}
+
+\maketitle
+
+\section{Introduction}
+
+John~Bell famously proposed a test {\bf{FILL IN REFERENCE HERE}}
+supposed to prove that quantum mechanics was, in essence, magical. I
+put the matter this way because the proposed test is soluble by
+probability theory, and yet Bell seems to have claimed quantum
+mechanics alone could provide the One True Answer that surpassed all
+other solutions.
+
+Of course, what actually happened is that Bell {\em{did not know}} the
+test could be solved by any means other than quantum
+mechanics. However, the problem is not, in fact, one of quantum
+mechanics at all. It is more properly a problem in random signal
+analysis. It merely happens that quantum mechanics ``knows'' how to
+solve such a problem, without the user having to understand signal
+analysis.
+
+We, however, wish to understand---and so shall recast the problem as
+one of signal analysis, and shall solve it.
+
+\section{The Problem}
+
+There is a transmitter that sends a \signal\ randomly from the set
+
+$$S=\{\curvearrowleft,\curvearrowright\}$$
+
+The transmission goes into both of two channels. Each channel attaches
+a \tagg\ to the signal, according to an algorithm to be specified
+below. The \tagg\ comes from the set
+
+$$T=\{\oplus,\ominus\}$$
+
+\end{document}
