@@ -16,7 +16,8 @@
 
 \begin{document}
 
-\title{Correlation Coefficient of a Two-Channel Bell Test\\by Probability Theory}
+\title{Correlation Coefficient of a Two-Channel Bell Test\\by
+  Probability Theory}
 \author{Barry~Schwartz,~\IEEEmembership{Member,~IEEE}}
 
 \maketitle
@@ -128,5 +129,34 @@ and
   P(\tau=\,\ominus \,|\, \sigma=\,\curvearrowright\,,\; \zeta=\phi\,,\; \phi_1\in[0,2\pi]\,,\; \lambda) &= \cos^2 \phi
 \end{align}
 
+We want to construct a table of probabilities of tagged signal pairs
+received by the receiver-recorder, so let us start by finding an
+expression for the following.
+\begin{multline}
+  P_1 = P(\sigma=\,\curvearrowleft\,,\; \tau_1=\,\oplus\,,\; \tau_2=\,\oplus \,|\,
+  \zeta_1=\phi_1\,,\; \zeta_2=\phi_2 \\ \phi_1\in[0,2\pi]\,,\; \lambda)
+\end{multline}
+However, because that does not fit well into a line of text, let us
+first introduce a shorthand, by writing something like
+\begin{equation}
+  P(\curvearrowleft\,\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\;
+  [0,2\pi]\,,\; \lambda)
+\end{equation}
+to mean the same thing. Then, by probability theory, and taking into
+account that $\phi_1$ and~$\phi_2$ respectively pertain exclusively to
+channel~1 or~channel~2 (so conditionality on the opposite channel's
+$\phi$ may be dropped),
+\begin{align}
+  P_1 &= P(\curvearrowleft\,\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
+      &= P(\curvearrowleft\,|\, \lambda) P(\oplus_1\,\oplus_2\,|\,\curvearrowleft\,,\;\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
+      &= P(\curvearrowleft\,|\, \lambda) P_{11} P_{12} = \frac{1}{2} P_{11} P_{12}
+\end{align}
+where
+\begin{align}
+  P_{11} &= P(\oplus_1\,|\,\curvearrowleft\,,\;\phi_1\,,\; [0,2\pi]\,,\; \lambda) = \cos^2 \phi_1 \\
+  P_{12} &= P(\oplus_2\,|\,\curvearrowleft\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) = \cos^2 \phi_2
+\end{align}
+
+By similar calculations the following table may be constructed.
 
 \end{document}
