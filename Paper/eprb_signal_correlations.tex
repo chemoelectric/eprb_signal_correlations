@@ -177,12 +177,14 @@ constructed.
 \end{align}
 Disregarding the signal values gives (by addition of probabilities)
 \begin{multline}
+  \label{coscos}
   P(\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
   = P(\ominus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
   = \frac{1}{2} \cos^2 \phi_1\, \cos^2 \phi_2 + \frac{1}{2} \sin^2 \phi_1\, \sin^2 \phi_2
 \end{multline}
 and
 \begin{multline}
+  \label{cossin}
   P(\oplus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
   = P(\ominus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
   = \frac{1}{2} \cos^2 \phi_1\, \sin^2 \phi_2 + \frac{1}{2} \sin^2 \phi_1\, \cos^2 \phi_2
@@ -195,14 +197,24 @@ We want to calculate the correlation coefficient
 \end{equation}
 where $\tau'_1, \tau'_2 \in T'$ and the expectations $E$ are
 calculated with respect to the conditional probabilities derived
-above.
+above. The numerator is the covariance and the denominator is the
+product of the standard deviations.
 
-The choice of values for the elements of $T'$ makes it so the
-denominator in (\ref{corrcoef}) equals one, and so the correlation
-coefficient simplifies to
+The choice of values for the elements of $T'$ makes it so the standard
+deviations in (\ref{corrcoef}) equal one, and thus the correlation
+coefficient simplifies to the covariance
 \begin{equation}
   \rho = E(\tau'_1 \tau'_2)
 \end{equation}
-which is also the covariance.
+which we now must calculate. To do so, not only must we compute a sum
+weighted by the probabilities in (\ref{coscos}) and~(\ref{cossin}),
+but we must also eliminate the $\phi_1\in[0,2\pi]$ condition by
+integrating with respect to $\phi_1$.  We have no information ahead of
+time on what this angular origin~$\phi_1$ will be, and so the
+probability distribution is uniform, which simplifies our
+integration. We will encounter a complication, but it will be minor:
+we will have to break the integration into pieces.
+
+
 
 \end{document}
