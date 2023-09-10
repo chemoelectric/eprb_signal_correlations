@@ -58,7 +58,7 @@ There is a transmitter that sends a {\em{signal}} randomly from the
 set
 
 \begin{equation}
-  S=\{\curvearrowleft,\curvearrowright\}
+  S=\{\curvearrowleft\,,\,\curvearrowright\}
 \end{equation}
 
 The transmission goes into both of two channels. Each channel attaches
@@ -66,18 +66,18 @@ a {\em{tag}} to the signal, according to an algorithm to be specified
 below, and re-transmits the tagged signal. The tag comes from the set
 
 \begin{equation}
-  T=\{\oplus,\ominus\}
+  T=\{\oplus\,,\,\ominus\}
 \end{equation}
 
 The tagging algorithm works as follows. The channel is ``tuned'' by an
 angular setting $\zeta\in[0,2\pi]$. Let $r$ represent a number chosen
 uniformly from $[0,1]$. Now suppose the signal $\sigma$ is
 $\curvearrowleft$. In that case, if $r < \cos^2 \zeta$ then
-re-transmit $(\oplus,\curvearrowleft)$. Otherwise re-transmit
-$(\ominus,\curvearrowleft)$. On the other hand, suppose the signal
+re-transmit $(\oplus\,,\,\curvearrowleft)$. Otherwise re-transmit
+$(\ominus\,,\,\curvearrowleft)$. On the other hand, suppose the signal
 is $\sigma$ is $\curvearrowright$. Then, if $r < \sin^2 \zeta$
-re-transmit $(\oplus,\curvearrowright)$, else re-transmit
-$(\ominus,\curvearrowright)$.
+re-transmit $(\oplus\,,\,\curvearrowright)$, else re-transmit
+$(\ominus\,,\,\curvearrowright)$.
 
 At the end of both channels is a receiver-recorder, which makes a
 record of received pairs of tagged signals, for some pair of
@@ -94,6 +94,39 @@ The problem is to use these numbers to calculate a correlation
 coefficient $\rho$, characterizing the correlation between tags in the
 received signal pairs.
 
+\section{Solution}
+
+We will use subscripts to refer to channel numbers. Thus, for example,
+$\zeta_2$ may refer to a $\zeta$ parameter for channel~2, $\tau_1$ to
+a tag value for channel~1, and so on. A plain letter without a
+subscript may refer to either channel. Thus, for instance, $\tau$ may
+stand in for either $\tau_1$ or $\tau_2$. And so on like that.
+
+We will use more or less conventional probability notation, though
+also always adding the letter ``$\lambda$'' as a condition, meaning
+something such as ``any relevant information we may so far have
+neglected''. It pays to be cautious.
+
+Note also that all angles must be with respect to some origin, which
+we will call $\phi_1$ and associate, purely for convenience, with the
+``tuning'' of channel~1. Thus ``$\phi_1\in[0,2\pi]$'' will appear
+often as a condition. The correlation coefficient we calculate,
+however, will be coordinate-free---as it must be, because the angular
+origin is arbitrary. The angular origin will appear in the final
+expression only as a term in a difference.
+
+By the problem definition, one immediately gets
+\begin{align}
+  P(\sigma=\,\curvearrowleft \,|\, \lambda) &= \frac{1}{2} \\
+  P(\sigma=\,\curvearrowright \,|\, \lambda) &= \frac{1}{2}
+\end{align}
+and
+\begin{align}
+  P(\tau=\,\oplus \,|\, \sigma=\,\curvearrowleft\,,\; \zeta=\phi\,,\; \phi_1\in[0,2\pi]\,,\; \lambda) &= \cos^2 \phi \\
+  P(\tau=\,\ominus \,|\, \sigma=\,\curvearrowleft\,,\; \zeta=\phi\,,\; \phi_1\in[0,2\pi]\,,\; \lambda) &= \sin^2 \phi \\
+  P(\tau=\,\oplus \,|\, \sigma=\,\curvearrowright\,,\; \zeta=\phi\,,\; \phi_1\in[0,2\pi]\,,\; \lambda) &= \sin^2 \phi \\
+  P(\tau=\,\ominus \,|\, \sigma=\,\curvearrowright\,,\; \zeta=\phi\,,\; \phi_1\in[0,2\pi]\,,\; \lambda) &= \cos^2 \phi
+\end{align}
 
 
 \end{document}
