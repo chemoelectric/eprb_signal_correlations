@@ -14,9 +14,6 @@
 \usepackage{cite}
 \hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
 
-\newcommand{\signal}{{\em{signal}}}
-\newcommand{\tagg}{{\em{tag}}}
-
 \begin{document}
 
 \title{Solution to a Two-Channel Bell Test\\by Probability Theory}
@@ -46,14 +43,44 @@ one of signal analysis, and shall solve it.
 
 \section{The Problem}
 
-There is a transmitter that sends a \signal\ randomly from the set
+There is a transmitter that sends a {\em{signal}} randomly from the
+set
 
-$$S=\{\curvearrowleft,\curvearrowright\}$$
+\begin{equation}
+  S=\{\curvearrowleft,\curvearrowright\}
+\end{equation}
 
 The transmission goes into both of two channels. Each channel attaches
-a \tagg\ to the signal, according to an algorithm to be specified
-below. The \tagg\ comes from the set
+a {\em{tag}} to the signal, according to an algorithm to be specified
+below, and re-transmits the tagged signal. The tag comes from the set
 
-$$T=\{\oplus,\ominus\}$$
+\begin{equation}
+  T=\{\oplus,\ominus\}
+\end{equation}
+
+The tagging algorithm works as follows. The channel is ``tuned'' by an
+angular setting $\zeta\in[0,2\pi]$. Let $r$ represent a number chosen
+uniformly from $[0,1]$. Now suppose the signal $\sigma$ is
+$\curvearrowleft$. In that case, if $r < \cos^2 \zeta$ then
+re-transmit $(\oplus,\curvearrowleft)$. Otherwise re-transmit
+$(\ominus,\curvearrowleft)$. On the other hand, suppose the signal
+is $\sigma$ is $\curvearrowright$. Then, if $r < \sin^2 \zeta$
+re-transmit $(\oplus,\curvearrowright)$, else re-transmit
+$(\ominus,\curvearrowright)$.
+
+At the end of both channels is a dual receiver and recorder, which
+makes a record of received pairs of tagged signals, for some pair of
+``tunings'' for the two channels, $(\zeta_1,\zeta_2)$. For example,
+one hundred thousand or one million pairs of tagged signals might be
+recorded.
+
+Now suppose we map tags to numbers, $T\to T'=\{-1,+1\}$, thus:
+\begin{align}
+  \oplus \mapsto +1 \\
+  \ominus \mapsto -1
+\end{align}
+The problem is to use these numbers to calculate a correlation
+coefficient $\rho$, characterizing the correlation between tags in the
+received signal pairs.
 
 \end{document}
