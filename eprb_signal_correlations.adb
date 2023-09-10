@@ -317,8 +317,8 @@ procedure eprb_signal_correlations is
 --
 --    ρ′ = cos(2φ′₂) cos(2φ′₁)
 --
--- Let φ′₁ be an angular landmark that defines the coordinate system,
--- and take on any value in [-π/4,π/4]. Compute the expectation
+-- Let φ′₁ be the angular origin and take on any value in [-π/4,π/4].
+-- Compute the expectation
 --
 --        π/4                 π/4
 --    ρ = ∫ ρ′ dφ′₁ = cos(2φ′₂) ∫ cos(2φ′₁) dφ′₁
@@ -326,7 +326,7 @@ procedure eprb_signal_correlations is
 --
 --                                 = cos(2φ′₂) = cos²(φ′₂) - sin²(φ′₂)
 --
--- where the angular landmarks φ′₁ are uniformly distributed in the
+-- where the angular origins φ′₁ are uniformly distributed in the
 -- quadrant [-π/4,π/4].
 --
 -- Let φ′₂=φ₂-φ₁. Then
@@ -373,7 +373,7 @@ procedure eprb_signal_correlations is
 -- It is certain that most quantum theorists seeking solutions to
 -- similar problems via probability theory have neglected the last
 -- step, where we integrated over a probability distribution function
--- of angular landmarks. The reason I say this with certainty is that
+-- of angular origins. The reason I say this with certainty is that
 -- the solution above is proof that it is possible to violate Bell
 -- inequalities with a ‘locally realistic’ model, and that Einstein,
 -- Podolsky, and Rosen were correct.
