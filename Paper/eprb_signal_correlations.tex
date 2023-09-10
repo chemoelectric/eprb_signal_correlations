@@ -175,5 +175,34 @@ constructed.
   P(\curvearrowright\,\ominus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &= \frac{1}{2} \cos^2 \phi_1\, \sin^2 \phi_2 \\
   P(\curvearrowright\,\ominus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &= \frac{1}{2} \cos^2 \phi_1\, \cos^2 \phi_2
 \end{align}
+Disregarding the signal values gives (by addition of probabilities)
+\begin{multline}
+  P(\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
+  = P(\ominus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
+  = \frac{1}{2} \cos^2 \phi_1\, \cos^2 \phi_2 + \frac{1}{2} \sin^2 \phi_1\, \sin^2 \phi_2
+\end{multline}
+and
+\begin{multline}
+  P(\oplus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
+  = P(\ominus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
+  = \frac{1}{2} \cos^2 \phi_1\, \sin^2 \phi_2 + \frac{1}{2} \sin^2 \phi_1\, \cos^2 \phi_2
+\end{multline}
+
+We want to calculate the correlation coefficient
+\begin{equation}
+  \label{corrcoef}
+  \rho = \frac{E(\tau'_1 \tau'_2)}{\sqrt{E({\tau'_1}^2)}\sqrt{E({\tau'_2}^2)}}
+\end{equation}
+where $\tau'_1, \tau'_2 \in T'$ and the expectations $E$ are
+calculated with respect to the conditional probabilities derived
+above.
+
+The choice of values for the elements of $T'$ makes it so the
+denominator in (\ref{corrcoef}) equals one, and so the correlation
+coefficient simplifies to
+\begin{equation}
+  \rho = E(\tau'_1 \tau'_2)
+\end{equation}
+which is also the covariance.
 
 \end{document}
