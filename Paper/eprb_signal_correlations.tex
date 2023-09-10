@@ -2,6 +2,7 @@
 
 \documentclass[9pt,technote]{IEEEtran}
 \usepackage{amsmath,amssymb,amsfonts}
+\usepackage{cases}
 \usepackage{algorithmic}
 \usepackage{algorithm}
 \usepackage{array}
@@ -117,11 +118,9 @@ neglected''. It pays to be cautious.
 Note also that all angles will be in some relation relative to each
 other, and positioned as a whole with respect to some ``landmark.'' We
 will call the landmark $\phi_1$ and associate it, purely for
-convenience, with the ``tuning'' of channel~1. The landmark may be any
-angle, and thus ``$\phi_1\in[0,2\pi]$'' will often appear as a
-condition. The correlation coefficient we calculate, however, will be
-coordinate-free. The angle $\phi_1$ will appear in the final
-expression only in its role as an angle relative to~$\phi_2$.
+convenience, with the ``calibration'' of channel~1. The landmark may
+be any angle, and thus ``$\phi_1\in[0,2\pi]$'' will often appear as a
+condition.
 
 By the problem definition, one immediately gets
 \begin{align}
@@ -236,5 +235,41 @@ and so
   \rho^{\prime} &= (\cos^2 \phi_2 - \sin^2 \phi_2) (\cos^2 \phi_1 - \sin^2 \phi_1) \\
                 &=\cos(2\phi_2)\,\cos(2\phi_1)
 \end{align}
+with the last step by one of the double-angle identities.
+
+This expression must now be integrated with respect to~$\phi_1$ over
+all of~$[0,2\pi]$, using a uniform probability distribution function
+(pdf) as the weight. We run into this complication: we have to treat
+all landmark angles alike (a coordinate system does not care what
+quadrant its landmark is in), yet the cosine sometimes is ``reversed''
+in its sense. We can deal with this problem by breaking the circle
+into pieces and reversing the sense of the integral in those places,
+either by negating the integral or by reversing the direction of
+integration. Here we will integrate in the reverse direction.
+\begin{align}
+\rho &= \cos(2\phi_2)\int_{-\frac{\pi}{4}}^{+\frac{\pi}{4}}\cos(2\phi_1)\,d\phi_1&\phi_1\in[-\frac{\pi}{4},+\frac{\pi}{4}] \\
+\rho &= \cos(2\phi_2)\int_{+\frac{3\pi}{4}}^{+\frac{\pi}{4}}\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{\pi}{4},+\frac{3\pi}{4}] \\
+\rho &= \cos(2\phi_2)\int_{+\frac{3\pi}{4}}^{+\frac{5\pi}{4}}\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{3\pi}{4},+\frac{5\pi}{4}] \\
+\rho &= \cos(2\phi_2)\int_{+\frac{7\pi}{4}}^{+\frac{5\pi}{4}}\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{5\pi}{4},+\frac{7\pi}{4}]
+\end{align}
+In each case the integral equals one, and so the expression is the
+same, regardless of quadrant. The correlation coefficient is
+\begin{equation}
+  \rho = \cos(2\phi_2) = \cos^2\phi_2 - \sin^2\phi_2
+\end{equation}
+
+Now suppose we have finished calibrating our transmission channels and
+wish to mark the dials. Where the landmark is on channel~1 we mark a
+zero. Where $\phi_2$ is on channel~2 we mark the value of
+$\phi_2-\phi_1$. Then we complete the two circles using a protractor
+or similar device. We label the dials~``$\theta$''.
+
+The general formula for the correlation coefficient of the calibrated
+channels is
+\begin{equation}
+  \rho = \cos(2(\theta_2-\theta_1)) = \cos^2(\theta_2-\theta_1) - \sin^2(\theta_2-\theta_1)
+\end{equation}
+because one could always redo the calculations from scratch, this time
+using $\phi_1=\theta_1$ and~$\phi_2=\theta_2-\theta_1$.
 
 \end{document}
