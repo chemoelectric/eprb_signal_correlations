@@ -1,8 +1,8 @@
 %% THIS TECHNOTE IS A WORK IN PROGRESS
 
 \documentclass[9pt,technote]{IEEEtran}
+
 \usepackage{amsmath,amssymb,amsfonts}
-\usepackage{cases}
 \usepackage{algorithmic}
 \usepackage{algorithm}
 \usepackage{array}
@@ -12,6 +12,7 @@
 \usepackage{url}
 \usepackage{verbatim}
 \usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage{cite}
 \hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
 
@@ -22,6 +23,14 @@
 \author{Barry~Schwartz,~\IEEEmembership{Member,~IEEE}}
 
 \maketitle
+\insert\footins{\normalfont\footnotesize\raggedright
+  \interlinepenalty\interfootnotelinepenalty \splittopskip\footnotesep
+  \splitmaxdepth \dp\strutbox \floatingpenalty10000 \hsize\columnwidth
+  This work is licensed under the Creative Commons Attribution~4.0
+  International License. To view a copy of this license, visit
+  \href{http://creativecommons.org/licenses/by/4.0/}{http://creativecommons.org/licenses/by/4.0/}
+  or send a letter to Creative Commons, P.~O. Box~1866, Mountain~View,
+  CA~94042, USA.\par}
 
 \begin{abstract}
   It is widely believed that only quantum mechanics can characterize
@@ -317,7 +326,7 @@ experiment be properly designed. This inequality specifically tests
 for non-invariance of correlations under in-unison rotation. Because
 there is no such non-invariance, there should be no positive
 results. Yet experimenters report positive results. Therefore not only
-is the inequality itself a failure of the scientific method, so must
-be the experiments.
+is the inequality itself a failure of scientific methods, so must be
+the experiments.
 
 \end{document}
