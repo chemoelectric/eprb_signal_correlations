@@ -242,11 +242,13 @@ This expression must now be integrated with respect to~$\phi_1$ over
 all of~$[0,2\pi]$, using a uniform probability distribution function
 (pdf) as the weight. We run into this complication: we have to treat
 all landmark angles alike (a coordinate system does not care what
-quadrant its landmark is in), yet the cosine sometimes is ``reversed''
-in its sense. We can deal with this problem by breaking the circle
-into pieces and reversing the sense of the integral in those places,
-either by negating the integral or by reversing the direction of
-integration. Here we will integrate in the reverse direction.
+quadrant its landmark is in), yet the cosine sometimes is reversed in
+sign, leading to~$\rho$ being reversed in sign. However, the sign of a
+correlation coefficient is arbitrary. We can deal with the problem by
+breaking the circle into pieces reversing the sign of the integral in
+those places, either by negating the integral explicitly or by
+reversing the direction of integration. Here we will integrate in the
+reverse direction.
 \begin{align}
 \rho &= \cos(2\phi_2)\int_{-\frac{\pi}{4}}^{+\frac{\pi}{4}}\cos(2\phi_1)\,d\phi_1&\phi_1\in[-\frac{\pi}{4},+\frac{\pi}{4}] \\
 \rho &= \cos(2\phi_2)\int_{+\frac{3\pi}{4}}^{+\frac{\pi}{4}}\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{\pi}{4},+\frac{3\pi}{4}] \\
