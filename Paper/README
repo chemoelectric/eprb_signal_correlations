@@ -1,0 +1,46 @@
+Here resides a paper that proves without question that J. S. Bell’s
+‘Speakable and Unspeakable in Quantum Mechanics’ is as good a
+collection of physics papers as is the wrapping paper that a dog has
+just shredded.
+
+The Ada program in this repository came first. I wrote it and came to
+the impasse where one has, in essence, recreated the CHSH
+formula. That formula, I then saw, was just one integration away from
+the CORRECT formula (which everyone already knows! but which quantum
+physicists refuse to try to get to), so the only question was why one
+would need to do that integration. And the answer was: because the
+correlation coefficient has to be invariant under rotation of the
+apparatus. Except I did not know yet to say it that way. This paper is
+where I say it that way. The correlation coefficient has to be
+invariant under in-unison rotation of the two settings.
+
+Now, as to the paper’s audience. The journals unquestionably have
+failed us, so I do not write the paper for them. Therefore I am free
+to, for instance, suggest future TV comedians select the Nobel
+Committee for Physics as subject for their jokes. Would that not be an
+appropriate suggestion? I think comedians should consider it. I write
+not for journals, but for distribution by the old method:
+correspondence. Please read the paper and also pass it along to your
+scientific, engineering, mathematical, philosophical, etc.,
+colleagues, friends, enemies, frenemies, and so on.
+
+Writing for correspondence also means I can use the Wikipedia
+(permanent links only!) for citations, so people can simply read the
+stuff. I need not dredge up citations designed merely to satisfy the
+paper-churning journal system that has failed us. I need not buy the
+second edition of that dreadful book by Bell (whose first edition I
+have had for decades and not yet used for origami), just so I can be
+sure to quote the correct page.
+
+Credentials do matter a little, so here are mine. I am a disabled
+former computer programmer, but have qualifications in random process
+analysis that, apparently, must far exceed those of a nuclear
+physicist such as Bell. Specifically, I have a master’s degree
+(Rutgers University, 1990) in digital signal processing, which is a
+branch of electrical engineering. Such a degree included mandatory
+coursework specifically in the topic of random process analysis. I am
+a long-time member of both the Institute of Electrical and Electronics
+Engineers and the Association for Computing Machinery.
+
+The paper is licensed CC BY 4.0:
+http://creativecommons.org/licenses/by/4.0/
