@@ -5,13 +5,13 @@ syntax: regexp
 \.orig$
 
 # Files created by gnatmake.
-^b~eprb_signal_correlations\.adb$
-^b~eprb_signal_correlations\.ads$
-^b~eprb_signal_correlations\.ali$
-^b~eprb_signal_correlations\.o$
+^b~eprb_signal_correlations\.(adb|ads|ali|o)$
+^eprb_signal_correlations\.(ali|o)$
 ^eprb_signal_correlations$
-^eprb_signal_correlations\.ali$
-^eprb_signal_correlations\.o$
+
+# Files created by TeX.
+^Paper/eprb_signal_correlations\.(log|aux|out)$
+^Paper/missfont\.log$
 
 # Other files likely to show up.
 ^.*/a\.out$
