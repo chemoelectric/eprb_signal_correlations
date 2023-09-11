@@ -23,15 +23,24 @@
 \author{Barry~Schwartz,~\IEEEmembership{Member,~IEEE}}
 
 \maketitle
-\insert\footins{\normalfont\footnotesize\raggedright
+\insert\footins{%
+  % See
+  % https://tex.stackexchange.com/questions/117597/inserting-a-creative-commons-licence-into-a-latex-document
+  \normalfont\footnotesize\raggedright
   \interlinepenalty\interfootnotelinepenalty \splittopskip\footnotesep
   \splitmaxdepth \dp\strutbox \floatingpenalty10000 \hsize\columnwidth
-  Copyright \copyright\ xxxx Barry Schwartz \par
+  Copyright \copyright\ 2023 Barry Schwartz \par
+  Revision: \input{revision.txt}\par
   This work is licensed under the Creative Commons Attribution~4.0
   International License. To view a copy of this license, visit
   \href{http://creativecommons.org/licenses/by/4.0/}{http://creativecommons.org/licenses/by/4.0/}
   or send a letter to Creative Commons, P.~O. Box~1866, Mountain~View,
-  CA~94042, USA.\par}
+  CA~94042, USA.\par
+  A PDF copy of this paper may be found at
+  \href{https://www.crudfactory.com/eprb_signal_correlations.pdf}{https://www.crudfactory.com/eprb\_signal\_correlations.pdf}\par
+  The \LaTeX\ source for this paper, and simulations based on its
+  contents, reside in a Git repository at
+  \href{https://github.com/chemoelectric/eprb_signal_correlations}{https://github.com/chemoelectric/eprb\_signal\_correlations}\par}
 
 \begin{abstract}
   It is widely believed that only quantum mechanics can characterize
