@@ -260,25 +260,22 @@ with the last step by one of the double-angle identities.
 This expression must now be integrated with respect to~$\phi_1$ over
 all of~$[0,2\pi]$, using a uniform probability distribution function
 (pdf) as the weight. We run into this complication: we have to treat
-all landmark angles alike (a coordinate system does not care what
-quadrant its landmark is in), yet the cosine sometimes is reversed in
+all landmark angles alike---a coordinate system does not care what
+quadrant its landmark is in---yet the cosine sometimes is reversed in
 sign, leading to~$\rho$ being reversed in sign. However, the sign of a
-correlation coefficient is arbitrary. We can deal with the problem by
-breaking the circle into pieces reversing the sign of the integral in
-those places, either by negating the integral explicitly or by
-reversing the direction of integration. Here we will integrate in the
-reverse direction.
+correlation coefficient is arbitrary, so we can simply reverse the
+sign in those quadrants.
 \begin{align}
-\rho &= \cos(2\phi_2)\int_{-\frac{\pi}{4}}^{+\frac{\pi}{4}}\cos(2\phi_1)\,d\phi_1&\phi_1\in[-\frac{\pi}{4},+\frac{\pi}{4}] \\
-\rho &= \cos(2\phi_2)\int_{+\frac{3\pi}{4}}^{+\frac{\pi}{4}}\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{\pi}{4},+\frac{3\pi}{4}] \\
-\rho &= \cos(2\phi_2)\int_{+\frac{3\pi}{4}}^{+\frac{5\pi}{4}}\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{3\pi}{4},+\frac{5\pi}{4}] \\
-\rho &= \cos(2\phi_2)\int_{+\frac{7\pi}{4}}^{+\frac{5\pi}{4}}\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{5\pi}{4},+\frac{7\pi}{4}]
+\rho &= \int_{-\frac{\pi}{4}}^{+\frac{\pi}{4}}\cos(2\phi_2)\cos(2\phi_1)\,d\phi_1&\phi_1\in[-\frac{\pi}{4},+\frac{\pi}{4}] \\
+-\rho &= \int_{+\frac{\pi}{4}}^{+\frac{3\pi}{4}}\cos(2\phi_2)\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{\pi}{4},+\frac{3\pi}{4}] \\
+\rho &= \int_{+\frac{3\pi}{4}}^{+\frac{5\pi}{4}}\cos(2\phi_2)\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{3\pi}{4},+\frac{5\pi}{4}] \\
+-\rho &= \int_{+\frac{5\pi}{4}}^{+\frac{7\pi}{4}}\cos(2\phi_2)\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{5\pi}{4},+\frac{7\pi}{4}]
 \end{align}
-In each case the integral equals one, and so the expression is the
-same, regardless of quadrant. The correlation coefficient is
+In each case the result is the same. The correlation coefficient is
 \begin{equation}
   \rho = \cos(2\phi_2) = \cos^2\phi_2 - \sin^2\phi_2
 \end{equation}
+regardless of quadrant.
 
 Now suppose we have finished calibrating our transmission channels and
 wish to mark the dials. Where the landmark is on channel~1 we mark a
