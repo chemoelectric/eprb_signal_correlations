@@ -21,6 +21,17 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{enwiki:1174875317}
+{Wikipedia contributors}, ``Bell test --- {Wikipedia}{,} the free
+  encyclopedia,''
+  \url{https://en.wikipedia.org/w/index.php?title=Bell_test&oldid=1174875317},
+  2023, [Online; accessed 12-September-2023].
+
+\bibitem{bertlmann:manuscript}
+{J. S. Bell}, ``{{B}ertlmann's socks and the nature of reality},''
+  \url{http://cds.cern.ch/record/142461/}, {CERN}, Tech. Rep. {CERN-TH-2926},
+  {1980}.
+
 \bibitem{enwiki:1170465048}
 {Wikipedia contributors}, ``{CHSH} inequality --- {Wikipedia}{,} the free
   encyclopedia,''

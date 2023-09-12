@@ -1,8 +1,8 @@
 .DELETE_ON_ERROR:
 
-eprb_signal_correlations.pdf: eprb_signal_correlations.tex \
-								eprb_signal_correlations.bib \
-								eprb_signal_correlations.bbl \
+eprb_signal_correlations.pdf: eprb_signal_correlations.tex		\
+								eprb_signal_correlations.bib	\
+								eprb_signal_correlations.bbl	\
 								revision.txt
 	pdflatex $(<) && pdflatex $(<) && pdflatex $(<)
 
