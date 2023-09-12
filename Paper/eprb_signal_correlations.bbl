@@ -21,9 +21,14 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{enwiki:1174555777}
-{Wikipedia contributors}, ``Niels {B}ohr --- {Wikipedia}{,} the free
+\bibitem{enwiki:1170465048}
+{Wikipedia contributors}, ``{CHSH} inequality --- {Wikipedia}{,} the free
   encyclopedia,''
+  \url{https://en.wikipedia.org/w/index.php?title=CHSH_inequality&oldid=1170465048},
+  2023, [Online; accessed 12-September-2023].
+
+\bibitem{enwiki:1174555777}
+------, ``Niels {B}ohr --- {Wikipedia}{,} the free encyclopedia,''
   \url{https://en.wikipedia.org/w/index.php?title=Niels_Bohr&oldid=1174555777},
   2023, [Online; accessed 12-September-2023].
 
