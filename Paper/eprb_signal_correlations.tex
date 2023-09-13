@@ -137,20 +137,16 @@ also always adding the letter ``$\lambda$'' as a condition, meaning
 something such as ``any relevant information we may so far have
 neglected''. It pays to be cautious.
 
-{\bf{THE FOLLOWING REALLY COULD USE REVISION. IT DOES NOT SEEM
-    RIGHT. I SHOULD REWRITE USING SOME COORDINATE-FREE
-    REPRESENTATION. MIND YOU, THE SOLUTION IS CORRECT OR QUANTUM
-    MECHANICS WOULD BE WRONG (unlike physicists, I require that
-    mathematics be consistent) AND THE SIMULATIONS WOULD NOT WORK. I
-    MEAN THAT I AM TRYING TO WRITE COORDINATE-FREE ARGUMENTS IN
-    COORDINATE-UNFREE NOTATIONS, AND NOT GETTING IT QUITE RIGHT.}}
-Note also that all angles will be in some relation relative to each
-other, and positioned as a whole with respect to some ``landmark.'' We
-will call the landmark $\phi_1$ and associate it, purely for
-convenience, with the ``calibration'' of channel~1. The landmark may
-be any angle, and thus ``$\phi_1\in[0,2\pi]$'' will often appear as a
-condition.
-
+Let $\phi_{01},\phi_{02}\in[0,2\pi]$ be the {\em{landmarks}}
+(or~{\em{origins}}) for settings of the respective $\zeta$~parameters,
+and let~$\phi_0$ represent either or both of them. Let $\phi_1$
+and~$\phi_2$ be respective settings, and~$\phi$ represent either or
+both of them. Also introduce the notation
+\begin{align}
+  \Delta\phi_1&=\phi_1-\phi_{01} \\
+  \Delta\phi_2&=\phi_2-\phi_{02} \\
+  \Delta\phi&=\phi-\phi_{0}
+\end{align}
 By the problem definition, one immediately gets
 \begin{align}
   P(\sigma=\,\curvearrowleft \,|\, \lambda) &= 1\!/2 \\
@@ -158,18 +154,23 @@ By the problem definition, one immediately gets
 \end{align}
 and
 \begin{align}
-  P(\tau=\,\oplus \,|\, \sigma=\,\curvearrowleft\,,\; \zeta=\phi\,,\; \phi_1\in[0,2\pi]\,,\; \lambda) &= \cos^2 \phi \\
-  P(\tau=\,\ominus \,|\, \sigma=\,\curvearrowleft\,,\; \zeta=\phi\,,\; \phi_1\in[0,2\pi]\,,\; \lambda) &= \sin^2 \phi \\
-  P(\tau=\,\oplus \,|\, \sigma=\,\curvearrowright\,,\; \zeta=\phi\,,\; \phi_1\in[0,2\pi]\,,\; \lambda) &= \sin^2 \phi \\
-  P(\tau=\,\ominus \,|\, \sigma=\,\curvearrowright\,,\; \zeta=\phi\,,\; \phi_1\in[0,2\pi]\,,\; \lambda) &= \cos^2 \phi
+  P(\tau=\,\oplus \,|\, \sigma=\,\curvearrowleft\,,\; \zeta=\Delta\phi\,,\; \phi_0\in[0,2\pi]\,,\; \lambda) &= \cos^2 \Delta\phi \\
+  P(\tau=\,\ominus \,|\, \sigma=\,\curvearrowleft\,,\; \zeta=\Delta\phi\,,\; \phi_0\in[0,2\pi]\,,\; \lambda) &= \sin^2 \Delta\phi \\
+  P(\tau=\,\oplus \,|\, \sigma=\,\curvearrowright\,,\; \zeta=\Delta\phi\,,\; \phi_0\in[0,2\pi]\,,\; \lambda) &= \sin^2 \Delta\phi \\
+  P(\tau=\,\ominus \,|\, \sigma=\,\curvearrowright\,,\; \zeta=\Delta\phi\,,\; \phi_0\in[0,2\pi]\,,\; \lambda) &= \cos^2 \Delta\phi
 \end{align}
+Here we are taking a liberty: actually, for both~$\phi_{01}$
+and~$\phi_{02}$ there should be a probability density function (pdf)
+specified in the conditions. However, we shall introduce each pdf only
+when it is about to be used. For now, consider them implicitly
+specified.
 
 We want to construct a table of probabilities of tagged signal pairs
 received by the receiver-recorder, so let us start by finding an
 expression for the following.
 \begin{multline}
-  P_1 = P(\sigma=\,\curvearrowleft\,,\; \tau_1=\,\oplus\,,\; \tau_2=\,\oplus \,|\,
-  \zeta_1=\phi_1\,,\; \zeta_2=\phi_2 \\ \phi_1\in[0,2\pi]\,,\; \lambda)
+  P_1 = P(\sigma=\,\curvearrowleft\,,\; \tau_1=\,\oplus\,,\; \tau_2=\,\oplus \,| \\
+  \zeta_1=\Delta\phi_1\,,\; \zeta_2=\Delta\phi_2\,,\; \phi_0\in[0,2\pi]\,,\; \lambda)
 \end{multline}
 However, because that does not fit well into a line of text, let us
 first introduce a shorthand, by writing something like
@@ -178,9 +179,9 @@ first introduce a shorthand, by writing something like
   [0,2\pi]\,,\; \lambda)
 \end{equation}
 to mean the same thing. Then, by probability theory, and taking into
-account that $\phi_1$ and~$\phi_2$ respectively pertain exclusively to
-channel~1 or~channel~2 (so conditionality on the opposite channel's
-$\phi$ may be dropped),
+account that $\Delta\phi_1$ and~$\Delta\phi_2$ respectively pertain
+exclusively to channel~1 or~channel~2 (so conditionality on the
+opposite channel's $\Delta\phi$ may be dropped),
 \begin{align}
   P_1 &= P(\curvearrowleft\,\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
       &= P(\curvearrowleft\,|\, \lambda) P(\oplus_1\,\oplus_2\,|\,\curvearrowleft\,,\;\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
@@ -188,35 +189,45 @@ $\phi$ may be dropped),
 \end{align}
 where
 \begin{align}
-  P_{11} &= P(\oplus_1\,|\,\curvearrowleft\,,\;\phi_1\,,\; [0,2\pi]\,,\; \lambda) = \cos^2 \phi_1 \\
-  P_{12} &= P(\oplus_2\,|\,\curvearrowleft\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) = \cos^2 \phi_2
+  P_{11} &= P(\oplus_1\,|\,\curvearrowleft\,,\;\phi_1\,,\; [0,2\pi]\,,\; \lambda) = \cos^2 \Delta\phi_1 \\
+  P_{12} &= P(\oplus_2\,|\,\curvearrowleft\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) = \cos^2 \Delta\phi_2
 \end{align}
 
 By that and similar calculations the following table may be
 constructed.
 \begin{align}
-  P(\curvearrowleft\,\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &= \frac{1}{2} \cos^2 \phi_1\, \cos^2 \phi_2 \\
-  P(\curvearrowleft\,\oplus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &= \frac{1}{2} \cos^2 \phi_1\, \sin^2 \phi_2 \\
-  P(\curvearrowleft\,\ominus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &= \frac{1}{2} \sin^2 \phi_1\, \cos^2 \phi_2 \\
-  P(\curvearrowleft\,\ominus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &= \frac{1}{2} \sin^2 \phi_1\, \sin^2 \phi_2 \\
-  P(\curvearrowright\,\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &= \frac{1}{2} \sin^2 \phi_1\, \sin^2 \phi_2 \\
-  P(\curvearrowright\,\oplus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &= \frac{1}{2} \sin^2 \phi_1\, \cos^2 \phi_2 \\
-  P(\curvearrowright\,\ominus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &= \frac{1}{2} \cos^2 \phi_1\, \sin^2 \phi_2 \\
-  P(\curvearrowright\,\ominus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &= \frac{1}{2} \cos^2 \phi_1\, \cos^2 \phi_2
+  P(\curvearrowleft\,\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &=
+  \frac{1}{2} \cos^2 \Delta\phi_1\, \cos^2 \Delta\phi_2 \\
+  P(\curvearrowleft\,\oplus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &=
+  \frac{1}{2} \cos^2 \Delta\phi_1\, \sin^2 \Delta\phi_2 \\
+  P(\curvearrowleft\,\ominus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &=
+  \frac{1}{2} \sin^2 \Delta\phi_1\, \cos^2 \Delta\phi_2 \\
+  P(\curvearrowleft\,\ominus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &=
+  \frac{1}{2} \sin^2 \Delta\phi_1\, \sin^2 \Delta\phi_2 \\
+  P(\curvearrowright\,\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &=
+  \frac{1}{2} \sin^2 \Delta\phi_1\, \sin^2 \Delta\phi_2 \\
+  P(\curvearrowright\,\oplus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &=
+  \frac{1}{2} \sin^2 \Delta\phi_1\, \cos^2 \Delta\phi_2 \\
+  P(\curvearrowright\,\ominus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &=
+  \frac{1}{2} \cos^2 \Delta\phi_1\, \sin^2 \Delta\phi_2 \\
+  P(\curvearrowright\,\ominus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) &=
+  \frac{1}{2} \cos^2 \Delta\phi_1\, \cos^2 \Delta\phi_2
 \end{align}
 Disregarding the signal values gives (by addition of probabilities)
 \begin{multline}
   \label{coscos}
-  P(\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
-  = P(\ominus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
-  = \frac{1}{2} \cos^2 \phi_1\, \cos^2 \phi_2 + \frac{1}{2} \sin^2 \phi_1\, \sin^2 \phi_2
+  P(\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\ =
+ P(\ominus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\ =
+   \frac{1}{2} \cos^2 \Delta\phi_1\, \cos^2 \Delta\phi_2 \\
+  + \frac{1}{2} \sin^2 \Delta\phi_1\, \sin^2 \Delta\phi_2
 \end{multline}
 and
 \begin{multline}
   \label{cossin}
-  P(\oplus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
-  = P(\ominus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
-  = \frac{1}{2} \cos^2 \phi_1\, \sin^2 \phi_2 + \frac{1}{2} \sin^2 \phi_1\, \cos^2 \phi_2
+  P(\oplus_1\,\ominus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\ =
+  P(\ominus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\ =
+  \frac{1}{2} \cos^2 \Delta\phi_1\, \sin^2 \Delta\phi_2 \\
+  + \frac{1}{2} \sin^2 \Delta\phi_1\, \cos^2 \Delta\phi_2
 \end{multline}
 
 We want to calculate the correlation coefficient
@@ -237,17 +248,11 @@ correlation coefficient simplifies to the covariance
 \end{equation}
 which we now must calculate. To do so, not only must we compute a sum
 weighted by the probabilities in (\ref{coscos}) and~(\ref{cossin}),
-but we must also eliminate the $\phi_1\in[0,2\pi]$ condition by
-integrating with respect to $\phi_1$.  We have no information ahead of
-time on what this angular landmark~$\phi_1$ will be, and so the
-probability distribution is uniform, which simplifies our
-integration. We will encounter a complication, but it will be minor:
-we will have to break the integration into pieces and solve the
-problem separately for each.
+but we must also eliminate the angular landmarks
 
-First let us calculate the sum for (\ref{coscos}) and~(\ref{cossin})
-(call the sum $\rho^{\prime}$), and then we will integrate the result of that
-sum.
+First let us calculate an average of~$\tau'_1 \tau'_2$ weighted by the
+probabilities in~(\ref{coscos}) and~(\ref{cossin}), and call that
+sum~$\rho^{\prime}$.
 \begin{multline}
   \rho^{\prime} 
   = (+1)(+1) P(\oplus_1\,\oplus_2\,|\,\phi_1\,,\; \phi_2\,,\; [0,2\pi]\,,\; \lambda) \\
@@ -257,63 +262,55 @@ sum.
 \end{multline}
 Substituting for the probabilities gives
 \begin{multline}
-  \rho^{\prime} = \cos^2 \phi_1\, \cos^2 \phi_2 - \cos^2 \phi_1\, \sin^2 \phi_2 \\
-  - \sin^2 \phi_1\, \cos^2 \phi_2 + \sin^2 \phi_1\, \sin^2 \phi_2
+  \rho^{\prime} = \cos^2 \Delta\phi_1\, \cos^2 \Delta\phi_2
+  - \cos^2 \Delta\phi_1\, \sin^2 \Delta\phi_2 \\
+  - \sin^2 \Delta\phi_1\, \cos^2 \Delta\phi_2
+  + \sin^2 \Delta\phi_1\, \sin^2 \Delta\phi_2
 \end{multline}
 and so
 \begin{align}
-  \rho^{\prime} &= (\cos^2 \phi_2 - \sin^2 \phi_2) (\cos^2 \phi_1 - \sin^2 \phi_1) \\
-                &=\cos(2\phi_2)\,\cos(2\phi_1)
+  \rho^{\prime} &= (\cos^2 \Delta\phi_2 - \sin^2 \Delta\phi_2)
+  (\cos^2 \Delta\phi_1 - \sin^2 \Delta\phi_1) \\
+  &=\cos(2\Delta\phi_2)\,\cos(2\Delta\phi_1)
 \end{align}
 with the last step by one of the double-angle identities.
 
-This expression must now be integrated with respect to~$\phi_1$ over
-all of~$[0,2\pi]$, using a uniform probability distribution function
-(pdf) as the weight. We run into this complication: we have to treat
-all landmark angles alike---a coordinate system does not care what
-quadrant its landmark is in---yet the cosine sometimes is reversed in
-sign, leading to~$\rho$ being reversed in sign. However, the sign of a
-correlation coefficient is arbitrary, so we can simply reverse the
-sign in those quadrants.
+To eliminate the landmark~$\phi_{01}$, we will compute the definite
+integral of~$\rho^{\prime}$ with respect to~$\Delta\phi_1$, weighted
+by a uniform pdf---which means just a simple integral, with no special
+weighting factor. Using a uniform pdf is the same as saying we do not
+not care where~$\phi_1$ and~$\phi_{01}$ lie on the protractor. The
+result of this integration we will call~$\rho''$. We run into this
+complication, however: we want to treat all landmarks (and thus
+angular coordinate systems) alike, yet the cosine sometimes is
+reversed in sign, leading to~$\rho''$ being reversed in sign. Luckily,
+the sign of a correlation coefficient is arbitrary, so we can simply,
+as a convention, reverse the sign in some quadrants.
 \begin{align}
-\rho &= \int_{-\frac{\pi}{4}}^{+\frac{\pi}{4}}\cos(2\phi_2)\cos(2\phi_1)\,d\phi_1&\phi_1\in[-\frac{\pi}{4},+\frac{\pi}{4}] \\
--\rho &= \int_{+\frac{\pi}{4}}^{+\frac{3\pi}{4}}\cos(2\phi_2)\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{\pi}{4},+\frac{3\pi}{4}] \\
-\rho &= \int_{+\frac{3\pi}{4}}^{+\frac{5\pi}{4}}\cos(2\phi_2)\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{3\pi}{4},+\frac{5\pi}{4}] \\
--\rho &= \int_{+\frac{5\pi}{4}}^{+\frac{7\pi}{4}}\cos(2\phi_2)\cos(2\phi_1)\,d\phi_1&\phi_1\in[+\frac{5\pi}{4},+\frac{7\pi}{4}]
+\rho'' &= \int_{-\frac{\pi}{4}}^{+\frac{\pi}{4}}\cos(2\Delta\phi_2)\cos(2\Delta\phi_1)\,d\Delta\phi_1&\Delta\phi_1\in[-\frac{\pi}{4},+\frac{\pi}{4}] \\
+-\rho'' &= \int_{+\frac{\pi}{4}}^{+\frac{3\pi}{4}}\cos(2\Delta\phi_2)\cos(2\Delta\phi_1)\,d\Delta\phi_1&\Delta\phi_1\in[+\frac{\pi}{4},+\frac{3\pi}{4}] \\
+\rho'' &= \int_{+\frac{3\pi}{4}}^{+\frac{5\pi}{4}}\cos(2\Delta\phi_2)\cos(2\Delta\phi_1)\,d\Delta\phi_1&\Delta\phi_1\in[+\frac{3\pi}{4},+\frac{5\pi}{4}] \\
+-\rho'' &= \int_{+\frac{5\pi}{4}}^{+\frac{7\pi}{4}}\cos(2\Delta\phi_2)\cos(2\Delta\phi_1)\,d\Delta\phi_1&\Delta\phi_1\in[+\frac{5\pi}{4},+\frac{7\pi}{4}]
 \end{align}
-In each case the result is the same. The correlation coefficient is
+In each case the result is the same, so
 \begin{equation}
-  \rho = \cos(2\phi_2) = \cos^2\phi_2 - \sin^2\phi_2
+  \rho'' = \cos(2\Delta\phi_2) = \cos(2(\phi_2-\phi_{02}))
 \end{equation}
-regardless of quadrant.\footnote{Keep in mind, though, that at this
-  point $\phi_2$ is a relative angle with respect to a different
-  ``landmark'' than $\phi_1$. These things are only becoming really
-  clear to me over time. The notions need clarification and better
-  notation in a later revision of the paper. It is in the calibration
-  and marking steps that we align the landmarks with each other and
-  $\rho$ starts expressing actual correlations and not merely some
-  cosine. I need notations.\par Physicists are not taking into account
-  that angular settings on two different pieces of equipment are with
-  respect to two distinct coordinate systems! (``Frames of
-  reference.'') These coordinate systems have to be unified in some
-  step of the analysis.}
+regardless of quadrant.
 
-Now suppose we have finished calibrating our transmission channels and
-wish to mark the dials. Where the landmark is on channel~1 we mark a
-zero. Where $\phi_2$ is on channel~2 we mark the value of
-$\phi_2-\phi_1$. Then we complete the two circles using a protractor
-or similar device. We label the dials~``$\theta$''.
-
-Then the general formula for the correlation coefficient of the
-calibrated channels, in terms of any $\theta_1$ and~$\theta_2$
-in~$[0,2\pi]$, is
-\begin{equation}
-  \rho = \cos(2(\theta_2-\theta_1)) = \cos^2(\theta_2-\theta_1) - \sin^2(\theta_2-\theta_1)
-\end{equation}
-because one could always redo the calibration, using $\phi_1$ equal to
-the new value of~$\theta_1$ and~$\phi_2$ equal to the
-new~$\theta_2-\theta_1$.
-
+Now we must eliminate~$\phi_{02}$, again by (generalized)
+integration. This time, however, we {\em{do}} care where it should
+fall on the protractor. We are trying to calculate an in-unison
+rotation-invariant correlation coefficient, that depends only on the
+difference in settings of~$\zeta_1$ and~$\zeta_2$, and thus the
+landmark for~$\phi_2$ is~$\phi_1$ with probability one. We will use a
+Dirac delta function as the pdf, and this time the result will
+be~$\rho$ itself.
+\begin{align}
+  \rho &= \int_{0}^{2{\pi}}\cos(2(\phi_2-\phi_{02}))\delta(\phi_{02}-\phi_1)d\phi_{02} \\
+       &= \cos(2(\phi_2-\phi_1)) \\
+       &= \cos^2(\phi_2-\phi_1) - \sin^2(\phi_2-\phi_1)
+\end{align}
 This result accords with quantum mechanics.
 
 \section{Discussion}
@@ -334,7 +331,12 @@ made a mathematical error! Indeed, he made what is probably the most
 common error made in probability theory, which is to factor a joint
 probability incorrectly. However, Bell was {\em{imitating}} methods of
 logical inference, not actually employing them. For his naïve
-audience, this was good enough.
+audience, this was good enough.\footnote{Perhaps Bell confused
+  mathematical ``{\em{reductio ad absurdum}}''---more properly called
+  proof by contradiction---with the more general method of
+  argumentation called {\em{reductio ad absurdum}}. But one cannot use
+  a mathematical contradiction to prove an absurdity, because a
+  mathematical contradiction is vacuous.}
 
 Perhaps, finally, we have reached the limit of what we should
 tolerate. Perhaps, now that millions and millions of dollars have been
@@ -365,11 +367,23 @@ of~$2\sqrt2$. The reason is that $E$, in the CHSH formulation, is
 claimed. Or, to put it another way, it is an expectation conditional
 on a particular coordinate system---but this is not what quantum
 mechanics gives, and it is not what one wants. Physicists have left
-out the step that took {\em{our}} calculation from $\rho^{\prime}$
+out the steps that took {\em{our}} calculation from $\rho^{\prime}$
 to~$\rho$ proper, and which gave us the {\em{correct}},
 {\em{rotation-invariant}} correlation coefficient. Yet experimenters
 report positive results. Therefore not only is the inequality itself a
 failure of scientific methods, so must be the experiments.
+
+Furthermore, derivation of the CHSH inequality merely mimics logical
+reasoning, much as Bell does in deriving his inequality. For
+mathematics to be consistent, all methods must reach the same
+result. Thus, when the CHSH ``quantum correlation'' does not reach the
+same result as quantum mechanics, the conclusion should {\em{not}} be
+that quantum mechanics is ``different'' from classical physics. The
+{\em{correct}} conclusion is that there is an error in the CHSH
+calculations, and that the researcher must keep working at it. Quantum
+physicists, instead, publish a paper ``confirming quantum mechanics,''
+and then await the accolades. It is a cushy job, insofar as intellect
+is concerned.
 
 At this point I shall state unequivocally that there is no such thing
 as ``entanglement.'' I write not for the journals but directly to the
