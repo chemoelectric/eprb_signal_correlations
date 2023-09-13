@@ -1,25 +1,21 @@
 .DELETE_ON_ERROR:
 
-eprb_signal_correlations.pdf: eprb_signal_correlations.tex		\
-								eprb_signal_correlations.bib	\
-								eprb_signal_correlations.bbl	\
-								revision.txt
-	pdflatex $(<) && pdflatex $(<) && pdflatex $(<)
+MY_DOC = eprb_signal_correlations
 
-# I suppose I should look up what a makefile for all this actually
-# should look like.
-eprb_signal_correlations.bbl: eprb_signal_correlations.aux \
-								eprb_signal_correlations.bib
-	bibtex $(<)
+$(MY_DOC).pdf: $(MY_DOC).tex $(MY_DOC).bib $(MY_DOC)_revision.txt
+	pdflatex $(MY_DOC) && \
+	bibtex $(MY_DOC) && \
+	pdflatex $(MY_DOC) && \
+	pdflatex $(MY_DOC)
 
-revision.txt: GNUmakefile
+$(MY_DOC)_revision.txt: GNUmakefile
 	date -u > $(@)
 
 .PHONY: clean
 clean:
-	rm -f eprb_signal_correlations.{log,aux,out}
+	rm -f $(MY_DOC).{log,aux,out}
 	rm -f missfont.log
 
 .PHONY: install
-install: eprb_signal_correlations.pdf
+install: $(MY_DOC).pdf
 	scp $(^) crudfact@crudfactory.com:www/.

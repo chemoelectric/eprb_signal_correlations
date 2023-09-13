@@ -43,9 +43,14 @@
   \url{https://en.wikipedia.org/w/index.php?title=Niels_Bohr&oldid=1174555777},
   2023, [Online; accessed 12-September-2023].
 
+\bibitem{kracklauer:nonloc-or-geom}
+{A. F. Kracklauer}, ``{{EPR-B} correlations: non-locality or geometry?}''
+  \emph{J. Nonlinear Math. Phys.}, vol. 11 (supp.), pp. 104--109, 2004,
+  \url{https://doi.org/10.2991/jnmp.2004.11.s1.13}.
+
 \bibitem{enwiki:1169021780}
-------, ``List of {N}obel laureates in {P}hysics --- {Wikipedia}{,} the free
-  encyclopedia,''
+{Wikipedia contributors}, ``List of {N}obel laureates in {P}hysics ---
+  {Wikipedia}{,} the free encyclopedia,''
   \url{https://en.wikipedia.org/w/index.php?title=List_of_Nobel_laureates_in_Physics&oldid=1169021780},
   2023, [Online; accessed 12-September-2023].
 
@@ -56,6 +61,7 @@ A.~Kohn, \emph{{P}unished by {R}ewards: {T}he {T}rouble with {G}old {S}tars,
 
 \bibitem{sciencemag:nobelbad}
 {David Shultz}, ``Winning a {N}obel {P}rize may be bad for your productivity,''
-  \emph{Science}, vol. 381, no. 6653, p.~15, July 2023.
+  \emph{Science}, vol. 381, no. 6653, p.~15, July 2023,
+  \url{https://www.science.org/content/article/winning-nobel-prize-may-be-bad-your-productivity}.
 
 \end{thebibliography}
