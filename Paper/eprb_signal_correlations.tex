@@ -45,7 +45,8 @@
   It is widely believed that only quantum mechanics can characterize
   the correlations of a Bell test. In fact, quantum mechanics is
   superfluous to the problem, and a correlation coefficient may be
-  derived by probability theory.
+  derived by probability theory. There is no ``entanglement,'' and all
+  causation is by contact-action.
 \end{abstract}
 
 \section{Introduction}
@@ -75,13 +76,13 @@ random process analysis.
 
 You and I, however, wish to understand---and so shall we recast the
 problem as one of random signal analysis. We shall state a problem in
-random signal analysis, and the reader can confirm for themself that
+random signal analysis, and the reader may confirm for themself that
 it is equivalent to a two-channel Bell test as described
 in~\cite{enwiki:1174875317}. Then we shall derive a correlation
 coefficient, using probability theory rather than quantum
 mechanics. Because the result can be reached at all, of course it will
-be the same as that of quantum mechanics. (Otherwise mathematics would
-be inconsistent.)
+be the same as that of quantum mechanics. Otherwise mathematics would
+be inconsistent.
 
 \section{The Problem}
 
@@ -112,9 +113,9 @@ $(\ominus\,,\,\curvearrowright)$.
 
 At the end of both channels is a receiver-recorder, which makes a
 record of received pairs of tagged signals, for some pair of
-``tunings'' $(\zeta_1,\zeta_2)$ for the two channels. For example, one
-hundred thousand or one million pairs of tagged signals might be
-recorded.
+``tunings'' (or ``$\zeta$-settings'') $(\zeta_1,\zeta_2)$ for the two
+channels. For example, one hundred thousand or one million pairs of
+tagged signals might be recorded.
 
 Now suppose we map tags to numbers, $T\to T^{\prime}=\{-1,+1\}$, thus:
 \begin{align}
@@ -123,26 +124,33 @@ Now suppose we map tags to numbers, $T\to T^{\prime}=\{-1,+1\}$, thus:
 \end{align}
 The problem is to use these numbers to calculate a correlation
 coefficient $\rho$, characterizing the correlation between tags in the
-received signal pairs.
+received signal pairs, as a function of the difference between the
+two~$\zeta$-settings.
 
 \section{Solution}
 
 We will use subscripts to refer to channel numbers. Thus, for example,
-$\zeta_2$ may refer to a $\zeta$ parameter for channel~2, $\tau_1$ to
-a tag value for channel~1, and so on. An unsubscripted letter may
-refer to either channel. Thus, for instance, $\tau$ may stand in for
-either $\tau_1$ or $\tau_2$. And so on like that.
+$\zeta_2$ may refer to a $\zeta$-setting for channel~2, $\tau_1$ to a
+tag value for channel~1, and so on. An unsubscripted letter may refer
+to either channel. Thus, for instance, $\tau$ may stand in for either
+or both of $\tau_1$ and $\tau_2$. And so on like that.
 
 We will use more or less conventional probability notation, though
 also always adding the letter ``$\lambda$'' as a condition, meaning
 something such as ``any relevant information we may so far have
-neglected''. It pays to be cautious.
+neglected.'' It pays to be cautious.\footnote{Bell sometimes
+  uses~$\lambda$ to mean something akin to ``background
+  noise''~\cite{bertlmann:manuscript}.  Such ``noise'' can be
+  considered a portion of what we mean~$\lambda$ to cover.}
 
-Let $\phi_{01},\phi_{02}\in[0,2\pi]$ be the {\em{landmarks}}
-(or~{\em{origins}}) for settings of the respective $\zeta$~parameters,
-and let~$\phi_0$ represent either or both of them. Let $\phi_1$
-and~$\phi_2$ be respective settings, and~$\phi$ represent either or
-both of them. Also introduce the notation
+The $\zeta$-settings must be set each with respect to its own angular
+coordinate system. They cannot be assumed set with respect to the
+ether or the distant stars, nor with respect to each other. Therefore
+let $\phi_{01},\phi_{02}\in[0,2\pi]$ be the {\em{landmarks}}
+(or~{\em{origins}}) for the respective $\zeta$-settings, and
+let~$\phi_0$ represent either or both of these landmarks. Let $\phi_1$
+and~$\phi_2$ be respective setting values, and let~$\phi$ represent
+either or both of these values. Also introduce the notation
 \begin{align}
   \Delta\phi_1&=\phi_1-\phi_{01} \\
   \Delta\phi_2&=\phi_2-\phi_{02} \\
@@ -162,8 +170,8 @@ and
 \end{align}
 Here we are taking a liberty: actually, for~$\phi_{01}$
 and~$\phi_{02}$ there should be a joint probability density function
-(pdf) specified in the conditions. However, we shall introduce the pdf
-only when it is about to be used. For now, consider it implicitly
+(pdf) specified in the conditions. However, we shall introduce this
+pdf only when it is about to be used. For now, consider it implicitly
 specified.
 
 We want to construct a table of probabilities of tagged signal pairs
@@ -249,7 +257,7 @@ correlation coefficient simplifies to the covariance
 \end{equation}
 which we now must calculate. To do so, not only must we compute a sum
 weighted by the probabilities in (\ref{coscos}) and~(\ref{cossin}),
-but we must also eliminate the angular landmarks
+but we must also eliminate the angular landmarks.
 
 First let us calculate an average of~$\tau'_1 \tau'_2$ weighted by the
 probabilities in~(\ref{coscos}) and~(\ref{cossin}), and call that
@@ -275,7 +283,11 @@ and so
   \label{rhoprime}
   &=\cos(2\Delta\phi_2)\,\cos(2\Delta\phi_1)
 \end{align}
-with the last step by one of the double-angle identities.
+with the last step by one of the double-angle
+identities.\footnote{Though the function does not have the correct
+  form and so cannot be the solution, this is probably where a quantum
+  physicist would believe they had solved the problem. Their version
+  would leave out the landmarks.}
 
 To eliminate the landmarks~$\phi_{01}$ and~$\phi_{02}$, we will have
 to compute a double integral weighted by a joint pdf. What pdf to use?
@@ -285,20 +297,20 @@ about first. Whatever follows in our arguments must apply to all
 possible arrangements, and so the probability density of~$\phi_{01}$
 must be uniform, independently of the density
 of~$\phi_{02}$. For~$\phi_{02}$, on the other hand, the situation is
-quite different. Our goal is to compute the rotation-invariant
-correlation coefficient, given the difference between two
+different. Our goal is to compute the rotation-invariant correlation
+coefficient, given the difference between the two
 $\zeta$-settings. Therefore~$\phi_{02}$ must equal~$\phi_{1}$ with
 probability one. The necessary joint pdf is thus the Dirac
 delta~$\delta(\phi_{02}-\phi_1)$. We do a double integration
 of~\ref{rhoprime}, going twice over the full 360~degrees of the
 circle.
 
-We run into this complication, however: we have to treat all landmarks
-(and thus angular coordinate systems) alike, yet the cosine sometimes
-is reversed in sign, which would lead to~$\rho$ being reversed in sign
-in some quadrants. Luckily, the sign of a correlation coefficient is
-arbitrary, so we can simply change the sign back to how we need it. We
-will also simplify the integrations by
+There will be this complication, however: we have to treat all
+landmarks (and thus angular coordinate systems) alike, yet the cosine
+sometimes is reversed in sign, which would lead to~$\rho$ being
+reversed in sign in some quadrants. Luckily, the sign of a correlation
+coefficient is arbitrary, so we can simply change the sign back to how
+we need it. We will also simplify the integrations by
 substituting~$\theta=\Delta\phi_1$. Thus
 \begin{equation}
 \rho = \int_{-\frac{\pi}{4}}^{+\frac{\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
@@ -333,20 +345,20 @@ to {\em{imitations}} of logical inference.
 For example, Bell famously introduces a mathematical contradiction
 with the goal of producing a physical
 absurdity~\cite{bertlmann:manuscript}. In fact, this is the crux of
-his argument in its best known form. But this is not a sound method of
-logical inference. One cannot deduce {\em{anything}} from a
-mathematical contradiction, except that the mathematical assumptions
-behind it are not sound. In other words, all Bell proved is that he
-made a mathematical error! Indeed, he made what is probably the most
-common error made in probability theory, which is to factor a joint
-probability incorrectly. However, Bell was {\em{imitating}} methods of
-logical inference, not actually employing them. For his naïve
-audience, this was good enough.\footnote{Perhaps Bell confused
-  mathematical ``{\em{reductio ad absurdum}}''---more properly called
-  proof by contradiction---with the more general method of
-  argumentation called {\em{reductio ad absurdum}}. But one cannot use
-  a mathematical contradiction to prove an absurdity, because a
-  mathematical contradiction is vacuous.}
+his argument in its best known form, but it is unsound reasoning. One
+cannot deduce {\em{anything}} from a mathematical contradiction,
+except that the mathematical assumptions behind it are wrong. In other
+words, all Bell proved is that he made a mistake! Indeed, he made what
+is probably the most frequently made mistake in probability theory:
+factoring a joint probability incorrectly. However, Bell was
+{\em{imitating}} logical inference, not employing the real thing with
+skill. For himself and his naïve audience, an imitation was good
+enough.\footnote{Perhaps Bell confused mathematical ``{\em{reductio ad
+      absurdum}}''---more properly called proof by
+  contradiction---with the more general method of argumentation called
+  {\em{reductio ad absurdum}}. But one cannot use a mathematical
+  contradiction to prove a general absurdity, because a mathematical
+  contradiction is vacuous.}
 
 Perhaps, finally, we have reached the limit of what we should
 tolerate. Perhaps, now that millions and millions of dollars have been
@@ -390,23 +402,23 @@ result. Thus, when the CHSH ``quantum correlation'' does not reach the
 same result as quantum mechanics, the conclusion should {\em{not}} be
 that quantum mechanics is ``different'' from classical physics. The
 {\em{correct}} conclusion is that there is an error in the CHSH
-calculations, and that the researcher must keep working at it. Quantum
-physicists, instead, publish a paper ``confirming quantum mechanics,''
-and then await the accolades. It is a cushy job, insofar as intellect
-is concerned.
+calculations, and that the researcher must keep working towards the
+solution. Quantum physicists, instead, publish a paper ``confirming
+quantum mechanics,'' then await the accolades and citation counts. It
+is a cushy job, insofar as intellect is concerned.
 
 At this point I shall state unequivocally that there is no such thing
 as ``entanglement.'' I write not for the journals but directly to the
 reader and so may speak freely. It is obvious that a ``superposition
-state'' or any such stuff must always be simply different notation for
-some probability expression, wave coherence expression, or the
-like. The real reason anyone believes there is magic involved seems
-not to be that the magic exists, but that the Fathers of the early
-Quantum Church (although perhaps not the great Emissary
-himself~\cite{enwiki:1174555777}) forbade treatment of quantum
-mechanics in the classical fashion. Physicists have been true to that
-stricture since, and simply do not {\em{permit}} the heresy of a
-solution by classical methods.\footnote{Indeed, some Bell tests are
+state'' or any such verbally obfuscated stuff must always be simply
+different notation for some probability expression, wave coherence
+expression, or the like. The real reason anyone believes there is
+magic involved seems not to be that the magic exists, but that the
+Fathers of the early Quantum Church (although perhaps not the great
+Emissary himself~\cite{enwiki:1174555777}) forbade treatment of
+quantum mechanics in the classical fashion. Physicists have been true
+to that stricture since, and simply do not {\em{permit}} the heresy of
+a solution by classical methods.\footnote{Indeed, some Bell tests are
   soluble {\em{by electromagnetic wave
       theory}}~\cite{kracklauer:nonloc-or-geom}, which is as classical
   a physics as one can imagine, but this fact is dismissed one way or
@@ -422,18 +434,19 @@ students {\em{how}} to reach solutions of random process problems by
 classical methods. {\em{I}} knew how because {\em{I}} majored not in
 physics at all, but in the very closely related subject of
 {\em{electrical engineering}} (where mistakes are punishable by
-corporate bankruptcy, and even prison). Peer review thus serves only
-to reinforce the orthodoxy. Orthodox papers in quantum physics are
-reviewed by orthodox quantum physicists for publication in orthodox
-journals. Peer review is useless, in this instance, to serve the
-scientific mission. The papers never are subjected to analysis by
-experts in random process analysis, who would tear the arguments to
-shreds, but only by ignorant persons who delight in the
-conclusions. Shining careers are constructed as the peers see each
-others’ papers published in the most elite of journals. Eventually,
-the Nobel Prize in Physics for~2022 is awarded to some of these
-quantum physicists, for their superlative achievements in the pursuit
-of this balderdash~\cite{enwiki:1169021780}.
+corporate bankruptcy, and sometimes even by prison for the
+engineer). Peer review thus serves only to reinforce the
+orthodoxy. Orthodox papers in quantum physics are reviewed by orthodox
+quantum physicists for publication in orthodox journals. Peer review
+is useless, in this instance, to serve the scientific mission. The
+papers never are subjected to analysis by experts in random process
+analysis, who would tear the arguments to shreds, but only by ignorant
+persons who delight in the conclusions. Shining careers are
+constructed as the peers see each others’ papers published in the most
+elite of journals. Eventually, the Nobel Prize in Physics for~2022 is
+awarded to some of these quantum physicists, for their superlative
+achievements in the pursuit of this
+balderdash~\cite{enwiki:1169021780}.
 
 The author of {\em{this}} paper would tell a Nobel Committee to take
 their prize and dump it in {\em{Östersjön}}, and recommends the same
@@ -441,8 +454,8 @@ for all Nobels in science and mathematics. Such prizes are unethical
 and destructive at best~\cite{kohn1993punished,sciencemag:nobelbad},
 but now also shown to be awarded without distinction to both actual
 science and pseudoscientific claptrap. Is it worth giving up on the
-scientific enterprise, just to be famous and also insulted with a cash
-reward?
+scientific enterprise, just to be famous and also lumped in with
+charlatans and insulted with a cash reward?
 
 \bibliography{eprb_signal_correlations}{}
 \bibliographystyle{IEEEtran}
