@@ -160,10 +160,10 @@ and
   P(\tau=\,\oplus \,|\, \sigma=\,\curvearrowright\,,\; \zeta=\Delta\phi\,,\; \phi_0\in[0,2\pi]\,,\; \lambda) &= \sin^2 \Delta\phi \\
   P(\tau=\,\ominus \,|\, \sigma=\,\curvearrowright\,,\; \zeta=\Delta\phi\,,\; \phi_0\in[0,2\pi]\,,\; \lambda) &= \cos^2 \Delta\phi
 \end{align}
-Here we are taking a liberty: actually, for both~$\phi_{01}$
-and~$\phi_{02}$ there should be a probability density function (pdf)
-specified in the conditions. However, we shall introduce each pdf only
-when it is about to be used. For now, consider them implicitly
+Here we are taking a liberty: actually, for~$\phi_{01}$
+and~$\phi_{02}$ there should be a joint probability density function
+(pdf) specified in the conditions. However, we shall introduce the pdf
+only when it is about to be used. For now, consider it implicitly
 specified.
 
 We want to construct a table of probabilities of tagged signal pairs
@@ -272,51 +272,56 @@ and so
 \begin{align}
   \rho^{\prime} &= (\cos^2 \Delta\phi_2 - \sin^2 \Delta\phi_2)
   (\cos^2 \Delta\phi_1 - \sin^2 \Delta\phi_1) \\
+  \label{rhoprime}
   &=\cos(2\Delta\phi_2)\,\cos(2\Delta\phi_1)
 \end{align}
 with the last step by one of the double-angle identities.
 
-{\bf{FIXME: In what follows, the expressions should be written as
-double integrals with the two pdfs applied. Then the calculations go
-through as before (with the integration done in either order).}}
+To eliminate the landmarks~$\phi_{01}$ and~$\phi_{02}$, we will have
+to compute a double integral weighted by a joint pdf. What pdf to use?
+The right side of~\ref{rhoprime} is symmetric in~$\phi_{01}$
+and~$\phi_{02}$, so let us arbitrarily choose~$\phi_{01}$ to talk
+about first. Whatever follows in our arguments must apply to all
+possible arrangements, and so the probability density of~$\phi_{01}$
+must be uniform, independently of the density
+of~$\phi_{02}$. For~$\phi_{02}$, on the other hand, the situation is
+quite different. Our goal is to compute the rotation-invariant
+correlation coefficient, given the difference between two
+$\zeta$-settings. Therefore~$\phi_{02}$ must equal~$\phi_{1}$ with
+probability one. The necessary joint pdf is thus the Dirac
+delta~$\delta(\phi_{02}-\phi_1)$. We do a double integration
+of~\ref{rhoprime}, going twice over the full 360~degrees of the
+circle.
 
-To eliminate the landmark~$\phi_{01}$, we will compute the definite
-integral of~$\rho^{\prime}$ with respect to~$\Delta\phi_1$, weighted
-by a uniform pdf---which means just a simple integral, with no special
-weighting factor. Using a uniform pdf is the same as saying we do not
-not care where~$\phi_1$ and~$\phi_{01}$ lie on the protractor. The
-result of this integration we will call~$\rho''$. We run into this
-complication, however: we want to treat all landmarks (and thus
-angular coordinate systems) alike, yet the cosine sometimes is
-reversed in sign, leading to~$\rho''$ being reversed in sign. Luckily,
-the sign of a correlation coefficient is arbitrary, so we can simply,
-as a convention, reverse the sign in some quadrants.
-\begin{align}
-\rho'' &= \int_{-\frac{\pi}{4}}^{+\frac{\pi}{4}}\cos(2\Delta\phi_2)\cos(2\Delta\phi_1)\,d\Delta\phi_1&\Delta\phi_1\in[-\frac{\pi}{4},+\frac{\pi}{4}] \\
--\rho'' &= \int_{+\frac{\pi}{4}}^{+\frac{3\pi}{4}}\cos(2\Delta\phi_2)\cos(2\Delta\phi_1)\,d\Delta\phi_1&\Delta\phi_1\in[+\frac{\pi}{4},+\frac{3\pi}{4}] \\
-\rho'' &= \int_{+\frac{3\pi}{4}}^{+\frac{5\pi}{4}}\cos(2\Delta\phi_2)\cos(2\Delta\phi_1)\,d\Delta\phi_1&\Delta\phi_1\in[+\frac{3\pi}{4},+\frac{5\pi}{4}] \\
--\rho'' &= \int_{+\frac{5\pi}{4}}^{+\frac{7\pi}{4}}\cos(2\Delta\phi_2)\cos(2\Delta\phi_1)\,d\Delta\phi_1&\Delta\phi_1\in[+\frac{5\pi}{4},+\frac{7\pi}{4}]
-\end{align}
+We run into this complication, however: we have to treat all landmarks
+(and thus angular coordinate systems) alike, yet the cosine sometimes
+is reversed in sign, which would lead to~$\rho$ being reversed in sign
+in some quadrants. Luckily, the sign of a correlation coefficient is
+arbitrary, so we can simply change the sign back to how we need it. We
+will also simplify the integrations by
+substituting~$\theta=\Delta\phi_1$. Thus
+\begin{equation}
+\rho = \int_{-\frac{\pi}{4}}^{+\frac{\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
+\end{equation}
+if~$\theta\in[-\frac{\pi}{4},+\frac{\pi}{4}]$,
+\begin{equation}
+-\rho = \int_{+\frac{\pi}{4}}^{+\frac{3\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
+\end{equation}
+if~$\theta\in[+\frac{\pi}{4},+\frac{3\pi}{4}]$,
+\begin{equation}
+\rho = \int_{+\frac{3\pi}{4}}^{+\frac{5\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
+\end{equation}
+if~$\theta\in[+\frac{3\pi}{4},+\frac{5\pi}{4}]$, and
+\begin{equation}
+-\rho = \int_{+\frac{5\pi}{4}}^{+\frac{7\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
+\end{equation}
+if~$\theta\in[+\frac{5\pi}{4},+\frac{7\pi}{4}]$.
+
 In each case the result is the same, so
 \begin{equation}
-  \rho'' = \cos(2\Delta\phi_2) = \cos(2(\phi_2-\phi_{02}))
+  \rho = \cos(2(\phi_2-\phi_1)) = \cos^2(\phi_2-\phi_1) - \sin^2(\phi_2-\phi_1)
 \end{equation}
-regardless of quadrant.
-
-Now we must eliminate~$\phi_{02}$, again by (generalized)
-integration. This time, however, we {\em{do}} care where it should
-fall on the protractor. We are trying to calculate an in-unison
-rotation-invariant correlation coefficient, that depends only on the
-difference in settings of~$\zeta_1$ and~$\zeta_2$, and thus the
-landmark for~$\phi_2$ is~$\phi_1$ with probability one. We will use a
-Dirac delta function as the pdf, and this time the result will
-be~$\rho$ itself.
-\begin{align}
-  \rho &= \int_{0}^{2{\pi}}\cos(2(\phi_2-\phi_{02}))\delta(\phi_{02}-\phi_1)d\phi_{02} \\
-       &= \cos(2(\phi_2-\phi_1)) \\
-       &= \cos^2(\phi_2-\phi_1) - \sin^2(\phi_2-\phi_1)
-\end{align}
-This result accords with quantum mechanics.
+regardless of quadrant. This result accords with quantum mechanics.
 
 \section{Discussion}
 
