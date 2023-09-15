@@ -2,113 +2,73 @@
 
 from math import pi, sin, cos
 import pyglet
-from pyglet.gl import *
-from pyglet.math import Mat4, Vec3
+from pyglet.shapes import Star, Arc, Line, BorderedRectangle
+
+class QuantumCorrelationsVisualized(pyglet.window.Window):
+
+    def __init__(self, Δφ):
+        super().__init__(700, 500, "Quantum Correlations Visualized")
+        pyglet.gl.glClearColor(1, 1, 1, 1)
+        self.Δφ = Δφ
+        self.t = 0.0
+        self.k = 1.0
+        self.batch = pyglet.graphics.Batch()
+
+#        source_color=(255, 205, 0)
+        source_color=(255, 143, 28)
+        border_color=(83, 86, 90)
+#        dial_color=(80, 7, 120)
+        dial_color=(191, 13, 62)
+
+        (φ1, φ2) = self.angles()        
+        self.source = \
+            Star(x=350, y=250, num_spikes=20, color=(255, 205, 0),
+                 outer_radius=50, inner_radius=2,
+                 batch=self.batch)
+        self.channel_L_border = \
+            Arc(x=220, y=250, radius=50, color=border_color,
+                batch=self.batch)
+        self.channel_R_border = \
+            Arc(x=480, y=250, radius=50, color=border_color,
+                batch=self.batch)
+        self.channel_L_dial = \
+            Line(x=220, y=250, x2=250+50*cos(φ1), y2=250+50*sin(φ1),
+                 color=dial_color, batch=self.batch)
+        self.channel_R_dial = \
+            Line(x=480, y=250, x2=450+50*cos(φ2), y2=250+50*sin(φ2),
+                 color=dial_color, batch=self.batch)
+        self.meter_L_outline = \
+            BorderedRectangle(x=50, y=50, width=70, height=400,
+                              border_color=border_color,
+                              batch=self.batch)
+        self.meter_R_outline = \
+            BorderedRectangle(x=650 - 70, y=50, width=70, height=400,
+                              border_color=border_color,
+                              batch=self.batch)
+
+    def on_draw(self):
+        """Clear the screen and draw the visualization."""
+        self.clear()
+        self.batch.draw()
+
+    def update(self, Δt):
+        """Animate the visualization."""
+        self.t += Δt
+        (φ1, φ2) = self.angles()
+        self.channel_L_dial.x2 = 220+50*cos(φ1)
+        self.channel_L_dial.y2 = 250+50*sin(φ1)
+        self.channel_R_dial.x2 = 480+50*cos(φ2)
+        self.channel_R_dial.y2 = 250+50*sin(φ2)
+
+    def angles(self):
+        """Compute the current angles of the two channels."""
+        φ1 = self.k * self.t
+        φ2 = φ1 + self.Δφ
+        return (φ1 % (2 * pi), φ2 % (2 * pi))
+
+if __name__ == "__main__":
+    visualization = QuantumCorrelationsVisualized(pi/8)
+    pyglet.clock.schedule_interval(visualization.update, 1/30)
+    pyglet.app.run()
 
 
-
-try:
-    # Try and create a window with multisampling (antialiasing)
-    config = Config(sample_buffers=1, samples=4, depth_size=16, double_buffer=True)
-    window = pyglet.window.Window(width=960, height=540, resizable=True, config=config)
-except pyglet.window.NoSuchConfigException:
-    # Fall back to no multisampling if not supported
-    window = pyglet.window.Window(width=960, height=540, resizable=True)
-
-@window.event
-def on_draw():
-    window.clear()
-    batch.draw()
-
-
-@window.event
-def on_resize(width, height):
-    window.viewport = (0, 0, *window.get_framebuffer_size())
-    window.projection = Mat4.perspective_projection(window.aspect_ratio, z_near=0.1, z_far=255, fov=60)
-    return pyglet.event.EVENT_HANDLED
-
-
-def update(dt):
-    global time
-    time += dt
-    rot_x = Mat4.from_rotation(time, Vec3(1, 0, 0))
-    rot_y = Mat4.from_rotation(time/2, Vec3(0, 1, 0))
-    rot_z = Mat4.from_rotation(time/4, Vec3(0, 0, 1))
-    trans = Mat4.from_translation(Vec3(0, 0, -3.0))
-    torus_model.matrix = trans @ rot_x @ rot_y @ rot_z
-
-def setup():
-    # One-time GL setup
-    glClearColor(1, 1, 1, 1)
-    glEnable(GL_DEPTH_TEST)
-    glEnable(GL_CULL_FACE)
-    on_resize(*window.size)
-
-    # Uncomment this line for a wireframe view:
-    # glPolygonMode(GL_FRONT_AND_BACK, GL_LINE)
-
-def create_torus(radius, inner_radius, slices, inner_slices, shader, batch):
-
-    # Create the vertex and normal arrays.
-    vertices = []
-    normals = []
-
-    u_step = 2 * pi / (slices - 1)
-    v_step = 2 * pi / (inner_slices - 1)
-    u = 0.
-    for i in range(slices):
-        cos_u = cos(u)
-        sin_u = sin(u)
-        v = 0.
-        for j in range(inner_slices):
-            cos_v = cos(v)
-            sin_v = sin(v)
-
-            d = (radius + inner_radius * cos_v)
-            x = d * cos_u
-            y = d * sin_u
-            z = inner_radius * sin_v
-
-            nx = cos_u * cos_v
-            ny = sin_u * cos_v
-            nz = sin_v
-
-            vertices.extend([x, y, z])
-            normals.extend([nx, ny, nz])
-            v += v_step
-        u += u_step
-
-    # Create a list of triangle indices.
-    indices = []
-    for i in range(slices - 1):
-        for j in range(inner_slices - 1):
-            p = i * inner_slices + j
-            indices.extend([p, p + inner_slices, p + inner_slices + 1])
-            indices.extend([p, p + inner_slices + 1, p + 1])
-
-    # Create a Material and Group for the Model
-    diffuse = [0.5, 0.0, 0.3, 1.0]
-    ambient = [0.5, 0.0, 0.3, 1.0]
-    specular = [1.0, 1.0, 1.0, 1.0]
-    emission = [0.0, 0.0, 0.0, 1.0]
-    shininess = 50
-
-    material = pyglet.model.Material("custom", diffuse, ambient, specular, emission, shininess)
-    group = pyglet.model.MaterialGroup(material=material, program=shader)
-
-    vertex_list = shader.vertex_list_indexed(len(vertices)//3, GL_TRIANGLES, indices, batch, group,
-                                             position=('f', vertices),
-                                             normals=('f', normals),
-                                             colors=('f', material.diffuse * (len(vertices) // 3)))
-
-    return pyglet.model.Model([vertex_list], [group], batch)
-
-
-setup()
-time = 0.0
-batch = pyglet.graphics.Batch()
-shader = pyglet.model.get_default_shader()
-torus_model = create_torus(1.0, 0.3, 50, 30, shader, batch)
-
-pyglet.clock.schedule(update)
-pyglet.app.run()
