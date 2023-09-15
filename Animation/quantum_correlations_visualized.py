@@ -1,8 +1,76 @@
 #!/bin/env python3
 
+from enum import Enum
+from random import random, seed
 from math import pi, sin, cos
 import pyglet
 from pyglet.shapes import Star, Arc, Line, BorderedRectangle
+
+π     = pi
+π_2   = π / 2.0
+π_3   = π / 3.0
+π_4   = π / 4.0
+π_6   = π / 6.0
+π_8   = π / 8.0
+π_180 = π / 180.0
+two_π = 2.0 * π
+
+class Signal(Enum):
+    COUNTERCLOCKWISE = 1
+    CLOCKWISE = 2
+
+class Tag(Enum):
+    CIRCLED_PLUS = 1
+    CIRCLED_MINUS = 2
+
+def countData(ζ1, ζ2, runLength):
+
+    n_ac2c2 = 0
+    n_ac2s2 = 0
+    n_as2c2 = 0
+    n_as2s2 = 0
+    n_cs2s2 = 0
+    n_cs2c2 = 0
+    n_cc2s2 = 0
+    n_cc2c2 = 0
+
+    for i in range(runLength):
+
+        σ = (Signal.COUNTERCLOCKWISE if random() < 0.5 else Signal.CLOCKWISE)
+
+        r1 = random()
+        x1 = (cos(ζ1) if σ == Signal.COUNTERCLOCKWISE else sin(ζ1))
+        τ1 = (Tag.CIRCLED_PLUS if r < x1 * x1 else Tag.CIRCLED_MINUS)
+
+        r2 = random()
+        x2 = (cos(ζ2) if σ == Signal.COUNTERCLOCKWISE else sin(ζ2))
+        τ2 = (Tag.CIRCLED_PLUS if r < x2 * x2 else Tag.CIRCLED_MINUS)
+
+        if σ == Signal.COUNTERCLOCKWISE:
+            if τ1 == Tag.CIRCLED_PLUS:
+                if τ2 == Tag.CIRCLED_PLUS:
+                    n_ac2c2 += 1
+                else:
+                    n_ac2s2 += 1
+            else:
+                if τ2 == Tag.CIRCLED_PLUS:
+                    n_as2c2 += 1
+                else:
+                    n_as2s2 += 1
+        else:
+            if τ1 == Tag.CIRCLED_PLUS:
+                if τ2 == Tag.CIRCLED_PLUS:
+                    n_cs2s2 += 1
+                else:
+                    n_cs2c2 += 1
+            else:
+                if τ2 == Tag.CIRCLED_PLUS:
+                    n_cc2s2 += 1
+                else:
+                    n_cc2c2 += 1
+
+    return (n_ac2c2, n_ac2s2, n_as2c2, n_as2s2,
+            n_cs2s2, n_cs2c2, n_cc2s2, n_cc2c2)
 
 class QuantumCorrelationsVisualized(pyglet.window.Window):
 
@@ -14,15 +82,13 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.k = 1.0
         self.batch = pyglet.graphics.Batch()
 
-#        source_color=(255, 205, 0)
-        source_color=(255, 143, 28)
+        source_color=(246, 141, 46)
         border_color=(83, 86, 90)
-#        dial_color=(80, 7, 120)
-        dial_color=(191, 13, 62)
+        dial_color=(135, 24, 157)
 
         (φ1, φ2) = self.angles()        
         self.source = \
-            Star(x=350, y=250, num_spikes=20, color=(255, 205, 0),
+            Star(x=350, y=250, num_spikes=10, color=source_color,
                  outer_radius=50, inner_radius=2,
                  batch=self.batch)
         self.channel_L_border = \
@@ -55,18 +121,19 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         """Animate the visualization."""
         self.t += Δt
         (φ1, φ2) = self.angles()
-        self.channel_L_dial.x2 = 220+50*cos(φ1)
-        self.channel_L_dial.y2 = 250+50*sin(φ1)
-        self.channel_R_dial.x2 = 480+50*cos(φ2)
-        self.channel_R_dial.y2 = 250+50*sin(φ2)
+        self.channel_L_dial.x2 = 220 + 50*cos(φ1)
+        self.channel_L_dial.y2 = 250 + 50*sin(φ1)
+        self.channel_R_dial.x2 = 480 + 50*cos(φ2)
+        self.channel_R_dial.y2 = 250 + 50*sin(φ2)
 
     def angles(self):
         """Compute the current angles of the two channels."""
         φ1 = self.k * self.t
         φ2 = φ1 + self.Δφ
-        return (φ1 % (2 * pi), φ2 % (2 * pi))
+        return (φ1 % two_π, φ2 % two_π)
 
 if __name__ == "__main__":
+    seed(a = 0, version = 2)
     visualization = QuantumCorrelationsVisualized(pi/8)
     pyglet.clock.schedule_interval(visualization.update, 1/30)
     pyglet.app.run()
