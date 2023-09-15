@@ -44,10 +44,10 @@
 # Scientists have simply done their math incorrectly. Correct math
 # requires a more sophisticated analysis that is taught to signal
 # processing engineers but not to physicists. One needs such things as
-# ‘joint probability density functions’ and so forth, and THEN one
-# gets the same answer as quantum mechanics. As you can see here, it
-# really is so. There is no ‘entanglement’, and yet there is obvious
-# correlation.
+# ‘joint probability density functions’ and multiple integration, and
+# THEN one gets the same answer as quantum mechanics. As you can see
+# here, it really is so. There is no ‘entanglement’, and yet there is
+# obvious correlation.
 #
 #---------------------------------------------------------------------
 
