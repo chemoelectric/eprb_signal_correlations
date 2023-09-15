@@ -2,7 +2,7 @@
 
 from enum import Enum
 from random import random, seed
-from math import pi, sin, cos
+from math import pi, sin, cos, sqrt
 import pyglet
 from pyglet.shapes import Star, Arc, Line, BorderedRectangle
 
@@ -14,6 +14,24 @@ from pyglet.shapes import Star, Arc, Line, BorderedRectangle
 π_8   = π / 8.0
 π_180 = π / 180.0
 two_π = 2.0 * π
+
+def cosine_sign(φ):
+    return (-1.0 if cos(φ) < 0.0 else 1.0)
+
+def sine_sign(φ):
+    return (-1.0 if sin(φ) < 0.0 else 1.0)
+
+def cc_sign(φ1, φ2):
+    return cosine_sign(φ1) * cosine_sign(φ2)
+
+def cs_sign(φ1, φ2):
+    return cosine_sign(φ1) * sine_sign(φ2)
+
+def sc_sign(φ1, φ2):
+    return sine_sign(φ1) * cosine_sign(φ2)
+
+def ss_sign(φ1, φ2):
+    return sine_sign(φ1) * sine_sign(φ2)
 
 class Signal(Enum):
     COUNTERCLOCKWISE = 1
@@ -40,11 +58,11 @@ def countData(ζ1, ζ2, runLength):
 
         r1 = random()
         x1 = (cos(ζ1) if σ == Signal.COUNTERCLOCKWISE else sin(ζ1))
-        τ1 = (Tag.CIRCLED_PLUS if r < x1 * x1 else Tag.CIRCLED_MINUS)
+        τ1 = (Tag.CIRCLED_PLUS if r1 < x1 * x1 else Tag.CIRCLED_MINUS)
 
         r2 = random()
         x2 = (cos(ζ2) if σ == Signal.COUNTERCLOCKWISE else sin(ζ2))
-        τ2 = (Tag.CIRCLED_PLUS if r < x2 * x2 else Tag.CIRCLED_MINUS)
+        τ2 = (Tag.CIRCLED_PLUS if r2 < x2 * x2 else Tag.CIRCLED_MINUS)
 
         if σ == Signal.COUNTERCLOCKWISE:
             if τ1 == Tag.CIRCLED_PLUS:
@@ -71,6 +89,39 @@ def countData(ζ1, ζ2, runLength):
 
     return (n_ac2c2, n_ac2s2, n_as2c2, n_as2s2,
             n_cs2s2, n_cs2c2, n_cc2s2, n_cc2c2)
+
+def estimate_ρ(counts, φ1, φ2):
+
+    (n_ac2c2, n_ac2s2, n_as2c2, n_as2s2,
+     n_cs2s2, n_cs2c2, n_cc2s2, n_cc2c2) = counts
+
+    n = (n_ac2c2 + n_ac2s2 + n_as2c2 + n_as2s2 +
+         n_cs2s2 + n_cs2c2 + n_cc2s2 + n_cc2c2)
+
+    ac2c2 = n_ac2c2 / n
+    ac2s2 = n_ac2s2 / n
+    as2c2 = n_as2c2 / n
+    as2s2 = n_as2s2 / n
+    cs2s2 = n_cs2s2 / n
+    cs2c2 = n_cs2c2 / n
+    cc2s2 = n_cc2s2 / n
+    cc2c2 = n_cc2c2 / n
+
+    c2c2 = ac2c2 + cc2c2
+    c2s2 = ac2s2 + cc2s2
+    s2c2 = as2c2 + cs2c2
+    s2s2 = as2s2 + cs2s2
+
+    cc = cc_sign(φ1, φ2) * sqrt(c2c2)
+    cs = cs_sign(φ1, φ2) * sqrt(c2s2)
+    sc = sc_sign(φ1, φ2) * sqrt(s2c2)
+    ss = ss_sign(φ1, φ2) * sqrt(s2s2)
+
+    c12 = cc + ss
+    s12 = sc - cs
+
+    return (c12 * c12) - (s12 * s12)
+
 
 class QuantumCorrelationsVisualized(pyglet.window.Window):
 
@@ -125,6 +176,8 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.channel_L_dial.y2 = 250 + 50*sin(φ1)
         self.channel_R_dial.x2 = 480 + 50*cos(φ2)
         self.channel_R_dial.y2 = 250 + 50*sin(φ2)
+        counts = countData(φ1, φ2, 10000)
+        ρ_est = estimate_ρ(counts, φ1, φ2)
 
     def angles(self):
         """Compute the current angles of the two channels."""
