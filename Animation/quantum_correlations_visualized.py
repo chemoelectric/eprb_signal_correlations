@@ -45,8 +45,9 @@
 # requires a more sophisticated analysis that is taught to signal
 # processing engineers but not to physicists. One needs such things as
 # ‘joint probability density functions’ and multiple integration, and
-# THEN one gets the same answer as quantum mechanics. As you can see
-# here, it really is so. There is no ‘entanglement’, and yet there is
+# THEN one really does get THE SAME ANSWER as quantum mechanics. As
+# you can see here, it really is so, even though physicists had
+# thought it impossible. There is no ‘entanglement’, and yet there is
 # obvious correlation.
 #
 #---------------------------------------------------------------------
