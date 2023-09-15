@@ -301,39 +301,45 @@ different. Our goal is to compute the rotation-invariant correlation
 coefficient, given the difference between the two
 $\zeta$-settings. Therefore~$\phi_{02}$ must equal~$\phi_{1}$ with
 probability one. The necessary joint pdf is thus the Dirac
-delta~$\delta(\phi_{02}-\phi_1)$. We do a double integration
-of~(\ref{rhoprime}), going twice over the full 360~degrees of the
-circle.
+delta~$\delta(\phi_{02}-\phi_1)$, times whatever constant is necessary
+to make the double integral of the joint pdf by itself come out
+to~one. We do a double integration of~(\ref{rhoprime}), going twice
+over the full 360~degrees of the circle.
 
 There will be this complication, however: we have to treat all
 landmarks (and thus angular coordinate systems) alike, yet the cosine
 sometimes is reversed in sign, which would lead to~$\rho$ being
-reversed in sign in some quadrants. Luckily, the sign of a correlation
-coefficient is arbitrary, so we can simply change the sign back to how
-we need it. We will also simplify the integrations by
-substituting~$\theta=\Delta\phi_1$. Thus
+reversed in sign in some quadrants. Luckily, the plus-or-minus sense
+of a correlation coefficient is arbitrary, so we can simply change the
+sign back to how we need it. We will also simplify the integrations by
+substituting~$\theta=\Delta\phi_1 $. Thus
 \begin{equation}
-\rho = \int_{-\frac{\pi}{4}}^{+\frac{\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
+\rho = \int_{0}^{\frac{\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,2\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
 \end{equation}
-if~$\theta\in[-\frac{\pi}{4},+\frac{\pi}{4}]$,
+if~$\theta\in[0,\frac{\pi}{4}]$,
 \begin{equation}
--\rho = \int_{+\frac{\pi}{4}}^{+\frac{3\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
+-\rho = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
 \end{equation}
-if~$\theta\in[+\frac{\pi}{4},+\frac{3\pi}{4}]$,
+if~$\theta\in[\frac{\pi}{4},\frac{3\pi}{4}]$,
 \begin{equation}
-\rho = \int_{+\frac{3\pi}{4}}^{+\frac{5\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
+\rho = \int_{\frac{3\pi}{4}}^{\frac{5\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
 \end{equation}
-if~$\theta\in[+\frac{3\pi}{4},+\frac{5\pi}{4}]$, and
+if~$\theta\in[\frac{3\pi}{4},\frac{5\pi}{4}]$,
 \begin{equation}
--\rho = \int_{+\frac{5\pi}{4}}^{+\frac{7\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
+-\rho = \int_{\frac{5\pi}{4}}^{\frac{7\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
 \end{equation}
-if~$\theta\in[+\frac{5\pi}{4},+\frac{7\pi}{4}]$.
+if~$\theta\in[\frac{5\pi}{4},\frac{7\pi}{4}]$, and
+\begin{equation}
+\rho = \int_{\frac{7\pi}{4}}^{2\pi}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,2\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
+\end{equation}
+if~$\theta\in[\frac{7\pi}{4},2\pi]$.
 
 In each case the result is the same, so
 \begin{equation}
   \rho = \cos(2(\phi_2-\phi_1)) = \cos^2(\phi_2-\phi_1) - \sin^2(\phi_2-\phi_1)
 \end{equation}
-regardless of quadrant. This result accords with quantum mechanics.
+regardless of quadrant. The formula obviously extends to
+all~$\phi_1,\phi_2\in\Re$, and the result accords with quantum mechanics.
 
 \section{Discussion}
 
