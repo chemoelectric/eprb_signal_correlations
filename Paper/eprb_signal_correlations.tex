@@ -301,10 +301,9 @@ different. Our goal is to compute the rotation-invariant correlation
 coefficient, given the difference between the two
 $\zeta$-settings. Therefore~$\phi_{02}$ must equal~$\phi_{1}$ with
 probability one. The necessary joint pdf is thus the Dirac
-delta~$\delta(\phi_{02}-\phi_1)$, times whatever constant is necessary
-to make the double integral of the joint pdf itself come out
-to~one. We do a double integration of~(\ref{rhoprime}), both integrals
-going from a point on the protractor to another.
+delta~$\delta(\phi_{02}-\phi_1)$. We do a double integration
+of~(\ref{rhoprime}), both integrals going from a point on the
+protractor to another.
 
 There will be this complication, however: we have to treat all
 landmarks (and thus angular coordinate systems) alike, yet the cosine
@@ -313,10 +312,11 @@ reversed in sign in some quadrants. Luckily, the plus-or-minus sense
 of a correlation coefficient is arbitrary, so we can simply change the
 sign back to how we need it. We will also simplify the integrations by
 substituting~$\theta=\Delta\phi_1 $. Thus
-\begin{equation}
-\rho = \int_{0}^{\frac{\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,2\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
-\end{equation}
-if~$\theta\in[0,\frac{\pi}{4}]$,
+\begin{multline}
+\rho = \int_{0}^{\frac{\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta \\
++ \int_{\frac{7\pi}{4}}^{2\pi}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
+\end{multline}
+if~$\theta\in[0,\frac{\pi}{4}]\cup[\frac{7\pi}{4},2\pi]$,
 \begin{equation}
 -\rho = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
 \end{equation}
@@ -324,15 +324,11 @@ if~$\theta\in[\frac{\pi}{4},\frac{3\pi}{4}]$,
 \begin{equation}
 \rho = \int_{\frac{3\pi}{4}}^{\frac{5\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
 \end{equation}
-if~$\theta\in[\frac{3\pi}{4},\frac{5\pi}{4}]$,
+if~$\theta\in[\frac{3\pi}{4},\frac{5\pi}{4}]$, and
 \begin{equation}
 -\rho = \int_{\frac{5\pi}{4}}^{\frac{7\pi}{4}}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
 \end{equation}
-if~$\theta\in[\frac{5\pi}{4},\frac{7\pi}{4}]$, and
-\begin{equation}
-\rho = \int_{\frac{7\pi}{4}}^{2\pi}\int_0^{2\pi}\cos(2\Delta\phi_2)\cos(2\theta)\,2\delta(\phi_{02}-\phi_1)\,d\phi_{02}\,d\theta
-\end{equation}
-if~$\theta\in[\frac{7\pi}{4},2\pi]$.
+if~$\theta\in[\frac{5\pi}{4},\frac{7\pi}{4}]$.
 
 In each case the result is the same, so
 \begin{equation}
