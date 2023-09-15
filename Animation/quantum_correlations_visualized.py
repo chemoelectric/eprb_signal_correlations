@@ -56,7 +56,7 @@ from enum import Enum
 from random import random, seed
 from math import pi, sin, cos, sqrt
 import pyglet
-from pyglet.shapes import Star, Arc, Line, BorderedRectangle
+from pyglet.shapes import *
 
 π     = pi
 π_2   = π / 2.0
@@ -147,19 +147,22 @@ def detector_dial_settings(counts):
     (n_app, n_apm, n_amp, n_amm,
      n_cpp, n_cpm, n_cmp, n_cmm) = counts
 
-    n_pp = n_app + n_cpp
-    n_pm = n_apm + n_cpm
-    n_mp = n_amp + n_cmp
-    n_mm = n_amm + n_cmm
+    n_ap1 = n_app + n_apm
+    n_am1 = n_amp + n_amm
 
-    n_p1 = n_pp + n_pm
-    n_m1 = n_mp + n_mm
+    n_ap2 = n_app + n_amp
+    n_am2 = n_apm + n_amm
 
-    n_p2 = n_pp + n_mp
-    n_m2 = n_pm + n_mm
+    n_cp1 = n_cpp + n_cpm
+    n_cm1 = n_cmp + n_cmm
 
-    return (n_p1 / (n_p1 + n_m1),
-            n_p2 / (n_p2 + n_m2))
+    n_cp2 = n_cpp + n_cmp
+    n_cm2 = n_cpm + n_cmm
+
+    return (n_ap1 / (n_ap1 + n_am1),
+            n_ap2 / (n_ap2 + n_am2),
+            n_cp1 / (n_cp1 + n_cm1),
+            n_cp2 / (n_cp2 + n_cm2))
 
 def estimate_ρ(counts, φ1, φ2):
 
@@ -207,6 +210,8 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         source_color=(246, 141, 46)
         border_color=(83, 86, 90)
         dial_color=(135, 24, 157)
+        counterclockwise_color=(135, 24, 157)
+        clockwise_color=(0, 106, 82)
 
         (φ1, φ2) = self.angles()        
         self.source = \
@@ -225,14 +230,18 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.channel_R_dial = \
             Line(x=480, y=250, x2=450+50*cos(φ2), y2=250+50*sin(φ2),
                  color=dial_color, batch=self.batch)
-        self.meter_L_outline = \
-            BorderedRectangle(x=50, y=50, width=70, height=400,
-                              border_color=border_color,
-                              batch=self.batch)
-        self.meter_R_outline = \
-            BorderedRectangle(x=650 - 70, y=50, width=70, height=400,
-                              border_color=border_color,
-                              batch=self.batch)
+        self.meter_L_counterclockwise_dial = \
+            Circle(x=50, y=50, radius=5, color=counterclockwise_color,
+                   batch=self.batch)
+        self.meter_L_clockwise_dial = \
+            Circle(x=80, y=50, radius=5, color=clockwise_color,
+                   batch=self.batch)
+        self.meter_R_counterclockwise_dial = \
+            Circle(x=650-30, y=50, radius=5, color=counterclockwise_color,
+                   batch=self.batch)
+        self.meter_R_clockwise_dial = \
+            Circle(x=650, y=50, radius=5, color=clockwise_color,
+                   batch=self.batch)
 
     def on_draw(self):
         """Clear the screen and draw the visualization."""
@@ -248,7 +257,19 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.channel_R_dial.x2 = 480 + 50*cos(φ2)
         self.channel_R_dial.y2 = 250 + 50*sin(φ2)
         counts = countData(φ1, φ2, 10000)
-        ρ_est = estimate_ρ(counts, φ1, φ2)
+        (detL_counterclockwise,
+         detR_counterclockwise,
+         detL_clockwise,
+         detR_clockwise) = detector_dial_settings(counts)
+        self.meter_L_counterclockwise_dial.y = \
+            50 + 400*(1.0 - detL_counterclockwise)
+        self.meter_L_clockwise_dial.y = \
+            50 + 400*(1.0 - detL_clockwise)
+        self.meter_R_counterclockwise_dial.y = \
+            50 + 400*(1.0 - detR_counterclockwise)
+        self.meter_R_clockwise_dial.y = \
+            50 + 400*(1.0 - detR_clockwise)
+        #ρ_est = estimate_ρ(counts, φ1, φ2)
 
     def angles(self):
         """Compute the current angles of the two channels."""
@@ -259,7 +280,5 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
 if __name__ == "__main__":
     seed(a = 0, version = 2)
     visualization = QuantumCorrelationsVisualized(pi/8)
-    pyglet.clock.schedule_interval(visualization.update, 1/30)
+    pyglet.clock.schedule_interval(visualization.update, 0.05)
     pyglet.app.run()
-
-
