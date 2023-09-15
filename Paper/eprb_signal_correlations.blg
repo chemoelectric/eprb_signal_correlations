@@ -11,46 +11,48 @@ Database file #1: eprb_signal_correlations.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in clearingupmysteries
 
 Done.
-You've used 8 entries,
+You've used 9 entries,
             4087 wiz_defined-function locations,
-            864 strings with 8729 characters,
-and the built_in function-call counts, 3868 in all, are:
-= -- 341
-> -- 39
-< -- 13
-+ -- 22
-- -- 8
-* -- 160
-:= -- 711
-add.period$ -- 16
-call.type$ -- 8
-change.case$ -- 13
-chr.to.int$ -- 21
-cite$ -- 8
-duplicate$ -- 309
-empty$ -- 334
-format.name$ -- 8
-if$ -- 861
+            874 strings with 9052 characters,
+and the built_in function-call counts, 4535 in all, are:
+= -- 400
+> -- 49
+< -- 20
++ -- 27
+- -- 9
+* -- 190
+:= -- 819
+add.period$ -- 18
+call.type$ -- 9
+change.case$ -- 14
+chr.to.int$ -- 39
+cite$ -- 10
+duplicate$ -- 356
+empty$ -- 382
+format.name$ -- 9
+if$ -- 1010
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 63
-newline$ -- 47
-num.names$ -- 8
-pop$ -- 134
+int.to.str$ -- 9
+missing$ -- 70
+newline$ -- 50
+num.names$ -- 9
+pop$ -- 149
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 312
+skip$ -- 363
 stack$ -- 0
-substring$ -- 72
-swap$ -- 211
-text.length$ -- 6
+substring$ -- 116
+swap$ -- 248
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 8
-warning$ -- 0
-while$ -- 12
-width$ -- 9
-write$ -- 98
+type$ -- 9
+warning$ -- 1
+while$ -- 18
+width$ -- 10
+write$ -- 107
+(There was 1 warning)
