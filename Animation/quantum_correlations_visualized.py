@@ -290,7 +290,7 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
                   anchor_x='center', anchor_y='center',
                   color=font_color, batch=self.batch)
         self.channel_R_phi = \
-            Label('phi_2', font_name=font_name,
+            Label('phi_2 = phi_1 + ' + Δφ_string, font_name=font_name,
                   font_size=font_size, x=xpbs_R, y=ypbs_R-70,
                   anchor_x='center', anchor_y='center',
                   color=font_color, batch=self.batch)
@@ -383,7 +383,9 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         return (φ1 % two_π, φ2 % two_π)
 
 def print_usage():
-    print("Usage: FIXME")
+    print("Usage: python3 " + sys.argv[0] + " ANGLE")
+    print("  where ANGLE is '0', 'pi/8', 'pi/4', '3pi/8', 'pi/2',")
+    print("  or a number specifying an angle in degrees.")
 
 def main():
     seed(a = 0, version = 2)
@@ -391,7 +393,9 @@ def main():
         print_usage()
         exit(1)
     Δφ_string = sys.argv[1]
-    if Δφ_string == "pi/8":
+    if Δφ_string == "0":
+        Δφ = 0
+    elif Δφ_string == "pi/8":
         Δφ = π_8
     elif Δφ_string == "pi/4":
         Δφ = π_4
