@@ -57,6 +57,7 @@ from random import random, seed
 from math import pi, sin, cos, sqrt
 import pyglet
 from pyglet.shapes import *
+from pyglet.text import Label
 
 π     = pi
 π_2   = π / 2.0
@@ -215,6 +216,10 @@ xmeter_L_vert = 80
 xmeter_R_horiz = 620
 xmeter_R_vert = 650
 
+font_name = "helvetica"
+font_size = 10
+font_color = (0, 0, 0, 255)
+
 class QuantumCorrelationsVisualized(pyglet.window.Window):
 
     def __init__(self, Δφ):
@@ -228,9 +233,11 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         border_color=(83, 86, 90)
         dial_color=(135, 24, 157)
         light_color=(246, 141, 46)
-        join_color=(217, 217, 214)
+        join12_color=(244, 205, 212)
+        join34_color=(229, 225, 230)
 
         (φ1, φ2) = self.angles()        
+
         self.source1 = \
             Star(x=xcenter, y=ycenter, num_spikes=80,
                  color=light_color, outer_radius=20, inner_radius=2,
@@ -241,36 +248,62 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.source3 = \
             Rectangle(x=xcenter-2, y=ycenter-10, width=4, height=20,
                       color=light_color, batch=self.batch)
+        self.source_label = \
+            Label('h/v polarized photons', font_name=font_name,
+                  font_size=font_size, x=xcenter, y=ycenter-30,
+                  anchor_x='center', anchor_y='center',
+                  color=font_color, batch=self.batch)
+
         self.channel_L_border = \
             Arc(x=xpbs_L, y=ypbs_L, radius=50, color=border_color,
-                batch=self.batch)
-        self.channel_R_border = \
-            Arc(x=xpbs_R, y=ypbs_R, radius=50, color=border_color,
                 batch=self.batch)
         self.channel_L_dial = \
             Line(x=xpbs_L, y=ypbs_L, x2=250+50*cos(φ1), y2=250+50*sin(φ1),
                  color=dial_color, batch=self.batch)
+        self.channel_L_label = \
+            Label('PBS rotating on axle', font_name=font_name,
+                  font_size=font_size, x=xpbs_L, y=ypbs_L-70,
+                  anchor_x='center', anchor_y='center',
+                  color=font_color, batch=self.batch)
+
+        self.channel_R_border = \
+            Arc(x=xpbs_R, y=ypbs_R, radius=50, color=border_color,
+                batch=self.batch)
         self.channel_R_dial = \
             Line(x=xpbs_R, y=ypbs_R, x2=450+50*cos(φ2), y2=250+50*sin(φ2),
                  color=dial_color, batch=self.batch)
+        self.channel_R_label = \
+            Label('PBS rotating on axle', font_name=font_name,
+                  font_size=font_size, x=xpbs_R, y=ypbs_R-70,
+                  anchor_x='center', anchor_y='center',
+                  color=font_color, batch=self.batch)
+
         self.meter_L_horizontal = \
             Rectangle(x=xmeter_L_horiz-10, y=50, width=20, height=4,
                       color=light_color, batch=self.batch)
         self.meter_L_vertical = \
             Rectangle(x=xmeter_L_vert-2, y=50, width=4, height=20,
                       color=light_color, batch=self.batch)
+
         self.meter_R_horizontal = \
             Rectangle(x=xmeter_R_horiz-10, y=50, width=20, height=4,
                       color=light_color, batch=self.batch)
         self.meter_R_vertical = \
             Rectangle(x=xmeter_R_vert-2, y=50, width=4, height=20,
                       color=light_color, batch=self.batch)
+
         self.join1 = \
             Line(x=xmeter_L_horiz+10, y=50, x2=xmeter_R_vert-2, y2=50,
-                 color=join_color, batch=self.batch)
+                 color=join12_color, batch=self.batch)
         self.join2 = \
             Line(x=xmeter_L_vert+2, y=50, x2=xmeter_R_horiz-10, y2=50,
-                 color=join_color, batch=self.batch)
+                 color=join12_color, batch=self.batch)
+        self.join3 = \
+            Line(x=xmeter_L_horiz+10, y=50, x2=xmeter_R_horiz-10, y2=50,
+                 color=join34_color, batch=self.batch)
+        self.join4 = \
+            Line(x=xmeter_L_vert+2, y=50, x2=xmeter_R_vert-2, y2=50,
+                 color=join34_color, batch=self.batch)
 
     def on_draw(self):
         """Clear the screen and draw the visualization."""
@@ -279,27 +312,43 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
 
     def update(self, Δt):
         """Animate the visualization."""
+
         self.t += Δt
         (φ1, φ2) = self.angles()
+
         self.channel_L_dial.x2 = 220 + 50*cos(φ1)
         self.channel_L_dial.y2 = 250 + 50*sin(φ1)
+
         self.channel_R_dial.x2 = 480 + 50*cos(φ2)
         self.channel_R_dial.y2 = 250 + 50*sin(φ2)
+
         counts = countData(φ1, φ2, 10000)
+
         (detL_horiz, detR_horiz, detL_vert, detR_vert) = \
             detector_dial_settings(counts)
+
         self.meter_L_horizontal.y = \
             ymeter - 2 + meter_height*(1.0 - detL_horiz)
         self.meter_L_vertical.y = \
             ymeter - 10 + meter_height*(1.0 - detL_vert)
+
         self.meter_R_horizontal.y = \
             ymeter - 2 + meter_height*(1.0 - detR_horiz)
         self.meter_R_vertical.y = \
             ymeter - 10 + meter_height*(1.0 - detR_vert)
+
         self.join1.y = self.meter_L_horizontal.y + 2
         self.join1.y2 = self.meter_R_vertical.y + 10
+
         self.join2.y = self.meter_L_vertical.y + 10
         self.join2.y2 = self.meter_R_horizontal.y + 2
+
+        self.join3.y = self.meter_L_horizontal.y + 2
+        self.join3.y2 = self.meter_R_horizontal.y + 2
+
+        self.join4.y = self.meter_L_vertical.y + 10
+        self.join4.y2 = self.meter_R_vertical.y + 10
+
         #ρ_est = estimate_ρ(counts, φ1, φ2)
 
     def angles(self):
