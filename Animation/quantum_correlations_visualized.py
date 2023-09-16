@@ -228,7 +228,7 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         border_color=(83, 86, 90)
         dial_color=(135, 24, 157)
         light_color=(246, 141, 46)
-        join_color=border_color
+        join_color=(217, 217, 214)
 
         (φ1, φ2) = self.angles()        
         self.source1 = \
@@ -265,6 +265,12 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.meter_R_vertical = \
             Rectangle(x=xmeter_R_vert-2, y=50, width=4, height=20,
                       color=light_color, batch=self.batch)
+        self.join1 = \
+            Line(x=xmeter_L_horiz+10, y=50, x2=xmeter_R_vert-2, y2=50,
+                 color=join_color, batch=self.batch)
+        self.join2 = \
+            Line(x=xmeter_L_vert+2, y=50, x2=xmeter_R_horiz-10, y2=50,
+                 color=join_color, batch=self.batch)
 
     def on_draw(self):
         """Clear the screen and draw the visualization."""
@@ -290,6 +296,10 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
             ymeter - 2 + meter_height*(1.0 - detR_horiz)
         self.meter_R_vertical.y = \
             ymeter - 10 + meter_height*(1.0 - detR_vert)
+        self.join1.y = self.meter_L_horizontal.y + 2
+        self.join1.y2 = self.meter_R_vertical.y + 10
+        self.join2.y = self.meter_L_vertical.y + 10
+        self.join2.y2 = self.meter_R_horizontal.y + 2
         #ρ_est = estimate_ρ(counts, φ1, φ2)
 
     def angles(self):
@@ -298,8 +308,11 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         φ2 = φ1 + self.Δφ
         return (φ1 % two_π, φ2 % two_π)
 
-if __name__ == "__main__":
+def main():
     seed(a = 0, version = 2)
     visualization = QuantumCorrelationsVisualized(pi/8)
     pyglet.clock.schedule_interval(visualization.update, 0.05)
     pyglet.app.run()
+
+if __name__ == "__main__":
+    main()
