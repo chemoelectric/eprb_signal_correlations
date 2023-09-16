@@ -85,13 +85,13 @@ def sc_sign(φ1, φ2):
 def ss_sign(φ1, φ2):
     return sine_sign(φ1) * sine_sign(φ2)
 
-class Signal(Enum):
-    COUNTERCLOCKWISE = 1
-    CLOCKWISE = 2
+class Photon(Enum):
+    HORIZONTAL = 1
+    VERTICAL = 2
 
-class Tag(Enum):
-    CIRCLED_PLUS = 1
-    CIRCLED_MINUS = 2
+class Detector(Enum):
+    PLUS = 1
+    MINUS = 2
 
 def countData(ζ1, ζ2, runLength):
 
@@ -106,35 +106,38 @@ def countData(ζ1, ζ2, runLength):
 
     for i in range(runLength):
 
-        σ = (Signal.COUNTERCLOCKWISE if random() < 0.5 else Signal.CLOCKWISE)
+        σ1 = (Photon.HORIZONTAL if random() < 0.5
+              else Photon.VERTICAL)
+        σ2 = (Photon.VERTICAL if σ1 == Photon.HORIZONTAL
+              else Photon.HORIZONTAL)
 
         r1 = random()
-        x1 = (cos(ζ1) if σ == Signal.COUNTERCLOCKWISE else sin(ζ1))
-        τ1 = (Tag.CIRCLED_PLUS if r1 < x1 * x1 else Tag.CIRCLED_MINUS)
+        x1 = (cos(ζ1) if σ1 == Photon.HORIZONTAL else sin(ζ1))
+        τ1 = (Detector.PLUS if r1 < x1 * x1 else Detector.MINUS)
 
         r2 = random()
-        x2 = (cos(ζ2) if σ == Signal.COUNTERCLOCKWISE else sin(ζ2))
-        τ2 = (Tag.CIRCLED_PLUS if r2 < x2 * x2 else Tag.CIRCLED_MINUS)
+        x2 = (cos(ζ2) if σ2 == Photon.HORIZONTAL else sin(ζ2))
+        τ2 = (Detector.PLUS if r2 < x2 * x2 else Detector.MINUS)
 
-        if σ == Signal.COUNTERCLOCKWISE:
-            if τ1 == Tag.CIRCLED_PLUS:
-                if τ2 == Tag.CIRCLED_PLUS:
+        if σ1 == Photon.HORIZONTAL:
+            if τ1 == Detector.PLUS:
+                if τ2 == Detector.PLUS:
                     n_ac2c2 += 1
                 else:
                     n_ac2s2 += 1
             else:
-                if τ2 == Tag.CIRCLED_PLUS:
+                if τ2 == Detector.PLUS:
                     n_as2c2 += 1
                 else:
                     n_as2s2 += 1
         else:
-            if τ1 == Tag.CIRCLED_PLUS:
-                if τ2 == Tag.CIRCLED_PLUS:
+            if τ1 == Detector.PLUS:
+                if τ2 == Detector.PLUS:
                     n_cs2s2 += 1
                 else:
                     n_cs2c2 += 1
             else:
-                if τ2 == Tag.CIRCLED_PLUS:
+                if τ2 == Detector.PLUS:
                     n_cc2s2 += 1
                 else:
                     n_cc2c2 += 1
@@ -196,6 +199,21 @@ def estimate_ρ(counts, φ1, φ2):
 
     return (c12 * c12) - (s12 * s12)
 
+xcenter = 350
+ycenter = 250
+
+xpbs_L = 220
+ypbs_L = ycenter
+
+xpbs_R = 480
+ypbs_R = ycenter
+
+meter_height = 300
+ymeter = 100
+xmeter_L_horiz = 50
+xmeter_L_vert = 80
+xmeter_R_horiz = 620
+xmeter_R_vert = 650
 
 class QuantumCorrelationsVisualized(pyglet.window.Window):
 
@@ -207,41 +225,46 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.k = 1.0
         self.batch = pyglet.graphics.Batch()
 
-        source_color=(246, 141, 46)
         border_color=(83, 86, 90)
         dial_color=(135, 24, 157)
-        counterclockwise_color=(135, 24, 157)
-        clockwise_color=(0, 106, 82)
+        light_color=(246, 141, 46)
+        join_color=border_color
 
         (φ1, φ2) = self.angles()        
-        self.source = \
-            Star(x=350, y=250, num_spikes=10, color=source_color,
-                 outer_radius=50, inner_radius=2,
+        self.source1 = \
+            Star(x=xcenter, y=ycenter, num_spikes=80,
+                 color=light_color, outer_radius=20, inner_radius=2,
                  batch=self.batch)
+        self.source2 = \
+            Rectangle(x=xcenter-10, y=ycenter-2, width=20, height=4,
+                      color=light_color, batch=self.batch)
+        self.source3 = \
+            Rectangle(x=xcenter-2, y=ycenter-10, width=4, height=20,
+                      color=light_color, batch=self.batch)
         self.channel_L_border = \
-            Arc(x=220, y=250, radius=50, color=border_color,
+            Arc(x=xpbs_L, y=ypbs_L, radius=50, color=border_color,
                 batch=self.batch)
         self.channel_R_border = \
-            Arc(x=480, y=250, radius=50, color=border_color,
+            Arc(x=xpbs_R, y=ypbs_R, radius=50, color=border_color,
                 batch=self.batch)
         self.channel_L_dial = \
-            Line(x=220, y=250, x2=250+50*cos(φ1), y2=250+50*sin(φ1),
+            Line(x=xpbs_L, y=ypbs_L, x2=250+50*cos(φ1), y2=250+50*sin(φ1),
                  color=dial_color, batch=self.batch)
         self.channel_R_dial = \
-            Line(x=480, y=250, x2=450+50*cos(φ2), y2=250+50*sin(φ2),
+            Line(x=xpbs_R, y=ypbs_R, x2=450+50*cos(φ2), y2=250+50*sin(φ2),
                  color=dial_color, batch=self.batch)
-        self.meter_L_counterclockwise_dial = \
-            Circle(x=50, y=50, radius=5, color=counterclockwise_color,
-                   batch=self.batch)
-        self.meter_L_clockwise_dial = \
-            Circle(x=80, y=50, radius=5, color=clockwise_color,
-                   batch=self.batch)
-        self.meter_R_counterclockwise_dial = \
-            Circle(x=650-30, y=50, radius=5, color=counterclockwise_color,
-                   batch=self.batch)
-        self.meter_R_clockwise_dial = \
-            Circle(x=650, y=50, radius=5, color=clockwise_color,
-                   batch=self.batch)
+        self.meter_L_horizontal = \
+            Rectangle(x=xmeter_L_horiz-10, y=50, width=20, height=4,
+                      color=light_color, batch=self.batch)
+        self.meter_L_vertical = \
+            Rectangle(x=xmeter_L_vert-2, y=50, width=4, height=20,
+                      color=light_color, batch=self.batch)
+        self.meter_R_horizontal = \
+            Rectangle(x=xmeter_R_horiz-10, y=50, width=20, height=4,
+                      color=light_color, batch=self.batch)
+        self.meter_R_vertical = \
+            Rectangle(x=xmeter_R_vert-2, y=50, width=4, height=20,
+                      color=light_color, batch=self.batch)
 
     def on_draw(self):
         """Clear the screen and draw the visualization."""
@@ -257,18 +280,16 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.channel_R_dial.x2 = 480 + 50*cos(φ2)
         self.channel_R_dial.y2 = 250 + 50*sin(φ2)
         counts = countData(φ1, φ2, 10000)
-        (detL_counterclockwise,
-         detR_counterclockwise,
-         detL_clockwise,
-         detR_clockwise) = detector_dial_settings(counts)
-        self.meter_L_counterclockwise_dial.y = \
-            50 + 400*(1.0 - detL_counterclockwise)
-        self.meter_L_clockwise_dial.y = \
-            50 + 400*(1.0 - detL_clockwise)
-        self.meter_R_counterclockwise_dial.y = \
-            50 + 400*(1.0 - detR_counterclockwise)
-        self.meter_R_clockwise_dial.y = \
-            50 + 400*(1.0 - detR_clockwise)
+        (detL_horiz, detR_horiz, detL_vert, detR_vert) = \
+            detector_dial_settings(counts)
+        self.meter_L_horizontal.y = \
+            ymeter - 2 + meter_height*(1.0 - detL_horiz)
+        self.meter_L_vertical.y = \
+            ymeter - 10 + meter_height*(1.0 - detL_vert)
+        self.meter_R_horizontal.y = \
+            ymeter - 2 + meter_height*(1.0 - detR_horiz)
+        self.meter_R_vertical.y = \
+            ymeter - 10 + meter_height*(1.0 - detR_vert)
         #ρ_est = estimate_ρ(counts, φ1, φ2)
 
     def angles(self):
