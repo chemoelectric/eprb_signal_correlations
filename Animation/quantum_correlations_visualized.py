@@ -221,13 +221,13 @@ xmeter_R_horiz = 620
 xmeter_R_axis = 640
 xmeter_R_vert = 650
 
-font_name = "helvetica"
+font_name = "times new roman"
 font_size = 10
 font_color = (0, 0, 0, 255)
 
 rho_text = 'correlation coefficient (lowpass filtered) = '
 xrho = xcenter - 60
-yrho = ycenter - 140
+yrho = ycenter - 150
 
 class QuantumCorrelationsVisualized(pyglet.window.Window):
 
@@ -253,9 +253,16 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
                   x=xcenter, y=490, anchor_x='center', anchor_y='top',
                   color=font_color, batch=self.batch)
 
+        self.math_wrong = \
+            Label('(Theorists who have thought this impossible did ' +
+                  'the math incorrectly.)', font_name=font_name,
+                  font_size=font_size, x=xcenter, y=465,
+                  anchor_x='center', anchor_y='top', color=font_color,
+                  batch=self.batch)
+
         self.escape = \
             Label('Press ESC to exit.', font_name=font_name,
-                  font_size=font_size, x=xcenter, y=10,
+                  font_size=font_size, x=xcenter+200, y=10,
                   anchor_x='center', anchor_y='bottom',
                   color=font_color, batch=self.batch)
 
@@ -323,6 +330,27 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
             Line(x=xmeter_L_axis, y=ymeter, x2=xmeter_L_axis,
                  y2=ymeter + meter_height, color=border_color,
                  batch=self.batch)
+        self.meter_L_tics = \
+            [Line(x=xmeter_L_axis-3, y=ymeter+(i*meter_height/10),
+                  x2=xmeter_L_axis+2, y2=ymeter+(i*meter_height/10),
+                  color=border_color, batch=self.batch)
+             for i in range(11)]
+        self.meter_L_label = \
+            Label('Detector predominance', font_name=font_name,
+                  font_size=font_size, x=xmeter_L_axis+10,
+                  y=ymeter+meter_height+15, anchor_x='center',
+                  anchor_y='bottom', color=font_color,
+                  batch=self.batch)
+        self.meter_L_plus = \
+            Label('+', font_name=font_name, font_size=font_size*2,
+                  x=xmeter_L_axis-50, y=ymeter+meter_height,
+                  anchor_x='center', anchor_y='top', color=font_color,
+                  batch=self.batch)
+        self.meter_L_minus = \
+            Label('-', font_name=font_name, font_size=font_size*2,
+                  x=xmeter_L_axis-50, y=ymeter, anchor_x='center',
+                  anchor_y='bottom', color=font_color,
+                  batch=self.batch)
 
         self.meter_R_horizontal = \
             Rectangle(x=xmeter_R_horiz-10, y=ymeter, width=20,
@@ -334,6 +362,27 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
             Line(x=xmeter_R_axis, y=ymeter, x2=xmeter_R_axis,
                  y2=ymeter + meter_height, color=border_color,
                  batch=self.batch)
+        self.meter_R_tics = \
+            [Line(x=xmeter_R_axis-3, y=ymeter+(i*meter_height/10),
+                  x2=xmeter_R_axis+2, y2=ymeter+(i*meter_height/10),
+                  color=border_color, batch=self.batch)
+             for i in range(11)]
+        self.meter_R_label = \
+            Label('Detector predominance', font_name=font_name,
+                  font_size=font_size, x=xmeter_R_axis-20,
+                  y=ymeter+meter_height+15, anchor_x='center',
+                  anchor_y='bottom', color=font_color,
+                  batch=self.batch)
+        self.meter_R_plus = \
+            Label('+', font_name=font_name, font_size=font_size*2,
+                  x=xmeter_R_axis+35, y=ymeter+meter_height,
+                  anchor_x='center', anchor_y='top', color=font_color,
+                  batch=self.batch)
+        self.meter_R_minus = \
+            Label('-', font_name=font_name, font_size=font_size*2,
+                  x=xmeter_R_axis+35, y=ymeter, anchor_x='center',
+                  anchor_y='bottom', color=font_color,
+                  batch=self.batch)
 
         self.join1 = \
             Line(x=xmeter_L_horiz+10, y=ymeter, x2=xmeter_R_vert-2,
@@ -403,7 +452,8 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         # Single-pole IIR lowpass filter, cutoff freq. 0.01 Hz.
         self.ρ_filtered += \
             (1.0 - exp (-0.01 * two_π)) * (ρ_est - self.ρ_filtered)
-        self.correlation_coef.text = rho_text + f'{self.ρ_filtered:.5}'
+        self.correlation_coef.text = \
+            rho_text + f'{self.ρ_filtered:.5}'
 
     def angles(self):
         """Compute the current angles of the two channels."""
