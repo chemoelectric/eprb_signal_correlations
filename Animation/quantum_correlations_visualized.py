@@ -177,6 +177,7 @@ def estimate_ρ(counts, φ1, φ2):
     n = (n_hpp + n_hpm + n_hmp + n_hmm +
          n_vpp + n_vpm + n_vmp + n_vmm)
 
+    # Compute frequencies.
     hpp = n_hpp / n
     hpm = n_hpm / n
     hmp = n_hmp / n
@@ -186,19 +187,25 @@ def estimate_ρ(counts, φ1, φ2):
     vmp = n_vmp / n
     vmm = n_vmm / n
 
+    # Estimate cos²(φ₁)cos²(φ₂), etc., using measured frequencies in
+    # lieu of the probabilities cos²(φ₁), etc.
     c2c2 = hpm + vmp
     c2s2 = hpp + vmm
     s2c2 = hmm + vpp
     s2s2 = hmp + vpm
 
+    # Take square roots. Correct the signs for quadrants.
     cc = cc_sign(φ1, φ2) * sqrt(c2c2)
     cs = cs_sign(φ1, φ2) * sqrt(c2s2)
     sc = sc_sign(φ1, φ2) * sqrt(s2c2)
     ss = ss_sign(φ1, φ2) * sqrt(s2s2)
 
+    # Use angle-difference identities to get cos(φ1-φ2) and
+    # sin(φ1-φ2).
     c12 = cc + ss
     s12 = sc - cs
 
+    # Return cos²(φ1-φ2)-sin²(φ1-φ2)=cos(2(φ1-φ2)).
     return (c12 * c12) - (s12 * s12)
 
 xcenter = 350
