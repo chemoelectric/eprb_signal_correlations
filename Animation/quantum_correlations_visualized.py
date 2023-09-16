@@ -55,7 +55,7 @@
 import sys
 from enum import Enum
 from random import random, seed
-from math import pi, sin, cos, sqrt
+from math import pi, sin, cos, sqrt, exp
 import pyglet
 from pyglet.shapes import *
 from pyglet.text import Label
@@ -225,6 +225,10 @@ font_name = "helvetica"
 font_size = 10
 font_color = (0, 0, 0, 255)
 
+rho_text = 'correlation coefficient (lowpass filtered) = '
+xrho = xcenter - 60
+yrho = ycenter - 140
+
 class QuantumCorrelationsVisualized(pyglet.window.Window):
 
     def __init__(self, Δφ_string, Δφ):
@@ -234,6 +238,8 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.t = 0.0
         self.k = 1.0
         self.batch = pyglet.graphics.Batch()
+
+        self.ρ_filtered = 0.0
 
         border_color=(83, 86, 90)
         dial_color=(135, 24, 157)
@@ -343,10 +349,10 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
                  y2=ymeter, color=join34_color, batch=self.batch)
 
         self.correlation_coef = \
-            Label(text='correlation coefficient = ',
-                  font_name=font_name, font_size=font_size,
-                  x=xcenter-20, y=ycenter-140, anchor_x='left',
-                  anchor_y='top', color=font_color, batch=self.batch)
+            Label(text=rho_text, font_name=font_name,
+                  font_size=font_size, x=xrho, y=yrho,
+                  anchor_x='left', anchor_y='top', color=font_color,
+                  batch=self.batch)
 
     def on_draw(self):
         """Clear the screen and draw the visualization."""
@@ -393,8 +399,11 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.join4.y2 = self.meter_R_vertical.y + 10
 
         ρ_est = estimate_ρ(counts, φ1, φ2)
-        self.correlation_coef.text = \
-            'correlation coefficient = ' + str(ρ_est)
+
+        # Single-pole IIR lowpass filter, cutoff freq. 0.01 Hz.
+        self.ρ_filtered += \
+            (1.0 - exp (-0.01 * two_π)) * (ρ_est - self.ρ_filtered)
+        self.correlation_coef.text = rho_text + f'{self.ρ_filtered:.5}'
 
     def angles(self):
         """Compute the current angles of the two channels."""
