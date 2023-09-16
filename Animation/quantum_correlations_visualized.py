@@ -186,10 +186,10 @@ def estimate_ρ(counts, φ1, φ2):
     vmp = n_vmp / n
     vmm = n_vmm / n
 
-    c2c2 = ac2c2 + cc2c2
-    c2s2 = ac2s2 + cc2s2
-    s2c2 = as2c2 + cs2c2
-    s2s2 = as2s2 + cs2s2
+    c2c2 = hpm + vmp
+    c2s2 = hpp + vmm
+    s2c2 = hmm + vpp
+    s2s2 = hmp + vpm
 
     cc = cc_sign(φ1, φ2) * sqrt(c2c2)
     cs = cs_sign(φ1, φ2) * sqrt(c2s2)
