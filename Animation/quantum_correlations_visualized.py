@@ -226,8 +226,11 @@ font_size = 10
 font_color = (0, 0, 0, 255)
 
 rho_text = 'correlation coefficient (lowpass filtered) = '
+rho_subtext = \
+    '(The formula used can be derived from quantum mechanics.)'
 xrho = xcenter - 60
 yrho = ycenter - 150
+yrhosub = yrho - 20
 
 class QuantumCorrelationsVisualized(pyglet.window.Window):
 
@@ -400,6 +403,11 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.correlation_coef = \
             Label(text=rho_text, font_name=font_name,
                   font_size=font_size, x=xrho, y=yrho,
+                  anchor_x='left', anchor_y='top', color=font_color,
+                  batch=self.batch)
+        self.correlation_coef_sub = \
+            Label(text=rho_subtext, font_name=font_name,
+                  font_size=font_size*0.9, x=xrho+10, y=yrhosub,
                   anchor_x='left', anchor_y='top', color=font_color,
                   batch=self.batch)
 
