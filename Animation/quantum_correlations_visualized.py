@@ -171,20 +171,20 @@ def detector_dial_settings(counts):
 
 def estimate_ρ(counts, φ1, φ2):
 
-    (n_hc2c2, n_hc2s2, n_hs2c2, n_hs2s2,
-     n_vs2s2, n_vs2c2, n_vc2s2, n_vc2c2) = counts
+    (n_hpp, n_hpm, n_hmp, n_hmm,
+     n_vpp, n_vpm, n_vmp, n_vmm) = counts
 
-    n = (n_hc2c2 + n_hc2s2 + n_hs2c2 + n_hs2s2 +
-         n_vs2s2 + n_vs2c2 + n_vc2s2 + n_vc2c2)
+    n = (n_hpp + n_hpm + n_hmp + n_hmm +
+         n_vpp + n_vpm + n_vmp + n_vmm)
 
-    ac2c2 = n_hc2c2 / n
-    ac2s2 = n_hc2s2 / n
-    as2c2 = n_hs2c2 / n
-    as2s2 = n_hs2s2 / n
-    cs2s2 = n_vs2s2 / n
-    cs2c2 = n_vs2c2 / n
-    cc2s2 = n_vc2s2 / n
-    cc2c2 = n_vc2c2 / n
+    hpp = n_hpp / n
+    hpm = n_hpm / n
+    hmp = n_hmp / n
+    hmm = n_hmm / n
+    vpp = n_vpp / n
+    vpm = n_vpm / n
+    vmp = n_vmp / n
+    vmm = n_vmm / n
 
     c2c2 = ac2c2 + cc2c2
     c2s2 = ac2s2 + cc2s2
