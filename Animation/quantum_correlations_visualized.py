@@ -469,12 +469,13 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         φ2 = φ1 + self.Δφ
         return (φ1 % two_π, φ2 % two_π)
 
-def print_usage():
-    print("Usage: python3 " + sys.argv[0] + " ANGLE")
-    print("  where ANGLE is '0', 'pi/8', 'pi/4', '3pi/8', 'pi/2',")
-    print("  or a number specifying an angle in degrees.")
+def quantum_correlations_visualized():
 
-def main():
+    def print_usage():
+        print("Usage: python3 " + sys.argv[0] + " ANGLE")
+        print("  where ANGLE is '0', 'pi/8', 'pi/4', '3pi/8', 'pi/2',")
+        print("  or a number specifying an angle in degrees.")
+
     seed(a = 0, version = 2)
     if len(sys.argv) != 2:
         print_usage()
@@ -502,4 +503,4 @@ def main():
     pyglet.app.run()
 
 if __name__ == "__main__":
-    main()
+    quantum_correlations_visualized()
