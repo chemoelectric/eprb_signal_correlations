@@ -188,7 +188,7 @@ def estimate_ρ(counts, φ1, φ2):
     vmm = n_vmm / n
 
     # Estimate cos²(φ₁)cos²(φ₂), etc., using measured frequencies in
-    # lieu of the probabilities cos²(φ₁), etc.
+    # lieu of the probabilities.
     c2c2 = hpm + vmp
     c2s2 = hpp + vmm
     s2c2 = hmm + vpp
