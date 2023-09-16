@@ -211,8 +211,11 @@ ypbs_R = ycenter
 
 meter_height = 300
 ymeter = 100
+
 xmeter_L_horiz = 50
+xmeter_L_axis = 70
 xmeter_L_vert = 80
+
 xmeter_R_horiz = 620
 xmeter_R_vert = 650
 
@@ -258,8 +261,9 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
             Arc(x=xpbs_L, y=ypbs_L, radius=50, color=border_color,
                 batch=self.batch)
         self.channel_L_dial = \
-            Line(x=xpbs_L, y=ypbs_L, x2=250+50*cos(φ1), y2=250+50*sin(φ1),
-                 color=dial_color, batch=self.batch)
+            Line(x=xpbs_L, y=ypbs_L, x2=250+50*cos(φ1),
+                 y2=250+50*sin(φ1), color=dial_color,
+                 batch=self.batch)
         self.channel_L_label = \
             Label('PBS rotating on axle', font_name=font_name,
                   font_size=font_size, x=xpbs_L, y=ypbs_L-70,
@@ -270,8 +274,9 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
             Arc(x=xpbs_R, y=ypbs_R, radius=50, color=border_color,
                 batch=self.batch)
         self.channel_R_dial = \
-            Line(x=xpbs_R, y=ypbs_R, x2=450+50*cos(φ2), y2=250+50*sin(φ2),
-                 color=dial_color, batch=self.batch)
+            Line(x=xpbs_R, y=ypbs_R, x2=450+50*cos(φ2),
+                 y2=250+50*sin(φ2), color=dial_color,
+                 batch=self.batch)
         self.channel_R_label = \
             Label('PBS rotating on axle', font_name=font_name,
                   font_size=font_size, x=xpbs_R, y=ypbs_R-70,
@@ -279,31 +284,35 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
                   color=font_color, batch=self.batch)
 
         self.meter_L_horizontal = \
-            Rectangle(x=xmeter_L_horiz-10, y=50, width=20, height=4,
-                      color=light_color, batch=self.batch)
+            Rectangle(x=xmeter_L_horiz-10, y=ymeter, width=20,
+                      height=4, color=light_color, batch=self.batch)
         self.meter_L_vertical = \
-            Rectangle(x=xmeter_L_vert-2, y=50, width=4, height=20,
+            Rectangle(x=xmeter_L_vert-2, y=ymeter, width=4, height=20,
                       color=light_color, batch=self.batch)
+        self.meter_L_axis = \
+            Line(x=xmeter_L_axis, y=ymeter, x2=xmeter_L_axis,
+                 y2=ymeter + meter_height, color=border_color,
+                 batch=self.batch)
 
         self.meter_R_horizontal = \
-            Rectangle(x=xmeter_R_horiz-10, y=50, width=20, height=4,
-                      color=light_color, batch=self.batch)
+            Rectangle(x=xmeter_R_horiz-10, y=ymeter, width=20,
+                      height=4, color=light_color, batch=self.batch)
         self.meter_R_vertical = \
-            Rectangle(x=xmeter_R_vert-2, y=50, width=4, height=20,
+            Rectangle(x=xmeter_R_vert-2, y=ymeter, width=4, height=20,
                       color=light_color, batch=self.batch)
 
         self.join1 = \
-            Line(x=xmeter_L_horiz+10, y=50, x2=xmeter_R_vert-2, y2=50,
-                 color=join12_color, batch=self.batch)
+            Line(x=xmeter_L_horiz+10, y=ymeter, x2=xmeter_R_vert-2,
+                 y2=ymeter, color=join12_color, batch=self.batch)
         self.join2 = \
-            Line(x=xmeter_L_vert+2, y=50, x2=xmeter_R_horiz-10, y2=50,
-                 color=join12_color, batch=self.batch)
+            Line(x=xmeter_L_vert+2, y=ymeter, x2=xmeter_R_horiz-10,
+                 y2=ymeter, color=join12_color, batch=self.batch)
         self.join3 = \
-            Line(x=xmeter_L_horiz+10, y=50, x2=xmeter_R_horiz-10, y2=50,
-                 color=join34_color, batch=self.batch)
+            Line(x=xmeter_L_horiz+10, y=ymeter, x2=xmeter_R_horiz-10,
+                 y2=ymeter, color=join34_color, batch=self.batch)
         self.join4 = \
-            Line(x=xmeter_L_vert+2, y=50, x2=xmeter_R_vert-2, y2=50,
-                 color=join34_color, batch=self.batch)
+            Line(x=xmeter_L_vert+2, y=ymeter, x2=xmeter_R_vert-2,
+                 y2=ymeter, color=join34_color, batch=self.batch)
 
     def on_draw(self):
         """Clear the screen and draw the visualization."""
