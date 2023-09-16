@@ -50,6 +50,11 @@
 # thought it impossible. There is no ‘entanglement’, and yet there is
 # obvious correlation.
 #
+# A Wikipedia article on this kind of experiment can be found at
+# https://en.wikipedia.org/w/index.php?title=CHSH_inequality&oldid=1173584834
+# See also
+# https://en.wikipedia.org/w/index.php?title=Bell_test&oldid=1174875317#A_typical_CHSH_(two-channel)_experiment
+#
 #---------------------------------------------------------------------
 
 import sys
