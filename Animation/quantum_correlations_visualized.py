@@ -97,14 +97,14 @@ class Detector(Enum):
 
 def countData(ζ1, ζ2, runLength):
 
-    n_ac2c2 = 0
-    n_ac2s2 = 0
-    n_as2c2 = 0
-    n_as2s2 = 0
-    n_cs2s2 = 0
-    n_cs2c2 = 0
-    n_cc2s2 = 0
-    n_cc2c2 = 0
+    n_hpp = 0
+    n_hpm = 0
+    n_hmp = 0
+    n_hmm = 0
+    n_vpp = 0
+    n_vpm = 0
+    n_vmp = 0
+    n_vmm = 0
 
     for i in range(runLength):
 
@@ -124,67 +124,67 @@ def countData(ζ1, ζ2, runLength):
         if σ1 == Photon.HORIZONTAL:
             if τ1 == Detector.PLUS:
                 if τ2 == Detector.PLUS:
-                    n_ac2c2 += 1
+                    n_hpp += 1
                 else:
-                    n_ac2s2 += 1
+                    n_hpm += 1
             else:
                 if τ2 == Detector.PLUS:
-                    n_as2c2 += 1
+                    n_hmp += 1
                 else:
-                    n_as2s2 += 1
+                    n_hmm += 1
         else:
             if τ1 == Detector.PLUS:
                 if τ2 == Detector.PLUS:
-                    n_cs2s2 += 1
+                    n_vpp += 1
                 else:
-                    n_cs2c2 += 1
+                    n_vpm += 1
             else:
                 if τ2 == Detector.PLUS:
-                    n_cc2s2 += 1
+                    n_vmp += 1
                 else:
-                    n_cc2c2 += 1
+                    n_vmm += 1
 
-    return (n_ac2c2, n_ac2s2, n_as2c2, n_as2s2,
-            n_cs2s2, n_cs2c2, n_cc2s2, n_cc2c2)
+    return (n_hpp, n_hpm, n_hmp, n_hmm,
+            n_vpp, n_vpm, n_vmp, n_vmm)
 
 def detector_dial_settings(counts):
 
-    (n_app, n_apm, n_amp, n_amm,
-     n_cpp, n_cpm, n_cmp, n_cmm) = counts
+    (n_hpp, n_hpm, n_hmp, n_hmm,
+     n_vpp, n_vpm, n_vmp, n_vmm) = counts
 
-    n_ap1 = n_app + n_apm
-    n_am1 = n_amp + n_amm
+    n_hp1 = n_hpp + n_hpm
+    n_hm1 = n_hmp + n_hmm
 
-    n_ap2 = n_app + n_amp
-    n_am2 = n_apm + n_amm
+    n_hp2 = n_hpp + n_hmp
+    n_hm2 = n_hpm + n_hmm
 
-    n_cp1 = n_cpp + n_cpm
-    n_cm1 = n_cmp + n_cmm
+    n_vp1 = n_vpp + n_vpm
+    n_vm1 = n_vmp + n_vmm
 
-    n_cp2 = n_cpp + n_cmp
-    n_cm2 = n_cpm + n_cmm
+    n_vp2 = n_vpp + n_vmp
+    n_vm2 = n_vpm + n_vmm
 
-    return (n_ap1 / (n_ap1 + n_am1),
-            n_ap2 / (n_ap2 + n_am2),
-            n_cp1 / (n_cp1 + n_cm1),
-            n_cp2 / (n_cp2 + n_cm2))
+    return (n_hp1 / (n_hp1 + n_hm1),
+            n_hp2 / (n_hp2 + n_hm2),
+            n_vp1 / (n_vp1 + n_vm1),
+            n_vp2 / (n_vp2 + n_vm2))
 
 def estimate_ρ(counts, φ1, φ2):
 
-    (n_ac2c2, n_ac2s2, n_as2c2, n_as2s2,
-     n_cs2s2, n_cs2c2, n_cc2s2, n_cc2c2) = counts
+    (n_hc2c2, n_hc2s2, n_hs2c2, n_hs2s2,
+     n_vs2s2, n_vs2c2, n_vc2s2, n_vc2c2) = counts
 
-    n = (n_ac2c2 + n_ac2s2 + n_as2c2 + n_as2s2 +
-         n_cs2s2 + n_cs2c2 + n_cc2s2 + n_cc2c2)
+    n = (n_hc2c2 + n_hc2s2 + n_hs2c2 + n_hs2s2 +
+         n_vs2s2 + n_vs2c2 + n_vc2s2 + n_vc2c2)
 
-    ac2c2 = n_ac2c2 / n
-    ac2s2 = n_ac2s2 / n
-    as2c2 = n_as2c2 / n
-    as2s2 = n_as2s2 / n
-    cs2s2 = n_cs2s2 / n
-    cs2c2 = n_cs2c2 / n
-    cc2s2 = n_cc2s2 / n
-    cc2c2 = n_cc2c2 / n
+    ac2c2 = n_hc2c2 / n
+    ac2s2 = n_hc2s2 / n
+    as2c2 = n_hs2c2 / n
+    as2s2 = n_hs2s2 / n
+    cs2s2 = n_vs2s2 / n
+    cs2c2 = n_vs2c2 / n
+    cc2s2 = n_vc2s2 / n
+    cc2c2 = n_vc2c2 / n
 
     c2c2 = ac2c2 + cc2c2
     c2s2 = ac2s2 + cc2s2
@@ -241,7 +241,19 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         join12_color=(244, 205, 212)
         join34_color=(229, 225, 230)
 
-        (φ1, φ2) = self.angles()        
+        self.bell_test = \
+            Label('Two-channel Bell test without ‘entanglement’',
+                  font_name=font_name, font_size=font_size*1.5,
+                  x=xcenter, y=490, anchor_x='center', anchor_y='top',
+                  color=font_color, batch=self.batch)
+
+        self.escape = \
+            Label('Press ESC to exit.', font_name=font_name,
+                  font_size=font_size, x=xcenter, y=10,
+                  anchor_x='center', anchor_y='bottom',
+                  color=font_color, batch=self.batch)
+
+        (φ1, φ2) = self.angles()
 
         self.source1 = \
             Star(x=xcenter, y=ycenter, num_spikes=80,
@@ -330,6 +342,12 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
             Line(x=xmeter_L_vert+2, y=ymeter, x2=xmeter_R_vert-2,
                  y2=ymeter, color=join34_color, batch=self.batch)
 
+        self.correlation_coef = \
+            Label(text='correlation coefficient = ',
+                  font_name=font_name, font_size=font_size,
+                  x=xcenter-20, y=ycenter-140, anchor_x='left',
+                  anchor_y='top', color=font_color, batch=self.batch)
+
     def on_draw(self):
         """Clear the screen and draw the visualization."""
         self.clear()
@@ -374,7 +392,9 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.join4.y = self.meter_L_vertical.y + 10
         self.join4.y2 = self.meter_R_vertical.y + 10
 
-        #ρ_est = estimate_ρ(counts, φ1, φ2)
+        ρ_est = estimate_ρ(counts, φ1, φ2)
+        self.correlation_coef.text = \
+            'correlation coefficient = ' + str(ρ_est)
 
     def angles(self):
         """Compute the current angles of the two channels."""
