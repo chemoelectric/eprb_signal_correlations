@@ -42,11 +42,15 @@
 # incorrect mathematical solutions to the experimental arrangement!
 #
 # Scientists have simply done their math incorrectly. Correct math
-# requires a more sophisticated analysis that is taught to signal
-# processing engineers but not to physicists. One needs such things as
-# ‘joint probability density functions’ and multiple integration, and
-# THEN one really does get THE SAME ANSWER as quantum mechanics. As
-# you can see here, it really is so, even though physicists had
+# requires a more sophisticated analysis that was taught to me as a
+# graduate student of signal processing engineering in the 1980s but
+# which, obviously and unfortunately, not to students of physics. One
+# needs such things as ‘joint probability density functions’, and THEN
+# one really does get THE SAME ANSWER as quantum mechanics. Even then,
+# it took me about 20 years of on and off work on the problem, to find
+# the derivation via probability theory alone.
+#
+# As you can see here, it really is so, even though physicists had
 # thought it impossible. There is no ‘entanglement’, and yet there is
 # obvious correlation.
 #
