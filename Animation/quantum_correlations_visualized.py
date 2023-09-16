@@ -52,6 +52,7 @@
 #
 #---------------------------------------------------------------------
 
+import sys
 from enum import Enum
 from random import random, seed
 from math import pi, sin, cos, sqrt
@@ -217,6 +218,7 @@ xmeter_L_axis = 70
 xmeter_L_vert = 80
 
 xmeter_R_horiz = 620
+xmeter_R_axis = 640
 xmeter_R_vert = 650
 
 font_name = "helvetica"
@@ -225,7 +227,7 @@ font_color = (0, 0, 0, 255)
 
 class QuantumCorrelationsVisualized(pyglet.window.Window):
 
-    def __init__(self, Δφ):
+    def __init__(self, Δφ_string, Δφ):
         super().__init__(700, 500, "Quantum Correlations Visualized")
         pyglet.gl.glClearColor(1, 1, 1, 1)
         self.Δφ = Δφ
@@ -253,7 +255,7 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
                       color=light_color, batch=self.batch)
         self.source_label = \
             Label('h/v polarized photons', font_name=font_name,
-                  font_size=font_size, x=xcenter, y=ycenter-30,
+                  font_size=font_size, x=xcenter, y=ycenter+30,
                   anchor_x='center', anchor_y='center',
                   color=font_color, batch=self.batch)
 
@@ -266,6 +268,11 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
                  batch=self.batch)
         self.channel_L_label = \
             Label('PBS rotating on axle', font_name=font_name,
+                  font_size=font_size, x=xpbs_L, y=ypbs_L+70,
+                  anchor_x='center', anchor_y='center',
+                  color=font_color, batch=self.batch)
+        self.channel_L_phi = \
+            Label('phi_1', font_name=font_name,
                   font_size=font_size, x=xpbs_L, y=ypbs_L-70,
                   anchor_x='center', anchor_y='center',
                   color=font_color, batch=self.batch)
@@ -279,6 +286,11 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
                  batch=self.batch)
         self.channel_R_label = \
             Label('PBS rotating on axle', font_name=font_name,
+                  font_size=font_size, x=xpbs_R, y=ypbs_R+70,
+                  anchor_x='center', anchor_y='center',
+                  color=font_color, batch=self.batch)
+        self.channel_R_phi = \
+            Label('phi_2', font_name=font_name,
                   font_size=font_size, x=xpbs_R, y=ypbs_R-70,
                   anchor_x='center', anchor_y='center',
                   color=font_color, batch=self.batch)
@@ -300,6 +312,10 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.meter_R_vertical = \
             Rectangle(x=xmeter_R_vert-2, y=ymeter, width=4, height=20,
                       color=light_color, batch=self.batch)
+        self.meter_R_axis = \
+            Line(x=xmeter_R_axis, y=ymeter, x2=xmeter_R_axis,
+                 y2=ymeter + meter_height, color=border_color,
+                 batch=self.batch)
 
         self.join1 = \
             Line(x=xmeter_L_horiz+10, y=ymeter, x2=xmeter_R_vert-2,
@@ -366,9 +382,31 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         φ2 = φ1 + self.Δφ
         return (φ1 % two_π, φ2 % two_π)
 
+def print_usage():
+    print("Usage: FIXME")
+
 def main():
     seed(a = 0, version = 2)
-    visualization = QuantumCorrelationsVisualized(pi/8)
+    if len(sys.argv) != 2:
+        print_usage()
+        exit(1)
+    Δφ_string = sys.argv[1]
+    if Δφ_string == "pi/8":
+        Δφ = π_8
+    elif Δφ_string == "pi/4":
+        Δφ = π_4
+    elif Δφ_string == "3pi/8":
+        Δφ = 3 * π_8
+    elif Δφ_string == "pi/2":
+        Δφ = π_2
+    else:
+        try:
+            Δφ = int(Δφ_string) * π_180
+            Δφ_string = Δφ_string + " deg"
+        except:
+            print_usage()
+            exit(1)
+    visualization = QuantumCorrelationsVisualized(Δφ_string, Δφ)
     pyglet.clock.schedule_interval(visualization.update, 0.05)
     pyglet.app.run()
 
