@@ -13,6 +13,9 @@ syntax: regexp
 ^Paper/eprb_signal_correlations\.(log|aux|out)$
 ^Paper/missfont\.log$
 
+# PyPI-related stuff.
+^Animation/Quantum_Correlations_Visualized/dist$
+
 # Other files likely to show up.
 ^.*/a\.out$
 ^.*/eprb_signal_correlations$
