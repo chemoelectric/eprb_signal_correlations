@@ -76,16 +76,17 @@
 #
 # As for Bell’s original inequality, he simply factored the joint
 # probability incorrectly. His hand-waving explanations for this
-# action make no difference. I have no idea why anyone ever took
-# Bell’s papers seriously. If Bell’s arguments were true, then my two
-# brothers and I could not have similar DNA, unless it were by my
+# action make no difference. If Bell’s arguments were true, then my
+# two brothers and I could not have similar DNA, unless it were by my
 # parents creating ‘entangled’ DNA, followed by a spooky kind of
-# action at a distance.
+# action at a distance. Presumably my DNA became ‘unentangled’ the
+# first time I took a DNA test, if not sooner.
 #
 # My father-in-law was a biochemistry research professor, at my own
 # alma mater as it happens, though in a different part of it. All
 # kinds of silliness go on in such large research universities, but I
-# doubt he would have agreed with such a theory.
+# doubt he would have agreed with the theory that my DNA was ever
+# ‘entangled’.
 #
 #---------------------------------------------------------------------
 
