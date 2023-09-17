@@ -65,9 +65,9 @@
 #
 # (I was lucky enough to do my studies in signal processing
 # engineering, which included coursework in random process
-# analysis. However, it was over thirty years ago and I never worked
-# in the field, so it took me a very, very long time to solve this
-# problem.)
+# analysis. However, that was in the 1980s and I never actually WORKED
+# in signal processing, so it has taken me about 20 years of off and
+# on attention to solve this problem.)
 #
 # If you do not believe the math, believe your eyes. Read the code of
 # this simulation.
