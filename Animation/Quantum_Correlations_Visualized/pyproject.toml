@@ -1,0 +1,27 @@
+[build-system]
+requires = ["flit_core>=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "Quantum-Correlations-Visualized"
+version = "0.1.0"
+authors = [
+    {name="Barry Schwartz", email="sortsmill@crudfactory.com"}
+]
+description = "Visual Simulation of a Two-Channel Quantum Bell Experiments"
+readme = "README.txt"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: The Unlicense (Unlicense)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyglet >= 2.0.9",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/chemoelectric/eprb_signal_correlations"
+
+[project.scripts]
+Quantum-Correlations-Visualized = "Quantum_Correlations_Visualized:quantum_correlations_visualized"

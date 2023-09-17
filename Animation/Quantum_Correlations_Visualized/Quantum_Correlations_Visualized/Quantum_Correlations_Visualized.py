@@ -254,7 +254,7 @@ xmeter_R_horiz = 620
 xmeter_R_axis = 640
 xmeter_R_vert = 650
 
-font_name = "times new roman"
+font_name = "serif"
 font_size = 10
 font_color = (0, 0, 0, 255)
 
@@ -283,7 +283,7 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
         self.bell_test = \
             Label('Two-channel Bell test (simulated randomly)',
                   font_name=font_name, font_size=font_size*1.5,
-                  x=xcenter, y=490, anchor_x='center', anchor_y='top',
+                  x=xcenter, y=480, anchor_x='center', anchor_y='top',
                   color=font_color, batch=self.batch)
 
         self.escape = \
@@ -318,7 +318,7 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
                  y2=250+50*sin(φ1), color=dial_color,
                  batch=self.batch)
         self.channel_L_label = \
-            Label('PBS rotating on axle', font_name=font_name,
+            Label('PBS rotating on an axle', font_name=font_name,
                   font_size=font_size, x=xpbs_L, y=ypbs_L+70,
                   anchor_x='center', anchor_y='center',
                   color=font_color, batch=self.batch)
@@ -336,7 +336,7 @@ class QuantumCorrelationsVisualized(pyglet.window.Window):
                  y2=250+50*sin(φ2), color=dial_color,
                  batch=self.batch)
         self.channel_R_label = \
-            Label('PBS rotating on axle', font_name=font_name,
+            Label('PBS rotating on an axle', font_name=font_name,
                   font_size=font_size, x=xpbs_R, y=ypbs_R+70,
                   anchor_x='center', anchor_y='center',
                   color=font_color, batch=self.batch)
