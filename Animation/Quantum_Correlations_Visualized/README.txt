@@ -36,7 +36,10 @@ trigonometric identities, and eventually end up calculating an
 approximation of the ideal value, −cos(2×(phi_2 − phi_1)). A little
 care has to be taken with quadrants and signs, because there are
 actually two square roots that are negatives of each other, but
-otherwise the process is straightforward, if tedious.
+otherwise the process is straightforward, if tedious. Before being
+displayed, the estimated correlation coefficients are passed through a
+digital lowpass filter with a very low cutoff frequency, so they do
+not change too rapidly.
 
 As for the sense of the correlation coefficient, some will prefer
 +cos(2×(phi_2 − phi_1)). This is arbitrary.
