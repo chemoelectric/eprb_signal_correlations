@@ -42,9 +42,18 @@ digital lowpass filter with a very low cutoff frequency, so they do
 not change too rapidly.
 
 As for the sense of the correlation coefficient, some will prefer
-+cos(2×(phi_2 − phi_1)). This is arbitrary.
++cos(2×(phi_2 − phi_1)). The sense is arbitrary, as long as it is kept
+consistent, and then only if one cares about more than just the
+magnitude of the coefficient.
 
-And, actually, a better way to write the coefficient is −(cos²(phi_2 −
-phi_1) − sin²(phi_2 − phi_1)), which expresses it as the difference
-between two polarizing beam splitter settings according to the Law of
-Malus.
+Incidentally, a better way to write the coefficient is
+
+     −(cos²(phi_2 − phi_1) − sin²(phi_2 − phi_1))
+
+which expresses it in relative intensities of the two polarizing beam
+splitters, according to the Law of Malus. The correlation coefficient
+written in this form thus applies almost intuitively to
+plane-polarized electromagnetic waves. And it is the formula actually
+used in the program. It is equivalent to the other form via one of the
+trigonometric double-angle identities found in CRC handbooks and
+Wikipedia.
