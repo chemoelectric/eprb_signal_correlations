@@ -63,6 +63,12 @@
 # integrations done. Then one gets the same answer as quantum
 # mechanics.
 #
+# (I was lucky enough to do my studies in signal processing
+# engineering, which included coursework in random process
+# analysis. However, it was over thirty years ago and I never worked
+# in the field, so it took me a very, very long time to solve this
+# problem.)
+#
 # If you do not believe the math, believe your eyes. Read the code of
 # this simulation.
 #
