@@ -1,11 +1,13 @@
-Visual Simulation of a Two-Channel Quantum Bell Experiment
-----------------------------------------------------------
+Visual Simulation of a Two-Channel Quantum Bell Test Experiment
+---------------------------------------------------------------
 
 Run the program from the command line with something like
 
     Quantum-Correlations-Visualized pi/8
     Quantum-Correlations-Visualized 3pi/8
-    Quantum-Correlations-Visualized 33.3
+    Quantum-Correlations-Visualized pi/4
+    Quantum-Correlations-Visualized 30
+    Quantum-Correlations-Visualized 60
 
 or run it without an argument to get a usage message.
 
@@ -57,3 +59,10 @@ plane-polarized electromagnetic waves. And it is the formula actually
 used in the program. It is equivalent to the other form via one of the
 trigonometric double-angle identities found in CRC handbooks and
 Wikipedia.
+
+At the sides of the display are ‘meters’ that show which detectors are
+detecting what percentage of the horizontally or vertically polarized
+photons. Thus one has visual confirmation of the correlations, even if
+the correlation coefficient should seem difficult to interpret. Lines
+between the ‘meter pointers’ are there to help with seeing the
+pointers move together, and also just to look pretty.
