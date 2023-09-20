@@ -66,3 +66,8 @@ photons. Thus one has visual confirmation of the correlations, even if
 the correlation coefficient should seem difficult to interpret. Lines
 between the ‘meter pointers’ are there to help with seeing the
 pointers move together, and also just to look pretty.
+
+Comments in the source code explain more about the program, such as
+how the simulation reproduces empirically the correlations predicted
+by quantum mechanics for a Bell test. The method used might seem novel
+and surprising.
