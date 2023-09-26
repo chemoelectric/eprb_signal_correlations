@@ -7,11 +7,12 @@ was given for junk pseudoscience.
 
 ----------------------------------------------------------------------
 
-It all began with the Ada program, which is a simulation of a signal
-processing problem logically equivalent to one of Alain Aspect’s
-Bell-test experiments. The simulation reproduces the statistics
-predicted by quantum mechanics, but entirely classically. Which OF
-COURSE it does, because it is LOGICALLY EQUIVALENT.
+This repository all began with the Ada program, which is a simulation
+of a signal processing problem logically equivalent to one of Alain
+Aspect’s Bell-test experiments. The simulation reproduces the
+statistics predicted by quantum mechanics, but entirely
+classically. Which OF COURSE it does, because it is LOGICALLY
+EQUIVALENT.
 
 There is no trick to it. Aspect is simply wrong, as are Bell and
 Clauser. Not one of them could do the math correctly.
