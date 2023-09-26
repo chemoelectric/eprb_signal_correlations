@@ -1,1 +1,102 @@
 Nobelkommittén för fysik har förbjudit det här programmet.
+
+----------------------------------------------------------------------
+
+Herein find materials that demonstrate the 2022 Nobel Prize in Physics
+was given for junk pseudoscience.
+
+----------------------------------------------------------------------
+
+It all began with the Ada program, which is a simulation of a signal
+processing problem logically equivalent to one of Alain Aspect’s
+Bell-test experiments. The simulation reproduces the statistics
+predicted by quantum mechanics, but entirely classically. Which OF
+COURSE it does, because it is LOGICALLY EQUIVALENT.
+
+There is no trick to it. Aspect is simply wrong, as are Bell and
+Clauser. Not one of them could do the math correctly.
+
+And it is plain fact that ‘science’ is NOT ‘self-correcting’, as the
+robotic talking heads would have it. Rather, physicists have
+instituted a self-reinforcing incompetence in probability theory and
+random process analysis that goes all the way back to the beginnings
+of quantum mechanics.
+
+We have, perhaps, what is the worst ‘scientific’ system a person could
+have dreamt up. I am not sure what to do about that except to alert
+the educated public to the fact and have them demand that the system
+be DISMANTLED. The journals, ‘peer review’ (which in practice is
+organized bullying), the whole thing!
+
+In its place, we need something with universal open access, and where
+bullies (such as the Bell apologists have been) cannot block
+publication.
+
+----------------------------------------------------------------------
+
+There are also in here:
+
+* Translations of the Ada program to other languages.
+
+* A paper, more or less in the style of the journals, based on the
+  math of the Ada program’s commentary, but with corrections that may
+  not yet have been incorporated into that commentary. The paper
+  should be considered a mere transitional, because the journal style
+  is a failed format. A Bell apologist in academia, having gotten a
+  copy, and not noticing that the solution was to a signal processing
+  problem rather than to a Bell-test itself, scanned it for
+  opportunities to build a Gish Gallop of reasons to reject it for
+  publication, citing ‘Theory of Local Beadles’ and other such
+  folderol. Also he attacked my attitude towards quantum physicists,
+  which is logically irrelevant, but which was further means to keep
+  my paper from being published (though I was not submitting it for
+  publication anywhere). As I say, the journal style simply DOES NOT
+  FUNCTION. It rewards bullies. Nevertheless, the paper is useful in
+  that it presents perhaps the first derivation of the correlation
+  coefficient from probability theory alone.
+
+* The source repository for the Python animation at
+  https://pypi.org/project/Quantum-Correlations-Visualized/
+
+* The beginnings of a monograph NOT in the journal style, which shall
+  teach basics of probability theory and go on from there.
+
+----------------------------------------------------------------------
+
+Let me finish this README with a trap for Bell apologists.
+
+This is a proof Einstein, Podolsky, and Rosen were right that SHOULD
+have occurred to electrical engineers long ago. However, nowadays the
+IEEE is ‘Quantum This’ and ‘Quantum That’, so I have no idea WHAT is
+occurring to electrical engineers. I cannot join an IEEE society
+anymore. They are all corrupted.
+
+The trap goes as follows.
+
+Take your favorite Bell-test experiment. Convert it step by step to a
+signal processing problem. Take the particles and convert them to
+signals. Take the beam-splitting polarizers or the Stern-Gerlach
+magnets and convert them to receiver-transmitter relay stations,
+applying equivalent algorithms. Do any other necessary transformations
+of the sort.
+
+The result will be a signal processing experiment that is, step by
+step, logically equivalent to the Bell-test experiment. And it will
+be, without question, a classical experiment, fully action by contact.
+
+Therefore the Bell-test experiment is classical and action by contact.
+
+At this point, the Bell apologist objects, perhaps, that the signal
+processing experiment is NOT, in fact, logically equivalent, because
+it left out ENTANGLEMENT. The signals are not, like the particles,
+entangled.
+
+So now what you do is you SOLVE for the correlation coefficient of the
+signal processing problem, using random process analysis methods. One
+obtains, of course, the same solution as QM obtains for the Bell-test.
+
+The Bell apologist is now trapped. Most likely they will not switch
+sides, but rather resort to a series of selections from this list:
+https://en.wikipedia.org/w/index.php?title=List_of_fallacies&oldid=1171695814#Informal_fallacies
+
+----------------------------------------------------------------------
