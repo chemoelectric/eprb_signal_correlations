@@ -26,12 +26,15 @@
 % For more information, please refer to <https://unlicense.org>
 
 \frenchspacing
+\def\conditional{{\vert}}
 
 @f crayton void
 @f crayton_pair void
 @f cray_ban void
 @f event_data void
 @f series_data void
+@f conditional TeX
+@f listitem TeX
 
 @* Magically Entangled Craytons. What follows are instructions on how
 to write a program that, on an ordinary computer, will
@@ -124,10 +127,18 @@ filter. Let us call the type |cray_ban|.
 typedef double cray_ban;
 
 @ Such a magic trick also needs smoke. In this case, the smoke
-comprises classical physics done, by people with doctorates in
-physics, so shockingly incorrectly that you go psychosomatically
-blind. However, there is not space here for phony mathematics, so we
-refer you to the quantum physics literature instead.
+comprises classical physics done, by doctors of philosophy in physics
+or mathematics, so shockingly incorrectly that you go
+psychosomatically blind. However, there is not space here for phony
+mathematics, so we refer you to the quantum physics literature
+instead.
+
+Please leave yourself a chance to recover. You may need as smelling
+salts the following reminders: (1) the definition of a conditional
+probability |P(A conditional B)|, in terms of a joint probability
+|P(A@,B)| and non-zero probability |P(B)|, is |P(A conditional
+B)=P(A@,B)/P(B)|, and this definition is {\it mathematics\/} and {\it
+immutable\/}, not {\it physics\/} and subject to debate;
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
@@ -205,3 +216,20 @@ typedef struct
   int number_of_sideways_updown_minus_minus;
 } series_data;
 
+@ Thus a series of |n| events may be run as follows.
+
+@<a series of |n| experimental events@>=
+series_data
+experimental_series (cray_ban angle1, cray_ban angle2, int n)
+{
+  series_data sdata;
+  sdata.angle1 = angle1;
+  sdata.angle2 = angle2;
+  sdata.number_of_events = n;
+  for (int i = 0; i != n; i = i + 1) /* Do |n| times. */
+    {
+      event_data edata;
+      
+    }
+  return sdata;
+}
