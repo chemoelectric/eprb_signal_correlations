@@ -136,9 +136,14 @@ instead.
 Please leave yourself a chance to recover. You may need as smelling
 salts the following reminders: (1) the definition of a conditional
 probability |P(A conditional B)|, in terms of a joint probability
-|P(A@,B)| and non-zero probability |P(B)|, is |P(A conditional
-B)=P(A@,B)/P(B)|, and this definition is {\it mathematics}, solid and
-unmovable, not physics nor subject to debate and arguments;
+|P(A@,B)| and a probability |P(B)|, is |P(A conditional
+B)=P(A@,B)/P(B)|, and this definition is {\it purely mathematical},
+containing no words pertaining to physics; (2) the claim that quantum
+physics is irreducible, though widely thought to be a claim about
+physics, is actually the extraordinary {\it mathematical\/} claim that
+a quantum physics problem, written in logically equivalent form but in
+a notation other than that of quantum physics, cannot be solved or
+will come to a different result!
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
