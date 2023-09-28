@@ -121,10 +121,10 @@ filter. Let us call the type |cray_ban|.
 typedef double cray_ban;
 
 @ Such a magic trick also needs smoke. In this case, the smoke
-comprises classical physics done so shockingly incorrectly you
-completely lose focus. However, there is not space here for phony
-mathematics, so we refer you to the quantum physics literature
-instead.
+comprises classical physics done, by people with doctorates in
+physics, so shockingly incorrectly that you go psychosomatically
+blind. However, there is not space here for phony mathematics, so we
+refer you to the quantum physics literature instead.
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
