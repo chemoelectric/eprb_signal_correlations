@@ -142,8 +142,8 @@ containing no words pertaining to physics; (2) the claim that quantum
 physics is irreducible, though widely thought to be a claim about
 physics, is actually the extraordinary {\it mathematical\/} claim that
 a quantum physics problem, written in logically equivalent form but in
-a notation other than that of quantum physics, cannot be solved or
-will come to a different result!
+a notation other than that of quantum physics, cannot exist, cannot be
+solved, or will come to a different result!
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
