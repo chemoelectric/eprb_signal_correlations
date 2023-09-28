@@ -138,12 +138,13 @@ salts the following reminders: (1) the definition of a conditional
 probability |P(A conditional B)|, in terms of a joint probability
 |P(A@,B)| and a probability |P(B)|, is |P(A conditional
 B)=P(A@,B)/P(B)|, and this definition is {\it purely mathematical},
-containing no words pertaining to physics; (2) the claim that quantum
-physics is irreducible, though widely thought to be a claim about
-physics, is actually the extraordinary {\it mathematical\/} claim that
-a quantum physics problem, written in logically equivalent form but in
-a mathematics other than that of quantum physics, cannot exist, cannot
-be solved, or will come to a different result!
+containing no words pertaining to physics, and so any redefinitions in
+physics terms make the mathematics {\it phony\/}; (2) the claim that
+quantum physics is irreducible, though widely thought to be a claim
+about physics, is actually the extraordinary {\it mathematical\/}
+claim that a quantum physics problem, written in logically equivalent
+form but in a mathematics other than that of quantum physics, cannot
+exist, cannot be solved, or will come to a different result!
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
@@ -231,10 +232,75 @@ experimental_series (cray_ban angle1, cray_ban angle2, int n)
   sdata.angle1 = angle1;
   sdata.angle2 = angle2;
   sdata.number_of_events = n;
+  sdata.number_of_updown_sideways_plus_plus = 0;
+  sdata.number_of_updown_sideways_plus_minus = 0;
+  sdata.number_of_updown_sideways_minus_plus = 0;
+  sdata.number_of_updown_sideways_minus_minus = 0;
+  sdata.number_of_sideways_updown_plus_plus = 0;
+  sdata.number_of_sideways_updown_plus_minus = 0;
+  sdata.number_of_sideways_updown_minus_plus = 0;
+  sdata.number_of_sideways_updown_minus_minus = 0;
   for (int i = 0; i != n; i = i + 1) /* Do |n| times. */
     {
-      event_data edata;
-      
+      event_data edata = experimental_event (angle1, angle2);
+      if (edata.pair.k1 == updown)
+        {
+          if (edata.way_pair_k1_was_sent == +1)
+            {
+              if (edata.way_pair_k2_was_sent == +1)
+                {
+                  sdata.number_of_updown_sideways_plus_plus = @|
+                    sdata.number_of_updown_sideways_plus_plus + 1;
+                }
+              else
+                {
+                  sdata.number_of_updown_sideways_plus_minus = @|
+                    sdata.number_of_updown_sideways_plus_minus + 1;
+                }
+            }
+          else
+            {
+              if (edata.way_pair_k2_was_sent == +1)
+                {
+                  sdata.number_of_updown_sideways_minus_plus = @|
+                    sdata.number_of_updown_sideways_minus_plus + 1;
+                }
+              else
+                {
+                  sdata.number_of_updown_sideways_minus_minus = @|
+                    sdata.number_of_updown_sideways_minus_minus + 1;
+                }
+            }
+        }
+      else
+        {
+          if (edata.way_pair_k1_was_sent == +1)
+            {
+              if (edata.way_pair_k2_was_sent == +1)
+                {
+                  sdata.number_of_sideways_updown_plus_plus = @|
+                    sdata.number_of_sideways_updown_plus_plus + 1;
+                }
+              else
+                {
+                  sdata.number_of_sideways_updown_plus_minus = @|
+                    sdata.number_of_sideways_updown_plus_minus + 1;
+                }
+            }
+          else
+            {
+              if (edata.way_pair_k2_was_sent == +1)
+                {
+                  sdata.number_of_sideways_updown_minus_plus = @|
+                    sdata.number_of_sideways_updown_minus_plus + 1;
+                }
+              else
+                {
+                  sdata.number_of_sideways_updown_minus_minus = @|
+                    sdata.number_of_sideways_updown_minus_minus + 1;
+                }
+            }
+        }
     }
   return sdata;
 }
