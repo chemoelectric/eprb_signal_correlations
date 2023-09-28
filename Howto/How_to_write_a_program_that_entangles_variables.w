@@ -120,6 +120,12 @@ filter. Let us call the type |cray_ban|.
 @<the |cray_ban| type@>=
 typedef double cray_ban;
 
+@ Such a magic trick also needs smoke. In this case, the smoke
+comprises classical physics done so shockingly incorrectly you
+completely lose focus. However, there is not space here for phony
+mathematics, so we refer you to the quantum physics literature
+instead.
+
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
 number the ways $+1$ and~$-1$) according to an algorithm that depends
@@ -157,12 +163,12 @@ typedef struct
   crayton_pair pair;
   int way_pair_k1_was_sent;
   int way_pair_k2_was_sent;
-} experimental_event_data;
+} event_data;
 
-experimental_event_data
+event_data
 experimental_event (cray_ban angle1, cray_ban angle2)
 {
-  experimental_event_data data;
+  event_data data;
   data.pair = crayton_source ();
   data.way_pair_k1_was_sent = law_of_logodaedalus (angle1, pair.k1);
   data.way_pair_k2_was_sent = law_of_logodaedalus (angle1, pair.k2);
