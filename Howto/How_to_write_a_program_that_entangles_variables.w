@@ -25,6 +25,8 @@
 %
 % For more information, please refer to <https://unlicense.org>
 
+@f electroton void
+
 @ What follows are instructions on how to write a program that, on an
 ordinary computer, will quantum-entangle two variables so that there
 is action at a distance between them when they are printed
@@ -66,12 +68,12 @@ number_between_zero_and_one ()
 }
 
 @ Now to the magical program itself. The first thing we need is the
-magical variables. These will be of a type called |digiton|, whose
+magical variables. These will be of a type called |electroton|, whose
 value will be either |updown| or |sideways|. How to write that in your
 language will vary, but here is one way to write it in C.
 
 @<Types@>=
-typedef enum {updown, sideways} digiton;
+typedef enum {updown, sideways} electroton;
 
 @ As with many a magic trick, we need mirrors. What we need here is
 the digital equivalent of a device made from a kind of mirror that
@@ -85,27 +87,27 @@ filter. Let us call the type |cray_ban|.
 @<Types@>=
 typedef double cray_ban;
 
-@ A |cray_ban| does not deal with a beam of light, but instead with a
-|digiton|. It decides which of two ways to send a |digiton| (we will
-number the ways simply $1$ and~$2$) according to an algorithm that
-depends on one of those arbitrary numbers between zero and
+@ A |cray_ban| does not deal with a beam of light, but instead with an
+|electroton|. It decides which of two ways to send an |electroton| (we
+will number the ways $+1$ and~$-1$) according to an algorithm
+that depends on one of those arbitrary numbers between zero and
 one. Students of optics may recognize this algorithm as the {\it Law
 of Malus}, but here we will call it the {\it Law of Logodaedalus},
 because that sounds more magical.
 
 @<Algorithms@>=
 int
-law_of_logodaedalus (cray_ban angle, digiton digiton_that_will_be_sent)
+law_of_logodaedalus (cray_ban angle, electroton electroton_that_will_be_sent)
 {
   double x;
   int i;
-  if (digiton_that_will_be_sent == updown)
+  if (electroton_that_will_be_sent == updown)
     x = sin (angle);
   else
     x = cos (angle);
   if (number_between_zero_and_one () < (x * x))
-    i = 1;
+    i = +1;
   else
-    i = 2;
+    i = -1;
   return i;
 }
