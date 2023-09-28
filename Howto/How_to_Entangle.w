@@ -28,7 +28,10 @@
 \frenchspacing
 
 @f crayton void
+@f crayton_pair void
 @f cray_ban void
+@f event_data void
+@f series_data void
 
 @* Magically Entangled Craytons. What follows are instructions on how
 to write a program that, on an ordinary computer, will
@@ -171,6 +174,34 @@ experimental_event (cray_ban angle1, cray_ban angle2)
   event_data data;
   data.pair = crayton_source ();
   data.way_pair_k1_was_sent = law_of_logodaedalus (angle1, pair.k1);
-  data.way_pair_k2_was_sent = law_of_logodaedalus (angle1, pair.k2);
+  data.way_pair_k2_was_sent = law_of_logodaedalus (angle2, pair.k2);
   return data;
 }
+
+@ One wishes to run a series of events, all with one particular pair
+of |cray_ban| angles, and count the different types of
+coincidence. For this there is a new record type, the |series_data|,
+containing the total number of events and the number of each type of
+event. (The total number of events will equal the sum of the other
+fields.)
+
+You do not have to use a record type, of course. This is just one way
+to represent the information. By using records a lot, I am avoiding a
+confusing C feature called ``pointers.''
+
+@<the |series_data| type@>=
+typedef struct
+{
+  cray_ban angle1;
+  cray_ban angle2;
+  int number_of_events;
+  int number_of_updown_sideways_plus_plus;
+  int number_of_updown_sideways_plus_minus;
+  int number_of_updown_sideways_minus_plus;
+  int number_of_updown_sideways_minus_minus;
+  int number_of_sideways_updown_plus_plus;
+  int number_of_sideways_updown_plus_minus;
+  int number_of_sideways_updown_minus_plus;
+  int number_of_sideways_updown_minus_minus;
+} series_data;
+
