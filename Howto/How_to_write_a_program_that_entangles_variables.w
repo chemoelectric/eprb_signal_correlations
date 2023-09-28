@@ -25,13 +25,15 @@
 %
 % For more information, please refer to <https://unlicense.org>
 
-@f electroton void
+@f crayton void
+@f cray_ban void
 
-@ What follows are instructions on how to write a program that, on an
-ordinary computer, will quantum-entangle two variables so that there
-is action at a distance between them when they are printed
-out. Normally such a program would require a quantum computer, but the
-program {\it you} write will be magical.
+@* Magically Entangled Craytons. What follows are instructions on how
+to write a program that, on an ordinary computer, will
+quantum-entangle two variables so that there is action at a distance
+between them when they are printed out. Normally such a program would
+require a quantum computer, but the program {\it you} write will be
+magical.
 
 I will myself write a magical C program that does the same thing.
 
@@ -42,10 +44,9 @@ colleagues, could be people who do not follow Scientific Method. There
 is no way they would not go even to the slight trouble of writing a
 simple simulation to observe what happens, before publishing thousands
 of papers and books, and encouraging governments to spend billions and
-billions of dollars. They could not also be thoroughly incompetent in
-random process analysis and yet bloviate voluminously on the
-subject. So what occurs in our programs must be nothing less than
-magic.
+billions of dollars. They would not also publish voluminously about
+random process analysis without ever consulting an expert. So what
+occurs in our programs must be nothing less than magic.
 
 @ We will need a way to pick arbitrary numbers between zero and one,
 without showing much bias. The method need not be particularly
@@ -55,7 +56,7 @@ a function returning a floating point number, will suffice. (Or you
 could just use your programming language's ``random number''
 facilities.)
 
-@<Algorithms@>=
+@<Arbitrary numbers between zero and one@>=
 double a_global_variable = 12345.0;
 
 double
@@ -68,12 +69,12 @@ number_between_zero_and_one ()
 }
 
 @ Now to the magical program itself. The first thing we need is the
-magical variables. These will be of a type called |electroton|, whose
+magical variables. These will be of a type called |crayton|, whose
 value will be either |updown| or |sideways|. How to write that in your
 language will vary, but here is one way to write it in C.
 
-@<Types@>=
-typedef enum {updown, sideways} electroton;
+@<The |crayton| type@>=
+typedef enum {updown, sideways} crayton;
 
 @ As with many a magic trick, we need mirrors. What we need here is
 the digital equivalent of a device made from a kind of mirror that
@@ -84,24 +85,24 @@ floating point number capable of representing an angle in radians. The
 angle is simply how much someone has rotated the angle of the
 filter. Let us call the type |cray_ban|.
 
-@<Types@>=
+@<The |cray_ban| type@>=
 typedef double cray_ban;
 
-@ A |cray_ban| does not deal with a beam of light, but instead with an
-|electroton|. It decides which of two ways to send an |electroton| (we
-will number the ways $+1$ and~$-1$) according to an algorithm
-that depends on one of those arbitrary numbers between zero and
-one. Students of optics may recognize this algorithm as the {\it Law
-of Malus}, but here we will call it the {\it Law of Logodaedalus},
-because that sounds more magical.
+@ A |cray_ban| does not deal with a beam of light, but instead with a
+|crayton|. It decides which of two ways to send a |crayton| (we will
+number the ways $+1$ and~$-1$) according to an algorithm that depends
+on one of those arbitrary numbers between zero and one. Students of
+optics may recognize this algorithm as the {\it Law of Malus}, but
+here we will call it the {\it Law of Logodaedalus}, because that
+sounds more magical.
 
-@<Algorithms@>=
+@<The Law of Logodaedalus@>=
 int
-law_of_logodaedalus (cray_ban angle, electroton electroton_that_will_be_sent)
+law_of_logodaedalus (cray_ban angle, crayton crayton_that_will_be_sent)
 {
   double x;
   int i;
-  if (electroton_that_will_be_sent == updown)
+  if (crayton_that_will_be_sent == updown)
     x = sin (angle);
   else
     x = cos (angle);
