@@ -146,7 +146,9 @@ though usually assumed to be a claim about physics, is actually the
 physics problem, written in logically equivalent form but in a
 mathematics other than that of quantum physics, cannot exist, cannot
 be solved, or will come to a different result! For, once put in the
-form of a word problem, physics becomes applied mathematics.
+form of a word problem, physics becomes applied mathematics. Despite
+the public address system blaring pronouncements through billows of
+smoke, nothing resembling a smidgen of proof has ever been provided.
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
