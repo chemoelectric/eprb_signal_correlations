@@ -365,8 +365,8 @@ comparing the ``way the |crayton| was sent'' of the two |crayton| in
 the pair. Assume the two |cray_ban| settings are $\phi_1$
 and~$\phi_2$. The formula from quantum mechanics is then
 %
-$$ \eqalign{{\it correlation\ coefficient} & = \cos\,\lbrace2(\phi_2-\phi_1)\rbrace \cr
-        &        = \cos^2(\phi_2-\phi_1) - \sin^2(\phi_2-\phi_1) \cr} $$
+$$ \eqalign{{\it correlation\ coefficient} & = \cos\,\lbrace2(\phi_1-\phi_2)\rbrace \cr
+        &        = \cos^2(\phi_1-\phi_2) - \sin^2(\phi_1-\phi_2) \cr} $$
 %
 or the same formula with the sign reversed, because (like, say, a
 cross product) a correlation coefficient has arbitrary sense. The
@@ -396,3 +396,73 @@ $$\phi_1,\phi_2=\cases{0,\, \pi/8         & {$+1/\sqrt2\approx+0.70711$} \cr
                        0,\, 3\,\pi/8      & {$-1/\sqrt2\approx-0.70711$} \cr
                        \pi/4,\, \pi/8     & {$+1/\sqrt2\approx+0.70711$} \cr
                        \pi/4,\, 3\,\pi/8  & {$+1/\sqrt2\approx+0.70711$} \cr}$$
+
+@ Now we are going to do some clever stuff. We are going to use the
+data we have collected, together with the Law of Logodaedalus, to
+compute the correlation coefficient empirically. More specifically, we
+are going to use {\it frequencies of the recorded events\/} to get
+estimates of trigonometric functions of $\phi_1$ and~$\phi_2$, which
+we will then use to compute an approximation of $\cos^2(\phi_1-\phi_2)
+- \sin^2(\phi_1-\phi_2)$.
+
+@ Obtaining the frequencies is a simple matter of computing
+ratios. Given a |series_data| record |sdata|:
+
+@<frequencies of events@>=
+double freq_of_updown_sideways_plus_plus = @|
+       (1.0 * sdata.number_of_updown_sideways_plus_plus)@, / sdata.number_of_events;
+double freq_of_updown_sideways_plus_minus = @|
+       (1.0 * sdata.number_of_updown_sideways_plus_minus)@, / sdata.number_of_events;
+double freq_of_updown_sideways_minus_plus = @|
+       (1.0 * sdata.number_of_updown_sideways_plus_minus)@, / sdata.number_of_events;
+double freq_of_updown_sideways_minus_minus = @|
+       (1.0 * sdata.number_of_updown_sideways_minus_minus)@, / sdata.number_of_events;
+double freq_of_sideways_updown_plus_plus = @|
+       (1.0 * sdata.number_of_sideways_updown_plus_plus)@, / sdata.number_of_events;
+double freq_of_sideways_updown_plus_minus = @|
+       (1.0 * sdata.number_of_sideways_updown_plus_minus)@, / sdata.number_of_events;
+double freq_of_sideways_updown_minus_plus = @|
+       (1.0 * sdata.number_of_sideways_updown_plus_minus)@, / sdata.number_of_events;
+double freq_of_sideways_updown_minus_minus = @|
+       (1.0 * sdata.number_of_sideways_updown_minus_minus)@, / sdata.number_of_events;
+
+@ From the Law of Logodaedalus, it is possible to use these
+frequencies as estimates of products of the squares of cosines and
+sines of $\phi_1$ and~$\phi_2$. I leave it as an exercise for the
+reader to convince themselves of this fact. (Not only do I not have
+space to prove such things to lazyboneses, but also it is good
+exercise for the little gray cells.) Thus:
+
+@<estimates of certain products@>=
+double estimate_of_cos2_phi1_cos2_phi2 = @|
+  freq_of_updown_sideways_minus_plus + freq_of_sideways_updown_plus_minus;
+double estimate_of_cos2_phi1_sin2_phi2 = @|
+  freq_of_updown_sideways_minus_minus + freq_of_sideways_updown_plus_plus;
+double estimate_of_sin2_phi1_cos2_phi2 = @|
+  freq_of_updown_sideways_plus_plus + freq_of_sideways_updown_minus_minus;
+double estimate_of_sin2_phi1_sin2_phi2 = @|
+  freq_of_updown_sideways_plus_minus + freq_of_sideways_updown_minus_plus;
+
+@ The following angle-difference identities may be found in reference books:
+$$\eqalign{\cos(\alpha-\beta)&=\cos\alpha\cos\beta+\sin\alpha\sin\beta \cr
+           \sin(\alpha-\beta)&=\sin\alpha\cos\beta-\cos\alpha\sin\beta \cr}$$
+We can obtain estimates of the terms on the right side by taking
+square roots of the results from |@<estimates of certain
+products@>|. There are, of course, {\it two\/} square roots, one
+positive and one negative, and so we must know which one to
+use. However, all of our $\phi_1,\phi_2$ settings are for angles in
+Quadrant~I, and therefore only positive square roots will be needed.
+Thus:
+
+@<estimates of the angle-difference functions@>=
+  double estimate_of_cos_phi1_minus_phi2 = @|
+    sqrt (estimate_of_cos2_phi1_cos2_phi2) + sqrt (estimate_of_sin2_phi1_sin2_phi2);
+  double estimate_of_sin_phi1_minus_phi2 = @|
+    sqrt (estimate_of_sin2_phi1_cos2_phi2) - sqrt (estimate_of_cos2_phi1_sin2_phi2);
+
+@ Finally, then, one can estimate the correlation coefficient:
+
+@<estimate of the correlation coefficient@>=
+  double estimate_of_correlation_coefficient = @|
+    (estimate_of_cos_phi1_minus_phi2 * estimate_of_cos_phi1_minus_phi2) - @|
+      (estimate_of_sin_phi1_minus_phi2 * estimate_of_sin_phi1_minus_phi2);
