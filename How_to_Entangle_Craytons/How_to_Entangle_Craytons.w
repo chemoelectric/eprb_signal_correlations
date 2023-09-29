@@ -172,12 +172,13 @@ problems. Despite public address systems blaring pronouncements
 through billows of smoke, nothing resembling a smidgen of proof of
 such ``irreducibility'' has ever been produced. The literature,
 however, does employ imcompetence in mathematics {\it to give the
-impression\/} of such ``irreducibility.'' One merely gives up short of
-a solution, proclaiming, ``This is all that can be done.'' The
+impression\/} of such ``irreducibility.'' The practitioner of such
+incompetence merely gives up short of a solution, proclaiming, ``That
+is all that can {\it possibly\/} be done. Now please run experiments
+showing {\it these\/} are not the results obtained empirically.'' The
 encounter of scientists not even {\it trying\/} to solve problems
 causes temporary shriveling of the hypothalamus, and thus blindness is
-merely the beginning of its effects. It is a really good technique.
-You can win a Nobel Prize with it, it is so good.  \medskip
+merely {\it the mildest beginning\/} of its effects.
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
