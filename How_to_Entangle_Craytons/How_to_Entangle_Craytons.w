@@ -344,14 +344,14 @@ experimental_series (cray_ban angle1, cray_ban angle2, int n)
 some techniques for ``showing'' {\it absence\/} of
 entanglement---though actually the audience have had their
 hypothalamuses temporarily withered. Really they are being
-mind-controlled, as if in a Philip~K. Dick novel. However, you do not
-practice mind-control (I hope), and our task is different: we must
+mind-controlled, as if in a Philip~K. Dick novel. However, {\it you\/} do not
+practice mind-control (I hope), and {\it our\/} task is different: we must
 show {\it presence\/} of entanglement. Thus we will do nothing less
 than show that our experiment is empirically consistent with a formula
 from quantum mechanics: the correlation coefficient for our
 experimental arrangement. According to the 2022 Nobel Prize winners in
 Physics, this would be impossible unless the |crayton| pairs were
-entangled. The entanglement must be so, because these exemplars of
+entangled. The entanglement, then, {\it must\/} be so, because these exemplars of
 science won the Nobel Prize for it. Thus the |crayton| pairs were
 indeed entangled.
 
