@@ -26,15 +26,12 @@
 % For more information, please refer to <https://unlicense.org>
 
 \frenchspacing
-\def\conditional{{\vert}}
 
 @f crayton void
 @f crayton_pair void
 @f cray_ban void
 @f event_data void
 @f series_data void
-@f conditional TeX
-@f listitem TeX
 
 @* Magically Entangled Craytons. What follows are instructions on how
 to write a program that, on an ordinary computer, will
@@ -134,21 +131,40 @@ mathematics, so we refer you to the quantum physics literature
 instead.
 
 Please leave yourself a chance to recover. You may need as smelling
-salts the following reminders: (1) the definition of a conditional
-probability |P(A conditional B)|, in terms of a joint probability
-|P(A@,B)| and a probability |P(B)|, is |P(A conditional
-B)=P(A@,B)/P(B)|, and this definition is {\it purely mathematical},
-containing no words pertaining to physics (and thus a redefinition
-{\it with\/} physics terms renders the ``mathematics'' {\it internally
-inconsistent\/}); (2) the claim that quantum physics is irreducible,
-though usually assumed to be a claim about physics, is actually the
-{\it mathematical\/} claim---and an alarming one---that a quantum
-physics problem, written in logically equivalent form but in a
-mathematics other than that of quantum physics, cannot exist, cannot
-be solved, or will come to a different result! For, once put in the
-form of a word problem, physics becomes applied mathematics. Despite
-the public address system blaring pronouncements through billows of
-smoke, nothing resembling a smidgen of proof has ever been provided.
+salts the following reminders:
+\medskip
+
+\item{\bullet} The {\it definition\/} of a conditional probability $
+P(A\,\vert{}B) $, in terms of a joint probability $ P(A\cap{}B) $ and
+a probability $ P(B) $, is $ P(A\,\vert{}B)=P(A\cap{}B)\,/\,P(B) $,
+and this definition is {\it purely mathematical}, having {\it
+nothing\/} to do with ``causality'' or ``controlled variables.'' When
+new definitions are introduced, employing such terms taken from
+physics, the resulting ``mathematics'' is phony and internally
+inconsistent. For instance, given the ``mathematics'' of the most
+famous smoke in all of the literature, one may easily prove that~$ 1 =
+0 $. This proof is not a ``loophole,'' as some thaumaturge may try to
+convince you it be, thereby giving you vertigo. It is demonstration
+that the author of the literature had not the vaguest clue what he was
+doing. The concussion of such incompetence, in a Fellow of the Royal
+Society, is what rendered you psychosomatically blind.
+
+\item{\bullet} The claim that quantum physics is ``irreducible'' to
+classical physics, though usually assumed to be a claim about physics,
+is actually the {\it mathematical\/} claim---and an alarming
+one---that a quantum physics problem, written in logically equivalent
+form but in a mathematics other than that of quantum physics, cannot
+exist, cannot be solved, or will come to a different result! For, once
+put in the form of a word problem, physics becomes applied
+mathematics, and ``classical physics'' becomes merely the application
+of any and all mathematics to the reasonable solution of such word
+problems. Despite public address systems blaring pronouncements
+through billows of smoke, nothing resembling a smidgen of proof of
+such ``irreducibility'' has ever been provided. The literature,
+however, does employ incompetence in techniques besides quantum
+mechanics {\it to give the impression\/} of such ``irreducibility.''
+The encounter of scientists not even {\it trying\/} to solve problems
+causes temporarily shriveling of the hypothalamus.  \medskip
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
@@ -226,7 +242,8 @@ typedef struct
   int number_of_sideways_updown_minus_minus;
 } series_data;
 
-@ Thus a series of |n| events may be run as follows.
+@ Thus a series of |n| events may be run as follows. And it so happens
+that the |crayton| pairs will be magically entangled!
 
 @<a series of |n| experimental events@>=
 series_data
@@ -308,3 +325,16 @@ experimental_series (cray_ban angle1, cray_ban angle2, int n)
     }
   return sdata;
 }
+
+@* Proof of Entanglement. The ``smoke'' mentioned earlier contains
+some techniques for pretending one has shown {\it absence\/} of
+entanglement---which work by causing psychosomatic blindness---but our
+task is to show {\it presence\/} of entanglement. Thus we will use
+nothing less than a formula from quantum mechanics: the correlation
+coefficient for our experimental arrangement.
+
+A {\it correlation coefficient\/} is a value between $-1$ and~$+1$
+that gives some idea how interrelated are two functions or sets of
+data. It is a notion familiar in the field of statistics, but also in
+the theory of waves, where it indicates the capacity of two waves (if
+superposed) to form different interference patterns.
