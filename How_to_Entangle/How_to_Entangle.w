@@ -164,7 +164,7 @@ such ``irreducibility'' has ever been provided. The literature,
 however, does employ incompetence in techniques besides quantum
 mechanics {\it to give the impression\/} of such ``irreducibility.''
 The encounter of scientists not even {\it trying\/} to solve problems
-causes temporarily shriveling of the hypothalamus.  \medskip
+causes temporary shriveling of the hypothalamus.  \medskip
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
