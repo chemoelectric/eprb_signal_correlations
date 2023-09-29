@@ -202,8 +202,8 @@ in the following C code, or do whatever you prefer.
 typedef struct
 {
   crayton_pair pair;
-  int way_pair_k1_was_sent;
-  int way_pair_k2_was_sent;
+  int way_k1_was_sent;
+  int way_k2_was_sent;
 } event_data;
 
 event_data
@@ -211,8 +211,8 @@ experimental_event (cray_ban angle1, cray_ban angle2)
 {
   event_data data;
   data.pair = crayton_source ();
-  data.way_pair_k1_was_sent = law_of_logodaedalus (angle1, pair.k1);
-  data.way_pair_k2_was_sent = law_of_logodaedalus (angle2, pair.k2);
+  data.way_k1_was_sent = law_of_logodaedalus (angle1, pair.k1);
+  data.way_k2_was_sent = law_of_logodaedalus (angle2, pair.k2);
   return data;
 }
 
@@ -267,9 +267,9 @@ experimental_series (cray_ban angle1, cray_ban angle2, int n)
       event_data edata = experimental_event (angle1, angle2);
       if (edata.pair.k1 == updown)
         {
-          if (edata.way_pair_k1_was_sent == +1)
+          if (edata.way_k1_was_sent == +1)
             {
-              if (edata.way_pair_k2_was_sent == +1)
+              if (edata.way_k2_was_sent == +1)
                 {
                   sdata.number_of_updown_sideways_plus_plus = @|
                     sdata.number_of_updown_sideways_plus_plus + 1;
@@ -282,7 +282,7 @@ experimental_series (cray_ban angle1, cray_ban angle2, int n)
             }
           else
             {
-              if (edata.way_pair_k2_was_sent == +1)
+              if (edata.way_k2_was_sent == +1)
                 {
                   sdata.number_of_updown_sideways_minus_plus = @|
                     sdata.number_of_updown_sideways_minus_plus + 1;
@@ -296,9 +296,9 @@ experimental_series (cray_ban angle1, cray_ban angle2, int n)
         }
       else
         {
-          if (edata.way_pair_k1_was_sent == +1)
+          if (edata.way_k1_was_sent == +1)
             {
-              if (edata.way_pair_k2_was_sent == +1)
+              if (edata.way_k2_was_sent == +1)
                 {
                   sdata.number_of_sideways_updown_plus_plus = @|
                     sdata.number_of_sideways_updown_plus_plus + 1;
@@ -311,7 +311,7 @@ experimental_series (cray_ban angle1, cray_ban angle2, int n)
             }
           else
             {
-              if (edata.way_pair_k2_was_sent == +1)
+              if (edata.way_k2_was_sent == +1)
                 {
                   sdata.number_of_sideways_updown_minus_plus = @|
                     sdata.number_of_sideways_updown_minus_plus + 1;
@@ -329,13 +329,30 @@ experimental_series (cray_ban angle1, cray_ban angle2, int n)
 
 @* Proof of Entanglement. The ``smoke'' mentioned earlier contains
 some techniques for pretending one has shown {\it absence\/} of
-entanglement---which work by causing psychosomatic blindness---but our
-task is to show {\it presence\/} of entanglement. Thus we will use
-nothing less than a formula from quantum mechanics: the correlation
-coefficient for our experimental arrangement.
+entanglement---though actually the audience is rendered blind and has
+only the illusion of seeing something. Really they are being
+mind-controlled. However, our task is different: we must show {\it
+presence\/} of entanglement, and we must {\it really\/} do so. Thus we
+will do nothing less than show that our experiment is consistent with
+a formula from quantum mechanics: the correlation coefficient for our
+experimental arrangement. According to the 2022 Nobel Prize winners in
+Physics, this would be impossible unless the |crayton| pairs were
+entangled---and this must be so, because it is what they won the Nobel
+Prize for. Thus the |crayton| pairs were indeed entangled.
 
-A {\it correlation coefficient\/} is a value between $-1$ and~$+1$
-that gives some idea how interrelated are two functions or sets of
-data. It is a notion familiar in the field of statistics, but also in
-the theory of waves, where it indicates the capacity of two waves (if
-superposed) to form different interference patterns.
+A {\it correlation coefficient\/} is what? It is a value between $-1$
+and~$+1$ that gives some idea how interrelated are two functions or
+sets of data. It is a notion familiar in the field of statistics, but
+also in the theory of waves, where it indicates the capacity of two
+waves (if superposed) to form different interference patterns. For
+this experiment, we want the correlation coefficient comparing the
+``way the |crayton| was sent'' of the two |crayton| in the
+pair. Assume the two |cray_ban| settings are $\phi_1$
+and~$\phi_2$. The formula from quantum mechanics is then
+
+$$ \eqalign{{\it correlation\ coefficient} & = cos\{2(\phi_2-\phi_1)\} \cr
+        &        = cos^2(\phi_2-\phi_1) - sin^2(\phi_2-\phi_1) \cr} $$
+
+\noindent or the same formula with the sign reversed, because the
+sense of a correlation coefficient is arbitrary and may be chosen
+according to convenience.
