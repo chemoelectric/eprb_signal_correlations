@@ -144,10 +144,11 @@ physics, the resulting ``mathematics'' is phony and internally
 inconsistent. For instance, given the ``mathematics'' of the most
 famous smoke in all of the literature, one may easily prove that~$ 1 =
 0 $. This proof is not a ``loophole,'' as some thaumaturge may try to
-convince you it be, thereby giving you vertigo. It is demonstration
-that the author of the literature had not the vaguest clue what he was
-doing. The concussion of such incompetence, in a Fellow of the Royal
-Society, is what rendered you psychosomatically blind.
+convince you it be (to give you vertigo, so the thaumaturge may knock
+you over with a whisper). It is demonstration that the author of the
+literature had not the vaguest clue what he was doing. The concussion
+of such incompetence, in a Fellow of the Royal Society, is what
+rendered you psychosomatically blind.
 
 \item{\bullet} The claim that quantum physics is ``irreducible'' to
 classical physics, though usually assumed to be a claim about physics,
