@@ -118,36 +118,40 @@ digital equivalent of a polarizing filter. This all seems very
 complicated, but in fact the type for the entire mess is just a
 floating point number capable of representing an angle in radians. The
 angle is simply how much someone has rotated the angle of the
-filter. Let us call the type |cray_ban|.
+filter. We will have a pair of them, so let us call the type a
+polarized |cray_ban|.
 
 @<the |cray_ban| type@>=
 typedef double cray_ban;
 
-@ Such a magic trick also needs smoke. In this case, the smoke
+@ Such a magic trick as ours also needs smoke. In this case, the smoke
 comprises classical physics done, by doctors of philosophy in physics
 or mathematics, so shockingly incorrectly that you go
-psychosomatically blind. However, there is not space here for phony
-mathematics, so we refer you to the quantum physics literature
-instead.
+psychosomatically blind. Once you are blinded, the doctors of
+philosophy can implant illusions into your brain. However, there is
+not space here for phony mathematics, so we refer you to the quantum
+physics literature instead.
 
-Please leave yourself a chance to recover. You may need as smelling
-salts the following reminders:
-\medskip
+Having dived into the literature (or better yet {\it not\/} having
+dived into the literature, but merely imagined yourself having done
+so), please leave yourself a chance to recover your vision. You may
+need as medicaments the following reminders: \medskip
 
 \item{\bullet} The {\it definition\/} of a conditional probability $
 P(A\,\vert{}B) $, in terms of a joint probability $ P(A\cap{}B) $ and
 a probability $ P(B) $, is $ P(A\,\vert{}B)=P(A\cap{}B)\,/\,P(B) $,
 and this definition is {\it purely mathematical}, having {\it
 nothing\/} to do with ``causality'' or ``controlled variables.'' When
-new definitions are introduced, employing such terms taken from
-physics, the resulting ``mathematics'' is phony and internally
-inconsistent. For instance, given the ``mathematics'' of the most
-famous smoke in all of the literature, one may easily prove that~$ 1 =
-0 $. This proof is not a ``loophole,'' as some thaumaturge may try to
-convince you it be (to give you vertigo, so the thaumaturge may knock
-you over with a whisper). It is demonstration that the author of the
-literature had not the vaguest clue what he was doing. The concussion
-of such incompetence, in a Fellow of the Royal Society, is what
+new definitions are introduced, employing terms such as ``causality''
+or ``controlled variables,'' the resulting ``mathematics'' is phony
+and internally inconsistent. For instance, given the ``mathematics''
+of the most famous smoke in all of the literature, one may easily
+prove that~$ 1 = 0 $. This proof is not a ``loophole,'' as some
+thaumaturge may try to convince you (to give you vertigo, so the
+thaumaturge may then knock you over with a whisper). It is
+demonstration that the author of the literature had not the vaguest
+clue what he was doing. The concussion of a Fellow of the Royal
+Society proudly displaying incompetence in simple mathematics is what
 rendered you psychosomatically blind.
 
 \item{\bullet} The claim that quantum physics is ``irreducible'' to
@@ -161,11 +165,14 @@ mathematics, and ``classical physics'' becomes merely the application
 of any and all mathematics to the reasonable solution of such word
 problems. Despite public address systems blaring pronouncements
 through billows of smoke, nothing resembling a smidgen of proof of
-such ``irreducibility'' has ever been provided. The literature,
-however, does employ incompetence in techniques besides quantum
-mechanics {\it to give the impression\/} of such ``irreducibility.''
-The encounter of scientists not even {\it trying\/} to solve problems
-causes temporary shriveling of the hypothalamus.  \medskip
+such ``irreducibility'' has ever been produced. The literature,
+however, does employ imcompetence in mathematics {\it to give the
+impression\/} of such ``irreducibility.'' One merely gives up short of
+a solution, proclaiming, ``This is all that can be done.'' The
+encounter of scientists not even {\it trying\/} to solve problems
+causes temporary shriveling of the hypothalamus, and thus blindness is
+merely the beginning of its effects. It is a really good technique.
+You can win a Nobel Prize with it, it is so good.  \medskip
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
