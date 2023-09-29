@@ -138,14 +138,15 @@ salts the following reminders: (1) the definition of a conditional
 probability |P(A conditional B)|, in terms of a joint probability
 |P(A@,B)| and a probability |P(B)|, is |P(A conditional
 B)=P(A@,B)/P(B)|, and this definition is {\it purely mathematical},
-containing no words pertaining to physics (and so any redefinitions in
-physics terms render the mathematics {\it phony\/}); (2) the claim
-that quantum physics is irreducible, though widely thought to be a
-claim about physics, is actually the extraordinary {\it
-mathematical\/} claim that a quantum physics problem, written in
-logically equivalent form but in a mathematics other than that of
-quantum physics, cannot exist, cannot be solved, or will come to a
-different result!
+containing no words pertaining to physics (and thus a redefinition
+{\it with\/} physics terms renders the ``mathematics'' {\it internally
+inconsistent\/}); (2) the claim that quantum physics is irreducible,
+though usually assumed to be a claim about physics, is actually the
+{\it mathematical\/} claim---and an alarming one---that a quantum
+physics problem, written in logically equivalent form but in a
+mathematics other than that of quantum physics, cannot exist, cannot
+be solved, or will come to a different result! For, once put in the
+form of a word problem, physics becomes applied mathematics.
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
