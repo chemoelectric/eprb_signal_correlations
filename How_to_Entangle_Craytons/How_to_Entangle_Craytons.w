@@ -378,3 +378,21 @@ particular angles are, but only what they are relative to each other.
 Some might also notice that there is a resemblance to the Law of
 Logodaedalus---this is not accidental, but let us not go into the
 details.
+
+@ What the exemplars of science tell us is that if we run four series
+of the experiment, using the following settings, and get approximately
+the results predicted by quantum mechanics, then we have proved that
+our |crayton| pairs were entangled.
+
+Actually they do not know about the |crayton| specifically, but only
+about other objects they do not know how to test this with, so they
+have invented other tests, such as shouting ``{\sc LOOK THAT WAY!}''
+and running out of the room. But we do have the |crayton| and so can
+run the test.
+
+The settings and corresponding correlation coefficients are as
+follows:
+$$\phi_1,\phi_2=\cases{0,\, \pi/8         & {$+1/\sqrt2\approx+0.70711$} \cr
+                       0,\, 3\,\pi/8      & {$-1/\sqrt2\approx-0.70711$} \cr
+                       \pi/4,\, \pi/8     & {$+1/\sqrt2\approx+0.70711$} \cr
+                       \pi/4,\, 3\,\pi/8  & {$+1/\sqrt2\approx+0.70711$} \cr}$$
