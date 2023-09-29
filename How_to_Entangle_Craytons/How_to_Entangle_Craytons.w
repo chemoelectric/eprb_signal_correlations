@@ -178,7 +178,7 @@ is all that can {\it possibly\/} be done. Now please run experiments
 showing {\it these\/} are not the results obtained empirically.'' The
 encounter of scientists not even {\it trying\/} to solve problems
 causes temporary shriveling of the hypothalamus, and thus blindness is
-merely {\it the mildest beginning\/} of its effects.
+merely a portion of the psychosomatic injury.
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
