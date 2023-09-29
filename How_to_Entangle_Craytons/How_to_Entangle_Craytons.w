@@ -341,31 +341,40 @@ experimental_series (cray_ban angle1, cray_ban angle2, int n)
 }
 
 @* Proof of Entanglement. The ``smoke'' mentioned earlier contains
-some techniques for pretending one has shown {\it absence\/} of
-entanglement---though actually the audience is rendered blind and has
-only the illusion of seeing something. Really they are being
-mind-controlled. However, our task is different: we must show {\it
-presence\/} of entanglement, and we must {\it really\/} do so. Thus we
-will do nothing less than show that our experiment is consistent with
-a formula from quantum mechanics: the correlation coefficient for our
+some techniques for ``showing'' {\it absence\/} of
+entanglement---though actually the audience have had their
+hypothalamuses temporarily withered. Really they are being
+mind-controlled, as if in a Philip~K. Dick novel. However, you do not
+practice mind-control (I hope), and our task is different: we must
+show {\it presence\/} of entanglement. Thus we will do nothing less
+than show that our experiment is empirically consistent with a formula
+from quantum mechanics: the correlation coefficient for our
 experimental arrangement. According to the 2022 Nobel Prize winners in
 Physics, this would be impossible unless the |crayton| pairs were
-entangled---and this must be so, because it is what they won the Nobel
-Prize for. Thus the |crayton| pairs were indeed entangled.
+entangled. The entanglement must be so, because these exemplars of
+science won the Nobel Prize for it. Thus the |crayton| pairs were
+indeed entangled.
 
-A {\it correlation coefficient\/} is what? It is a value between $-1$
-and~$+1$ that gives some idea how interrelated are two functions or
-sets of data. It is a notion familiar in the field of statistics, but
-also in the theory of waves, where it indicates the capacity of two
-waves (if superposed) to form different interference patterns. For
-this experiment, we want the correlation coefficient comparing the
-``way the |crayton| was sent'' of the two |crayton| in the
-pair. Assume the two |cray_ban| settings are $\phi_1$
+So, then, a {\it correlation coefficient\/} is what? It is a value
+between $-1$ and~$+1$ that gives some idea how interrelated are two
+functions or sets of data. It is a notion familiar in the field of
+statistics, but also in the theory of waves, where it indicates the
+capacity of two waves (if superposed) to form different interference
+patterns. For this experiment, we want the correlation coefficient
+comparing the ``way the |crayton| was sent'' of the two |crayton| in
+the pair. Assume the two |cray_ban| settings are $\phi_1$
 and~$\phi_2$. The formula from quantum mechanics is then
-
-$$ \eqalign{{\it correlation\ coefficient} & = cos\{2(\phi_2-\phi_1)\} \cr
-        &        = cos^2(\phi_2-\phi_1) - sin^2(\phi_2-\phi_1) \cr} $$
-
-\noindent or the same formula with the sign reversed, because the
-sense of a correlation coefficient is arbitrary and may be chosen
-according to convenience.
+%
+$$ \eqalign{{\it correlation\ coefficient} & = \cos\,\lbrace2(\phi_2-\phi_1)\rbrace \cr
+        &        = \cos^2(\phi_2-\phi_1) - \sin^2(\phi_2-\phi_1) \cr} $$
+%
+or the same formula with the sign reversed, because (like, say, a
+cross product) a correlation coefficient has arbitrary sense. The
+formula itself makes it evident that only the size of the angle
+between $\phi_1$ and~$\phi_2$ matters, not the direction of the
+subtraction. It is also clear that the formula is {\it invariant with
+rotations of the |cray_ban| pair}---it does not matter what the
+particular angles are, but only what they are relative to each other.
+Some might also notice that there is a resemblance to the Law of
+Logodaedalus---this is not accidental, but let us not go into the
+details.
