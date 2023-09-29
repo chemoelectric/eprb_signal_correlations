@@ -137,22 +137,27 @@ dived into the literature, but merely imagined yourself having done
 so), please leave yourself a chance to recover your vision. You may
 need as medicaments the following reminders: \medskip
 
-\item{\bullet} The {\it definition\/} of a conditional probability $
-P(A\,\vert{}B) $, in terms of a joint probability $ P(A\cap{}B) $ and
-a probability $ P(B) $, is $ P(A\,\vert{}B)=P(A\cap{}B)\,/\,P(B) $,
-and this definition is {\it purely mathematical}, having {\it
-nothing\/} to do with ``causality'' or ``controlled variables.'' When
-new definitions are introduced, employing terms such as ``causality''
-or ``controlled variables,'' the resulting ``mathematics'' is phony
-and internally inconsistent. For instance, given the ``mathematics''
-of the most famous smoke in all of the literature, one may easily
-prove that~$ 1 = 0 $. This proof is not a ``loophole,'' as some
-thaumaturge may try to convince you (to give you vertigo, so the
-thaumaturge may then knock you over with a whisper). It is
-demonstration that the author of the literature had not the vaguest
-clue what he was doing. The concussion of a Fellow of the Royal
-Society proudly displaying incompetence in simple mathematics is what
-rendered you psychosomatically blind.
+\item{\bullet} Let $a$ and~$b$ represent propositions,
+and~$a{\wedge}b$ their joint proposition. The {\it definition\/} of
+their conditional probability is
+%
+$$P(a{\vert}b)=P(a{\wedge}b)\,/\,P(b) $$
+%
+This definition is {\it purely mathematical} and is complete
+in itself. Nevertheless, if you have read the ``smoke'' literature,
+you will have seen that none other than John Stewart Bell, Fellow of
+the Royal Society, redefined the conditional probability as follows:
+%
+$$P(a{\vert}b) = \cases{P(a{\wedge}b)\,/\,P(b) &{\rm pretty\ much\ never}\cr
+                        P(a) &{\rm if\ ``local\ causality,''\ beables,%
+                        \ socks,\ heart\ attacks,\ $\lambda$,\ etc.}\cr} $$
+%
+Most individuals familiar with mathematics will recognize
+that this is a license to declare ``proved'' any pseudo-mathematical
+nonsense one wishes, such as that $1=0$ and $E=mc^{9}$.
+The concussion of a Fellow of the
+Royal Society proudly displaying such a license is what rendered you
+psychosomatically blind.
 
 \item{\bullet} The claim that quantum physics is ``irreducible'' to
 classical physics, though usually assumed to be a claim about physics,
