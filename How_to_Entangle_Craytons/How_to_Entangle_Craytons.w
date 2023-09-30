@@ -543,7 +543,7 @@ real difference---I {\it think\/} that, in our case, it winds up being
 a difference of opinion on what kind of integration one is doing.
 
 @ The first thing I will do is something I thought of because it was
-easier than switching to coordinate-free representation for the
+easier than switching to a coordinate-free representation for the
 problem (such as re-casting the |cray_ban| as abstract multivectors in
 a 30-dimensional degenerate Clifford algebra). I will introduce two
 {\it landmark angles\/}---or {\it landmarks\/} for short---$\phi_{01}$
@@ -551,6 +551,28 @@ and~$\phi_{02}$. In the measure theory these would be considered
 ``random variables,'' but that terminology is {\it astronomically\/}
 misleading. They are simply introduced variables that play a role
 similar to that of the {\it origin\/} in a coordinate system.
+
+That the solution has to be coordinate-free is something we know from
+its form:
+$$\rho=\cos\,\lbrace2(\phi_1-\phi_2)\rbrace=\cos^2(\phi_1-\phi_2)-\sin^2(\phi_1-\phi_2)$$
+As far as I can tell, you can win a Nobel Prize by ignoring this
+fact. Or, at least, you could have if you were among the first to do
+so and publish the results of your calculations or experiments based
+on ignoring the fact. But we will not ignore the fact. Thus the
+introduction of landmarks. Instead of working directly with~$\phi_1$
+and~$\phi_2$, we will work with the {\it landmark-relative\/} angles
+$$\eqalign{\Delta\phi_1&=\phi_1-\phi_{01} \cr
+\Delta\phi_2&=\phi_2-\phi_{02} \cr}$$ Then we will craft the pdf so
+the result is coordinate-free. Actually, the problem itself will
+dictate the pdf to us.
+
+@ Before proceeding further, a little notation. This notation likely
+is familiar: the Dirac delta function, which we will treat simply as a
+notation for ``sifting'' when one is integrating, without worrying
+what it really ``is'' or ``is~not.''  Thus, for instance:
+$$\int_0^\infty{}f(t)\,\delta(t-t_0)\,dt=f(t_0)$$ The delta could in
+fact be regarded as a notational convenience, with the left side
+meaning the same thing as the right side.
 
 @* Index.
 
