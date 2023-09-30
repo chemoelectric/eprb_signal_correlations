@@ -521,6 +521,36 @@ members is that they did not believe it could be done, so they did not
 really {\it try} (and thus your hypothalamus was psychosomatically
 withered), whereas I knew it could be done, but did not yet know how.
 
+@ Okay, I did know how to solve for the correlation
+coefficient. Actually the very same correlation coefficient has been
+derivable all along, for the very same experiments, {\it from
+classical wave theory\/}. This fact occasionally has prompted use of
+the license to shout the universal retort, ``{\it LOCAL CAUSALITY HAY
+SOCKS LOOPHOLES!\/}''
+
+Nevertheless, what I wished for was a derivation that employed nothing
+more than probability theory. Such a derivation would be as
+fundamental as possible, for probability theory is known to be the
+uniquely qualified mathematics of plausible scientific inference.
+
+In school I was taught the version of probability theory that is based
+on measure theory, and which most mathematicians consider ``rigorous''
+but which I consider ``standing on a sinkhole''---who would cross a
+bridge if its design {\it really\/} depended on the Axiom of Choice?
+There is a more axiomatic version of probability theory that has the
+unique qualifications mentioned above. For our purposes it makes no
+real difference---I {\it think\/} that, in our case, it winds up being
+a difference of opinion on what kind of integration one is doing.
+
+@ The first thing I will do is something I thought of because it was
+easier than switching to coordinate-free representation for the
+problem (such as re-casting the |cray_ban| as abstract multivectors in
+a 30-dimensional degenerate Clifford algebra). I will introduce two
+{\it landmark angles\/}---or {\it landmarks\/} for short---$\phi_{01}$
+and~$\phi_{02}$. In the measure theory these would be considered
+``random variables,'' but that terminology is {\it highly\/}
+misleading. They are simply introduced variables that play a role
+similar to that of the {\it origin\/} in a coordinate system.
 
 @* Index.
 
