@@ -548,7 +548,7 @@ problem (such as re-casting the |cray_ban| as abstract multivectors in
 a 30-dimensional degenerate Clifford algebra). I will introduce two
 {\it landmark angles\/}---or {\it landmarks\/} for short---$\phi_{01}$
 and~$\phi_{02}$. In the measure theory these would be considered
-``random variables,'' but that terminology is {\it highly\/}
+``random variables,'' but that terminology is {\it astronomically\/}
 misleading. They are simply introduced variables that play a role
 similar to that of the {\it origin\/} in a coordinate system.
 
