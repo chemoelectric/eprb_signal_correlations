@@ -140,18 +140,14 @@ need as medicaments the following reminders: \medskip
 \item{\bullet} Let $a$ and~$b$ represent propositions,
 and~$a{\wedge}b$ their joint proposition. The {\it definition\/} of
 their conditional probability is
-%
 $$P(a{\vert}b)=P(a{\wedge}b)\,/\,P(b) $$
-%
 This definition is {\it purely mathematical} and is complete
 in itself. Nevertheless, if you have read the ``smoke'' literature,
 you will have seen that none other than John Stewart Bell, Fellow of
 the Royal Society, redefined the conditional probability as follows:
-%
 $$P(a{\vert}b) = \cases{P(a{\wedge}b)\,/\,P(b) &{\rm pretty\ much\ never}\cr
                         P(a) &{\rm if\ ``local\ causality,''\ beables,%
                         \ socks,\ heart\ attacks,\ $\lambda$,\ etc.}\cr} $$
-%
 Most individuals familiar with mathematics will recognize
 that this is a license to declare ``proved'' any pseudo-mathematical
 nonsense one wishes, such as that $1=0$ and $E=mc^{9}$.
@@ -364,10 +360,8 @@ patterns. For this experiment, we want the correlation coefficient
 comparing the ``way the |crayton| was sent'' of the two |crayton| in
 the pair. Assume the two |cray_ban| settings are $\phi_1$
 and~$\phi_2$. The formula from quantum mechanics is then
-%
 $$ \eqalign{{\it correlation\ coefficient} & = \cos\,\lbrace2(\phi_1-\phi_2)\rbrace \cr
         &        = \cos^2(\phi_1-\phi_2) - \sin^2(\phi_1-\phi_2) \cr} $$
-%
 or the same formula with the sign reversed, because (like, say, a
 cross product) a correlation coefficient has arbitrary sense. The
 formula itself makes it evident that only the size of the angle
@@ -481,10 +475,10 @@ worthless. The root of the matter is that license John Stewart Bell
 gave quantum theorists to declare anything ``true'' that suited their
 fancy. They have used that license freely. Any attempt to declare
 their math illegitimate is immediately canceled by the license Bell
-gave them. It will be a Gish Gallop of ``{\it Local causality, beables,
-socks, heart attacks, loopholes, dichotomic variables, imported
-Belgian hay,\,..., yadda, yadda, yadda,\,...\,! Did you hear me? I
-said LOCAL CAUSALITY HEART ATTACK HAY LOOPHOLES!\/}''
+gave them. It will be a Gish Gallop of ``{\it Local causality,
+beables, socks, heart attacks, loopholes, dichotomic variables,
+imported Belgian hay,\,..., yadda, yadda, yadda,\,...\,! Did you hear
+me? I said LOCAL CAUSALITY HAY SOCKS LOOPHOLES!\/}''
 
 I had thought to say more about what has been perpetrated, but words
 escape me. Papers and books promoting ``entanglement'' and
@@ -493,7 +487,40 @@ paper pulp. Instead I will do another thing the Winner's Circle
 occupants claim cannot be done: for the sake of those capable of
 reading the mathematics, I will derive the correlation coefficient of
 our experiment, but using classical physics instead of quantum
-mechanics.
+mechanics. How to solve such problems I know from a 1980s education in
+electronic signal processing. It seems uncertain whether such teaching
+will remain legal for long, in the face of local causality hay socks
+loopholes.
+
+@ What we are looking for is the correlation coefficient of the ``way
+sent'' values $+1$ and~$-1$. The definition of the correlation
+coefficient is the covariance over the product of the standard
+deviations. That denominator is merely a normalization, to put the
+correlation coefficient between $-1$ and~$+1$, and the ``way sent''
+values were chosen so that no such normalization was necessary. Thus
+the correlation coefficient is equal to the covariance. Call the
+correlation coefficient~$\rho$ and the two ``way sent''
+values~$\tau_1$ and~$\tau_2$, and let $E$ represent an {\it
+expectation}---that is, an average weighted by a probability density
+function (pdf). Then $$\rho=E(\tau_1\tau_2)$$ for some pdf we have to
+determine. That is, the correlation coefficient is a very carefully
+weighted average of the products of ``way sent'' values.
+
+@ It happens that members of the Smoke-and-Mirrors Club do not know
+how to determine the pdf, and not knowing how to do that is part of
+how they, as a group, ended up with the Nobel Prize. That statement
+would seem to make no sense, which is because it makes no
+sense. Signal processing engineers, however, are liable in court,
+blah, blah, blah\,...\,{\it Okay, let us tell the truth\/}\,...\,the
+{\it real\/} story is it is a problem I looked at casually for some
+20~years before finally figuring it out. Thus I {\it do\/} know how to
+determine the pdf---finally, after 20~years or so.
+
+However, the main difference between me and the Smoke-and-Mirrors
+members is that they did not believe it could be done, so they did not
+really {\it try} (and thus your hypothalamus was psychosomatically
+withered), whereas I knew it could be done, but did not yet know how.
+
 
 @* Index.
 
