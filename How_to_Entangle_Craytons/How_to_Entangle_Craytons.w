@@ -582,5 +582,10 @@ its factors $$\delta(\phi_{01}-\phi_2)$$ For otherwise $\phi_1-\phi_2$
 would not appear in the solution. (That is, the form of the solution
 dictates that $\phi_{01}=\phi_2$ with probability one.)
 
+The order of integration is immaterial, so let us integrate with
+respect to $\phi_{01}$ now. Thus wherever
+$\Delta\phi_1=\phi_1-\phi_{01}$ would have appeared in an expression
+we can put instead $$\Delta\phi=\phi_1-\phi_2$$
+
 @* Index.
 
