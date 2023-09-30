@@ -466,3 +466,34 @@ Thus:
   double estimate_of_correlation_coefficient = @|
     (estimate_of_cos_phi1_minus_phi2 * estimate_of_cos_phi1_minus_phi2) - @|
       (estimate_of_sin_phi1_minus_phi2 * estimate_of_sin_phi1_minus_phi2);
+
+@* Okay, I Lied. There was actually no entanglement. There is no
+entanglement anywhere in the world. Entanglement is the wrongest wrong
+thing that there has ever been in the history of physics. But, because
+the Nobel Prize treats science as if it were the Preakness Stakes
+rather than a humble pursuit of understanding, it is just as well that
+some of the mistakenest mistaken individuals in the history of the
+universe should receive it.
+
+Your program demonstrates that the Nobel Prize winners are {\it just
+plain wrong\/} in their reasoning. Their papers should be retracted as
+worthless. The root of the matter is that license John Stewart Bell
+gave quantum theorists to declare anything ``true'' that suited their
+fancy. They have used that license freely. Any attempt to declare
+their math illegitimate is immediately canceled by the license Bell
+gave them. It will be a Gish Gallop of ``{\it Local causality, beables,
+socks, heart attacks, loopholes, dichotomic variables, imported
+Belgian hay,\,..., yadda, yadda, yadda,\,...\,! Did you hear me? I
+said LOCAL CAUSALITY HEART ATTACK HAY LOOPHOLES!\/}''
+
+I had thought to say more about what has been perpetrated, but words
+escape me. Papers and books promoting ``entanglement'' and
+``non-locality'' are simply worthless. They have no use except as
+paper pulp. Instead I will do another thing the Winner's Circle
+occupants claim cannot be done: for the sake of those capable of
+reading the mathematics, I will derive the correlation coefficient of
+our experiment, but using classical physics instead of quantum
+mechanics.
+
+@* Index.
+
