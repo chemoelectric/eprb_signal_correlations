@@ -579,8 +579,7 @@ archangels Michael, Gabriel, Uriel, Raphael, and~Shemp.
 @ We will let~$\phi_{02}$ take on any angle of the circle. Then, to
 make the solution coordinate-free, the pdf {\it must\/} have as one of
 its factors $$\delta(\phi_{01}-\phi_2)$$ For otherwise $\phi_1-\phi_2$
-would not appear in the solution. (That is, the form of the solution
-dictates that $\phi_{01}=\phi_2$ with probability one.)
+would not appear in the solution.
 
 The order of integration is immaterial, so let us integrate with
 respect to $\phi_{01}$ now. Thus wherever
@@ -590,6 +589,14 @@ seek is $$\rho=\cos^2\Delta\phi-\sin^2\Delta\phi$$ By the way, do not
 let anyone deceive you that it is peculiar to know ahead what solution
 you seek. Most likely they have removed the watch from your wrist and
 now are going for your wallet.
+
+A Smoke-and-Mirrors dude once shouted ``{\it LOCAL CAUSALITY HAY SOCKS
+LOOPHOLES B-E-A-B-L-E-S B-E-A-B-L-E-S B-E-A-B-L-E-S!\/}'' when I
+carried out this integration, and thereby incapacitated me for several
+days. But the probability theory involved has nothing to do with
+``local causality,'' nor even with ``randomness.'' It is simply that
+the form of the solution dictates $\phi_{01}=\phi_2$ with probability
+one. That is to say: with absolute certainty.
 
 @* Index.
 
