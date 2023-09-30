@@ -570,11 +570,11 @@ dictate the pdf to us.
 is familiar: the Dirac delta function, which we will treat simply as a
 notation for ``sifting'' when one is integrating, without worrying
 what it really ``is'' or ``is~not.''  Thus, for instance:
-$$\int_0^\infty{}f(t)\,\delta(t-t_0)\,dt=f(t_0)$$ The delta could in
-fact be regarded as a notational convenience, with the left side
-meaning the same thing as the right side. Mathematicians have fancier
-explanations that make sense to them and maybe also to the archangels
-Michael, Gabriel, Uriel, Raphael, and~Shemp.
+$$\int_{-\infty}^{+\infty}f(t)\,\delta(t-t_0)\,dt=f(t_0)$$ The delta
+could in fact be regarded as a notational convenience, with the left
+side meaning the same thing as the right side. Mathematicians have
+fancier explanations that make sense to them and maybe also to the
+archangels Michael, Gabriel, Uriel, Raphael, and~Shemp.
 
 @ We will let~$\phi_{02}$ take on any angle of the circle. Then, to
 make the solution coordinate-free, the pdf {\it must\/} have as one of
@@ -585,7 +585,11 @@ dictates that $\phi_{01}=\phi_2$ with probability one.)
 The order of integration is immaterial, so let us integrate with
 respect to $\phi_{01}$ now. Thus wherever
 $\Delta\phi_1=\phi_1-\phi_{01}$ would have appeared in an expression
-we can put instead $$\Delta\phi=\phi_1-\phi_2$$
+we can put instead $$\Delta\phi=\phi_1-\phi_2$$ and the solution we
+seek is $$\rho=\cos^2\Delta\phi-\sin^2\Delta\phi$$ By the way, do not
+let anyone deceive you that it is peculiar to know ahead what solution
+you seek. Most likely they have removed the watch from your wrist and
+now are going for your wallet.
 
 @* Index.
 
