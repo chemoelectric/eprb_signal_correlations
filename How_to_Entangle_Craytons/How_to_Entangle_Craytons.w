@@ -723,15 +723,15 @@ that is due is staggering to consider.
 
 @ There is a simple interpretation for this derivation, which I have
 put into display in slightly more complicated simulations. (Actually,
-the simulations existed for many weeks before the derivation, so
-served as immediate evidence of the proof's validity.) In these
-simulations, instead of testing with a few angles, the equivalents of
-a |cray_ban| are constantly rotating on axles, in unison. This is as
-if $\Delta\phi$ were allowed to increase freely over time. Although
-the proportions of ``who gets sent which way'' change with the
-particular angles, the correlation coefficient stays fixed with the
-relative angle. There is no entanglement, there is no non-locality,
-there is nothing weird whatsoever. The Smoke-and-Mirrors crowd were
-always merely deploying psychosomatic weaponry.
+the simulations existed many weeks before the derivation, so served as
+immediate evidence of the proof's validity.) In these simulations,
+instead of testing with a few angles, the equivalents of a |cray_ban|
+are constantly rotating on axles, in unison. This is as if
+$\Delta\phi$ were allowed to increase freely over time. Although the
+proportions of ``who gets sent which way'' change with the particular
+angles, the correlation coefficient stays fixed with the relative
+angle. There is no entanglement, there is no non-locality, there is
+nothing weird whatsoever. The Smoke-and-Mirrors crowd were always
+merely deploying psychosomatic weaponry.
 
 @* Index.
