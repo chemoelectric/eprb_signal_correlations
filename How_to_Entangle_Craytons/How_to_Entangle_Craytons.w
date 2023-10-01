@@ -360,8 +360,9 @@ patterns. For this experiment, we want the correlation coefficient
 comparing the ``way the |crayton| was sent'' of the two |crayton| in
 the pair. Assume the two |cray_ban| settings are $\phi_1$
 and~$\phi_2$. The formula from quantum mechanics is then
-$$ \eqalign{{\it correlation\ coefficient} & = \cos\,\lbrace2(\phi_1-\phi_2)\rbrace \cr
-        &        = \cos^2(\phi_1-\phi_2) - \sin^2(\phi_1-\phi_2) \cr} $$
+$$ \eqalign{{\it correlation\ coefficient}
+        &= -\cos\,\{2(\phi_1-\phi_2)\} \cr
+        &= -\{\cos^2(\phi_1-\phi_2) - \sin^2(\phi_1-\phi_2)\} \cr} $$
 or the same formula with the sign reversed, because (like, say, a
 cross product) a correlation coefficient has arbitrary sense. The
 formula itself makes it evident that only the size of the angle
@@ -386,18 +387,18 @@ run the test.
 
 The settings and corresponding correlation coefficients are as
 follows:
-$$\phi_1,\phi_2=\cases{0,\, \pi/8         & {$+1/\sqrt2\approx+0.70711$} \cr
-                       0,\, 3\,\pi/8      & {$-1/\sqrt2\approx-0.70711$} \cr
-                       \pi/4,\, \pi/8     & {$+1/\sqrt2\approx+0.70711$} \cr
-                       \pi/4,\, 3\,\pi/8  & {$+1/\sqrt2\approx+0.70711$} \cr}$$
+$$\phi_1,\phi_2=\cases{0,\, \pi/8         & {$-1/\sqrt2\approx-0.70711$} \cr
+                       0,\, 3\,\pi/8      & {$+1/\sqrt2\approx+0.70711$} \cr
+                       \pi/4,\, \pi/8     & {$-1/\sqrt2\approx-0.70711$} \cr
+                       \pi/4,\, 3\,\pi/8  & {$-1/\sqrt2\approx-0.70711$} \cr}$$
 
 @ Now we are going to do some clever stuff. We are going to use the
 data we have collected, together with the Law of Logodaedalus, to
 compute the correlation coefficient empirically. More specifically, we
 are going to use {\it frequencies of the recorded events\/} to get
 estimates of trigonometric functions of $\phi_1$ and~$\phi_2$, which
-we will then use to compute an approximation of $\cos^2(\phi_1-\phi_2)
-- \sin^2(\phi_1-\phi_2)$.
+we will then use to compute an approximation of $-\{\cos^2(\phi_1-\phi_2)
+- \sin^2(\phi_1-\phi_2)\}$.
 
 @ Obtaining the frequencies is a simple matter of computing
 ratios. Given a |series_data| record |sdata|:
@@ -458,8 +459,8 @@ Thus:
 
 @<estimate of the correlation coefficient@>=
   double estimate_of_correlation_coefficient = @|
-    (estimate_of_cos_phi1_minus_phi2 * estimate_of_cos_phi1_minus_phi2) - @|
-      (estimate_of_sin_phi1_minus_phi2 * estimate_of_sin_phi1_minus_phi2);
+    -((estimate_of_cos_phi1_minus_phi2 * estimate_of_cos_phi1_minus_phi2) -
+      (estimate_of_sin_phi1_minus_phi2 * estimate_of_sin_phi1_minus_phi2));
 
 @* Okay, I Lied. There was actually no entanglement. There is no
 entanglement anywhere in the world. Entanglement is the wrongest wrong
@@ -676,6 +677,10 @@ P^{++} &= P(\tau_1=+1{\,\wedge\,}\tau_2=+1) \cr
 P^{+-} &= P(\tau_1=+1{\,\wedge\,}\tau_2=-1) \cr
 P^{-+} &= P(\tau_1=-1{\,\wedge\,}\tau_2=+1) \cr
 P^{--} &= P(\tau_1=-1{\,\wedge\,}\tau_2=-1) \cr
+}$$
+Substituting the calculated expressions for the probabilities:
+$$\eqalign{
+\rho'= \cr
 }$$
 
 
