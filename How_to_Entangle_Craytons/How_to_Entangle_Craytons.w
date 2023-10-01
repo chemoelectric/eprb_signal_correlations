@@ -499,23 +499,20 @@ function (pdf). Then $$\rho=E(\tau_1\tau_2)$$ for some pdf we have to
 determine. That is, the correlation coefficient is a very carefully
 weighted average of the products of ``way sent'' values.
 
-@ It happens that members of the Smoke-and-Mirrors Club do not know
-how to determine the pdf, and not knowing how to do that is part of
-how they, as a group, ended up with the Nobel Prize. That statement
-would seem to make no sense, which is because it makes no sense. I
-knew more than they did, because I studied signal processing
-engineering rather than physics, and looked at the problem casually
-for some 20~years before finally figuring out how to determine the
-pdf. But then I decided that determining the pdf was not necessary,
-after all!
+@ I studied the problem casually for some 20~years before finally
+figuring out how to determine the pdf. But then I decided that
+determining the pdf was not necessary, after all!
 
 Yes, I had a derived the correlation coefficient by determining a pdf,
 but I shall not reproduce that derivation for you, because it is too
-complicated. You need an education in electronic communications theory
+complicated. You need an education in digital signal processing theory
 to understand it, and even then it makes one's head feel as if it were
-a muddled fruit at the bottom of a cocktail shaker. It probably still
+a muddled fruit at the bottom of a cocktail shaker. (Which a
+university education does in any case.) The derivation probably still
 has bugs in it, the way a computer program that is too complicated
-seems never to have all the bugs cleaned out.
+seems never to have all the bugs cleaned out. They can be cleaned out,
+certainly, but the effort is not worth it. It is better to find a new
+approach.
 
 @ The following much simpler derivation starts by deriving what the
 Smoke-and-Mirrors Club seems to believe is all classical physics is
