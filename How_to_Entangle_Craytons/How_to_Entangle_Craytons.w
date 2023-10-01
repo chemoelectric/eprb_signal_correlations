@@ -49,9 +49,8 @@ colleagues, could be people who do not follow Scientific Method. There
 is no way they would not go even to the slight trouble of writing a
 simple simulation to observe what happens, before publishing thousands
 of papers and books, and encouraging governments to spend billions and
-billions of dollars. They would not also publish voluminously about
-random process analysis without ever consulting an expert. So what
-occurs in our programs must be nothing less than magic.
+billions of dollars. So what occurs in our programs must be nothing
+less than magic.
 
 @ We will need a way to pick arbitrary numbers between zero and one,
 without showing much bias. The method need not be particularly
@@ -464,34 +463,27 @@ Thus:
 
 @* Okay, I Lied. There was actually no entanglement. There is no
 entanglement anywhere in the world. Entanglement is the wrongest wrong
-thing that there has ever been in the history of physics. But, because
-the Nobel Prize treats science as if it were the Preakness Stakes
-rather than a humble pursuit of understanding, it is just as well that
-some of the mistakenest mistaken individuals in the history of the
-universe should receive it.
+thing that there has ever been in the history of physics.
 
-Your program demonstrates that the Nobel Prize winners are {\it just
-plain wrong\/} in their reasoning. Their papers should be retracted as
-worthless. The root of the matter is that license John Stewart Bell
-gave quantum theorists to declare anything ``true'' that suited their
-fancy. They have used that license freely. Any attempt to declare
-their math illegitimate is immediately canceled by the license Bell
-gave them. It will be a Gish Gallop of ``{\it Local causality,
-beables, socks, heart attacks, loopholes, dichotomic variables,
-imported Belgian hay,\,..., yadda, yadda, yadda,\,...\,! Did you hear
-me? I said LOCAL CAUSALITY HAY SOCKS LOOPHOLES!\/}''
+Your program demonstrates that quantum theorists have been {\it just
+plain wrong\/} in their reasoning. One of the root causes is that
+license John Stewart Bell gave theorists to declare anything ``true''
+that suited their fancy. They have used that license freely. Any
+attempt to declare their math illegitimate is immediately canceled by
+the license Bell gave them. One will be slammed with a Gish Gallop of
+``{\it Local causality, beables, socks, heart attacks, loopholes,
+dichotomic variables, imported Belgian hay,\,..., yadda, yadda,
+yadda,\,...\,!  Did you hear me? I said LOCAL CAUSALITY HAY SOCKS
+LOOPHOLES!\/}''
 
 I had thought to say more about what has been perpetrated, but words
 escape me. Papers and books promoting ``entanglement'' and
 ``non-locality'' are simply worthless. They have no use except as
-paper pulp. Instead I will do another thing the Winner's Circle
-occupants claim cannot be done: for the sake of those capable of
+paper pulp. Instead I will do another thing the Smoke-and-Mirrors
+magicians claim cannot be done: for the sake of those capable of
 reading the mathematics, I will derive the correlation coefficient of
 our experiment, but using classical physics instead of quantum
-mechanics. How to solve such problems I know from a 1980s education in
-electronic signal processing. It seems uncertain whether such teaching
-will remain legal for long, in the face of local causality hay socks
-loopholes.
+mechanics.
 
 @ What we are looking for is the correlation coefficient of the ``way
 sent'' values $+1$ and~$-1$. The definition of the correlation
@@ -511,20 +503,24 @@ weighted average of the products of ``way sent'' values.
 how to determine the pdf, and not knowing how to do that is part of
 how they, as a group, ended up with the Nobel Prize. That statement
 would seem to make no sense, which is because it makes no sense. I
-looked at the problem casually for some 20~years before finally
-figuring out how to determine the pdf. But then I decided it was not
-necessary, after all!
+knew more than they did, because I studied signal processing
+engineering rather than physics, and looked at the problem casually
+for some 20~years before finally figuring out how to determine the
+pdf. But then I decided that determining the pdf was not necessary,
+after all!
 
-Yes, I had a derivation of the correlation coefficient, but I shall
-not reproduce that derivation for you, because it is too
-complicated. You need an education in random process analysis to
-understand it, and even then it makes one's head feel as if it were a
-muddled fruit at the bottom of a cocktail shaker.
+Yes, I had a derived the correlation coefficient by determining a pdf,
+but I shall not reproduce that derivation for you, because it is too
+complicated. You need an education in electronic communications theory
+to understand it, and even then it makes one's head feel as if it were
+a muddled fruit at the bottom of a cocktail shaker. It probably still
+has bugs in it, the way a computer program that is too complicated
+seems never to have all the bugs cleaned out.
 
-@ The following much simpler, derivation starts by deriving what the
+@ The following much simpler derivation starts by deriving what the
 Smoke-and-Mirrors Club seems to believe is all classical physics is
 capable of deriving: a particular function of the two |cray_ban|
-settings that is {\it not\/} a function of their difference. The
+settings that is {\it not\/} a function of their difference. {\it That\/}
 derivation is tedious but straightforward.
 
 Let~$k_1$ and~$k_2$ represent the |crayton| pair, and~$\phi_{01}$
@@ -726,14 +722,15 @@ that is due is staggering to consider.
 
 @ There is a simple interpretation for this derivation, which I have
 put into display in slightly more complicated simulations. (Actually,
-the simulations were around for many weeks before the derivation.) In
-these simulations, instead of testing with a few angles, the
-equivalents of a |cray_ban| are constantly rotating on axles, in
-unison. This is as if $\Delta\phi$ were allowed to increase freely
-over time. Although the proportions of ``who gets sent which way''
-change with the particular angles, the correlation coefficient stays
-fixed with the relative angle. There is no entanglement, there is no
-non-locality, there is nothing weird whatsoever. The Smoke-and-Mirrors
-crowd were always merely deploying psychosomatic weaponry.
+the simulations existed for many weeks before the derivation, so
+served as immediate evidence of the proof's validity.) In these
+simulations, instead of testing with a few angles, the equivalents of
+a |cray_ban| are constantly rotating on axles, in unison. This is as
+if $\Delta\phi$ were allowed to increase freely over time. Although
+the proportions of ``who gets sent which way'' change with the
+particular angles, the correlation coefficient stays fixed with the
+relative angle. There is no entanglement, there is no non-locality,
+there is nothing weird whatsoever. The Smoke-and-Mirrors crowd were
+always merely deploying psychosomatic weaponry.
 
 @* Index.
