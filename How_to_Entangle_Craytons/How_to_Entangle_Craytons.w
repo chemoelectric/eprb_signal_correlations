@@ -734,4 +734,14 @@ angle. There is no entanglement, there is no non-locality, there is
 nothing weird whatsoever. The Smoke-and-Mirrors crowd were always
 merely deploying psychosomatic weaponry.
 
+@ However, there is a much deeper interpretation: any angle may be
+labeled zero, so long as it is the same angle on both |cray_ban| in
+the pair.
+
+To make this so was the main goal of the pdf in my original proof,
+where I achieved the goal by making the probability density uniform in
+one of the two angular settings. It turns out, instead, to be as
+simple as setting the angle once and for all time to zero, and then
+introducing~$\Delta\phi$ as a translation of coordinates.
+
 @* Index.
