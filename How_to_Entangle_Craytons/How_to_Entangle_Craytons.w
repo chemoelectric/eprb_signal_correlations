@@ -509,117 +509,220 @@ weighted average of the products of ``way sent'' values.
 @ It happens that members of the Smoke-and-Mirrors Club do not know
 how to determine the pdf, and not knowing how to do that is part of
 how they, as a group, ended up with the Nobel Prize. That statement
-would seem to make no sense, which is because it makes no
-sense. Signal processing engineers, however, are liable in court,
-blah, blah, blah\,...\,{\it Okay, let us tell the truth\/}\,...\,the
-{\it real\/} story is it is a problem I looked at casually for some
-20~years before finally figuring it out. Thus I {\it do\/} know how to
-determine the pdf---finally, after 20~years or so.
+would seem to make no sense, which is because it makes no sense. I
+looked at the problem casually for some 20~years before finally
+figuring out how to determine the pdf. But then I decided it was not
+necessary, after all!
 
-However, the main difference between me and the Smoke-and-Mirrors
-members is that they did not believe it could be done, so they did not
-really {\it try} (and thus your hypothalamus was psychosomatically
-withered), whereas I knew it could be done, but did not yet know how.
+Yes, I had a derivation of the correlation coefficient, but I shall
+not reproduce that derivation for you, because it is too
+complicated. You need an education in random process analysis to
+understand it, and even then it makes your head feel as if it were a
+muddled fruit at the bottom of a cocktail shaker.
 
-@ Okay, I did know how to solve for the correlation
-coefficient. Actually the very same correlation coefficient has been
-derivable all along, for the very same experiments, {\it from
-classical wave theory\/}. This fact occasionally has prompted use of
-the license to shout the universal retort, ``{\it LOCAL CAUSALITY HAY
-SOCKS LOOPHOLES!\/}''
+@ The following derivation starts by deriving what the
+Smoke-and-Mirrors Club seems to believe is all classical physics is
+capable of deriving.
 
-Nevertheless, what I wished for was a derivation that employed nothing
-more than probability theory. Such a derivation would be as
-fundamental as possible, for probability theory is known to be the
-uniquely qualified mathematics of plausible scientific inference.
+Let~$k_1$ and~$k_2$ represent the |crayton| pair, and~$\phi_{01}$
+and~$\phi_{02}$ the |cray_ban| settings. Then the Law of Logodaedalus
+is
+$$\eqalign{
+P(\tau_1=+1{\,\vert\,} k_1={\it updown})&=\sin^2(\phi_{01}) \cr
+P(\tau_1=-1{\,\vert\,} k_1={\it updown})&=\cos^2(\phi_{01}) \cr
+P(\tau_2=+1{\,\vert\,} k_2={\it updown})&=\sin^2(\phi_{02}) \cr
+P(\tau_2=-1{\,\vert\,} k_2={\it updown})&=\cos^2(\phi_{02}) \cr
+P(\tau_1=+1{\,\vert\,} k_1={\it sideways})&=\cos^2(\phi_{01}) \cr
+P(\tau_1=-1{\,\vert\,} k_1={\it sideways})&=\sin^2(\phi_{01}) \cr
+P(\tau_2=+1{\,\vert\,} k_2={\it sideways})&=\cos^2(\phi_{02}) \cr
+P(\tau_2=-1{\,\vert\,} k_2={\it sideways})&=\sin^2(\phi_{02}) \cr
+}$$
+The Law of Logodaedalus is obviously consistent, in that
+$$\eqalign{
+P(\tau_1=+1{\,\vert\,} k_1={\it updown}) + P(\tau_1=-1{\,\vert\,} k_1={\it updown})
+           &= \sin^2(\phi_{01}) + \cos^2(\phi_{01}) = 1 \cr
+P(\tau_2=+1{\,\vert\,} k_2={\it updown}) + P(\tau_2=-1{\,\vert\,} k_2={\it updown})
+           &= \sin^2(\phi_{02}) + \cos^2(\phi_{02}) = 1 \cr
+P(\tau_1=-1{\,\vert\,} k_1={\it sideways}) + P(\tau_1=+1{\,\vert\,} k_1={\it sideways})
+           &= \sin^2(\phi_{01}) + \cos^2(\phi_{01}) = 1 \cr
+P(\tau_2=-1{\,\vert\,} k_2={\it sideways}) + P(\tau_2=+1{\,\vert\,} k_2={\it sideways})
+           &= \sin^2(\phi_{02}) + \cos^2(\phi_{02}) = 1 \cr
+}$$
+This smidgen of mathematical consistency is present even in the
+Smoke-and-Mirrors literature.
 
-In school I was taught the version of probability theory that is based
-on measure theory, and which most mathematicians consider ``rigorous''
-but which I consider ``standing on a sinkhole''---who would cross a
-bridge if its design {\it really\/} depended on the Axiom of Choice?
-There is a more axiomatic version of probability theory that has the
-unique qualifications mentioned above. For our purposes it makes no
-real difference---I {\it think\/} that, in our case, it winds up being
-a difference of opinion on what kind of integration one is doing.
-
-@ The first thing I will do is something I thought of because it was
-easier than switching to a coordinate-free representation for the
-problem (such as re-casting the |cray_ban| as abstract multivectors in
-a 30-dimensional degenerate Clifford algebra). I will introduce two
-{\it landmark angles\/}---or {\it landmarks\/} for short---$\phi_{01}$
-and~$\phi_{02}$. In the probability theory I was taught in school,
-these would be called ``random variables,'' but that terminology is
-{\it astronomically\/} misleading, and in my opinion should be avoided
-unequivocally. These variables are simply introduced variables that
-play a role similar to that of the {\it origin\/} in a coordinate
-system.
-
-That the solution has to be coordinate-free is something we know from
-its form:
-$$\rho=\cos\,\lbrace2(\phi_1-\phi_2)\rbrace=\cos^2(\phi_1-\phi_2)-\sin^2(\phi_1-\phi_2)$$
-As far as I can tell, you can win a Nobel Prize by ignoring this
-fact. Or, at least, you could have if you were among the first to do
-so and publish the results of your calculations or experiments based
-on ignoring the fact. But we will not ignore the fact. Thus the
-introduction of landmarks. Instead of working directly with~$\phi_1$
-and~$\phi_2$, we will work with the {\it landmark-relative\/} angles
-$$\eqalign{\Delta\phi_1&=\phi_1-\phi_{01} \cr
-\Delta\phi_2&=\phi_2-\phi_{02} \cr}$$ Then we will craft the pdf so
-the result is coordinate-free. Actually, the problem itself will
-dictate the pdf to us.
-
-@ Before proceeding further, a little notation. This notation likely
-is familiar: the Dirac delta function, which we will treat simply as a
-notation for ``sifting'' when one is integrating, without worrying
-what it really ``is'' or ``is~not.''  Thus, for instance:
-$$\int_{-\infty}^{+\infty}f(t)\,\delta(t-t_0)\,dt=f(t_0)$$ The delta
-could in fact be regarded as a notational convenience, with the left
-side meaning the same thing as the right side. Mathematicians have
-fancier explanations that make sense to them and maybe also to the
-archangels Michael, Gabriel, Uriel, Raphael, and~Shemp.
-
-@ We will let~$\phi_{02}$ take on any angle of some arc, without
-bias. Then, to make the solution coordinate-free, the pdf {\it must\/}
-have as one of its factors $$\delta(\phi_{01}-\phi_2)$$ For otherwise
-$\phi_1-\phi_2$ would not appear in the solution.
-
-The order of integration is immaterial, so let us integrate with
-respect to $\phi_{01}$ now. Thus wherever
-$\Delta\phi_1=\phi_1-\phi_{01}$ would have appeared in an expression
-we can put instead $$\Delta\phi=\phi_1-\phi_2$$ and the solution we
-seek is $$\rho=\cos^2\Delta\phi-\sin^2\Delta\phi$$ By the way, do not
-let anyone deceive you that it is peculiar to know ahead what solution
-you seek. Most likely they have removed the watch from your wrist and
-now are going for your wallet.
-
-A Smoke-and-Mirrors dude once shouted ``{\it LOCAL CAUSALITY HAY SOCKS
-LOOPHOLES B-E-A-B-L-E-S B-E-A-B-L-E-S B-E-A-B-L-E-S!\/}'' when I
-carried out this integration, and thereby incapacitated me for several
-days. But the probability theory involved has nothing to do with
-``local causality,'' nor even with ``randomness.'' It is simply that
-the form of the solution dictates $\phi_{01}=\phi_2$ with probability
-one. That is to say: with absolute certainty.
-
-@ Other factors of the pdf are related to occurrences of
-|number_between_zero_and_one| (or whatever your equivalent be) in the
-program. So let us review probabilities due to these occurrences.
-
-Let~$k_1$ and~$k_2$ represent the two |crayton|. Then
-$$\cases{P(k_1={\it updown}) = P(k_1={\it sideways}) =
-                       P(k_2={\it updown}) = P(k_2={\it sideways}) = 1/2 \cr
-         P(k_1={\it updown}{\,\wedge\,}k_2={\it sideways}) =
+@ The |crayton| source also gives us opportunity to define some
+probabilities:
+$$\eqalign{P(k_1={\it updown}{\,\wedge\,}k_2={\it sideways}) &=
            P(k_1={\it sideways}{\,\wedge\,}k_2={\it updown}) = 1/2 \cr
-           P(k_1={\it updown}{\,\wedge\,}k_2={\it updown}) =
+           P(k_1={\it updown}{\,\wedge\,}k_2={\it updown}) &=
            P(k_1={\it sideways}{\,\wedge\,}k_2={\it sideways}) = 0 \cr}$$
-and the Law of Logodaedalus can be stated as
-$$\cases{P(\tau_1=+1{\,\vert\,} k_1={\it updown})=\sin^2(\phi_{01}+\Delta\phi_1+\Delta\phi) \cr
-         P(\tau_1=-1{\,\vert\,} k_1={\it sideways})=\cos^2(\phi_{01}+\Delta\phi_1+\Delta\phi) \cr
-         P(\tau_2=+1{\,\vert\,} k_1={\it updown})=\sin^2(\phi_{01}+\Delta\phi_1) \cr
-         P(\tau_2=-1{\,\vert\,} k_1={\it sideways})=\cos^2(\phi_{01}+\Delta\phi_1) \cr}$$
-where obviously by trigonometry, and also by necessity of probability theory,
-$$\eqalign{P(\tau_1=+1{\,\vert\,} k_1&={\it updown}) +
-P(\tau_1=-1{\,\vert\,} k_1={\it sideways})= \cr &P(\tau_2=+1{\,\vert\,}
-k_1={\it updown}) + P(\tau_2=-1{\,\vert\,} k_1={\it sideways}) = 1\cr}$$
+These add up to one and so also are consistent.
+For simplicity, from now on we will write down only~$k_1$, given that the
+value of~$k_2$ is immediately deducible. Including it in the calculations
+merely adds tedium. Thus the equations above become simply
+$$P(k_1={\it updown}) = P(k_1={\it sideways}) = 1/2$$
+
+@ Suppose we want to calculate the joint probability $P_1 = P(k_1={\it
+updown}{\,\wedge\,}\tau_1=+1{\,\wedge\,}\tau_2=+1)$. One does it by
+using the definition of the conditional probability---the actual
+definition, not the John~Stewart Bell definition:
+$$\eqalign{P_1 &= P(k_1={\it updown}{\,\wedge\,}\tau_1=+1{\,\wedge\,}\tau_2=+1) \cr
+&= P(k_1={\it updown})\,P(\tau_1=+1{\,\wedge\,}\tau_2=+1{\,\vert\,}k_1={\it updown}) \cr
+&= P(k_1={\it updown})\,P(\tau_1=+1{\,\vert\,}k_1={\it updown})
+\,P(\tau_2=+1{\,\vert\,}k_1={\it updown}) \cr
+&= P(k_1={\it updown})\,P(\tau_1=+1{\,\vert\,}k_1={\it updown})
+\,P(\tau_2=+1{\,\vert\,}k_2={\it sideways}) \cr
+&={1\over2} \sin^2(\phi_{01}) \cos^2(\phi_{02}) \cr
+}$$
+A person might notice I assumed
+$$P(\tau_1=+1{\,\wedge\,}\tau_2=+1{\,\vert\,}k_1={\it updown})
+= P(\tau_1=+1{\,\vert\,}k_1={\it updown})\,P(\tau_2=+1{\,\vert\,}k_1={\it updown})$$
+without proof, but this was because I am old and tired and get senior
+discounts.  I did not invoke ``{\it LOCAL CAUSALITY HAY SOCKS
+LOOPHOLES!\/}'' Seriously, though, the two |cray_ban| operate
+independently and that is the intuition here. This is entirely
+different from what John~Bell was attempting, which was to construct
+an explicit causal chain (by abusing conditional probability
+notation), whack the audience with a stun weapon, blinding them, then
+impress the illusion an explicit causal chain was the {\it only\/}
+form in which classical physics could be expressed.
+
+If John~Bell had been correct about that, then Johannes~Kepler was not
+doing classical physics when he observed that planets moved in
+ellipses, nor was Isaac~Newton when he formulated his Law of Universal
+Gravitation. But really that is beside the point, because those are
+{\it empirical laws}, not derived theories. As I said earlier, the
+Smoke-and-Mirrors crowd are actually distracting you from {\it this\/}
+fact: in the context at hand, ``classical physics'' means {\it any\/}
+mathematics that is not quantum mechanics, if employed to reach the
+same result as quantum mechanics. Their actual claim, {\it sotto
+voce}, is that no mathematics but quantum mechanics can get the job
+done.
+
+It is a ludicrous claim. It would have been laughed out of the room so
+long ago that the Tortoise had not yet caught up with the Hare, had it
+been voiced out loud. Indeed, it is not so much that the claim is kept
+{\it sotto voce\/} as that the believers in it do not have clear
+vision. Their cortexes are screaming and their hypothalamuses
+pulsate. They spend too much time exposed to their own psychosomatic
+weapons.
+
+Part of the reason for me writing this program as {\it instructions\/}
+on how to write a program, rather than as merely a program, is now
+Smoke-and-Mirrors members can sooth their throbbing brains by writing
+{\it their own programs}. They can experience the truth firsthand, and
+as recreation rather than hard work.
+
+
+
+
+
+
+%% However, the main difference between me and the Smoke-and-Mirrors
+%% members is that they did not believe it could be done, so they did not
+%% really {\it try} (and thus your hypothalamus was psychosomatically
+%% withered), whereas I knew it could be done, but did not yet know how.
+
+%% Okay, I did know how to solve for the correlation
+%% coefficient. Actually the very same correlation coefficient has been
+%% derivable all along, for the very same experiments, {\it from
+%% classical wave theory\/}. This fact occasionally has prompted use of
+%% the license to shout the universal retort, ``{\it LOCAL CAUSALITY HAY
+%% SOCKS LOOPHOLES!\/}''
+
+%% Nevertheless, what I wished for was a derivation that employed nothing
+%% more than probability theory. Such a derivation would be as
+%% fundamental as possible, for probability theory is known to be the
+%% uniquely qualified mathematics of plausible scientific inference.
+
+%% In school I was taught the version of probability theory that is based
+%% on measure theory, and which most mathematicians consider ``rigorous''
+%% but which I consider ``standing on a sinkhole''---who would cross a
+%% bridge if its design {\it really\/} depended on the Axiom of Choice?
+%% There is a more axiomatic version of probability theory that has the
+%% unique qualifications mentioned above. For our purposes it makes no
+%% real difference---I {\it think\/} that, in our case, it winds up being
+%% a difference of opinion on what kind of integration one is doing.
+
+%% The first thing I will do is something I thought of because it was
+%% easier than switching to a coordinate-free representation for the
+%% problem (such as re-casting the |cray_ban| as abstract multivectors in
+%% a 30-dimensional degenerate Clifford algebra). I will introduce two
+%% {\it landmark angles\/}---or {\it landmarks\/} for short---$\phi_{01}$
+%% and~$\phi_{02}$. In the probability theory I was taught in school,
+%% these would be called ``random variables,'' but that terminology is
+%% {\it astronomically\/} misleading, and in my opinion should be avoided
+%% unequivocally. These variables are simply introduced variables that
+%% play a role similar to that of the {\it origin\/} in a coordinate
+%% system.
+
+%% That the solution has to be coordinate-free is something we know from
+%% its form:
+%% $$\rho=\cos\,\lbrace2(\phi_1-\phi_2)\rbrace=\cos^2(\phi_1-\phi_2)-\sin^2(\phi_1-\phi_2)$$
+%% As far as I can tell, you can win a Nobel Prize by ignoring this
+%% fact. Or, at least, you could have if you were among the first to do
+%% so and publish the results of your calculations or experiments based
+%% on ignoring the fact. But we will not ignore the fact. Thus the
+%% introduction of landmarks. Instead of working directly with~$\phi_1$
+%% and~$\phi_2$, we will work with the {\it landmark-relative\/} angles
+%% $$\eqalign{\Delta\phi_1&=\phi_1-\phi_{01} \cr
+%% \Delta\phi_2&=\phi_2-\phi_{02} \cr}$$ Then we will craft the pdf so
+%% the result is coordinate-free. Actually, the problem itself will
+%% dictate the pdf to us.
+
+%% Before proceeding further, a little notation. This notation likely
+%% is familiar: the Dirac delta function, which we will treat simply as a
+%% notation for ``sifting'' when one is integrating, without worrying
+%% what it really ``is'' or ``is~not.''  Thus, for instance:
+%% $$\int_{-\infty}^{+\infty}f(t)\,\delta(t-t_0)\,dt=f(t_0)$$ The delta
+%% could in fact be regarded as a notational convenience, with the left
+%% side meaning the same thing as the right side. Mathematicians have
+%% fancier explanations that make sense to them and maybe also to the
+%% archangels Michael, Gabriel, Uriel, Raphael, and~Shemp.
+
+%% We will let~$\phi_{02}$ take on any angle of some arc, without
+%% bias. Then, to make the solution coordinate-free, the pdf {\it must\/}
+%% have as one of its factors $$\delta(\phi_{01}-\phi_2)$$ For otherwise
+%% $\phi_1-\phi_2$ would not appear in the solution.
+
+%% The order of integration is immaterial, so let us integrate with
+%% respect to $\phi_{01}$ now. Thus wherever
+%% $\Delta\phi_1=\phi_1-\phi_{01}$ would have appeared in an expression
+%% we can put instead $$\Delta\phi=\phi_1-\phi_2$$ and the solution we
+%% seek is $$\rho=\cos^2\Delta\phi-\sin^2\Delta\phi$$ By the way, do not
+%% let anyone deceive you that it is peculiar to know ahead what solution
+%% you seek. Most likely they have removed the watch from your wrist and
+%% now are going for your wallet.
+
+%% A Smoke-and-Mirrors dude once shouted ``{\it LOCAL CAUSALITY HAY SOCKS
+%% LOOPHOLES B-E-A-B-L-E-S B-E-A-B-L-E-S B-E-A-B-L-E-S!\/}'' when I
+%% carried out this integration, and thereby incapacitated me for several
+%% days. But the probability theory involved has nothing to do with
+%% ``local causality,'' nor even with ``randomness.'' It is simply that
+%% the form of the solution dictates $\phi_{01}=\phi_2$ with probability
+%% one. That is to say: with absolute certainty.
+
+%% Other factors of the pdf are related to occurrences of
+%% |number_between_zero_and_one| (or whatever your equivalent be) in the
+%% program. So let us review probabilities due to these occurrences.
+
+%% Let~$k_1$ and~$k_2$ represent the two |crayton|. Then
+%% $$\cases{P(k_1={\it updown}) = P(k_1={\it sideways}) =
+%%                        P(k_2={\it updown}) = P(k_2={\it sideways}) = 1/2 \cr
+%%          P(k_1={\it updown}{\,\wedge\,}k_2={\it sideways}) =
+%%            P(k_1={\it sideways}{\,\wedge\,}k_2={\it updown}) = 1/2 \cr
+%%            P(k_1={\it updown}{\,\wedge\,}k_2={\it updown}) =
+%%            P(k_1={\it sideways}{\,\wedge\,}k_2={\it sideways}) = 0 \cr}$$
+%% and the Law of Logodaedalus can be stated as
+%% $$\cases{P(\tau_1=+1{\,\vert\,} k_1={\it updown})=\sin^2(\phi_{01}+\Delta\phi_1+\Delta\phi) \cr
+%%          P(\tau_1=-1{\,\vert\,} k_1={\it sideways})=\cos^2(\phi_{01}+\Delta\phi_1+\Delta\phi) \cr
+%%          P(\tau_2=+1{\,\vert\,} k_1={\it updown})=\sin^2(\phi_{01}+\Delta\phi_1) \cr
+%%          P(\tau_2=-1{\,\vert\,} k_1={\it sideways})=\cos^2(\phi_{01}+\Delta\phi_1) \cr}$$
+%% where obviously by trigonometry, and also by necessity of probability theory,
+%% $$\eqalign{P(\tau_1=+1{\,\vert\,} k_1&={\it updown}) +
+%% P(\tau_1=-1{\,\vert\,} k_1={\it sideways})= \cr &P(\tau_2=+1{\,\vert\,}
+%% k_1={\it updown}) + P(\tau_2=-1{\,\vert\,} k_1={\it sideways}) = 1\cr}$$
 
 
 @* Index.
