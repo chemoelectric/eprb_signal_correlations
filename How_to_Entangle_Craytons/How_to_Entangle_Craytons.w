@@ -517,17 +517,19 @@ necessary, after all!
 Yes, I had a derivation of the correlation coefficient, but I shall
 not reproduce that derivation for you, because it is too
 complicated. You need an education in random process analysis to
-understand it, and even then it makes your head feel as if it were a
+understand it, and even then it makes one's head feel as if it were a
 muddled fruit at the bottom of a cocktail shaker.
 
-@ The following derivation starts by deriving what the
+@ The following much simpler, derivation starts by deriving what the
 Smoke-and-Mirrors Club seems to believe is all classical physics is
-capable of deriving.
+capable of deriving: a particular function of the two |cray_ban|
+settings that is {\it not\/} a function of their difference. The
+derivation is tedious but straightforward.
 
 Let~$k_1$ and~$k_2$ represent the |crayton| pair, and~$\phi_{01}$
 and~$\phi_{02}$ the |cray_ban| settings. Then the Law of Logodaedalus
 is
-$$\eqalign{
+$$\eqalignno{
 P(\tau_1=+1{\,\vert\,} k_1={\it updown})&=\sin^2(\phi_{01}) \cr
 P(\tau_1=-1{\,\vert\,} k_1={\it updown})&=\cos^2(\phi_{01}) \cr
 P(\tau_2=+1{\,\vert\,} k_2={\it updown})&=\sin^2(\phi_{02}) \cr
@@ -614,7 +616,37 @@ Smoke-and-Mirrors members can sooth their throbbing brains by writing
 {\it their own programs}. They can experience the truth firsthand, and
 as recreation rather than hard work.
 
+@ By the previous calculation, and then by similar ones (though
+actually by symmetry considerations), a table can be constructed:
+$$\eqalignno{
+P(k_1={\it updown}{\,\wedge\,}\tau_1=+1{\,\wedge\,}\tau_2=+1)
+  &= {1\over2} \sin^2(\phi_{01}) \cos^2(\phi_{02}) \cr
+P(k_1={\it updown}{\,\wedge\,}\tau_1=+1{\,\wedge\,}\tau_2=-1)
+  &= {1\over2} \sin^2(\phi_{01}) \sin^2(\phi_{02}) \cr
+P(k_1={\it updown}{\,\wedge\,}\tau_1=-1{\,\wedge\,}\tau_2=+1)
+  &= {1\over2} \cos^2(\phi_{01}) \cos^2(\phi_{02}) \cr
+P(k_1={\it updown}{\,\wedge\,}\tau_1=-1{\,\wedge\,}\tau_2=-1)
+  &= {1\over2} \cos^2(\phi_{01}) \sin^2(\phi_{02}) \cr
+P(k_1={\it sideways}{\,\wedge\,}\tau_1=+1{\,\wedge\,}\tau_2=+1)
+  &= {1\over2} \cos^2(\phi_{01}) \sin^2(\phi_{02}) \cr
+P(k_1={\it sideways}{\,\wedge\,}\tau_1=+1{\,\wedge\,}\tau_2=-1)
+  &= {1\over2} \cos^2(\phi_{01}) \cos^2(\phi_{02}) \cr
+P(k_1={\it sideways}{\,\wedge\,}\tau_1=-1{\,\wedge\,}\tau_2=+1)
+  &= {1\over2} \sin^2(\phi_{01}) \sin^2(\phi_{02}) \cr
+P(k_1={\it sideways}{\,\wedge\,}\tau_1=-1{\,\wedge\,}\tau_2=-1)
+  &= {1\over2} \sin^2(\phi_{01}) \cos^2(\phi_{02}) \cr
+}$$
 
+@ By adding the probabilities of mutually exclusive propositions in
+that table, one deduces
+$$\eqalign{P(&\tau_1=+1{\,\wedge\,}\tau_2=+1) \cr
+  &= P(\tau_1=-1{\,\wedge\,}\tau_2=-1) \cr
+  &= {1\over2} \sin^2(\phi_{01}) \cos^2(\phi_{02})
+      + {1\over2} \cos^2(\phi_{01}) \sin^2(\phi_{02}) \cr}$$
+$$\eqalign{P(&\tau_1=+1{\,\wedge\,}\tau_2=-1) \cr
+  &= P(\tau_1=-1{\,\wedge\,}\tau_2=+1) \cr
+  &= {1\over2} \sin^2(\phi_{01}) \sin^2(\phi_{02})
+      + {1\over2} \cos^2(\phi_{01}) \cos^2(\phi_{02}) \cr}$$
 
 
 
