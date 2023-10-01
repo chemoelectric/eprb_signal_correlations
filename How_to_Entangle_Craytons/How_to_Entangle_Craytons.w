@@ -547,10 +547,12 @@ easier than switching to a coordinate-free representation for the
 problem (such as re-casting the |cray_ban| as abstract multivectors in
 a 30-dimensional degenerate Clifford algebra). I will introduce two
 {\it landmark angles\/}---or {\it landmarks\/} for short---$\phi_{01}$
-and~$\phi_{02}$. In the measure theory these would be considered
-``random variables,'' but that terminology is {\it astronomically\/}
-misleading. They are simply introduced variables that play a role
-similar to that of the {\it origin\/} in a coordinate system.
+and~$\phi_{02}$. In the probability theory I was taught in school,
+these would be called ``random variables,'' but that terminology is
+{\it astronomically\/} misleading, and in my opinion should be avoided
+unequivocally. These variables are simply introduced variables that
+play a role similar to that of the {\it origin\/} in a coordinate
+system.
 
 That the solution has to be coordinate-free is something we know from
 its form:
@@ -576,10 +578,10 @@ side meaning the same thing as the right side. Mathematicians have
 fancier explanations that make sense to them and maybe also to the
 archangels Michael, Gabriel, Uriel, Raphael, and~Shemp.
 
-@ We will let~$\phi_{02}$ take on any angle of the circle. Then, to
-make the solution coordinate-free, the pdf {\it must\/} have as one of
-its factors $$\delta(\phi_{01}-\phi_2)$$ For otherwise $\phi_1-\phi_2$
-would not appear in the solution.
+@ We will let~$\phi_{02}$ take on any angle of some arc, without
+bias. Then, to make the solution coordinate-free, the pdf {\it must\/}
+have as one of its factors $$\delta(\phi_{01}-\phi_2)$$ For otherwise
+$\phi_1-\phi_2$ would not appear in the solution.
 
 The order of integration is immaterial, so let us integrate with
 respect to $\phi_{01}$ now. Thus wherever
@@ -598,5 +600,26 @@ days. But the probability theory involved has nothing to do with
 the form of the solution dictates $\phi_{01}=\phi_2$ with probability
 one. That is to say: with absolute certainty.
 
-@* Index.
+@ Other factors of the pdf are related to occurrences of
+|number_between_zero_and_one| (or whatever your equivalent be) in the
+program. So let us review probabilities due to these occurrences.
 
+Let~$k_1$ and~$k_2$ represent the two |crayton|. Then
+$$\cases{P(k_1={\it updown}) = P(k_1={\it sideways}) =
+                       P(k_2={\it updown}) = P(k_2={\it sideways}) = 1/2 \cr
+         P(k_1={\it updown}{\,\wedge\,}k_2={\it sideways}) =
+           P(k_1={\it sideways}{\,\wedge\,}k_2={\it updown}) = 1/2 \cr
+           P(k_1={\it updown}{\,\wedge\,}k_2={\it updown}) =
+           P(k_1={\it sideways}{\,\wedge\,}k_2={\it sideways}) = 0 \cr}$$
+and the Law of Logodaedalus can be stated as
+$$\cases{P(\tau_1=+1{\,\vert\,} k_1={\it updown})=\sin^2(\phi_{01}+\Delta\phi_1+\Delta\phi) \cr
+         P(\tau_1=-1{\,\vert\,} k_1={\it sideways})=\cos^2(\phi_{01}+\Delta\phi_1+\Delta\phi) \cr
+         P(\tau_2=+1{\,\vert\,} k_1={\it updown})=\sin^2(\phi_{01}+\Delta\phi_1) \cr
+         P(\tau_2=-1{\,\vert\,} k_1={\it sideways})=\cos^2(\phi_{01}+\Delta\phi_1) \cr}$$
+where obviously by trigonometry, and also by necessity of probability theory,
+$$\eqalign{P(\tau_1=+1{\,\vert\,} k_1&={\it updown}) +
+P(\tau_1=-1{\,\vert\,} k_1={\it sideways})= \cr &P(\tau_2=+1{\,\vert\,}
+k_1={\it updown}) + P(\tau_2=-1{\,\vert\,} k_1={\it sideways}) = 1\cr}$$
+
+
+@* Index.
