@@ -598,17 +598,21 @@ done.
 
 It is a ludicrous claim. It would have been laughed out of the room so
 long ago that the Tortoise had not yet caught up with the Hare, had it
-been voiced out loud. Indeed, it is not so much that the claim is kept
-{\it sotto voce\/} as that the believers in it do not have clear
-vision. Their cortexes are screaming and their hypothalamuses
-pulsate. They spend too much time exposed to their own psychosomatic
-weapons.
+been voiced out loud. It is so ridiculous a claim that it could not
+have been kept secret. Thus, indeed, it is not so much that the claim
+is kept {\it sotto voce\/} as that its believers do not, in fact, see
+that it is what they believe. Their cortexes are screaming and their
+hypothalamuses are pulsating. They {\it think\/} they are saying
+things that make sense. They spend too much time exposed to their own
+psychosomatic weapons.
 
 Part of the reason for me writing this program as {\it instructions\/}
-on how to write a program, rather than as merely a program, is now
-Smoke-and-Mirrors members can sooth their throbbing brains by writing
-{\it their own programs}. They can experience the truth firsthand, and
-as recreation rather than hard work.
+on how to write a program, rather than as merely a program for others
+to compile and run, is now Smoke-and-Mirrors members can sooth their
+throbbing brains by writing {\it their own programs}. They can
+experience the truth firsthand, and as recreation rather than hard
+work. I encourage them to pick up computer and bow, and play a
+soothing |crayton| lullaby.
 
 @ By the previous calculation, and then by similar ones (though
 actually by symmetry considerations), a table can be constructed:
