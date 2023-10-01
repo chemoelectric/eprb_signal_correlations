@@ -723,4 +723,15 @@ weirdness whatsoever. Einstein, Podolsky, and Rosen were correct. The
 2022 Nobel Prize in Physics was awarded for physics done so badly it
 ought to be regarded as pseudoscience.
 
+@ There is a simple interpretation for this result, which I have put
+into display in slightly more complicated simulations. In these
+simulations, instead of testing with a few angles, the equivalents of
+a |cray_ban| are constantly rotating on axles, in unison. This is as
+if $\Delta\phi$ were allowed to increase freely over time. Although
+the proportions of ``who gets sent which way'' change with the
+particular angles, the correlation coefficient stays fixed with the
+relative angle. There is no entanglement, there is no non-locality,
+there is nothing weird whatsoever. The Smoke-and-Mirrors crowd were
+always merely deploying psychosomatic weaponry.
+
 @* Index.
