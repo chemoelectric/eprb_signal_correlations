@@ -661,8 +661,8 @@ CAUSALITY HAY SOCKS LOOPHOLES!\/}'' That is, they knew if they
 submitted a paper they would be bombarded with energy weapons.
 
 @ To write this new expectation $E(\tau_1\tau_2)$ (call it $\rho'$)
-using a probability
-density function would be excessive. It can be written as a summation:
+as an integral weighted by a pdf would be excessive.
+It can be written as a sum:
 $$\eqalign{\rho' &= E(\tau_1\tau_2) \cr
  &= [(+1)(+1) P^{++}]
  + [(+1)(-1) P^{+-}]
