@@ -648,6 +648,35 @@ $$\eqalign{P(&\tau_1=+1{\,\wedge\,}\tau_2=-1) \cr
   &= {1\over2} \sin^2(\phi_{01}) \sin^2(\phi_{02})
       + {1\over2} \cos^2(\phi_{01}) \cos^2(\phi_{02}) \cr}$$
 
+@ Now suppose we want to find a correlation coefficient {\it not\/} as
+a function of a difference, such as~$\phi_{01}-\phi_{02}$, but {\it
+instead\/} as a function of particular given values~$\phi_{01}$
+and~$\phi_{02}$. This, I believe, is a problem the Smoke-and-Mirrors
+Club has mistaken for the real one. But its solution will lead {\it so
+quickly\/} to the real answer (in terms of a difference between
+angles) that\,...\,you have to see it to believe it. One wonders not
+so much {\it how\/} they missed the solution, but whether some of them
+{\it saw\/} it but dismissed it as unpublishable, because ``{\it LOCAL
+CAUSALITY HAY SOCKS LOOPHOLES!\/}'' That is, they knew if they
+submitted a paper they would be bombarded with energy weapons.
+
+@ To write this new expectation $E(\tau_1\tau_2)$ (call it $\rho'$)
+using a probability
+density function would be excessive. It can be written as a summation:
+$$\eqalign{\rho' &= E(\tau_1\tau_2) \cr
+ &= [(+1)(+1) P^{++}]
+ + [(+1)(-1) P^{+-}]
+ + [(-1)(+1) P^{-+}]
+ + [(-1)(-1) P^{--}] \cr
+ &= P^{++} - P^{+-} - P^{-+} + P^{--} \cr
+}$$
+where
+$$\eqalign{
+P^{++} &= P(\tau_1=+1{\,\wedge\,}\tau_2=+1) \cr
+P^{+-} &= P(\tau_1=+1{\,\wedge\,}\tau_2=-1) \cr
+P^{-+} &= P(\tau_1=-1{\,\wedge\,}\tau_2=+1) \cr
+P^{--} &= P(\tau_1=-1{\,\wedge\,}\tau_2=-1) \cr
+}$$
 
 
 
