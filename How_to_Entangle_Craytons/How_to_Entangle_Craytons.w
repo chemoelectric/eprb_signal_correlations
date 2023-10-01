@@ -649,7 +649,8 @@ $$\eqalign{P(&\tau_1=+1{\,\wedge\,}\tau_2=-1) \cr
   &= {1\over2} \sin^2(\phi_{01}) \sin^2(\phi_{02})
       + {1\over2} \cos^2(\phi_{01}) \cos^2(\phi_{02}) \cr}$$
 
-@ Now suppose we want to find a correlation coefficient {\it not\/} as
+@ Now suppose we want to find an ``expectation'' $E'(\tau_1\tau_2)$
+{\it not\/} as
 a function of a difference, such as~$\phi_{01}-\phi_{02}$, but {\it
 instead\/} as a function of particular given values~$\phi_{01}$
 and~$\phi_{02}$. This, I believe, is a problem the Smoke-and-Mirrors
@@ -661,10 +662,10 @@ so much {\it how\/} they missed the solution, but whether some of them
 CAUSALITY HAY SOCKS LOOPHOLES!\/}'' That is, they knew if they
 submitted a paper they would be bombarded with energy weapons.
 
-@ To write this new expectation $E(\tau_1\tau_2)$ (call it $\rho'$)
+@ To write this new ``expectation'' $E'(\tau_1\tau_2)$ (call it $\rho'$)
 as an integral weighted by a pdf would be excessive.
 It can be written as a sum:
-$$\eqalign{\rho' &= E(\tau_1\tau_2) \cr
+$$\eqalign{\rho' &= E'(\tau_1\tau_2) \cr
  &= [(+1)(+1) P^{++}]
  + [(+1)(-1) P^{+-}]
  + [(-1)(+1) P^{-+}]
@@ -694,6 +695,32 @@ where the last step is by a double-angle identity found in reference
 books. This result is, I believe, what Smoke-and-Mirrors members
 commonly believe is the best classical physics can achieve.
 
+@ This result has the wrong form, so it simply {\it cannot\/} be the
+correct solution! And, indeed, it gives incorrect results. If you plug
+in the angles $\phi_{01}=\pi/4$ and~$\phi_{02}=\pi/8$, for instance,
+you will get zero instead of the correct value,~$-1/\sqrt2$. But now,
+with this result that obviously, at a glance, cannot be correct, you
+can derive an ``inequality'' and win a Nobel Prize.
 
+@ But suppose we take the special case of~$\phi_{02}=0$. Then
+$$\rho' = -\cos(2\phi_{01}) = -\cos\{2(\phi_{01}-\phi_{02})\}$$
+and it {\it does\/} have the correct form.
+
+And now let us give the name~$\Delta\phi$ to any angle whatsoever, and
+add~$0=\Delta\phi - \Delta\phi$ to ~$\phi_{01}-\phi_{02}$:
+$$\rho' = -\cos\{2[(\phi_{01} + \Delta\phi) - (\phi_{02} + \Delta\phi)]\}$$
+
+And then let us call~$\phi_{01} + \Delta\phi$ by the name~$\phi_1$,
+and~$\phi_{02} + \Delta\phi$ by the name~$\phi_2$, and also (because
+it has the correct form) rename~$\rho'$ as simply~$\rho$:
+$$\eqalign{\rho &= -\cos\{2(\phi_1 - \phi_2)\} \cr
+ &= -\{\cos^2(\phi_1 - \phi_2) - \sin^2(\phi_1 - \phi_2)\}\cr}$$
+
+Having done these things, we have derived, using only classical
+physics, the same correlation coefficient quantum mechanics
+gives. Thus there is no entanglement, no non-locality, no quantum
+weirdness whatsoever. Einstein, Podolsky, and Rosen were correct. The
+2022 Nobel Prize in Physics was awarded for physics done so badly it
+ought to be regarded as pseudoscience.
 
 @* Index.
