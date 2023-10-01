@@ -721,7 +721,8 @@ physics, the same correlation coefficient quantum mechanics
 gives. Thus there is no entanglement, no non-locality, no quantum
 weirdness whatsoever. Einstein, Podolsky, and Rosen were correct. The
 2022 Nobel Prize in Physics was awarded for physics done so badly it
-ought to be regarded as pseudoscience.
+ought to be regarded as pseudoscience. The number of paper retractions
+that is due is staggering to consider.
 
 @ There is a simple interpretation for this result, which I have put
 into display in slightly more complicated simulations. In these
