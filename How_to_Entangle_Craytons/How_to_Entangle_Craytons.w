@@ -704,7 +704,7 @@ and it {\it does\/} have the correct form.
 
 And now let us give the name~$\Delta\phi$ to any angle whatsoever, and
 add~$0=\Delta\phi - \Delta\phi$ to ~$\phi_{01}-\phi_{02}$:
-$$\rho' = -\cos\{2[(\phi_{01} + \Delta\phi) - (\phi_{02} + \Delta\phi)]\}$$
+$$\rho' = -\cos(2\{(\phi_{01} + \Delta\phi) - (\phi_{02} + \Delta\phi)\})$$
 
 And then let us call~$\phi_{01} + \Delta\phi$ by the name~$\phi_1$,
 and~$\phi_{02} + \Delta\phi$ by the name~$\phi_2$, and also (because
