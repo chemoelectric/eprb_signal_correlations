@@ -471,9 +471,9 @@ that suited their fancy. They have used that license freely. Any
 attempt to declare their math illegitimate is immediately canceled by
 the license Bell gave them. One will be slammed with a Gish Gallop of
 ``{\it Local causality, beables, socks, heart attacks, loopholes,
-dichotomic variables, imported Belgian hay,\,..., yadda, yadda,
-yadda,\,...\,!  Did you hear me? I said {\sc LOCAL CAUSALITY HAY SOCKS
-LOOPHOLES!}}''
+dichotomic variables, imported hay, Fantastic Voyage, Final
+Four,\,...\,!  Did you hear me? Tick, tick, tick. I said {\sc LOCAL
+CAUSALITY HAY SOCKS LOOPHOLES!}}''
 
 I had thought to say more about what has been perpetrated, but words
 escape me. Papers and books promoting ``entanglement'' and
