@@ -560,6 +560,35 @@ main ()
   return 0;
 }
 
+@ When I compile and run my program, I obtain the following as my output:
+{\raggedright\parindent=5em\tentt
+\medskip
+cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}0.0{\SP}deg\par
+cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}22.5{\SP}deg\par
+nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}-0.70711\par
+measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}-0.71180\par
+\medskip
+cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}0.0{\SP}deg\par
+cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}67.5{\SP}deg\par
+nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}+0.70711\par
+measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}+0.70980\par
+\medskip
+cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}45.0{\SP}deg\par
+cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}22.5{\SP}deg\par
+nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}-0.70711\par
+measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}-0.70859\par
+\medskip
+cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}45.0{\SP}deg\par
+cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}67.5{\SP}deg\par
+nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}-0.70711\par
+measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}-0.70148\par
+\medskip}
+
+\noindent Thus is entanglement proven! I have entangled |crayton|
+pairs on ordinary computer hardware. No quantum computer was
+necessary. Each |crayton| in a pair settled into its individual state
+non-locally upon measurement of the other.
+
 @* Okay, I Lied. There was actually no entanglement. There is no
 entanglement anywhere in the world. Entanglement is the wrongest wrong
 thing that there has ever been in the history of physics.
