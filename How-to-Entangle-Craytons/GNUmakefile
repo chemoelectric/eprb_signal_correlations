@@ -42,11 +42,14 @@ QPDFFLAGS =
 CC = cc
 CFLAGS = -O -g
 
-.PHONY: default
-default: all
+.PHONY: pdf default
+pdf default: $(MY_DOC).pdf
+
+.PHONY: program
+program: $(MY_DOC)
 
 .PHONY: all
-all: $(MY_DOC).pdf $(MY_DOC)
+all: pdf program
 
 %.c: %.w
 	$(CTANGLE) $(CTANGLEFLAGS) $(<) - $(@)
@@ -69,3 +72,7 @@ $(MY_DOC).tex: $(MY_DOC)-revision.txt
 
 $(MY_DOC)-revision.txt: GNUmakefile
 	date -u > $(@)
+
+.PHONY: clean
+clean:
+	rm -f $(MY_DOC){,.{c,idx,log,scn,toc,tex}}
