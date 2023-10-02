@@ -40,27 +40,14 @@ There are also in here:
 * Translations of the Ada program to other languages.
 
 * A paper, more or less in the style of the journals, based on the
-  math of the Ada program’s commentary, but with corrections that may
-  not yet have been incorporated into that commentary. The paper
-  should be considered a mere transitional, because the journal style
-  is a failed format. A Bell apologist in academia, having gotten a
-  copy, and not noticing that the solution was to a signal processing
-  problem rather than to a Bell-test itself, scanned it for
-  opportunities to build a Gish Gallop of reasons to reject it for
-  publication, citing ‘Theory of Local Beables’ and other such
-  folderol. Also he attacked my attitude towards quantum physicists,
-  which is logically irrelevant, but which was further means to keep
-  my paper from being published (though I was not submitting it for
-  publication anywhere). As I say, the journal style simply DOES NOT
-  FUNCTION. It rewards bullies. Nevertheless, the paper is useful in
-  that it presents perhaps the first derivation of the correlation
-  coefficient from probability theory alone.
+  math of the Ada program’s commentary, and completely superceded by a
+  new proof that is sketched in the introduction.
+
+* A CWEB program, not yet completed, that contains the new proof
+  (already completed).
 
 * The source repository for the Python animation at
   https://pypi.org/project/Quantum-Correlations-Visualized/
-
-* The beginnings of a monograph NOT in the journal style, which shall
-  teach basics of probability theory and go on from there.
 
 ----------------------------------------------------------------------
 
