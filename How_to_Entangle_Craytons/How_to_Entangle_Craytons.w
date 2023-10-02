@@ -605,28 +605,29 @@ Gravitation. But really that is beside the point, because those are
 {\it empirical laws}, not derived theories. As I said earlier, the
 Smoke-and-Mirrors crowd are actually distracting you from {\it this\/}
 fact: in the context at hand, ``classical physics'' means {\it any\/}
-mathematics that is not quantum mechanics, if employed to reach the
-same result as quantum mechanics. Their actual claim, {\it sotto
-voce}, is that no mathematics but quantum mechanics can get the job
-done.
+mathematics that is not quantum mechanics, {\it if\/} employed to
+reach the same result as quantum mechanics. Their actual claim, {\it
+sotto voce}, is that no mathematics but quantum mechanics can get the
+job done.
 
 It is a ludicrous claim. It would have been laughed out of the room so
-long ago that the Tortoise had not yet caught up with the Hare, had it
-been voiced out loud. It is so ridiculous a claim that it could not
-have been kept secret. Thus, indeed, it is not so much that the claim
-is kept {\it sotto voce\/} as that its believers do not, in fact, see
-that it is what they believe. Their cortexes are screaming and their
-hypothalamuses are pulsating. They {\it think\/} they are saying
-things that make sense. They spend too much time exposed to their own
-psychosomatic weapons.
+long ago that the Tortoise had not yet caught up with the Hare, had
+the claim been voiced out loud. It is so ridiculous a claim that it
+could not have been kept secret. Thus, indeed, it is not so much that
+the claim is kept {\it sotto voce\/} as that its believers do not, in
+fact, see that it is what they believe. Their cortexes are screaming
+and their hypothalamuses are pulsating. They {\it think\/} they are
+saying things that make sense. They spend too much time amidst their
+own psychosomatic barrages.
 
 Part of the reason for me writing this program as {\it instructions\/}
 on how to write a program, rather than as merely a program for others
-to compile and run, is now Smoke-and-Mirrors members can sooth their
+to compile and run, is so Smoke-and-Mirrors members can sooth their
 throbbing brains by writing {\it their own programs}. They can
 experience the truth firsthand, and as recreation rather than hard
 work. I encourage them to pick up computer and bow, and play a
-soothing |crayton| lullaby.
+soothing |crayton| lullaby, according to this sheet music, but each in
+their unique style.
 
 @ By the previous calculation, and then by similar ones (though
 actually by symmetry considerations), a table can be constructed:
