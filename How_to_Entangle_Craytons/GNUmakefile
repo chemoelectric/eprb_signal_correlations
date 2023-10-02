@@ -25,13 +25,32 @@
 
 .DELETE_ON_ERROR:
 
+MY_DOC = How_to_Entangle_Craytons
+
 CWEAVE = cweave
 CWEAVEFLAGS = -v
 
-MY_DOC = How_to_Entangle_Craytons
+PDFTEX = pdftex
+PDFTEXFLAGS =
+
+QPDF = qpdf
+QPDFFLAGS =
+
+.PHONY: default
+default: all
+
+.PHONY: all
+all: $(MY_DOC).pdf
 
 %.tex: %.w
 	$(CWEAVE) $(CWEAVEFLAGS) $(<) - $(@)
+
+%.pdf: %.tex
+	$(PDFTEX) $(PDFTEXFLAGS) $(<)
+	mv $(@) $(MY_DOC).tmp1.pdf
+	$(QPDF) $(QPDFFLAGS) $(MY_DOC).tmp1.pdf --pages . r1 . 1-r2 -- \
+		$(MY_DOC).tmp2.pdf
+	mv $(MY_DOC).tmp2.pdf $(@)
 
 $(MY_DOC).tex: $(MY_DOC)_revision.txt
 
