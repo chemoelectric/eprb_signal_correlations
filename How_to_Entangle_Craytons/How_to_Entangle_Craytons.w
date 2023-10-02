@@ -42,6 +42,14 @@
 \centerline{and last revised}%
 \centerline{\input{How_to_Entangle_Craytons_revision.txt}}%
 \medskip
+\centerline{Containing also a}%
+\smallskip
+\centerline{\sc PROOF}%
+\smallskip
+\centerline{without recourse to quantum mechanics}%
+\centerline{of the correlation coefficient}%
+\centerline{of a two-channel Bell test experiment.}%
+\medskip
 \centerline{With many thanks to an anonymous person}%
 \centerline{for their scientific curiosity.}%
 \centerline{In our times, scientific method}%
