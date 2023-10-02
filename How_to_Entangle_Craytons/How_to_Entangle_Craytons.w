@@ -41,9 +41,12 @@
 \centerline{prepared in the year 2023,}%
 \centerline{and last revised}%
 \centerline{\input{How_to_Entangle_Craytons_revision.txt}}%
-\smallskip
+\medskip
 \centerline{With many thanks to an anonymous person}%
-\centerline{for their very rare curiosity.}%
+\centerline{for their scientific curiosity.}%
+\centerline{In our times, scientific method}%
+\centerline{has been displaced by scientific authority,}%
+\centerline{and to encounter actual curiosity is rare.}%
 }}
 
 @* Magically Entangled Craytons. What follows are instructions on how
