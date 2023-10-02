@@ -698,11 +698,14 @@ correct solution! And, indeed, it gives incorrect results. If you plug
 in the angles $\phi_{01}=\pi/4$ and~$\phi_{02}=\pi/8$, for instance,
 you will get zero instead of the correct value,~$-1/\sqrt2$. But now,
 with this result that obviously, at a glance, cannot be correct, you
-can derive an ``inequality'' and win a Nobel Prize.
+can derive an ``inequality'' and win a Nobel Prize. This is one route,
+at least, by which the so-called ``CHSH inequality'' can be derived.
 
-@ But suppose we take the special case of~$\phi_{02}=0$. Then
-$$\rho' = -\cos(2\phi_{01}) = -\cos\{2(\phi_{01}-\phi_{02})\}$$
-and it {\it does\/} have the correct form.
+@ But suppose that, instead of publishing an ``inequality'' and
+winning a Nobel Prize, we consider only the special
+case~$\phi_{02}=0$. Then $$\rho' = -\cos(2\phi_{01}) =
+-\cos\{2(\phi_{01}-\phi_{02})\}$$ and it {\it does\/} have the correct
+form.
 
 And now let us give the name~$\Delta\phi$ to any angle whatsoever, and
 add~$0=\Delta\phi - \Delta\phi$ to~$\phi_{01}-\phi_{02}$:
@@ -719,30 +722,35 @@ physics, the same correlation coefficient quantum mechanics
 gives. Thus there is no entanglement, no non-locality, no quantum
 weirdness whatsoever. Einstein, Podolsky, and Rosen were correct. The
 2022 Nobel Prize in Physics was awarded for physics done so badly it
-ought to be regarded as pseudoscience. The number of paper retractions
-that is due is staggering to consider.
+ought to be regarded as pseudoscience.
 
-@ There is a simple interpretation for this derivation, which I have
-put into display in slightly more complicated simulations. (Actually,
-the simulations existed many weeks before the derivation, so served as
-immediate evidence of the proof's validity.) In these simulations,
-instead of testing with a few angles, the equivalents of a |cray_ban|
-are constantly rotating on axles, in unison. This is as if
-$\Delta\phi$ were allowed to increase freely over time. Although the
-proportions of ``who gets sent which way'' change with the particular
-angles, the correlation coefficient stays fixed with the relative
-angle. There is no entanglement, there is no non-locality, there is
-nothing weird whatsoever. The Smoke-and-Mirrors crowd were always
-merely deploying psychosomatic weaponry.
+The number of paper retractions that is due is staggering to consider.
 
-@ However, there is a much deeper interpretation: any angle may be
-labeled zero, so long as it is the same angle on both |cray_ban| in
-the pair.
+@ There is a simple interpretation for this classical derivation, an
+interpretation I worked into simulations slightly more complicated
+than the one this tutorial describes. Actually, the simulations
+existed many weeks before the derivation, so served as immediate
+evidence of the proof's validity.  In these simulations, instead of
+testing with a few angles, the equivalents of a |cray_ban| are
+constantly rotating on axles, in unison. This is as if~$\Delta\phi$
+were allowed to increase freely over time. Although the proportions of
+``who gets sent which way'' change as~$\Delta\phi$ changes, the
+correlation coefficient stays fixed with the relative angle. There is
+no entanglement, there is no non-locality, there is nothing weird
+whatsoever. The Smoke-and-Mirrors crowd were always merely deploying
+psychosomatic weaponry.
+
+@ However, there is also a much deeper interpretation: {\it any\/}
+angle may be labeled zero, as long as it is {\it the same\/} angle on
+both |cray_ban| in the pair.
 
 To make this so was the main goal of the pdf in my original proof,
-where I achieved the goal by making the probability density uniform in
-one of the two angular settings. It turns out, instead, to be as
-simple as setting the angle once and for all time to zero, and then
-introducing~$\Delta\phi$ as a translation of coordinates.
+where I achieved the goal by making the probability density uniform
+with respect to one of the two angular settings. This approach might
+seem obvious to we who do not confuse probability with ``randomness''
+or with physical substance. Nevertheless, that approach is
+overcomplicated. Instead, simply set the angle, once and for all time,
+to zero. Then introduce~$\Delta\phi$ as a translation of angular
+coordinate system.
 
 @* Index.
