@@ -242,8 +242,8 @@ experimental_event (cray_ban angle1, cray_ban angle2)
 {
   event_data data;
   data.pair = crayton_source ();
-  data.way_k1_was_sent = law_of_logodaedalus (angle1, pair.k1);
-  data.way_k2_was_sent = law_of_logodaedalus (angle2, pair.k2);
+  data.way_k1_was_sent = law_of_logodaedalus (angle1, data.pair.k1);
+  data.way_k2_was_sent = law_of_logodaedalus (angle2, data.pair.k2);
   return data;
 }
 
@@ -525,6 +525,7 @@ together your program.
 #include <math.h>
 #include <float.h>
 
+@<arbitrary numbers between zero and one@> @;
 @<the |crayton| type@> @;
 @<the |crayton| source@> @;
 @<the |cray_ban| type@> @;
@@ -532,7 +533,6 @@ together your program.
 @<an experimental event@> @;
 @<the |series_data| type@> @;
 @<a series of |n| experimental events@> @;
-@<arbitrary numbers between zero and one@> @;
 @<correlation coefficient estimate function@> @;
 @<printing out the correlation coefficient estimate@> @;
 
