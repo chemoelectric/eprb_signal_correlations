@@ -484,6 +484,21 @@ reading the mathematics, I will derive the correlation coefficient of
 our experiment, but using classical physics instead of quantum
 mechanics.
 
+@ Actually the correlation coefficients for experiments such as this
+one were derived long ago using the classical theory of wave
+mechanics! If you assume waves are assemblages of particles, then some
+``quantum'' phenomena are explained classically. There are also other
+ways in which some ``quantum'' phenomena can be explained classically
+as wave phenomena, where the waves may be continuous
+substance. However, in counterargument, ``{\sc LOCAL CAUSALITY HAY
+SOCKS LOOPHOLES!}''
+
+If you see what I mean.
+
+The same counterargument will apply to the derivation below. However,
+at least the derivation will not depend upon wave theory. It will
+employ more fundamental mathematics.
+
 @ What we are looking for is the correlation coefficient of the ``way
 sent'' values $+1$ and~$-1$. The definition of the correlation
 coefficient is the covariance over the product of the standard
