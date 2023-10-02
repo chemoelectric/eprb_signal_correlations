@@ -27,6 +27,9 @@
 
 MY_DOC = How_to_Entangle_Craytons
 
+CTANGLE = ctangle
+CTANGLEFLAGS = -v
+
 CWEAVE = cweave
 CWEAVEFLAGS = -v
 
@@ -36,11 +39,17 @@ PDFTEXFLAGS =
 QPDF = qpdf
 QPDFFLAGS =
 
+CC = cc
+CFLAGS = -O -g
+
 .PHONY: default
 default: all
 
 .PHONY: all
-all: $(MY_DOC).pdf
+all: $(MY_DOC).pdf $(MY_DOC)
+
+%.c: %.w
+	$(CTANGLE) $(CTANGLEFLAGS) $(<) - $(@)
 
 %.tex: %.w
 	$(CWEAVE) $(CWEAVEFLAGS) $(<) - $(@)
@@ -51,6 +60,9 @@ all: $(MY_DOC).pdf
 	$(QPDF) $(QPDFFLAGS) $(MY_DOC).tmp1.pdf --pages . r1 . 1-r2 -- \
 		$(MY_DOC).tmp2.pdf
 	mv $(MY_DOC).tmp2.pdf $(@)
+
+$(MY_DOC): $(MY_DOC).c
+	$(CC) $(CFLAGS) -o $(@) $(<) -lm
 
 $(MY_DOC).tex: $(MY_DOC)_revision.txt
 
