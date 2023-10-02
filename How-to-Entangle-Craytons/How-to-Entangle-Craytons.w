@@ -68,7 +68,7 @@ magical.
 
 I will myself, in the process of instructing you, write a magical
 \CEE/ program that does the same thing. That is part of the magic of
-using CWEB to write instructions.
+using {\tt CWEB} to write instructions.
 
 That the programs we write must be magical is guaranteed to us by no
 less than the 2022 Nobel Prize winners in Physics. Thousands of papers
