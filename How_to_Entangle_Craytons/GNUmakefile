@@ -25,7 +25,7 @@
 
 .DELETE_ON_ERROR:
 
-MY_DOC = How_to_Entangle_Craytons
+MY_DOC = How-to-Entangle-Craytons
 
 CTANGLE = ctangle
 CTANGLEFLAGS = -v
@@ -65,7 +65,7 @@ all: $(MY_DOC).pdf $(MY_DOC)
 $(MY_DOC): $(MY_DOC).c
 	$(CC) $(CFLAGS) -o $(@) $(<) -lm
 
-$(MY_DOC).tex: $(MY_DOC)_revision.txt
+$(MY_DOC).tex: $(MY_DOC)-revision.txt
 
-$(MY_DOC)_revision.txt: GNUmakefile
+$(MY_DOC)-revision.txt: GNUmakefile
 	date -u > $(@)

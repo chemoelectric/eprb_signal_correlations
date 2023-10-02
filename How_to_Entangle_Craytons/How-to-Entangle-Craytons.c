@@ -1,5 +1,5 @@
 /*20:*/
-#line 526 "How_to_Entangle_Craytons.w"
+#line 526 "How-to-Entangle-Craytons.w"
 
 #include <stdio.h> 
 #include <stdlib.h> 
@@ -7,7 +7,7 @@
 #include <float.h> 
 
 /*2:*/
-#line 88 "How_to_Entangle_Craytons.w"
+#line 88 "How-to-Entangle-Craytons.w"
 
 int a_global_variable= 12345;
 
@@ -21,18 +21,18 @@ return((1.0*i)/65537.0);
 }
 
 /*:2*/
-#line 532 "How_to_Entangle_Craytons.w"
+#line 532 "How-to-Entangle-Craytons.w"
 
 /*3:*/
-#line 105 "How_to_Entangle_Craytons.w"
+#line 105 "How-to-Entangle-Craytons.w"
 
 typedef enum{updown,sideways}crayton;
 
 /*:3*/
-#line 533 "How_to_Entangle_Craytons.w"
+#line 533 "How-to-Entangle-Craytons.w"
 
 /*4:*/
-#line 118 "How_to_Entangle_Craytons.w"
+#line 118 "How-to-Entangle-Craytons.w"
 
 typedef struct{crayton k1;crayton k2;}crayton_pair;
 
@@ -54,18 +54,18 @@ return pair;
 }
 
 /*:4*/
-#line 534 "How_to_Entangle_Craytons.w"
+#line 534 "How-to-Entangle-Craytons.w"
 
 /*5:*/
-#line 148 "How_to_Entangle_Craytons.w"
+#line 148 "How-to-Entangle-Craytons.w"
 
 typedef double cray_ban;
 
 /*:5*/
-#line 535 "How_to_Entangle_Craytons.w"
+#line 535 "How-to-Entangle-Craytons.w"
 
 /*7:*/
-#line 211 "How_to_Entangle_Craytons.w"
+#line 211 "How-to-Entangle-Craytons.w"
 
 int
 law_of_logodaedalus(cray_ban angle,crayton crayton_that_will_be_sent)
@@ -84,10 +84,10 @@ return i;
 }
 
 /*:7*/
-#line 536 "How_to_Entangle_Craytons.w"
+#line 536 "How-to-Entangle-Craytons.w"
 
 /*8:*/
-#line 234 "How_to_Entangle_Craytons.w"
+#line 234 "How-to-Entangle-Craytons.w"
 
 typedef struct
 {
@@ -107,10 +107,10 @@ return data;
 }
 
 /*:8*/
-#line 537 "How_to_Entangle_Craytons.w"
+#line 537 "How-to-Entangle-Craytons.w"
 
 /*9:*/
-#line 263 "How_to_Entangle_Craytons.w"
+#line 263 "How-to-Entangle-Craytons.w"
 
 typedef struct
 {
@@ -128,10 +128,10 @@ int number_of_sideways_updown_minus_minus;
 }series_data;
 
 /*:9*/
-#line 538 "How_to_Entangle_Craytons.w"
+#line 538 "How-to-Entangle-Craytons.w"
 
 /*10:*/
-#line 282 "How_to_Entangle_Craytons.w"
+#line 282 "How-to-Entangle-Craytons.w"
 
 series_data
 experimental_series(cray_ban angle1,cray_ban angle2,int n)
@@ -214,16 +214,16 @@ return sdata;
 }
 
 /*:10*/
-#line 539 "How_to_Entangle_Craytons.w"
+#line 539 "How-to-Entangle-Craytons.w"
 
 /*18:*/
-#line 494 "How_to_Entangle_Craytons.w"
+#line 494 "How-to-Entangle-Craytons.w"
 
 double
 correlation_coefficient_estimate(series_data sdata)
 {
 /*14:*/
-#line 430 "How_to_Entangle_Craytons.w"
+#line 430 "How-to-Entangle-Craytons.w"
 
 double freq_of_updown_sideways_plus_plus= 
 (1.0*sdata.number_of_updown_sideways_plus_plus)/sdata.number_of_events;
@@ -243,10 +243,10 @@ double freq_of_sideways_updown_minus_minus=
 (1.0*sdata.number_of_sideways_updown_minus_minus)/sdata.number_of_events;
 
 /*:14*/
-#line 498 "How_to_Entangle_Craytons.w"
+#line 498 "How-to-Entangle-Craytons.w"
 
 /*15:*/
-#line 455 "How_to_Entangle_Craytons.w"
+#line 455 "How-to-Entangle-Craytons.w"
 
 double estimate_of_cos2_phi1_cos2_phi2= 
 freq_of_updown_sideways_minus_plus+freq_of_sideways_updown_plus_minus;
@@ -258,10 +258,10 @@ double estimate_of_sin2_phi1_sin2_phi2=
 freq_of_updown_sideways_plus_minus+freq_of_sideways_updown_minus_plus;
 
 /*:15*/
-#line 499 "How_to_Entangle_Craytons.w"
+#line 499 "How-to-Entangle-Craytons.w"
 
 /*16:*/
-#line 476 "How_to_Entangle_Craytons.w"
+#line 476 "How-to-Entangle-Craytons.w"
 
 double estimate_of_cos_phi1_minus_phi2= 
 sqrt(estimate_of_cos2_phi1_cos2_phi2)+sqrt(estimate_of_sin2_phi1_sin2_phi2);
@@ -269,26 +269,26 @@ double estimate_of_sin_phi1_minus_phi2=
 sqrt(estimate_of_sin2_phi1_cos2_phi2)-sqrt(estimate_of_cos2_phi1_sin2_phi2);
 
 /*:16*/
-#line 500 "How_to_Entangle_Craytons.w"
+#line 500 "How-to-Entangle-Craytons.w"
 
 /*17:*/
-#line 484 "How_to_Entangle_Craytons.w"
+#line 484 "How-to-Entangle-Craytons.w"
 
 double estimate_of_correlation_coefficient= 
 -((estimate_of_cos_phi1_minus_phi2*estimate_of_cos_phi1_minus_phi2)-
 (estimate_of_sin_phi1_minus_phi2*estimate_of_sin_phi1_minus_phi2));
 
 /*:17*/
-#line 501 "How_to_Entangle_Craytons.w"
+#line 501 "How-to-Entangle-Craytons.w"
 
 return estimate_of_correlation_coefficient;
 }
 
 /*:18*/
-#line 540 "How_to_Entangle_Craytons.w"
+#line 540 "How-to-Entangle-Craytons.w"
 
 /*19:*/
-#line 509 "How_to_Entangle_Craytons.w"
+#line 509 "How-to-Entangle-Craytons.w"
 
 void
 print_correlation_coefficient_estimate(series_data sdata)
@@ -304,7 +304,7 @@ correlation_coefficient_estimate(sdata));
 }
 
 /*:19*/
-#line 541 "How_to_Entangle_Craytons.w"
+#line 541 "How-to-Entangle-Craytons.w"
 
 
 int
