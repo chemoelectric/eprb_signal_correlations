@@ -216,7 +216,7 @@ law_of_logodaedalus (cray_ban angle, crayton crayton_that_will_be_sent)
     x = sin (angle);
   else
     x = cos (angle);
-  if (number_between_zero_and_one () < (x * x))
+  if (number_between_zero_and_one () < x * x)
     i = +1;
   else
     i = -1;
@@ -431,7 +431,7 @@ double freq_of_updown_sideways_plus_plus = @|
 double freq_of_updown_sideways_plus_minus = @|
        (1.0 * sdata.number_of_updown_sideways_plus_minus)@, / sdata.number_of_events;
 double freq_of_updown_sideways_minus_plus = @|
-       (1.0 * sdata.number_of_updown_sideways_plus_minus)@, / sdata.number_of_events;
+       (1.0 * sdata.number_of_updown_sideways_minus_plus)@, / sdata.number_of_events;
 double freq_of_updown_sideways_minus_minus = @|
        (1.0 * sdata.number_of_updown_sideways_minus_minus)@, / sdata.number_of_events;
 double freq_of_sideways_updown_plus_plus = @|
@@ -439,7 +439,7 @@ double freq_of_sideways_updown_plus_plus = @|
 double freq_of_sideways_updown_plus_minus = @|
        (1.0 * sdata.number_of_sideways_updown_plus_minus)@, / sdata.number_of_events;
 double freq_of_sideways_updown_minus_plus = @|
-       (1.0 * sdata.number_of_sideways_updown_plus_minus)@, / sdata.number_of_events;
+       (1.0 * sdata.number_of_sideways_updown_minus_plus)@, / sdata.number_of_events;
 double freq_of_sideways_updown_minus_minus = @|
        (1.0 * sdata.number_of_sideways_updown_minus_minus)@, / sdata.number_of_events;
 
@@ -508,11 +508,13 @@ data varies greatly from one programming language to another.
 void
 print_correlation_coefficient_estimate (series_data sdata)
 {
-  printf ("cray_ban angle1      %3.1f\n", sdata.angle1 * 180.0 / M_PI);
-  printf ("cray_ban angle2      %3.1f\n", sdata.angle2 * 180.0 / M_PI);
-  printf ("nominal corr coef    %8.5f\n",
+  printf ("cray_ban angle1      %4.1f deg\n",
+          sdata.angle1 * 180.0 / M_PI);
+  printf ("cray_ban angle2      %4.1f deg\n",
+          sdata.angle2 * 180.0 / M_PI);
+  printf ("nominal corr coef    %+8.5f\n",
           -cos (2.0 * (sdata.angle1 - sdata.angle2)));
-  printf ("measured corr coef   %8.5f\n",
+  printf ("measured corr coef   %+8.5f\n",
           correlation_coefficient_estimate (sdata));
 }
 
