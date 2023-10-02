@@ -46,11 +46,10 @@ CWEB to write instructions.
 
 That the programs we write must be magical is guaranteed to us by no
 less than the 2022 Nobel Prize winners in Physics. Thousands of papers
-have been published and thousands of volumes printed. Billions and
-billions of public dollars have been spent. Experiments have been
-conducted {\it using spacecraft\/} to ensure there was a great
-distance between the particles in an entangled pair. So what occurs in
-our programs must be nothing less than magic.
+have been published and thousands of volumes printed. Jillions of
+public dollars have been spent. Experiment after experiment after
+experiment has been conducted. So what occurs in our programs {\it
+must\/} be nothing less than magic.
 
 @ We will need a way to pick arbitrary numbers between zero and one,
 without showing much bias. The method need not be particularly
@@ -473,8 +472,8 @@ attempt to declare their math illegitimate is immediately canceled by
 the license Bell gave them. One will be slammed with a Gish Gallop of
 ``{\it Local causality, beables, socks, heart attacks, loopholes,
 dichotomic variables, imported Belgian hay,\,..., yadda, yadda,
-yadda,\,...\,!  Did you hear me? I said LOCAL CAUSALITY HAY SOCKS
-LOOPHOLES!\/}''
+yadda,\,...\,!  Did you hear me? I said {\sc LOCAL CAUSALITY HAY SOCKS
+LOOPHOLES!}}''
 
 I had thought to say more about what has been perpetrated, but words
 escape me. Papers and books promoting ``entanglement'' and
@@ -575,8 +574,8 @@ A person might notice I assumed
 $$P(\tau_1=+1{\,\wedge\,}\tau_2=+1{\,\vert\,}k_1={\it updown})
 = P(\tau_1=+1{\,\vert\,}k_1={\it updown})\,P(\tau_2=+1{\,\vert\,}k_1={\it updown})$$
 without proof, but this was because I am old and tired and get senior
-discounts.  I did not invoke ``{\it LOCAL CAUSALITY HAY SOCKS
-LOOPHOLES!\/}'' Seriously, though, the two |cray_ban| operate
+discounts.  I did not invoke ``{\sc LOCAL CAUSALITY HAY SOCKS
+LOOPHOLES!}'' Seriously, though, the two |cray_ban| operate
 independently and that is the intuition here. This is entirely
 different from what John~Bell was attempting, which was to construct
 an explicit causal chain (by abusing conditional probability
@@ -647,17 +646,19 @@ $$\eqalign{P(&\tau_1=+1{\,\wedge\,}\tau_2=-1) \cr
       + {1\over2} \cos^2(\phi_{01}) \cos^2(\phi_{02}) \cr}$$
 
 @ Now suppose we want to find an ``expectation'' $E'(\tau_1\tau_2)$
-{\it not\/} as
-a function of a difference, such as~$\phi_{01}-\phi_{02}$, but {\it
-instead\/} as a function of particular given values~$\phi_{01}$
-and~$\phi_{02}$. This, I believe, is a problem the Smoke-and-Mirrors
-Club has mistaken for the real one. But its solution will lead {\it so
-quickly\/} to the real answer (in terms of a difference between
-angles) that\,...\,you have to see it to believe it. One wonders not
-so much {\it how\/} they missed the solution, but whether some of them
-{\it saw\/} it but dismissed it as unpublishable, because ``{\it LOCAL
-CAUSALITY HAY SOCKS LOOPHOLES!\/}'' That is, they knew if they
-submitted a paper they would be bombarded with energy weapons.
+{\it not\/} as a function of a difference, such
+as~$\phi_{01}-\phi_{02}$, but {\it instead\/} as a function of
+particular given values~$\phi_{01}$ and~$\phi_{02}$. This, I believe,
+is a problem the Smoke-and-Mirrors Club has mistaken for the real
+one. But its solution will lead {\it so quickly\/} to the real answer
+(in terms of a difference between angles) that\,...\,you have to see
+it to believe it. One wonders not so much {\it how\/} they missed the
+solution, but whether some of them {\it saw\/} it but dismissed it as
+unpublishable, because ``{\sc LOCAL CAUSALITY HAY SOCKS LOOPHOLES!}''
+That is, they knew if they submitted a paper they would be bombarded
+with psychic energy weapons. Once they recovered they would have to
+publish in obscure journals, at engineering conferences, etc., or not
+at all, and the whole affair would have harmed their careers.
 
 @ To write this new ``expectation'' $E'(\tau_1\tau_2)$ (call it $\rho'$)
 as an integral weighted by a pdf would be excessive.
