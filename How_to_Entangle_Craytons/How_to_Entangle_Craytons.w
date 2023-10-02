@@ -753,8 +753,9 @@ weirdness whatsoever. Einstein, Podolsky, and Rosen were correct. The
 2022 Nobel Prize in Physics was awarded for physics done so badly it
 ought to be regarded as pseudoscience.
 
-The number of paper retractions due is staggering to consider. Expect
-``{\sc LOCAL CAUSALITY HAY SOCKS LOOPHOLES!}'' instead.
+The number of paper retractions due is staggering. Expect professors
+occupying university administration offices and putting up ``{\sc
+LOCAL CAUSALITY HAY SOCKS LOOPHOLES!}'' banners, instead.
 
 @ There is a simple interpretation for this classical derivation, an
 interpretation I worked into simulations slightly more complicated
