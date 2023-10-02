@@ -36,7 +36,7 @@
 \def\SAMCLUB/{{\sc{SMOKE-\AM-MIRRORS CLUB}}}
 
 \def\covernote{\vbox{%
-\centerline{A tutorial by}%
+\centerline{A tutorial for the public domain by}%
 \smallskip
 \centerline{{\sc BARRY} SCHWARTZ,}%
 \smallskip
@@ -561,28 +561,29 @@ main ()
 }
 
 @ When I compile and run my program, I obtain the following as my output:
-{\raggedright\parindent=5em\tentt
+{\tentt
 \medskip
-cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}0.0{\SP}deg\par
-cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}22.5{\SP}deg\par
-nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}-0.70711\par
-measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}-0.71180\par
+\centerline{cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}0.0{\SP}deg}
+\centerline{cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}22.5{\SP}deg}
+\centerline{nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}-0.70711}
+\centerline{measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}-0.71180}
 \medskip
-cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}0.0{\SP}deg\par
-cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}67.5{\SP}deg\par
-nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}+0.70711\par
-measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}+0.70980\par
+\centerline{cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}0.0{\SP}deg}
+\centerline{cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}67.5{\SP}deg}
+\centerline{nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}+0.70711}
+\centerline{measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}+0.70980}
 \medskip
-cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}45.0{\SP}deg\par
-cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}22.5{\SP}deg\par
-nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}-0.70711\par
-measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}-0.70859\par
+\centerline{cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}45.0{\SP}deg}
+\centerline{cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}22.5{\SP}deg}
+\centerline{nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}-0.70711}
+\centerline{measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}-0.70859}
 \medskip
-cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}45.0{\SP}deg\par
-cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}67.5{\SP}deg\par
-nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}-0.70711\par
-measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}-0.70148\par
-\medskip}
+\centerline{cray{\UL}ban{\SP}angle1{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}45.0{\SP}deg}
+\centerline{cray{\UL}ban{\SP}angle2{\SP}{\SP}{\SP}{\SP}{\SP}{\SP}67.5{\SP}deg}
+\centerline{nominal{\SP}corr{\SP}coef{\SP}{\SP}{\SP}{\SP}-0.70711}
+\centerline{measured{\SP}corr{\SP}coef{\SP}{\SP}{\SP}-0.70148}
+\medskip
+}
 
 \noindent Thus is entanglement proven! I have entangled |crayton|
 pairs on ordinary computer hardware. No quantum computer was
