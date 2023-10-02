@@ -79,30 +79,40 @@
 # wanted a derivation from probability theory, which would be as
 # fundamental a proof as one could get.
 #
-# The technical write-up is still in draft, but here is a
-# summary. CHSH neglects this simple fact: the correlation coefficient
-# has to be a function of the difference between the two angular
-# settings of the polarizing beam splitters (PBS). It cannot be merely
-# a function of the two angles. It has to be ROTATIONALLY INVARIANT.
+# The so-called CHSH inequality is nonsense, but presumably (I would
+# have to look this up) proceeds from an expression of the form
 #
-# Thus the CHSH inequality assumes that one of the two PBS never has
-# its setting changed--in which case, the CHSH result is the same as
-# that of quantum mechanics. In the experiment, however, both settings
-# are changed. Therefore the CHSH inequality is invalid.
+#    ‘correlation’ = cos(2a') cos(2b')
 #
-# What I did, instead, when I did a closed-form analysis, is introduce
-# a ‘landmark’ or ‘origin’ separately for each of the two angular
-# settings, and let it be an unknown in [0,2π]. Then I introduced a
-# very simple joint probability density function, whose definition was
-# mandated by the experimental design, and used it to weight something
-# similar to the CHSH solution, doing a set of double integrations. In
-# other words, I computed the actual expectation, not the
-# half-completed expectation CHSH calculates. The result, then, is
-# identical to that of quantum mechanics.
+# for polarizing beam splitters with angular settings a' and b', which
+# can be derived by a straightforward although tedious
+# calculation. This actually has the wrong form to be the desired
+# correlation coefficient, and much nonsense has proceeded from its
+# use as if it were the correlation coefficient ‘according to
+# classical physics’. The correct form is a function of a'-b'. Indeed,
+# we know from both quantum mechanics and ordinary wave machanics
+# (which IS classical physics) that the correlation coefficient for
+# angular settings a and b is cos(2(a-b)) = cos²(a-b) - sin²(a-b)
 #
-# If you do not believe the math (which isn’t shown here, anyway),
-# believe your eyes and read the code of this simulation (which exists
-# independently of that math).
+# However, set b' = 0. Then
+#
+#    ‘correlation’ = cos(2a') = cos(2(a'-b'))
+#
+# and then ‘correlation’ DOES have the correct form. Furthermore, a
+# change of angular coordinates can be effected by adding 0 = 2(c'-c')
+# inside the cosine:
+#
+#    ‘correlation’ = = cos(2((a'+c')-(b'+c')))
+#
+# Let a = a'+c' and b = b'+c'. Then ‘correlation’ is none other than
+# the correlation coefficient, derived using nothing but probability
+# theory.
+#
+# There is a simple but profound interpretation for this derivation:
+# ANY angle can be chosen as zero, as long as it is THE SAME angle on
+# both polarizing beam splitters. The individual detectors may
+# ‘notice’ the difference (as the animation portrays), but the
+# correlation coefficient remains invariant.
 #
 #---------------------------------------------------------------------
 #
@@ -126,16 +136,19 @@
 # head. For me, it is overcomplicating the matter. The fact is, you
 # simply cannot write
 #
-#    P(AB) = P(A)P(B)
+#    P(a∧b) = P(a)P(b)
 #
-# unless you have already proven that P(A) = P(A|B) or that P(B) =
-# P(B|A). This is a THEOREM in any version of probability theory there
-# is. You must provide the proof. But, in Bell’s case, these equations
-# are what he is trying to ‘encode’ (for reasons, incidentally, that
-# confuse correlation with causation). Therefore Bell is assuming what
-# he must provide as a lemma, not merely as a ‘seems reasonable’. But
-# his lemma, in fact, is easily disproven. For me, there is nothing
-# more to say.
+# unless you have already proven that P(a) = P(a|b) or that P(b) =
+# P(b|a), or if it is obvious by inspection. The reason is that P(a|b)
+# = P(a∧b)/P(b) is THE DEFINITION of P(a|b). Therefore, what Bell was
+# doing was REDEFINING the conditional probability so he could
+# substitute the unconditional probability whenever he thought it
+# seemed sensible to him. This showed he was actually no good at
+# mathematics. Anyone good at mathematics would before long recognize
+# Bell was giving himself free license to declare anything ‘proved’
+# that he wished to be proven: ‘1=0’, ‘E=mc⁹’, etc. He added to
+# mathematics is what I call the ‘Wishing Theorem’, though it is
+# really an axiom.
 #
 #---------------------------------------------------------------------
 #
@@ -161,7 +174,8 @@
 #
 # Tyson was actually teaching the opposite of science: not to observe,
 # but to repeat a verbal formula about giving up forelimbs for
-# wings. It is how one teaches a religion, not science.
+# wings. It is how one teaches a religion, not science. Students
+# should be taught to go look for themselves.
 #
 # In fact, any person with a TRS-80 and Level I BASIC could have run
 # an experiment like this very program, thus proving that Einstein,
