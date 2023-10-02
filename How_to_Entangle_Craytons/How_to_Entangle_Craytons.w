@@ -36,12 +36,12 @@
 \def\covernote{\vbox{%
 \centerline{A tutorial by}%
 \smallskip
-\centerline{Barry S{\sc{CHWARTZ}},}%
+\centerline{{\sc BARRY} SCHWARTZ,}%
 \smallskip
 \centerline{prepared in the year 2023,}%
 \centerline{and last revised}%
 \centerline{\input{How_to_Entangle_Craytons_revision.txt}}%
-\medskip
+\bigskip
 \centerline{Containing also a}%
 \smallskip
 \centerline{\sc PROOF}%
@@ -49,7 +49,7 @@
 \centerline{without recourse to quantum mechanics}%
 \centerline{of the correlation coefficient}%
 \centerline{of a two-channel Bell test experiment.}%
-\medskip
+\bigskip
 \centerline{With many thanks to an anonymous person}%
 \centerline{for their scientific curiosity.}%
 \centerline{In our times, scientific method}%
@@ -64,9 +64,9 @@ between them when they are printed out. Normally such a program would
 require a quantum computer, but the program {\it you} write will be
 magical.
 
-I will myself, in the process of instructing you, write a magical C
-program that does the same thing. That is part of the magic of using
-CWEB to write instructions.
+I will myself, in the process of instructing you, write a magical
+\CEE/ program that does the same thing. That is part of the magic of
+using CWEB to write instructions.
 
 That the programs we write must be magical is guaranteed to us by no
 less than the 2022 Nobel Prize winners in Physics. Thousands of papers
@@ -98,7 +98,7 @@ number_between_zero_and_one ()
 @ Now to the magical program itself. The first thing we need is the
 magical variables. These will be of a type called |crayton|, whose
 value will be either |updown| or |sideways|. How to write that in your
-language will vary, but here is one way to write it in C.
+language will vary, but here is one way to write it in \CEE/.
 
 @<the |crayton| type@>=
 typedef enum {updown, sideways} crayton;
@@ -109,9 +109,9 @@ two |crayton| is which, however, is, over time, an unbiased mixture of
 both ways. This is ensured by use of |@<arbitrary numbers between zero
 and one@>|.
 
-In the C code, the two |crayton| will be returned in the C version of
-a record structure. This pair of |crayton| variables will be the pair
-the program magically entangles.
+In the \CEE/ code, the two |crayton| will be returned in the \CEE/
+version of a record structure. This pair of |crayton| variables will
+be the pair the program magically entangles.
 
 @<the |crayton| source@>=
 typedef struct {crayton k1; crayton k2;} crayton_pair;
@@ -227,7 +227,7 @@ law_of_logodaedalus (cray_ban angle, crayton crayton_that_will_be_sent)
 one |crayton| source and there are two |cray_ban|, set respectively to
 their angles. Each |crayton| in the pair is put through a respective
 |cray_ban|. Data is recorded. You can return the data in a record, as
-in the following C code, or do whatever you prefer.
+in the following \CEE/ code, or do whatever you prefer.
 
 @<an experimental event@>=
 typedef struct
@@ -256,7 +256,7 @@ fields.)
 
 You do not have to use a record type, of course. This is just one way
 to represent the information. By using records a lot, I am avoiding a
-confusing C feature called ``pointers.''
+confusing \CEE/ feature called ``pointers.''
 
 @<the |series_data| type@>=
 typedef struct
@@ -472,17 +472,89 @@ Quadrant~I, and therefore only positive square roots will be needed.
 Thus:
 
 @<estimates of the angle-difference functions@>=
-  double estimate_of_cos_phi1_minus_phi2 = @|
-    sqrt (estimate_of_cos2_phi1_cos2_phi2) + sqrt (estimate_of_sin2_phi1_sin2_phi2);
-  double estimate_of_sin_phi1_minus_phi2 = @|
-    sqrt (estimate_of_sin2_phi1_cos2_phi2) - sqrt (estimate_of_cos2_phi1_sin2_phi2);
+double estimate_of_cos_phi1_minus_phi2 = @|
+  sqrt (estimate_of_cos2_phi1_cos2_phi2) + sqrt (estimate_of_sin2_phi1_sin2_phi2);
+double estimate_of_sin_phi1_minus_phi2 = @|
+  sqrt (estimate_of_sin2_phi1_cos2_phi2) - sqrt (estimate_of_cos2_phi1_sin2_phi2);
 
 @ Finally, then, one can estimate the correlation coefficient:
 
 @<estimate of the correlation coefficient@>=
-  double estimate_of_correlation_coefficient = @|
-    -((estimate_of_cos_phi1_minus_phi2 * estimate_of_cos_phi1_minus_phi2) -
-      (estimate_of_sin_phi1_minus_phi2 * estimate_of_sin_phi1_minus_phi2));
+double estimate_of_correlation_coefficient = @|
+  -((estimate_of_cos_phi1_minus_phi2 * estimate_of_cos_phi1_minus_phi2) -
+    (estimate_of_sin_phi1_minus_phi2 * estimate_of_sin_phi1_minus_phi2));
+
+@ Here is a \CEE/ function that puts together these calculations and
+turns a |series_data| record into an estimate of a correlation
+coefficient. Put the operations together similarly, in whatever
+language you are using.
+
+@<correlation coefficient estimate function@>=
+double
+correlation_coefficient_estimate (series_data sdata)
+{
+  @<frequencies of events@> @;
+  @<estimates of certain products@> @;
+  @<estimates of the angle-difference functions@> @;
+  @<estimate of the correlation coefficient@> @;
+  return estimate_of_correlation_coefficient;
+}
+
+@ Here is a procedure that will print out the estimate, along with the
+nominal value. You will want something similar, but how to print out
+data varies greatly from one programming language to another.
+
+@<printing out the correlation coefficient estimate@>=
+void
+print_correlation_coefficient_estimate (series_data sdata)
+{
+  printf ("cray_ban angle1      %3.1f\n", sdata.angle1 * 180.0 / M_PI);
+  printf ("cray_ban angle2      %3.1f\n", sdata.angle2 * 180.0 / M_PI);
+  printf ("nominal corr coef    %8.5f\n",
+          -cos (2.0 * (sdata.angle1 - sdata.angle2)));
+  printf ("measured corr coef   %8.5f\n",
+          correlation_coefficient_estimate (sdata));
+}
+
+@ Finally I will put together my \CEE/ program, and you can put
+together your program.
+
+@c
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <float.h>
+
+@<the |crayton| type@> @;
+@<the |crayton| source@> @;
+@<the |cray_ban| type@> @;
+@<the Law of Logodaedalus@> @;
+@<an experimental event@> @;
+@<the |series_data| type@> @;
+@<a series of |n| experimental events@> @;
+@<arbitrary numbers between zero and one@> @;
+@<correlation coefficient estimate function@> @;
+@<printing out the correlation coefficient estimate@> @;
+
+int
+main ()
+{
+  int n = 10000;
+  series_data sdata1 = experimental_series (0.0, M_PI / 8.0, n);
+  series_data sdata2 = experimental_series (0.0, 3.0 * M_PI / 8.0, n);
+  series_data sdata3 = experimental_series (M_PI / 4.0, M_PI / 8.0, n);
+  series_data sdata4 = experimental_series (M_PI / 4.0, 3.0 * M_PI / 8.0, n);
+  printf ("\n");
+  print_correlation_coefficient_estimate (sdata1);
+  printf ("\n");
+  print_correlation_coefficient_estimate (sdata2);
+  printf ("\n");
+  print_correlation_coefficient_estimate (sdata3);
+  printf ("\n");
+  print_correlation_coefficient_estimate (sdata4);
+  printf ("\n");
+  return 0;
+}
 
 @* Okay, I Lied. There was actually no entanglement. There is no
 entanglement anywhere in the world. Entanglement is the wrongest wrong
