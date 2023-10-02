@@ -32,6 +32,8 @@
 @f series_data void
 
 \frenchspacing
+\def\SAM/{{\sc{SMOKE-\AM-MIRRORS}}}
+\def\SAMCLUB/{{\sc{SMOKE-\AM-MIRRORS CLUB}}}
 
 \def\covernote{\vbox{%
 \centerline{A tutorial by}%
@@ -567,16 +569,16 @@ plain wrong\/} in their reasoning. One of the root causes is that
 license John Stewart Bell gave theorists to declare anything ``true''
 that suited their fancy. They have used that license freely. Any
 attempt to declare their math illegitimate is immediately canceled by
-the license Bell gave them. One will be slammed with a Gish Gallop of
-``{\it Local causality, beables, socks, heart attacks, loopholes,
-dichotomic variables, imported hay, Fantastic Voyage, Final
+the license Bell gave them. One will be slammed with a {\sc GISH
+GALLOP} of ``{\it Local causality, beables, socks, heart attacks,
+loopholes, dichotomic variables, imported hay, Fantastic Voyage, Final
 Four,\,...\,!  Did you hear me? Tick, tick, tick. I said {\sc LOCAL
 CAUSALITY HAY SOCKS LOOPHOLES!}}''
 
 I had thought to say more about what has been perpetrated, but words
 escape me. Papers and books promoting ``entanglement'' and
 ``non-locality'' are simply worthless. They have no use except as
-paper pulp. Instead I will do another thing the Smoke-and-Mirrors
+paper pulp. Instead I will do another thing the \SAM/
 magicians claim cannot be done: for the sake of those capable of
 reading the mathematics, I will derive the correlation coefficient of
 our experiment, but using classical physics instead of quantum
@@ -627,10 +629,10 @@ certainly, but the effort is not worth it. It is better to find a new
 approach.
 
 @ The following much simpler derivation starts by deriving what the
-Smoke-and-Mirrors Club seems to believe is all classical physics is
-capable of deriving: a particular function of the two |cray_ban|
-settings that is {\it not\/} a function of their difference. {\it That\/}
-derivation is tedious but straightforward.
+\SAMCLUB/ seems to believe is all classical physics is capable of
+deriving: a particular function of the two |cray_ban| settings that is
+{\it not\/} a function of their difference. {\it That\/} derivation is
+tedious but straightforward.
 
 Let~$k_1$ and~$k_2$ represent the |crayton| pair, and~$\phi_{01}$
 and~$\phi_{02}$ the |cray_ban| settings. Then the Law of Logodaedalus
@@ -657,7 +659,7 @@ P(\tau_2=-1{\,\vert\,} k_2={\it sideways}) + P(\tau_2=+1{\,\vert\,} k_2={\it sid
            &= \sin^2(\phi_{02}) + \cos^2(\phi_{02}) = 1 \cr
 }$$
 This smidgen of mathematical consistency is present even in the
-Smoke-and-Mirrors literature.
+\SAM/ literature.
 
 @ The |crayton| source also gives us opportunity to define some
 probabilities:
@@ -701,7 +703,7 @@ doing classical physics when he observed that planets moved in
 ellipses, nor was Isaac~Newton when he formulated his Law of Universal
 Gravitation. But really that is beside the point, because those are
 {\it empirical laws}, not derived theories. As I said earlier, the
-Smoke-and-Mirrors crowd are actually distracting you from {\it this\/}
+\SAM/ crowd are actually distracting you from {\it this\/}
 fact: in the context at hand, ``classical physics'' means {\it any\/}
 mathematics that is not quantum mechanics, {\it if\/} employed to
 reach the same result as quantum mechanics. Their actual claim, {\it
@@ -720,12 +722,12 @@ own psychosomatic barrages.
 
 Part of the reason for me writing this program as {\it instructions\/}
 on how to write a program, rather than as merely a program for others
-to compile and run, is so Smoke-and-Mirrors members can sooth their
-throbbing brains by writing {\it their own programs}. They can
-experience the truth firsthand, and as recreation rather than hard
-work. I encourage them to pick up computer and bow, and play a
-soothing |crayton| lullaby, according to this sheet music, but each in
-their unique style.
+to compile and run, is so \SAMCLUB/ members can sooth their throbbing
+brains by writing {\it their own programs}. They can experience the
+truth firsthand, and as recreation rather than hard work. I encourage
+them to pick up computer and bow, and play a soothing |crayton|
+lullaby, according to this sheet music, but each in their unique
+style.
 
 @ By the previous calculation, and then by similar ones (though
 actually by symmetry considerations), a table can be constructed:
@@ -763,7 +765,7 @@ $$\eqalign{P(&\tau_1=+1{\,\wedge\,}\tau_2=-1) \cr
 {\it not\/} as a function of a difference, such
 as~$\phi_{01}-\phi_{02}$, but {\it instead\/} as a function of
 particular given values~$\phi_{01}$ and~$\phi_{02}$. This, I believe,
-is a problem the Smoke-and-Mirrors Club has mistaken for the real
+is a problem the \SAMCLUB/ has mistaken for the real
 one. But its solution will lead {\it so quickly\/} to the real answer
 (in terms of a difference between angles) that\,...\,you have to see
 it to believe it. One wonders not so much {\it how\/} they missed the
@@ -804,7 +806,7 @@ $$\eqalign{
 &=-\cos(2\phi_{01})\cos(2\phi_{02}) \cr
 }$$
 where the last step is by a double-angle identity found in reference
-books. This result is, I believe, what Smoke-and-Mirrors members
+books. This result is, I believe, what \SAM/ members
 commonly believe is the best classical physics can achieve.
 
 @ This result has the wrong form, so it simply {\it cannot\/} be the
@@ -813,7 +815,8 @@ in the angles $\phi_{01}=\pi/4$ and~$\phi_{02}=\pi/8$, for instance,
 you will get zero instead of the correct value,~$-1/\sqrt2$. But now,
 with this result that obviously, at a glance, cannot be correct, you
 can derive an ``inequality'' and win a Nobel Prize. This is one route,
-at least, by which the so-called ``CHSH inequality'' can be derived.
+at least, by which the so-called ``{\sc CHSH} inequality'' can be
+derived.
 
 @ But suppose that, instead of publishing an ``inequality'' and
 winning a Nobel Prize, we consider only the special
@@ -836,11 +839,14 @@ physics, the same correlation coefficient quantum mechanics
 gives. Thus there is no entanglement, no non-locality, no quantum
 weirdness whatsoever. Einstein, Podolsky, and Rosen were correct. The
 2022 Nobel Prize in Physics was awarded for physics done so badly it
-ought to be regarded as pseudoscience.
+ought to be regarded as {\it pseudoscience}. This ``science'' was
+worse than cold fusion, for instance. A perpetual motion machine would
+be no worse than what this prize was given for.
 
-The number of paper retractions due is staggering. Expect professors
-occupying university administration offices and putting up ``{\sc
-LOCAL CAUSALITY HAY SOCKS LOOPHOLES!}'' banners, instead.
+The number of paper retractions due is staggering. Nevertheless,
+expect instead professors occupying university administration offices,
+standing on the roofs shouting ``{\sc LOCAL CAUSALITY HAY SOCKS
+LOOPHOLES!}'' into megaphones.
 
 @ There is a simple interpretation for this classical derivation, an
 interpretation I worked into simulations slightly more complicated
@@ -853,8 +859,8 @@ were allowed to increase freely over time. Although the proportions of
 ``who gets sent which way'' change as~$\Delta\phi$ changes, the
 correlation coefficient stays fixed with the relative angle. There is
 no entanglement, there is no non-locality, there is nothing weird
-whatsoever. The Smoke-and-Mirrors crowd were always merely deploying
-psychosomatic weaponry.
+whatsoever. Members of the \SAMCLUB/ were always deploying
+psychosomatic weaponry rather than presenting facts.
 
 @ However, there is also a much deeper interpretation: {\it any\/}
 angle may be labeled zero, as long as it is {\it the same\/} angle on
