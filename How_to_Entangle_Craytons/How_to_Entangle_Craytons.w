@@ -40,17 +40,17 @@ between them when they are printed out. Normally such a program would
 require a quantum computer, but the program {\it you} write will be
 magical.
 
-I will myself write a magical C program that does the same thing.
+I will myself, in the process of instructing you, write a magical C
+program that does the same thing. That is part of the magic of using
+CWEB to write instructions.
 
-That the programs we write must be magical is guaranteed to us by the
-2022 Nobel Prize winners in Physics. There is not the slightest chance
-in the world that Nobel Prize winners in Physics, and their
-colleagues, could be people who do not follow Scientific Method. There
-is no way they would not go even to the slight trouble of writing a
-simple simulation to observe what happens, before publishing thousands
-of papers and books, and encouraging governments to spend billions and
-billions of dollars. So what occurs in our programs must be nothing
-less than magic.
+That the programs we write must be magical is guaranteed to us by no
+less than the 2022 Nobel Prize winners in Physics. Thousands of papers
+have been published and thousands of volumes printed. Billions and
+billions of public dollars have been spent. Experiments have been
+conducted {\it using spacecraft\/} to ensure there was a great
+distance between the particles in an entangled pair. So what occurs in
+our programs must be nothing less than magic.
 
 @ We will need a way to pick arbitrary numbers between zero and one,
 without showing much bias. The method need not be particularly
