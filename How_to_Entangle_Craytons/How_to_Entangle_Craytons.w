@@ -25,13 +25,26 @@
 %
 % For more information, please refer to <https://unlicense.org>
 
-\frenchspacing
-
 @f crayton void
 @f crayton_pair void
 @f cray_ban void
 @f event_data void
 @f series_data void
+
+\frenchspacing
+
+\def\covernote{\vbox{%
+\centerline{A tutorial by}%
+\smallskip
+\centerline{Barry S{\sc{CHWARTZ}},}%
+\smallskip
+\centerline{prepared in the year 2023,}%
+\centerline{and last revised}%
+\centerline{\input{How_to_Entangle_Craytons_revision.txt}}%
+\smallskip
+\centerline{With many thanks to an anonymous person}%
+\centerline{for their very rare curiosity.}%
+}}
 
 @* Magically Entangled Craytons. What follows are instructions on how
 to write a program that, on an ordinary computer, will
@@ -135,7 +148,7 @@ dived into the literature, but merely imagined yourself having done
 so), please leave yourself a chance to recover your vision. You may
 need as medicaments the following reminders: \medskip
 
-\item{\bullet} Let $a$ and~$b$ represent propositions,
+\item{$\bullet$} Let $a$ and~$b$ represent propositions,
 and~$a{\wedge}b$ their logical conjunction. The {\it definition\/} of
 their conditional probability is
 $$P(a{\vert}b)=P(a{\wedge}b)\,/\,P(b) $$
@@ -153,7 +166,7 @@ The concussion of a Fellow of the
 Royal Society proudly displaying such a license is what rendered you
 psychosomatically blind.
 
-\item{\bullet} The claim that quantum physics is ``irreducible'' to
+\item{$\bullet$} The claim that quantum physics is ``irreducible'' to
 classical physics, though usually assumed to be a claim about physics,
 is actually the {\it mathematical\/} claim---and an alarming
 one---that a quantum physics problem, written in logically equivalent
@@ -680,10 +693,10 @@ at all, and the whole affair would have harmed their careers.
 as an integral weighted by a pdf would be excessive.
 It can be written as a sum:
 $$\eqalign{\rho' &= E'(\tau_1\tau_2) \cr
- &= [(+1)(+1) P^{++}]
- + [(+1)(-1) P^{+-}]
- + [(-1)(+1) P^{-+}]
- + [(-1)(-1) P^{--}] \cr
+ &= (+1)(+1) P^{++}
+ + (+1)(-1) P^{+-}
+ + (-1)(+1) P^{-+}
+ + (-1)(-1) P^{--} \cr
  &= P^{++} - P^{+-} - P^{-+} + P^{--} \cr
 }$$
 where
@@ -740,7 +753,8 @@ weirdness whatsoever. Einstein, Podolsky, and Rosen were correct. The
 2022 Nobel Prize in Physics was awarded for physics done so badly it
 ought to be regarded as pseudoscience.
 
-The number of paper retractions that is due is staggering to consider.
+The number of paper retractions due is staggering to consider. Expect
+``{\sc LOCAL CAUSALITY HAY SOCKS LOOPHOLES!}'' instead.
 
 @ There is a simple interpretation for this classical derivation, an
 interpretation I worked into simulations slightly more complicated
