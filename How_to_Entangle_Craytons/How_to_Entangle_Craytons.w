@@ -136,7 +136,7 @@ so), please leave yourself a chance to recover your vision. You may
 need as medicaments the following reminders: \medskip
 
 \item{\bullet} Let $a$ and~$b$ represent propositions,
-and~$a{\wedge}b$ their joint proposition. The {\it definition\/} of
+and~$a{\wedge}b$ their logical conjunction. The {\it definition\/} of
 their conditional probability is
 $$P(a{\vert}b)=P(a{\wedge}b)\,/\,P(b) $$
 This definition is {\it purely mathematical} and is complete
