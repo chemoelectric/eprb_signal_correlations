@@ -53,7 +53,8 @@
 \centerline{of the correlation coefficient}%
 \centerline{of a two-channel Bell test experiment.}%
 \bigskip
-\centerline{With special thanks to an anonymous person}%
+\centerline{With a special point of thanks}%
+\centerline{to a patient person}%
 \centerline{for their scientific curiosity.}%
 \centerline{In our times, scientific method}%
 \centerline{has been displaced by scientific authority,}%
@@ -201,15 +202,16 @@ of any and all mathematics to the reasonable solution of such word
 problems. Despite public address systems blaring pronouncements
 through billows of smoke, nothing resembling a smidgen of proof of
 such ``irreducibility'' has ever been produced. The quantum physics
-literature, however, does employ {\it sheer incompetence\/} in
-mathematics (similar to John~Bell's described above) {\it to give the
-impression\/} of such ``irreducibility.'' The practitioner of such
-incompetence might merely give up short of a solution, proclaiming,
-``That is all that can {\it possibly\/} be done. Now please run
-experiments showing {\it these\/} are not the results obtained
-empirically.'' The encounter of scientists not even {\it trying\/} to
-solve problems causes temporary shriveling of the hypothalamus.
-Blindness is merely a portion of the psychosomatic injury.
+literature, however, does employ {\it limited competence in general
+mathematics\/} (similar to John~Bell's described above) {\it to give
+the impression\/} of such ``irreducibility.'' The practitioner of such
+limited competence might merely give up short of a solution,
+proclaiming, ``That is all that can {\it possibly\/} be done. Now
+please run experiments showing {\it these\/} are not the results
+obtained empirically.'' The encounter of scientists not even {\it
+trying\/} to solve problems causes temporary shriveling of the
+hypothalamus.  Blindness is merely a portion of the psychosomatic
+injury.
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
@@ -963,9 +965,9 @@ no entanglement, there is no non-locality, there is nothing weird
 whatsoever. Members of the \SAMCLUB/ were always deploying
 psychosomatic weaponry rather than presenting facts.
 
-@ However, there is also a much deeper interpretation: {\it any\/}
-angle may be labeled zero, as long as it is {\it the same\/} angle on
-both |cray_ban| in the pair.
+@ However, there is also a much deeper interpretation: to obtain the
+correlation coefficient, {\it any\/} angle may be labeled zero, as
+long as it is {\it the same\/} angle on both |cray_ban| in the pair.
 
 To make this so was the main goal of the pdf in my original proof,
 where I achieved the goal by making the probability density uniform
