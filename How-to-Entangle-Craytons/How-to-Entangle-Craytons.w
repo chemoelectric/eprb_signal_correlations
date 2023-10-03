@@ -32,6 +32,7 @@
 @f series_data void
 
 \frenchspacing
+\def\POSIX/{{\sc{POSIX}}}
 \def\SAM/{{\sc{SMOKE-\AM-MIRRORS}}}
 \def\SAMCLUB/{{\sc{SMOKE-\AM-MIRRORS CLUB}}}
 
@@ -52,7 +53,7 @@
 \centerline{of the correlation coefficient}%
 \centerline{of a two-channel Bell test experiment.}%
 \bigskip
-\centerline{With many thanks to an anonymous person}%
+\centerline{With special thanks to an anonymous person}%
 \centerline{for their scientific curiosity.}%
 \centerline{In our times, scientific method}%
 \centerline{has been displaced by scientific authority,}%
@@ -98,6 +99,13 @@ number_between_zero_and_one ()
   a_global_variable = i;
   return ((1.0 * i) / 65538.0);
 }
+
+@ Another preliminary: the value of $\pi$. This is available to \CEE/
+programmers on \POSIX/ platforms as |M_PI|, but I think perhaps not in
+the \CEE/~standard itself. (An old {\sc FORTRAN} trick, by the way, is
+to use |4.0 * atan(1.0)|.)
+
+@d PI 3.14159265358979323846264338327950288419716939937510582097494459
 
 @ Now to the magical program itself. The first things we need are the
 magical variables. These will be of a type called |crayton|, whose
@@ -228,11 +236,12 @@ law_of_logodaedalus (cray_ban angle, crayton crayton_that_will_be_sent)
   return i;
 }
 
-@ So here is what one event of the experiment looks like. There is the
-one |crayton| source and there are two |cray_ban|, set respectively to
-their angles. Each |crayton| in the pair is put through a respective
-|cray_ban|. Data is recorded. You can return the data in a record, as
-in the following \CEE/ code, or do whatever you prefer.
+@ In what follows I show what one event of the experiment looks
+like. There is the one |crayton| source and there are the two
+|cray_ban|, set respectively to their angles. The source generates a
+|crayton| pair. Each |crayton| in the pair is put respectively through
+one of the |cray_ban|. Data is recorded. You can return the data in a
+record, as in the following \CEE/ code, or do whatever you prefer.
 
 @<an experimental event@>=
 typedef struct
@@ -260,8 +269,11 @@ event. (The total number of events will equal the sum of the other
 fields.)
 
 You do not have to use a record type, of course. This is just one way
-to represent the information. By using records a lot, I am avoiding a
-confusing \CEE/ feature called ``pointers.''
+to represent the information.
+
+(By using records, I am avoiding more \CEE/-specific features that
+have no use being in a tutorial such as this one. Anyway, I like using
+records.)
 
 @<the |series_data| type@>=
 typedef struct
@@ -365,52 +377,63 @@ experimental_series (cray_ban angle1, cray_ban angle2, int n)
 
 @* Proof of Entanglement. The ``smoke'' mentioned earlier contains
 some techniques for ``showing'' {\it absence\/} of
-entanglement---though actually the audience have had their
-hypothalamuses temporarily withered. Really they are being
-mind-controlled, as if in a Philip~K. Dick novel. However, {\it you\/} do not
-practice mind-control (I hope), and {\it our\/} task is different: we must
-show {\it presence\/} of entanglement. Thus we will do nothing less
-than show that our experiment is empirically consistent with a formula
-from quantum mechanics: the correlation coefficient for our
-experimental arrangement. According to the 2022 Nobel Prize winners in
-Physics, this would be impossible unless the |crayton| pairs were
-entangled. The entanglement, then, {\it must\/} be so, because these exemplars of
-science won the Nobel Prize for it. Thus the |crayton| pairs were
-indeed entangled.
+entanglement---which then {\it fail}, thereby supposedly proving
+entanglement by inference. Actually the techniques temporarily wither
+the audience's hypothalamuses, and the audience members are being
+mind-controlled, as if in a Philip~K. Dick novel. However, {\it you\/}
+do not practice mind-control (I hope), and {\it our\/} task is
+different: we must {\it positively demonstrate\/} entanglement. Thus
+we will do nothing less than show that our experiment is empirically
+consistent with a formula from quantum mechanics: the correlation
+coefficient for our experimental arrangement. According to the 2022
+Nobel Prize winners in Physics, and practically the entire field of
+quantum physics, this would be impossible unless the |crayton| pairs
+were entangled. The entanglement, then, {\it must\/} be so. Thus the
+|crayton| pairs were indeed entangled.
 
-So, then, a {\it correlation coefficient\/} is what? It is a value
+So, then, you ask, what is a {\it correlation coefficient\/}?
+It is a value
 between $-1$ and~$+1$ that gives some idea how interrelated are two
 functions or sets of data. It is a notion familiar in the field of
 statistics, but also in the theory of waves, where it indicates the
 capacity of two waves (if superposed) to form different interference
 patterns. For this experiment, we want the correlation coefficient
 comparing the ``way the |crayton| was sent'' of the two |crayton| in
-the pair. Assume the two |cray_ban| settings are $\phi_1$
+the pair. So let us begin.
+
+Assume the two |cray_ban| settings are~$\phi_1$
 and~$\phi_2$. The formula from quantum mechanics is then
 $$ \eqalign{{\it correlation\ coefficient}
         &= -\cos\,\{2(\phi_1-\phi_2)\} \cr
         &= -\{\cos^2(\phi_1-\phi_2) - \sin^2(\phi_1-\phi_2)\} \cr} $$
-or the same formula with the sign reversed, because (like, say, a
-cross product) a correlation coefficient has arbitrary sense. The
-formula itself makes it evident that only the size of the angle
+or the same formula with the sign reversed, because a correlation
+coefficient has arbitrary sense. One must be sure to be consistent,
+but otherwise whether there is a minus sign or a plus sign in front of
+the whole thing does not matter.  I choose the minus sign because,
+after I stop dissembling and present my own derivation of the
+correlation coefficient, it will have the minus sign due to how I
+formulated the Law of Logodaedalus.
+
+The formula itself makes it evident that only the size of the angle
 between $\phi_1$ and~$\phi_2$ matters, not the direction of the
 subtraction. It is also clear that the formula is {\it invariant with
 rotations of the |cray_ban| pair}---it does not matter what the
 particular angles are, but only what they are relative to each other.
 Some might also notice that there is a resemblance to the Law of
 Logodaedalus---this is not accidental, but let us not go into the
-details.
+details. The resemblance is important in the study of optics.
 
-@ What the exemplars of science tell us is that if we run four series
-of the experiment, using the following settings, and get approximately
-the results predicted by quantum mechanics, then we have proved that
-our |crayton| pairs were entangled.
+@ What experts in quantum physics tell us is: if we run four series of
+the experiment, using settings I will list below, and get
+approximately the results predicted by quantum mechanics, then we will
+have proved that our |crayton| pairs were entangled.
 
 Actually they do not know about the |crayton| specifically, but only
 about other objects they do not know how to test this with, so they
 have invented other tests, such as shouting ``{\sc LOOK THAT WAY!}''
-and running out of the room. But we do have the |crayton| and so can
-run the test.
+and running out of the room. But {\it we\/} have the |crayton| and so
+can run the test. The experts may object, of course. They always
+object. But let us proceed, nonetheless.
 
 The settings and corresponding correlation coefficients are as
 follows:
@@ -428,7 +451,9 @@ we will then use to compute an approximation of $-\{\cos^2(\phi_1-\phi_2)
 - \sin^2(\phi_1-\phi_2)\}$.
 
 @ Obtaining the frequencies is a simple matter of computing
-ratios. Given a |series_data| record |sdata|:
+ratios. Given a |series_data| record |sdata|, simply do a bunch of
+divisions, after converting the integers to rational numbers (floating
+point, in the~\CEE/ program):
 
 @<frequencies of events@>=
 double freq_of_updown_sideways_plus_plus = @|
@@ -449,11 +474,16 @@ double freq_of_sideways_updown_minus_minus = @|
        (1.0 * sdata.number_of_sideways_updown_minus_minus)@, / sdata.number_of_events;
 
 @ From the Law of Logodaedalus, it is possible to use these
-frequencies as estimates of products of the squares of cosines and
-sines of $\phi_1$ and~$\phi_2$. I leave it as an exercise for the
-reader to convince themselves of this fact. (Not only do I not have
-space to prove such things to lazyboneses, but also it is good
-exercise for the little gray cells.) Thus:
+frequencies to estimate products of the squares of cosines and sines
+of $\phi_1$ and~$\phi_2$. I leave it as an exercise for the reader to
+convince themselves of this fact. Here is not a good place to do a
+proof, and it is good exercise for what Hercule~Poirot called ``the
+little gray cells.'' It is intuitive once visualized, if a person be
+capable. (Not everyone is. There are people, including the late famous
+neurologist and fellow eccentric Jewish migraineur Oliver~Sacks, who
+cannot even recognize a human face---whereas Sacks's mother, a
+surgeon, could do a three-dimensional drawing without reference. One
+must allow for individual variation.)  Thus:
 
 @<estimates of certain products@>=
 double estimate_of_cos2_phi1_cos2_phi2 = @|
@@ -465,7 +495,8 @@ double estimate_of_sin2_phi1_cos2_phi2 = @|
 double estimate_of_sin2_phi1_sin2_phi2 = @|
   freq_of_updown_sideways_plus_minus + freq_of_sideways_updown_minus_plus;
 
-@ The following angle-difference identities may be found in reference books:
+@ The following angle-difference identities may be found in reference books,
+such as the {\it CRC Handbook of Mathematical Sciences\/}:
 $$\eqalign{\cos(\alpha-\beta)&=\cos\alpha\cos\beta+\sin\alpha\sin\beta \cr
            \sin(\alpha-\beta)&=\sin\alpha\cos\beta-\cos\alpha\sin\beta \cr}$$
 We can obtain estimates of the terms on the right side by taking
@@ -489,8 +520,8 @@ double estimate_of_correlation_coefficient = @|
   -((estimate_of_cos_phi1_minus_phi2 * estimate_of_cos_phi1_minus_phi2) -
     (estimate_of_sin_phi1_minus_phi2 * estimate_of_sin_phi1_minus_phi2));
 
-@ Here is a \CEE/ function that puts together these calculations and
-turns a |series_data| record into an estimate of a correlation
+@ There follows a \CEE/ function that puts together these calculations
+and turns a |series_data| record into an estimate of a correlation
 coefficient. Put the operations together similarly, in whatever
 language you are using.
 
@@ -505,18 +536,22 @@ correlation_coefficient_estimate (series_data sdata)
   return estimate_of_correlation_coefficient;
 }
 
-@ Here is a procedure that will print out the estimate, along with the
-nominal value. You will want something similar, but how to print out
-data varies greatly from one programming language to another.
+@ Next is a procedure that will print out that estimate, along with
+the nominal value. You will want something similar, but how to print
+out data varies greatly from one programming language to
+another. Although I know many programming languages, in this tutorial
+I cannot help you much. In any case, some of these languages cannot
+make up their mind how to do output, and every one of them sucks at
+it.
 
 @<printing out the correlation coefficient estimate@>=
 void
 print_correlation_coefficient_estimate (series_data sdata)
 {
   printf ("cray_ban angle1      %4.1f deg\n",
-          sdata.angle1 * 180.0 / M_PI);
+          sdata.angle1 * 180.0 / PI);
   printf ("cray_ban angle2      %4.1f deg\n",
-          sdata.angle2 * 180.0 / M_PI);
+          sdata.angle2 * 180.0 / PI);
   printf ("nominal corr coef    %+8.5f\n",
           -cos (2.0 * (sdata.angle1 - sdata.angle2)));
   printf ("measured corr coef   %+8.5f\n",
@@ -530,7 +565,6 @@ together your program.
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <float.h>
 
 @<arbitrary numbers between zero and one@> @;
 @<the |crayton| type@> @;
@@ -546,11 +580,11 @@ together your program.
 int
 main ()
 {
-  int n = 10000;
-  series_data sdata1 = experimental_series (0.0, M_PI / 8.0, n);
-  series_data sdata2 = experimental_series (0.0, 3.0 * M_PI / 8.0, n);
-  series_data sdata3 = experimental_series (M_PI / 4.0, M_PI / 8.0, n);
-  series_data sdata4 = experimental_series (M_PI / 4.0, 3.0 * M_PI / 8.0, n);
+  int n = 10000; /* Each series will contain |n| experimental events. */
+  series_data sdata1 = experimental_series (0.0, PI / 8.0, n);
+  series_data sdata2 = experimental_series (0.0, 3.0 * PI / 8.0, n);
+  series_data sdata3 = experimental_series (PI / 4.0, PI / 8.0, n);
+  series_data sdata4 = experimental_series (PI / 4.0, 3.0 * PI / 8.0, n);
   printf ("\n");
   print_correlation_coefficient_estimate (sdata1);
   printf ("\n");
@@ -562,6 +596,13 @@ main ()
   printf ("\n");
   return 0;
 }
+
+@ On \POSIX/ systems, the \CEE/ program has to be linked with a
+library of mathematical functions, {\tt -lm}. Also, this probably does
+not matter, but I wrote the program for a \CEE/~standard that is not
+expected to be approved until~2024. The program should be legal under
+the older standards, but more likely to provoke warnings from your
+compiler.
 
 @ When I compile and run my program, I obtain the following as my output:
 {\tentt
