@@ -67,19 +67,21 @@ require a quantum computer, but the program {\it you} write will be
 magical.
 
 I will myself, in the process of instructing you, write a magical
-\CEE/ program that does the same thing. That is part of the magic of
-using {\tt CWEB} to write instructions.
+\CEE/ program that does the same thing. Obtaining a \CEE/ program from
+the tutorial itself is part of the magic of using {\tt CWEB} to write
+these instructions.
 
-That the programs we write must be magical is guaranteed to us by no
-less than the 2022 Nobel Prize winners in Physics. Thousands of papers
-have been published and thousands of volumes printed. Jillions of
-public dollars have been spent. Experiment after experiment after
-experiment has been conducted. So what occurs in our programs {\it
-must\/} be nothing less than magic.
+That the programs we write will be magical is guaranteed us by no less
+than the 2022 Nobel Prize winners in Physics. Thousands of papers have
+been published and thousands of volumes printed. Jillions of public
+dollars have been spent. Experiment after experiment after experiment
+has been conducted. So what occurs in our programs {\it must\/} be
+nothing less than the magic of entanglement and quantum non-locality
+(that is, action at a distance).
 
-@ We will need a way to pick arbitrary numbers between zero and one,
-without showing much bias. The method need not be particularly
-fancy. It will not matter whether zero or one are themselves
+@ First, a preliminary. We will need a way to pick arbitrary numbers
+between zero and one, without showing much bias. The method need not
+be fancy. It will not matter whether zero or one are themselves
 included. The following algorithm, consisting of a global variable and
 a function returning a floating point number, will suffice on most
 modern computers. (Or you could just use your programming language's
@@ -94,7 +96,7 @@ number_between_zero_and_one ()
   int i = a_global_variable * 75;
   while (i > 65537) i = i - 65537;
   a_global_variable = i;
-  return ((1.0 * i) / 65537.0);
+  return ((1.0 * i) / 65538.0);
 }
 
 @ Now to the magical program itself. The first thing we need is the
