@@ -951,10 +951,10 @@ HAY SOCKS LOOPHOLES!}''
 
 @ There is a simple interpretation for this classical derivation, an
 interpretation I worked into simulations slightly more complicated
-than the one this tutorial describes. Actually, the simulations
-existed many weeks before the derivation, so served as immediate
-evidence of the proof's validity.  In these simulations, instead of
-testing with a few angles, the equivalents of a |cray_ban| are
+than the one this tutorial describes. Actually, those simulations
+existed many weeks before this derivation, so served as immediate
+evidence of the proof's validity.  In the simulations,
+the equivalents of a |cray_ban| are
 constantly rotating on axles, in unison. This is as if~$\Delta\phi$
 were allowed to increase freely over time. Although the proportions of
 ``who gets sent which way'' change as~$\Delta\phi$ changes, the
@@ -971,10 +971,9 @@ To make this so was the main goal of the pdf in my original proof,
 where I achieved the goal by making the probability density uniform
 with respect to one of the two angular settings. This approach might
 seem obvious to we who do not confuse probability with ``randomness''
-or with physical substance. Nevertheless, that approach is
+or with physical substance. Nevertheless, the approach is
 overcomplicated. Instead, simply set the angle, once and for all time,
-to zero. Then introduce~$\Delta\phi$ as a translation of angular
-coordinate system.
+to zero. Then introduce~$0=\Delta\phi-\Delta\phi$.
 
 @* The Unlicense.
 \medskip
