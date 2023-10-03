@@ -99,19 +99,19 @@ number_between_zero_and_one ()
   return ((1.0 * i) / 65538.0);
 }
 
-@ Now to the magical program itself. The first thing we need is the
+@ Now to the magical program itself. The first things we need are the
 magical variables. These will be of a type called |crayton|, whose
-value will be either |updown| or |sideways|. How to write that in your
-language will vary, but here is one way to write it in \CEE/.
+value is either |updown| or |sideways|. How to define such a type in
+your language will vary, but here is one way to define it in \CEE/.
 
 @<the |crayton| type@>=
 typedef enum {updown, sideways} crayton;
 
-@ We have a special source of |crayton| variables. It produces two
-|crayton|, one of them |updown| and the other |sideways|. Which of the
-two |crayton| is which, however, is, over time, an unbiased mixture of
-both ways. This is ensured by use of |@<arbitrary numbers between zero
-and one@>|.
+@ We need a special source of |crayton| variables. It produces two
+|crayton| at a time, one |updown| and the other |sideways|. Which of
+the two |crayton| is which, however, is sometimes |updown|-|sideways|,
+sometimes the |sideways|-|updown|, without bias. Lack of bias is
+ensured by use of |@<arbitrary numbers between zero and one@>|.
 
 In the \CEE/ code, the two |crayton| will be returned in the \CEE/
 version of a record structure. This pair of |crayton| variables will
@@ -140,12 +140,13 @@ crayton_source ()
 @ As with many a magic trick, we need mirrors. What we need here is
 the digital equivalent of a device made from a kind of mirror that
 breaks a beam of light into two beams. But this mirror is also the
-digital equivalent of a polarizing filter. This all seems very
-complicated, but in fact the type for the entire mess is just a
-floating point number capable of representing an angle in radians. The
-angle is simply how much someone has rotated the angle of the
-filter. We will have a pair of them, so let us call the type a
-polarized |cray_ban|.
+digital equivalent of a polarizing filter. From the foregoing
+description it may seem complicated, but in fact the type for the
+entire mess is just a floating point number capable of representing an
+angle in radians. The angle is simply how much someone has rotated the
+angle of the filter. We need a pair of these filters, so let us call
+the type a |cray_ban|. For our magic, we will use a pair of polarized
+|cray_ban|.
 
 @<the |cray_ban| type@>=
 typedef double cray_ban;
