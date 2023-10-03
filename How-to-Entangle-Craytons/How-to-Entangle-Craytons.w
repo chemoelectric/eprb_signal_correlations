@@ -175,12 +175,11 @@ the Royal Society, redefined the conditional probability as follows:
 $$P(a{\vert}b) = \cases{P(a{\wedge}b)\,/\,P(b) &{\rm pretty\ much\ never}\cr
                         P(a) &{\rm if\ local\ causality,\ beables,%
                         \ socks,\ heart\ attacks,\ $\lambda$,\ etc.}\cr} $$
-Most individuals familiar with mathematics will recognize
-that this is a license to declare ``proved'' any pseudo-mathematical
-nonsense one wishes, such as that $1=0$ and $E=mc^{9}$.
-The concussion of a Fellow of the
-Royal Society proudly displaying such a license is what rendered you
-psychosomatically blind.
+Most individuals seriously familiar with mathematics will recognize
+this as (literally) a license to declare ``proved'' any nonsense one
+wishes, such as $1=0$ and $E=mc^{9}$.  The concussion of a Fellow of
+the Royal Society proudly displaying such a license is what rendered
+you psychosomatically blind.
 
 \item{$\bullet$} The claim that quantum physics is ``irreducible'' to
 classical physics, though usually assumed to be a claim about physics,
@@ -193,15 +192,16 @@ mathematics, and ``classical physics'' becomes merely the application
 of any and all mathematics to the reasonable solution of such word
 problems. Despite public address systems blaring pronouncements
 through billows of smoke, nothing resembling a smidgen of proof of
-such ``irreducibility'' has ever been produced. The literature,
-however, does employ imcompetence in mathematics {\it to give the
+such ``irreducibility'' has ever been produced. The quantum physics
+literature, however, does employ {\it sheer incompetence\/} in
+mathematics (similar to John~Bell's described above) {\it to give the
 impression\/} of such ``irreducibility.'' The practitioner of such
-incompetence merely gives up short of a solution, proclaiming, ``That
-is all that can {\it possibly\/} be done. Now please run experiments
-showing {\it these\/} are not the results obtained empirically.'' The
-encounter of scientists not even {\it trying\/} to solve problems
-causes temporary shriveling of the hypothalamus, and thus blindness is
-merely a portion of the psychosomatic injury.
+incompetence might merely give up short of a solution, proclaiming,
+``That is all that can {\it possibly\/} be done. Now please run
+experiments showing {\it these\/} are not the results obtained
+empirically.'' The encounter of scientists not even {\it trying\/} to
+solve problems causes temporary shriveling of the hypothalamus.
+Blindness is merely a portion of the psychosomatic injury.
 
 @ A |cray_ban| does not deal with a beam of light, but instead with a
 |crayton|. It decides which of two ways to send a |crayton| (we will
