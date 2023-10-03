@@ -634,20 +634,30 @@ pairs on ordinary computer hardware. No quantum computer was
 necessary. Each |crayton| in a pair settled into its individual state
 non-locally upon measurement of the other.
 
-@* Okay, I Lied. There was actually no entanglement. There is no
-entanglement anywhere in the world. Entanglement is the wrongest wrong
-thing that there has ever been in the history of physics.
+@* Okay, I Lied. There was actually no entanglement. I am sure there
+is no entanglement anywhere in the universe. The very notion is as
+silly as a perpetual motion machine. Entanglement is the wrongest
+wrong thing there has ever been in the history of physics.
 
 Your program demonstrates that quantum theorists have been {\it just
 plain wrong\/} in their reasoning. One of the root causes is that
 license John Stewart Bell gave theorists to declare anything ``true''
 that suited their fancy. They have used that license freely. Any
 attempt to declare their math illegitimate is immediately canceled by
-the license Bell gave them. One will be slammed with a {\sc GISH
-GALLOP} of ``{\it Local causality, beables, socks, heart attacks,
+the license Bell gave them. The declarer will be slammed with a {\sc
+GISH GALLOP} of ``{\it Local causality, beables, socks, heart attacks,
 loopholes, dichotomic variables, imported hay, Fantastic Voyage, Final
 Four,\,...\,!  Did you hear me? Tick, tick, tick. I said {\sc LOCAL
 CAUSALITY HAY SOCKS LOOPHOLES!}}''
+
+This deluge will serve two purposes. The first is to prevent
+publication of any paper the declarer may present. The second is, so
+to speak, to damage the declarer's hypothalamus. The victim, if not
+hurt too badly, will run off like a dog with tail between legs. I,
+personally, am psychiatrically disabled and have been rendered
+temporarily bedridden by such a barrage, despite that what I had said
+concerned {\it an electronic signal processing problem}, and so had no
+quantum mechanics in it whatsoever.
 
 I had thought to say more about what has been perpetrated, but words
 escape me. Papers and books promoting ``entanglement'' and
@@ -661,11 +671,14 @@ mechanics.
 @ Actually the correlation coefficients for experiments such as this
 one were derived long ago using the classical theory of wave
 mechanics! If you assume waves are assemblages of particles, then some
-``quantum'' phenomena are explained classically. There are also other
-ways in which some ``quantum'' phenomena can be explained classically
-as wave phenomena, where the waves may be continuous
-substance. However, in counterargument, ``{\sc LOCAL CAUSALITY HAY
-SOCKS LOOPHOLES!}''
+``quantum'' phenomena can easily be explained classically. There are
+also other ways in which such ``quantum'' phenomena might be explained
+classically as wave phenomena, while letting the waves be continuous
+substance, as they traditionally have been imagined. For instance, if
+photodetectors randomly generate photoelectrons in proportion to light
+intensity, this explains the ``quantum'' phenomena. (This explanation
+is due to A.~F. Kracklauer.)  However, in counterargument: ``{\sc
+LOCAL CAUSALITY HAY SOCKS LOOPHOLES!}''
 
 If you see what I mean.
 
@@ -913,9 +926,17 @@ physics, the same correlation coefficient quantum mechanics
 gives. Thus there is no entanglement, no non-locality, no quantum
 weirdness whatsoever. Einstein, Podolsky, and Rosen were correct. The
 2022 Nobel Prize in Physics was awarded for physics done so badly it
-ought to be regarded as {\it pseudoscience}. This ``science'' was
-worse than cold fusion, for instance. A perpetual motion machine would
-be no worse than what this prize was given for.
+ought to be regarded as {\it pseudoscience}. A perpetual motion
+machine, as I implied before, would be just as deserving of a
+prize.
+
+Prizes in science are inherently unethical. Who will volunteer to
+torpedo the 2022 Nobel Prize in Physics, even though it {\it must\/}
+be done, eventually? Besides, to give out a huge cash prize for what
+ought to be a humble profession of scientific method is {\it an
+insult}. But, of course, it is not, in fact, a humble profession of
+scientific method, but of career advancement through citation
+churning.
 
 The number of paper retractions due is staggering. Nevertheless,
 expect instead professors occupying university administration offices,
