@@ -704,21 +704,21 @@ weighted average of the products of ``way sent'' values.
 figuring out how to determine the pdf. But then I decided that
 determining the pdf was not necessary, after all!
 
-Yes, I had a derived the correlation coefficient by determining a pdf,
+Yes, I had derived the correlation coefficient by determining a pdf,
 but I shall not reproduce that derivation for you, because it is too
-complicated. You need an education in digital signal processing theory
-to understand it, and even then it makes one's head feel as if it were
-a muddled fruit at the bottom of a cocktail shaker. (Which a
-university education does in any case.) The derivation probably still
-has bugs in it, the way a computer program that is too complicated
-seems never to have all the bugs cleaned out. They can be cleaned out,
-certainly, but the effort is not worth it. It is better to find a new
-approach.
+complicated. You need an education in electronic signal processing
+theory to understand it, and even then it makes one's head feel as if
+it were a muddled fruit at the bottom of a cocktail shaker. (Which
+school always did to me, in any case. I hate school.) The derivation
+probably still has bugs in it, the way a computer program that is too
+complicated seems never to have all the bugs cleaned out. They can be
+cleaned out, certainly, but the effort is not worth it. It is better
+to find a new approach.
 
 @ The following much simpler derivation starts by deriving what the
 \SAMCLUB/ seems to believe is all classical physics is capable of
 deriving: a particular function of the two |cray_ban| settings that is
-{\it not\/} a function of their difference. {\it That\/} derivation is
+{\it not\/} a function of their difference. {\it This\/} derivation is
 tedious but straightforward.
 
 Let~$k_1$ and~$k_2$ represent the |crayton| pair, and~$\phi_{01}$
@@ -778,20 +778,20 @@ $$P(\tau_1=+1{\,\wedge\,}\tau_2=+1{\,\vert\,}k_1={\it updown})
 without proof, but this was because I am old and tired and get senior
 discounts.  I did not invoke ``{\sc LOCAL CAUSALITY HAY SOCKS
 LOOPHOLES!}'' Seriously, though, the two |cray_ban| operate
-independently and that is the intuition here. This is entirely
-different from what John~Bell was attempting, which was to construct
+independently and that is the intuition here. This is
+different from what John~Bell attempted, which was to construct
 an explicit causal chain (by abusing conditional probability
-notation), whack the audience with a stun weapon, blinding them, then
-impress the illusion an explicit causal chain was the {\it only\/}
-form in which classical physics could be expressed.
+notation), whack the audience with a stun weapon---blinding them---then
+impress upon them the illusion an explicit causal chain is the {\it only\/}
+form in which classical physics can be expressed.
 
 If John~Bell had been correct about that, then Johannes~Kepler was not
 doing classical physics when he observed that planets moved in
 ellipses, nor was Isaac~Newton when he formulated his Law of Universal
-Gravitation. But really that is beside the point, because those are
+Gravitation. But really that is beside the point, because thosed are
 {\it empirical laws}, not derived theories. As I said earlier, the
-\SAM/ crowd are actually distracting you from {\it this\/}
-fact: in the context at hand, ``classical physics'' means {\it any\/}
+\SAM/ crowd are actually distracting you from {\it this\/} fact: in
+the context at hand, ``classical physics'' means {\it any\/}
 mathematics that is not quantum mechanics, {\it if\/} employed to
 reach the same result as quantum mechanics. Their actual claim, {\it
 sotto voce}, is that no mathematics but quantum mechanics can get the
@@ -810,11 +810,11 @@ own psychosomatic barrages.
 Part of the reason for me writing this program as {\it instructions\/}
 on how to write a program, rather than as merely a program for others
 to compile and run, is so \SAMCLUB/ members can sooth their throbbing
-brains by writing {\it their own programs}. They can experience the
+brains by writing {\it their own programs}. So they can experience the
 truth firsthand, and as recreation rather than hard work. I encourage
-them to pick up computer and bow, and play a soothing |crayton|
-lullaby, according to this sheet music, but each in their unique
-style.
+them to pick up computer and bow to play a soothing |crayton|
+lullaby, according to the sheet music herein, but each playing the
+music in their unique style.
 
 @ By the previous calculation, and then by similar ones (though
 actually by symmetry considerations), a table can be constructed:
@@ -859,9 +859,7 @@ it to believe it. One wonders not so much {\it how\/} they missed the
 solution, but whether some of them {\it saw\/} it but dismissed it as
 unpublishable, because ``{\sc LOCAL CAUSALITY HAY SOCKS LOOPHOLES!}''
 That is, they knew if they submitted a paper they would be bombarded
-with psychic energy weapons. Once they recovered they would have to
-publish in obscure journals, at engineering conferences, etc., or not
-at all, and the whole affair would have harmed their careers.
+with psychic energy weapons and have their careers severely damaged.
 
 @ To write this new ``expectation'' $E'(\tau_1\tau_2)$ (call it $\rho'$)
 as an integral weighted by a pdf would be excessive.
