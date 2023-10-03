@@ -480,10 +480,10 @@ convince themselves of this fact. Here is not a good place to do a
 proof, and it is good exercise for what Hercule~Poirot called ``the
 little gray cells.'' It is intuitive once visualized, if a person be
 capable. (Not everyone is. There are people, including the late famous
-neurologist and fellow eccentric Jewish migraineur Oliver~Sacks, who
-cannot even recognize a human face---whereas Sacks's mother, a
-surgeon, could do a three-dimensional drawing without reference. One
-must allow for individual variation.)  Thus:
+neurologist Oliver~Sacks, who cannot even recognize a human
+face---whereas Sacks's mother, a surgeon, could do a three-dimensional
+drawing without reference. One must allow for individual variation.)
+Thus:
 
 @<estimates of certain products@>=
 double estimate_of_cos2_phi1_cos2_phi2 = @|
