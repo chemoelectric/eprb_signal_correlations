@@ -40,7 +40,7 @@ QPDF = qpdf
 QPDFFLAGS =
 
 CC = cc
-CFLAGS = -O -g
+CFLAGS = -g
 
 .PHONY: pdf default
 pdf default: $(MY_DOC).pdf
