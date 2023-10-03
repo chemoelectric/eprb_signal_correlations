@@ -899,19 +899,22 @@ correct solution! And, indeed, it gives incorrect results. If you plug
 in the angles $\phi_{01}=\pi/4$ and~$\phi_{02}=\pi/8$, for instance,
 you will get zero instead of the correct value,~$-1/\sqrt2$. But now,
 with this result that obviously, at a glance, cannot be correct, you
-can derive an ``inequality'' and win a Nobel Prize. This is one route,
-at least, by which the so-called ``{\sc CHSH} inequality'' can be
-derived.
+can derive an ``inequality'' and win a Nobel Prize. I am pretty sure
+this is one route, at least, by which the so-called ``{\sc CHSH}
+inequality'' can be derived. I do not wish to damage my cerebral
+cortex by looking into the matter more deeply. The ``{\sc CHSH}
+inequality'' is complete garbage.
 
 @ But suppose that, instead of publishing an ``inequality'' and
 winning a Nobel Prize, we consider only the special
 case~$\phi_{02}=0$. Then $$\rho' = -\cos(2\phi_{01}) =
 -\cos\{2(\phi_{01}-\phi_{02})\}$$ and it {\it does\/} have the correct
-form.
+form. Yes, it is valid to include zero in an expression.
 
 And now let us give the name~$\Delta\phi$ to any angle whatsoever, and
-add~$0=\Delta\phi - \Delta\phi$ to~$\phi_{01}-\phi_{02}$:
-$$\rho' = -\cos(2\{(\phi_{01} + \Delta\phi) - (\phi_{02} + \Delta\phi)\})$$
+include zero in the expression once more, by adding~$0=\Delta\phi -
+\Delta\phi$ to~$\phi_{01}-\phi_{02}$: $$\rho' = -\cos(2\{(\phi_{01} +
+\Delta\phi) - (\phi_{02} + \Delta\phi)\})$$
 
 And then let us call~$\phi_{01} + \Delta\phi$ by the name~$\phi_1$,
 and~$\phi_{02} + \Delta\phi$ by the name~$\phi_2$, and also (because
@@ -920,26 +923,31 @@ $$\eqalign{\rho &= -\cos\{2(\phi_1 - \phi_2)\} \cr
  &= -\{\cos^2(\phi_1 - \phi_2) - \sin^2(\phi_1 - \phi_2)\}\cr}$$
 
 Having done these things, we have derived, using only classical
-physics, the same correlation coefficient quantum mechanics
-gives. Thus there is no entanglement, no non-locality, no quantum
-weirdness whatsoever. Einstein, Podolsky, and Rosen were correct. The
-2022 Nobel Prize in Physics was awarded for physics done so badly it
+physics, the same correlation coefficient quantum mechanics gives. All
+we have done is take the {\it incomplete\/} solution \SAM/ members
+know how to derive, restrict it to a special case, and then discovered
+(by careful consideration of the number zero) that this restriction
+makes the solution complete! In so doing, we have shown that there is
+no entanglement, no non-locality, no quantum weirdness
+whatsoever. Einstein, Podolsky, and Rosen were correct in~1935. The
+2022~Nobel Prize in Physics was awarded for research done so badly it
 ought to be regarded as {\it pseudoscience}. A perpetual motion
-machine, as I implied before, would be just as deserving of a
-prize.
+machine, as I implied before, would be just as deserving of a prize.
 
-Prizes in science are inherently unethical. Who will volunteer to
-torpedo the 2022 Nobel Prize in Physics, even though it {\it must\/}
-be done, eventually? Besides, to give out a huge cash prize for what
-ought to be a humble profession of scientific method is {\it an
-insult}. But, of course, it is not, in fact, a humble profession of
-scientific method, but of career advancement through citation
-churning.
+This affair demonstrates that prizes in science are unethical. Who
+will volunteer to torpedo the 2022~Nobel Prize in Physics, even though
+this {\it must\/} be done, eventually? Besides, to give out a huge
+cash prize for what ought to be a humble profession of scientific
+method is {\it an insult}. But, of course, it is not, in fact, a
+humble profession of scientific method. Today's science is often a
+profession of career advancement through citation churning. Journals
+do not advocate for their scientific value, but their ``impact
+factor.''  So perhaps a Nobel Prize is fitting, in this instance.
 
 The number of paper retractions due is staggering. Nevertheless,
 expect instead professors occupying university administration offices,
-standing on the roofs shouting ``{\sc LOCAL CAUSALITY HAY SOCKS
-LOOPHOLES!}'' into megaphones.
+standing on the roofs with megaphones, shouting ``{\sc LOCAL CAUSALITY
+HAY SOCKS LOOPHOLES!}''
 
 @ There is a simple interpretation for this classical derivation, an
 interpretation I worked into simulations slightly more complicated
