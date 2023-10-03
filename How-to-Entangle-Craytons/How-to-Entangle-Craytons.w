@@ -36,19 +36,19 @@
 \def\SAMCLUB/{{\sc{SMOKE-\AM-MIRRORS CLUB}}}
 
 \def\covernote{\vbox{%
-\centerline{A tutorial for the public domain by}%
+\centerline{A tutorial by}%
 \smallskip
 \centerline{{\sc BARRY} SCHWARTZ,}%
 \smallskip
-\centerline{prepared in the year 2023,}%
-\centerline{and last revised}%
+\centerline{prepared and placed in the public domain}%
+\centerline{in the year 2023, and last revised}%
 \centerline{\input{How-to-Entangle-Craytons-revision.txt}}%
 \bigskip
 \centerline{Containing also a}%
 \smallskip
 \centerline{\sc PROOF}%
 \smallskip
-\centerline{without recourse to quantum mechanics}%
+\centerline{(without recourse to quantum mechanics)}%
 \centerline{of the correlation coefficient}%
 \centerline{of a two-channel Bell test experiment.}%
 \bigskip
