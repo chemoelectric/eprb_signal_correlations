@@ -35,6 +35,7 @@
 \def\POSIX/{{\sc{POSIX}}}
 \def\SAM/{{\sc{SMOKE-\AM-MIRRORS}}}
 \def\SAMCLUB/{{\sc{SMOKE-\AM-MIRRORS CLUB}}}
+\font\ninerm=cmr9
 
 \def\covernote{\vbox{%
 \centerline{A tutorial by}%
@@ -53,13 +54,13 @@
 \centerline{of the correlation coefficient}%
 \centerline{of a two-channel Bell test experiment.}%
 \bigskip
-\centerline{With a special point of thanks}%
-\centerline{to a patient person}%
+{\baselineskip=0.9\baselineskip\ninerm
+\centerline{A point of thanks is due to a patient person}%
 \centerline{for their scientific curiosity.}%
 \centerline{In our times, scientific method}%
 \centerline{has been displaced by scientific authority,}%
 \centerline{and to encounter actual curiosity is rare.}%
-}}
+}}}
 
 @* Magically Entangled Craytons. What follows are instructions on how
 to write a program that, on an ordinary computer, will
