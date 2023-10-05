@@ -10,5 +10,6 @@ produce different numbers on different runs, although we will try to
 avoid that.
 
 These programs all generate data using the tagging algorithm, and then
-analyze the data by substituting frequencies for probabilities in the
-correlation coefficient.
+analyze the data by substituting frequencies of events for products of
+squares of trigonometric functions. From these estimates the
+correlation coefficient is estimated.
