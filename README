@@ -39,10 +39,6 @@ There are also in here:
 
 * Translations of the Ada program to other languages.
 
-* A paper, more or less in the style of the journals, based on the
-  math of the Ada program’s commentary, and completely superceded by a
-  new proof that is sketched in the introduction.
-
 * A CWEB program, not yet completed, that contains the new proof
   (already completed).
 
