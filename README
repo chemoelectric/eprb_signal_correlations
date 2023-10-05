@@ -39,9 +39,6 @@ There are also in here:
 
 * Translations of the Ada program to other languages.
 
-* A CWEB program, not yet completed, that contains the new proof
-  (already completed).
-
 * The source repository for the Python animation at
   https://pypi.org/project/Quantum-Correlations-Visualized/
 
@@ -82,5 +79,9 @@ obtains, of course, the same solution as QM obtains for the Bell-test.
 The Bell apologist is now trapped. Most likely they will not switch
 sides, but rather resort to a series of selections from this list:
 https://en.wikipedia.org/w/index.php?title=List_of_fallacies&oldid=1171695814#Informal_fallacies
+
+It is likely that the solution method used by the signal processing
+engineer will be more complicated than necessary (as was mine when I
+first employed this approach), but the principle is sound.
 
 ----------------------------------------------------------------------
