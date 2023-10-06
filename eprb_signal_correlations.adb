@@ -22,9 +22,8 @@
 -- ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 -- OTHER DEALINGS IN THE SOFTWARE.
 ----------------------------------------------------------------------
--- A novel solution to a two-channel Bell test, by treating it as a
--- problem in random signal analysis, and a simulation based on the
--- solution.
+-- A solution to a two-channel Bell test by treating it as a problem
+-- in random signal analysis, and a simulation based on the solution.
 --
 -- Author: Barry Schwartz
 -- Mastodon address: @ chemoelectric at masto.ai
@@ -57,20 +56,6 @@ with ada.numerics.generic_elementary_functions;
 with ada.numerics.generic_complex_types;
 
 ----------------------------------------------------------------------
-
---!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
---!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
---!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
---!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
---
--- FIXME: THE COMMENTS HAVE NOT YET BEEN CORRECTED, ALTHOUGH THE
--- SIMULATION IS CORRECT. SEE THE Paper SUBDIRECTORY FOR A TECHNICAL
--- NOTE WITH CORRECTIONS.
---
---!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
---!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
---!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
---!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 procedure eprb_signal_correlations is
 
@@ -314,139 +299,56 @@ procedure eprb_signal_correlations is
 --    φ₁=π/4  φ₂=π/8       ρ=0
 --    φ₁=π/4  φ₂=3π/8      ρ=0
 --
--- This is a disappointing result—but we have computed the
--- expectations incorrectly. It is easy to overlook that one has
--- assumed a particular coordinate system, and that is what we have
--- done for the ζ settings. However, look at the answer we got: it
--- SHOULD be, but is not, in terms of φ₂-φ₁. It is not
--- coordinate-free. We should always have had that we were assuming a
--- particular coordinate system written into our probabilities as
--- another condition.
+-- This is a disappointing result. We seem to have arrived at the
+-- ‘CHSH contrast’, in which we get 0 for the last two values instead
+-- of the proper values √½.
 --
--- Therefore let us assume that condition implicitly written in, and
--- begin again exactly where we left off, but with the variables
--- renamed.
+-- But notice something peculiar: if φ₁=0, one DOES get the correct
+-- values, and φ₁=0 looks an awful lot like an ORIGIN. (Did no one
+-- before now notice that?) So let us try it out as an origin, but
+-- first renaming the angles as φ₀₁=0 and φ₀₂.
 --
---    ρ′ = cos(2φ′₂) cos(2φ′₁)
+--    ρ = cos(2φ₀₂) cos(2φ₀₁) = cos(2φ₀₂) = cos(2(φ₀₂-φ₀₁))
 --
--- Let φ′₁ be the angular origin and take on any value in [-π/4,π/4].
--- Compute the expectation
+-- That looks an awful lot like the desired result, but remember that
+-- φ₀₁=0 identically. However, what happens if we add zero to φ₀₂-φ₀₁?
+-- But not just any zero. Rather, let Δφ be any real number, and add
+-- 0=Δφ-Δφ. Also let φ₁=φ₀₁+Δφ and φ₂=φ₀₂+Δφ. Here φ₁ and φ₂ are
+-- obviously any angles whatsoever, but measured with respect to an
+-- origin rather than heck knows how. (I am too old to spend my
+-- remaining years finding the correct interpretations of incorrect
+-- solutions to problems.) Then
 --
---        π/4                 π/4
---    ρ = ∫ ρ′ dφ′₁ = cos(2φ′₂) ∫ cos(2φ′₁) dφ′₁
---       -π/4                -π/4
+--    ρ = cos(2((φ₀₂+Δφ)-(φ₀₁+Δφ))) = cos(2(φ₂-φ₁))
 --
---                                 = cos(2φ′₂) = cos²(φ′₂) - sin²(φ′₂)
---
--- where the angular origins φ′₁ are uniformly distributed in the
--- quadrant [-π/4,π/4].
---
--- Let φ′₂=φ₂-φ₁. Then
---
---    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁),  φ′₁∈[-π/4,π/4]
---
--- For φ′₁∈[π/4,3π/4], the cosine in the integral is negative, so we
--- integrate in the other direction.
---
---        π/4                 π/4
---    ρ = ∫ ρ′ dφ′₁ = cos(2φ′₂) ∫ cos(2φ′₁) dφ′₁
---       3π/4                3π/4
---
---                                 = cos(2φ′₂) = cos²(φ′₂) - sin²(φ′₂)
---
--- We can make similar arguments for φ′₁∈[3π/4,5π/4] and
--- φ′₁∈[5π/4,7π/4], and therefore can drop the quadrant
--- restriction. Thus
---
---    ρ = cos²(φ₂-φ₁) - sin²(φ₂-φ₁) = cos(2(φ₂-φ₁))
---
--- which, finally, is a solution in the desired, coordinate-free
--- form.
---
--- We have, in a sense, hidden the ζ₁ setting—as we must do to
--- calculate a correlation coefficient. When running a simulation,
--- however, one can set a specific coordinate system with the ζ
--- settings of the channels. The specific JOINT PROBABILITIES do
--- depend on the coordinate system, but the CORRELATION COEFFICIENT,
--- which is an AVERAGE, depends only on the difference in
--- settings.
---
--- Let us, then, plug in the Bell test angles. This gives
+-- and that looks just like the formula from quantum mechanics. So let
+-- us plug in the Bell test angles.
 --
 --    φ₁=0    φ₂=π/8       ρ=√½
 --    φ₁=0    φ₂=3π/8      ρ=-√½
 --    φ₁=π/4  φ₂=π/8       ρ=√½
 --    φ₁=π/4  φ₂=3π/8      ρ=√½
 --
--- which is more satisfactory.
+-- This result is more satisfactory.
 --
 ----------------------------------------------------------------------
---
--- It is certain that most quantum theorists seeking solutions to
--- similar problems via probability theory have neglected the last
--- step, where we integrated over a probability distribution function
--- of angular origins. The reason I say this with certainty is that
--- the solution above is proof that it is possible to violate Bell
--- inequalities with a ‘locally realistic’ model, and that Einstein,
--- Podolsky, and Rosen were correct.
---
--- Two questions immediately arise. One is why do experimenters get
--- Bell inequality violations, despite that they may have incorrect
--- formulas for their correlation calculations? This is a question for
--- which I have no answer, except to suggest experimenter bias leading
--- to poor control of the measurements. I am not in the least a
--- scholar of the experimental techniques employed. The derivation
--- above shows that these experiments are pointless, anyway.
---
--- The other question is how do Bell and others arrive at their
--- ‘inequalities’ in the first place? That question was answered at
--- least as early as [2] in the References section below. As Bell
--- explains at great length in his famous address [1], his argument
--- rests entirely on what we might call an ‘axiom of causality’. This
--- axiom states that if two random variables have no ‘causal
--- influence’ on each other then they are statistically
--- independent. It is easily demonstrated that this axiom makes the
--- mathematics inconsistent, so that any proofs that follow (such as
--- Bell inequalities) are meaningless.
---
--- Suppose I mail a quartz to Fred Flintstone and a topaz to Barney
--- Rubble, or a quartz to Barney Rubble and a topaz to Fred
--- Flintstone. No matter how one writes expressions for them in
--- ordinary probability theory, the joint probabilities are
---
---    P(Fred-quartz Barney-quartz) = 0
---    P(Fred-quartz Barney-topaz)  = ½
---    P(Fred-topaz  Barney-quartz) = ½
---    P(Fred-topaz  Barney-topaz)  = 0
---
--- But suppose we add the ‘axiom of causality’ to the mix and use
--- that. Then we get
---
---    P(Fred-quartz Barney-quartz) = ¼
---    P(Fred-quartz Barney-topaz)  = ¼
---    P(Fred-topaz  Barney-quartz) = ¼
---    P(Fred-topaz  Barney-topaz)  = ¼
---
--- which yields the contradiction 0=¼=½. Thus Bell’s mathematics is
--- inconsistent, and all ‘Bell inequalities’ are meaningless.
---
--- Bell, of course, instead concludes he has contradicted the
--- assumption that the ‘causation’ in his axiom took place
--- ‘locally’. But it does not matter. Regardless of whether the
--- ‘causation’ is local, non-local, or of some third kind, the
--- mathematics is inconsistent and thus useless to prove ANYTHING.
---
-----------------------------------------------------------------------
-
 --
 -- Back to the simulation. The data analysis follows the mathematics
 -- derived above, and not anything you will find in the usual
--- Bell-test literature. That literature, we have found, is riddled
--- with faulty mathematics. It can be relied on for nothing.
+-- Bell-test literature. That literature is riddled with faulty
+-- mathematics. Really it is outright fake mathematics: John Stewart
+-- Bell essentially made up his own version of probability theory, and
+-- it is INCONSISTENT. Thus it literally gives quantum theorists a
+-- license to declare anything ‘proved’ that they wish ‘proved’. Their
+-- ‘mathematics’ can be relied on for nothing.
 --
--- Our methods will be very similar to those of reference [3],
--- although not identical. We substitute frequencies in the data for
--- probabilities in the closed-form analysis.
+-- Our methods will be very similar to those of reference [1],
+-- although not identical. We substitute frequencies of events for
+-- products of squares of sines and cosines in the closed-form
+-- analysis. Care must be taken to account for there being two square
+-- roots, despite that the sqrt() function returns only the positive
+-- root. Thus the need to test for the proper sign of the cosine and
+-- sine, depending on the quadrant.
 --
 
   function count (raw_data : TAGGED_SIGNAL_PAIR_LISTS.list;
@@ -638,55 +540,9 @@ end eprb_signal_correlations;
 
 ----------------------------------------------------------------------
 --
--- Afterword.
---
--- Of course, John S. Bell and others have at last been awarded a
--- Nobel Prize, precisely for inventing and using their inconsistent
--- mathematics, and for calculating their correlation coefficients
--- incorrectly. What actually will happen now is that quantum
--- physicists will continue to use inconsistent mathematics, and also
--- will continue to leave probability distribution functions out of
--- their expectation calculations. We will get no return to the
--- classical approach, such as I demonstrated here using the
--- engineering techniques of signal processing analysis. We will
--- continue to get very little progress towards a deeper understanding
--- of our universe—if we do not, in fact, slip considerably backwards.
--- ‘Quantum’ madness seems to be infecting electrical engineering
--- itself more and more deeply. Must I fear signal processing
--- engineers going the same route as physicists? We may be witnessing
--- one of the worst and most quickly accelerating infectious rots ever
--- encountered by our intellectual institutions.
---
--- It is possible, by the way, to arrive at our solution by wave
--- coherence theory instead of probability theory. Probability theory
--- is more mathematically fundamental and so, perhaps, more
--- convincing, but wave coherence is more familiar to some engineers
--- and scientists. Reference [3] uses the wave coherence approach,
--- treating the signals specifically as pulses of plane-polarized
--- light. The wave coherence approach could be used as well with
--- abstract signals, looking for coherence not in electromagnetic
--- waves, but directly within statistical data. The mathematics for
--- data coherence would be similar to that for electromagnetic wave
--- coherence.
---
--- Finally, I would like to point out that Bell’s ‘axiom of causality’
--- is actually a corollary of the famous ‘Wishing Theorem’. The
--- Wishing Theorem states: Proposition P is true because I wish it.
---
-----------------------------------------------------------------------
---
 -- References.
 --
--- [1] J. S. Bell, ‘Bertlmann’s socks and the nature of reality’,
---     preprint, CERN-TH-2926 (1980).
---     http://cds.cern.ch/record/142461/ (Open access, CC BY 4.0)
---
--- [2] E. T. Jaynes, ‘Clearing up mysteries—the original goal’, in
---     J. Skilling, ed., Maximum-Entropy and Bayesian Methods, Kluwer,
---     Dordrecht (1989).
---     https://bayes.wustl.edu/etj/articles/cmystery.pdf
---
--- [3] A. F. Kracklauer, ‘EPR-B correlations: non-locality or
+-- [1] A. F. Kracklauer, ‘EPR-B correlations: non-locality or
 --     geometry?’, J. Nonlinear Math. Phys. 11 (Supp.) 104–109 (2004).
 --     https://doi.org/10.2991/jnmp.2004.11.s1.13 (Open access, CC
 --     BY-NC)
