@@ -303,9 +303,14 @@ procedure eprb_signal_correlations is
 -- ‘CHSH contrast’, in which we get 0 for the last two values instead
 -- of the proper values √½.
 --
+-- [Side note: we have actually, it turns out, solved for a different
+-- experimental arrangement in which a SIGNAL gets a TAG twice.]
+--
 -- But notice something peculiar: if φ₁=0, one DOES get the correct
 -- values, and φ₁=0 looks an awful lot like an ORIGIN. (Did no one
--- before now notice that?) So let us try it out as an origin, but
+-- before now notice that?) [Side note: we are now in the overlap
+-- where both the ‘original’ and ‘different’ experimental arrangements
+-- have the same solution.] So let us try it out as an origin, but
 -- first renaming the angles as φ₀₁=0 and φ₀₂.
 --
 --    ρ = cos(2φ₀₂) cos(2φ₀₁) = cos(2φ₀₂) = cos(2(φ₀₂-φ₀₁))
