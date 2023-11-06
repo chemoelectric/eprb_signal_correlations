@@ -22,8 +22,6 @@
 # OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 # ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
-#
-# For more information, please refer to <https://unlicense.org>
 
 #---------------------------------------------------------------------
 #
@@ -89,18 +87,21 @@
 # calculation. This actually has the wrong form to be the desired
 # correlation coefficient, and much nonsense has proceeded from its
 # use as if it were the correlation coefficient ‘according to
-# classical physics’. The correct form is a function of a'-b'. Indeed,
-# we know from both quantum mechanics and ordinary wave machanics
-# (which IS classical physics) that the correlation coefficient for
-# angular settings a and b is cos(2(a-b)) = cos²(a-b) - sin²(a-b)
+# classical physics’. [Side note: it is actually a solution for
+# polarizing beam splitters in series!] The correct form is a function
+# of a'-b'. Indeed, we know from both quantum mechanics and ordinary
+# wave mechanics (which IS classical physics) that the correlation
+# coefficient for angular settings a and b is cos(2(a-b)) = cos²(a-b)
+# - sin²(a-b)
 #
 # However, set b' = 0. Then
 #
 #    ‘correlation’ = cos(2a') = cos(2(a'-b'))
 #
-# and then ‘correlation’ DOES have the correct form. Furthermore, a
-# change of angular coordinates can be effected by adding 0 = 2(c'-c')
-# inside the cosine:
+# and then ‘correlation’ DOES have the correct form. [Side note: it is
+# a specific-case solution BOTH to our problem AND to polarizing beam
+# splitters in series.] Furthermore, a change of angular coordinates
+# can be effected by adding 0 = 2(c'-c') inside the cosine:
 #
 #    ‘correlation’ = = cos(2((a'+c')-(b'+c')))
 #
@@ -131,46 +132,42 @@
 # ‘entangled’.
 #
 # I have seen explanations of Bell’s error in terms of things being in
-# the wrong state spaces, etc., etc. These no doubt are correct in
-# their way, but are too difficult for me to keep straight in my
-# head. For me, it is overcomplicating the matter. The fact is, you
-# simply cannot write
+# the wrong state spaces, etc., etc. These explications no doubt are
+# correct in their way, but are too difficult for me to keep straight
+# in my head. For me, it is overcomplicating the matter. You just
+# plain cannot write
 #
 #    P(a∧b) = P(a)P(b)
 #
 # unless you have already proven that P(a) = P(a|b) or that P(b) =
-# P(b|a), or if it is obvious by inspection. The reason is that P(a|b)
-# = P(a∧b)/P(b) is THE DEFINITION of P(a|b). Therefore, what Bell was
-# doing was REDEFINING the conditional probability so he could
-# substitute the unconditional probability whenever he thought it
-# seemed sensible to him. This showed he was actually no good at
-# mathematics. Anyone good at mathematics would before long recognize
-# Bell was giving himself free license to declare anything ‘proved’
-# that he wished to be proven: ‘1=0’, ‘E=mc⁹’, etc. He added to
-# mathematics is what I call the ‘Wishing Theorem’, though it is
-# really an axiom.
+# P(b|a), or if it is obvious by inspection. Why not? Because P(a|b) =
+# P(a∧b)/P(b) is THE DEFINITION of P(a|b). One cannot by any sophistry
+# evade the definition of a notation.
+#
+# Bell was writing whatever the hell he wanted, without citing any
+# lemma to justify it.
 #
 #---------------------------------------------------------------------
 #
 # Afterword.
 #
-# Science education in the era of Sagan and Tyson is a travesty. Yes,
-# it goes back as far as Carl Sagan, whom I used to watch again and
-# again when I was a young adult.
+# Science education in the era of Sagan and his copycat Tyson is a
+# travesty. Yes, it goes back as far as Carl Sagan, whom I used to
+# watch again and again when I was a young adult.
 #
-# Before Sagan, science was taught as primarily a process of OBSERVING
+# Before Sagan, science was taught primarily as a process of OBSERVING
 # THINGS SILENTLY. Since Sagan, it is taught primarily as a process of
 # REPEATING WORDS THAT YOU ARE TOLD.
 #
-# Let me give a simple example. Tyson, who made a new version of
-# ‘Cosmos’, once tweeted that, true to ‘science’ Game of Thrones
-# dragons, LIKE BATS, got their wings by giving up their forelimbs. I
-# was livid. I mentioned this to a biologist who didn’t see the
-# problem. But if you look at some photos of bats on the Internet you
-# may see the problem: BATS HAVE FORELIMBS! All it takes is
-# OBSERVATION WITHOUT SPEECHIFYING for one to see that the wings of
-# bats ARE ALSO forelimbs. Bats can walk on four legs. Fruit bats use
-# their wings as arms to hold their food. Etc.
+# Let me give a simple example. Tyson once tweeted that, ‘true to
+# ‘science’’, Game of Thrones dragons, LIKE BATS, got their wings by
+# giving up their forelimbs. I was livid. I mentioned this to a
+# biologist who didn’t see the problem. But if you look at some photos
+# of bats on the Internet you may see the problem: BATS HAVE
+# FORELIMBS! All it takes is OBSERVATION WITHOUT SPEECHIFYING for one
+# to see that the wings of bats ARE ALSO forelimbs. Bats can walk on
+# four legs. Fruit bats use their wings as arms to hold their
+# food. Etc.
 #
 # Tyson was actually teaching the opposite of science: not to observe,
 # but to repeat a verbal formula about giving up forelimbs for
@@ -184,11 +181,18 @@
 # have been doing actual science: stopping your mouth and observing
 # quietly.
 #
+# You can actually do an equivalent experiment with paper, ruler,
+# compass, and some way to measure areas.
+#
 # But we were not taught to do that. No. Instead we were taught that
 # physics is incomprehensibly magical and that the only way we could
 # learn physics was by repeating what we were told. This was true even
 # for those of us who actually took physics classes in college. We
-# were COMMANDED not to try to understand it.
+# were COMMANDED not to try to understand it. I was COMMANDED this way
+# by a physics professor in the early 1980s. Even Nobel Prize-winning
+# ‘physicists’ do not do actual experiments that reveal facts about
+# the universe. They make up fake experiments that ‘prove’
+# preposterous superstitions.
 #
 # Whereas, in fact, Einstein, Podolsky, and Rosen were correct. You
 # are observing it here.
